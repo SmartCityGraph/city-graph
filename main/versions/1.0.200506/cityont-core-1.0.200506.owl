@@ -1,0 +1,3592 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3id.org/cityont-core"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3id.org/cityont-core">
+    <Prefix name="" IRI="http://www.w3id.org/cityont-core"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="city-data-conceptual" IRI="http://www.w3id.org/cityont-core#"/>
+    <Declaration>
+        <Class IRI="#AchitectureElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AdministrativeUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ApartmentType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AreaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutonomousOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Block"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bowling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuidlingSeries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusinessCentre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusinessHub"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralParcel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cafe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CapitalConstruction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cemetery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CentralBank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CharityFoundation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cinema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CityDistrict"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Club"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommercialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommercialOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConcertHall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CornerStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CreativeClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crosswalk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CulturalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisabledPopulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eatery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EducationalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnergeticObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederalAgency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederalCity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederalGov"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederalGovernment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederalMinistry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FunctionalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GTFS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Garage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GiftShop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GovCorporation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GovernmentAuthority"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GovernmentBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreenObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HelthFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#House"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hypermarket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndustrialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KU_state"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Land"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Layer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Library"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LivingObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MajorRenovation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Memorial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetroEntranceHall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motorcycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovableObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultifunctionalStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultyAptHouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MunAdministration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MunDepSovet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MunicipalGov"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Municipality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Museum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NatureObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonProfitAssociation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonProfitFoundation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonProfitOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonProfitPartnership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_AO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_IP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_OOO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_ZAO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherFunctionalCityObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherPopulationGroups"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutletCenter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutpatientClinic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PT_Route"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PT_Stop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PT_Trip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Park"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pedestrian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pharmacy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Playground"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PointObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Preschool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#President"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PresidentAdministration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PresidentHumanRightsSovet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProsecutorOffice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicHeatingSystemObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicNotRegistered"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicPowerSystemObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicSewerageSystemObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicSystemObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicTransportationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicWaterSystemObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegionalAdministartion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegionalGov"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegionalMinistry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegionalParliament"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReligiousObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RetailHub"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RetailStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Road"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoadNetworkObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#School"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShoppingEntertainmentCentre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShoppingEntertainmentMall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallArchitecrure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SnowCleaningMachine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StateOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Supermarket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TallMultyApt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechObjects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalBuilding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Territory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Theatre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TouristPopulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Town"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Townhouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tractor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tram"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TraumaCenter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrolleyBus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TruckVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UpwardWorkingAgePopulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VeterinaryHospital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Village"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkingAgePopulation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasApartmentType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBuidlingSeries"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLand"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMajorRenovation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNestedObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPublicAmenity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWorkType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CentralHotWaterWoods"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAgeGroupPercentage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasApartmentsAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAreaGeneral"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAutoBoilerRoom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBuildingDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCadastralNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCentralElectricity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCentralGas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCentralHeating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCentralHotWater"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCentralHotWaterGas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCommunalApartmentsAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCommunalFacilitiesArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDomofonAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFailureStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFloors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGarbageAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIllumination"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInhabitableArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLayerDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLicensePlate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLiftAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaxFloors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMinFloors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNotCentralGas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasParkingArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPopulationCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasResidentNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSocialGroupPercentage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStairsAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStoveHeating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStudentsCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUninhabitableArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVIN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasYearConstruct"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasYearProduction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasYearRepair"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bicyclers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BusinessTourist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CarOwner"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithEarlyChildhood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithInfant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithPreschooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithPrimarySchoolAge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisabledMovement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisabledSight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EarlyChildhood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ElderlyWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EventTourist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HealthyLifestyleCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Infant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MiddleAgeWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MigrantWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoHealthyLifestyleCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OlderRetiree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PetOwner"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pregnant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Preschooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrimarySchoolAge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PublicTransportUser"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Religious"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SelfEmployedCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SeniorWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Teenager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemporarilyStayingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TouristInGroup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tween"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UncoordinatedTourist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WasteSortingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#YoungRetiree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#YoungWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#param"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AchitectureElement"/>
+        <Class IRI="#PointObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AdministrativeUnit"/>
+        <Class IRI="#Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apartment"/>
+        <Class IRI="#LivingObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApartmentType"/>
+        <Class IRI="#Reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AreaObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutonomousOrganization"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bar"/>
+        <Class IRI="#Eatery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Block"/>
+        <Class IRI="#Territory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowling"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BuidlingSeries"/>
+        <Class IRI="#Reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#AreaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusinessCentre"/>
+        <Class IRI="#BusinessHub"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusinessHub"/>
+        <Class IRI="#CommercialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralParcel"/>
+        <Class IRI="#Land"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cafe"/>
+        <Class IRI="#Eatery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CapitalConstruction"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarVehicle"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cemetery"/>
+        <Class IRI="#PublicObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralBank"/>
+        <Class IRI="#GovernmentAuthority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CharityFoundation"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cinema"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CityDistrict"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Club"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommercialObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommercialOrganization"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcertHall"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CornerStore"/>
+        <Class IRI="#MultifunctionalStore"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreativeClass"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crosswalk"/>
+        <Class IRI="#PublicTransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CulturalObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisabledPopulation"/>
+        <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eatery"/>
+        <Class IRI="#CommercialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EducationalObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnergeticObject"/>
+        <Class IRI="#IndustrialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederalAgency"/>
+        <Class IRI="#FederalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederalCity"/>
+        <Class IRI="#City"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederalGov"/>
+        <Class IRI="#GovernmentBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederalGovernment"/>
+        <Class IRI="#FederalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederalMinistry"/>
+        <Class IRI="#FederalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GTFS"/>
+        <Class IRI="#PublicTransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Garage"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GiftShop"/>
+        <Class IRI="#RetailStore"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GovCorporation"/>
+        <Class IRI="#GovernmentAuthority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GovernmentAuthority"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GovernmentBody"/>
+        <Class IRI="#GovernmentAuthority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreenObject"/>
+        <Class IRI="#NatureObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Group"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HelthFacility"/>
+        <Class IRI="#MedicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospital"/>
+        <Class IRI="#HelthFacility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#House"/>
+        <Class IRI="#LivingObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hypermarket"/>
+        <Class IRI="#MultifunctionalStore"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndustrialObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KU_state"/>
+        <Class IRI="#GovernmentAuthority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Land"/>
+        <Class IRI="#Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Layer"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Library"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LivingObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MajorRenovation"/>
+        <Class IRI="#Reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Memorial"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetroEntranceHall"/>
+        <Class IRI="#PublicTransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovableObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultifunctionalStore"/>
+        <Class IRI="#RetailStore"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultyAptHouse"/>
+        <Class IRI="#LivingObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MunAdministration"/>
+        <Class IRI="#MunicipalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MunDepSovet"/>
+        <Class IRI="#MunicipalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MunicipalGov"/>
+        <Class IRI="#GovernmentBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Municipality"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Museum"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NatureObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonProfitAssociation"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonProfitFoundation"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonProfitOrganization"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonProfitPartnership"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_AO"/>
+        <Class IRI="#CommercialOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_IP"/>
+        <Class IRI="#CommercialOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_OOO"/>
+        <Class IRI="#CommercialOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_ZAO"/>
+        <Class IRI="#CommercialOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherFunctionalCityObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherPopulationGroups"/>
+        <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutletCenter"/>
+        <Class IRI="#RetailHub"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutpatientClinic"/>
+        <Class IRI="#HelthFacility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PT_Route"/>
+        <Class IRI="#GTFS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PT_Stop"/>
+        <Class IRI="#GTFS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PT_Trip"/>
+        <Class IRI="#GTFS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Park"/>
+        <Class IRI="#GreenObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pedestrian"/>
+        <Class IRI="#PublicTransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pharmacy"/>
+        <Class IRI="#MedicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Playground"/>
+        <Class IRI="#PublicObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PointObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Preschool"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#President"/>
+        <Class IRI="#FederalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PresidentAdministration"/>
+        <Class IRI="#President"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PresidentHumanRightsSovet"/>
+        <Class IRI="#President"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProsecutorOffice"/>
+        <Class IRI="#GovernmentAuthority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicHeatingSystemObject"/>
+        <Class IRI="#PublicSystemObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicNotRegistered"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicOrganization"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicPowerSystemObject"/>
+        <Class IRI="#PublicSystemObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicSewerageSystemObject"/>
+        <Class IRI="#PublicSystemObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicSystemObject"/>
+        <Class IRI="#NetObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicTransportationObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicVehicle"/>
+        <Class IRI="#PublicTransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicWaterSystemObject"/>
+        <Class IRI="#PublicSystemObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reference"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Region"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegionalAdministartion"/>
+        <Class IRI="#RegionalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegionalGov"/>
+        <Class IRI="#GovernmentBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegionalMinistry"/>
+        <Class IRI="#RegionalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegionalParliament"/>
+        <Class IRI="#RegionalGov"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReligiousObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restaurant"/>
+        <Class IRI="#Eatery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RetailHub"/>
+        <Class IRI="#CommercialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RetailStore"/>
+        <Class IRI="#CommercialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Road"/>
+        <Class IRI="#RoadNetworkObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoadNetworkObject"/>
+        <Class IRI="#NetObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#School"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShoppingEntertainmentCentre"/>
+        <Class IRI="#RetailHub"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShoppingEntertainmentMall"/>
+        <Class IRI="#RetailHub"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmallArchitecrure"/>
+        <Class IRI="#AchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SnowCleaningMachine"/>
+        <Class IRI="#TechObjects"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialGroup"/>
+        <Class IRI="#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Space"/>
+        <Class IRI="#AreaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsClass"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StateOrganization"/>
+        <Class IRI="#GovernmentAuthority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Supermarket"/>
+        <Class IRI="#MultifunctionalStore"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TallMultyApt"/>
+        <Class IRI="#LivingObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechObjects"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalBuilding"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Territory"/>
+        <Class IRI="#Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theatre"/>
+        <Class IRI="#CulturalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TouristPopulation"/>
+        <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Town"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Townhouse"/>
+        <Class IRI="#LivingObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tractor"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrafficLight"/>
+        <Class IRI="#PublicTransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tram"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TraumaCenter"/>
+        <Class IRI="#HelthFacility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tree"/>
+        <Class IRI="#GreenObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tree"/>
+        <Class IRI="#PointObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrolleyBus"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TruckVehicle"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UpwardWorkingAgePopulation"/>
+        <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VeterinaryHospital"/>
+        <Class IRI="#MedicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Village"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterObject"/>
+        <Class IRI="#NatureObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkType"/>
+        <Class IRI="#Reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkingAgePopulation"/>
+        <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#Bicyclers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TouristPopulation"/>
+        <NamedIndividual IRI="#BusinessTourist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#CarOwner"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#CitizensWithEarlyChildhood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#CitizensWithInfant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#CitizensWithPreschooler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#CitizensWithPrimarySchoolAge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DisabledPopulation"/>
+        <NamedIndividual IRI="#DisabledMovement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DisabledPopulation"/>
+        <NamedIndividual IRI="#DisabledSight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <NamedIndividual IRI="#EarlyChildhood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#ElderlyWorkingCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TouristPopulation"/>
+        <NamedIndividual IRI="#EventTourist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#HealthyLifestyleCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <NamedIndividual IRI="#Infant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#MiddleAgeWorkingCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#MigrantWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#NoHealthyLifestyleCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UpwardWorkingAgePopulation"/>
+        <NamedIndividual IRI="#OlderRetiree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#PetOwner"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#Pregnant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <NamedIndividual IRI="#Preschooler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <NamedIndividual IRI="#PrimarySchoolAge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#PublicTransportUser"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#Religious"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#SelfEmployedCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#SeniorWorkingCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#Student"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <NamedIndividual IRI="#Teenager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#TemporarilyStayingCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TouristPopulation"/>
+        <NamedIndividual IRI="#TouristInGroup"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderWorkingAgePopulation"/>
+        <NamedIndividual IRI="#Tween"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TouristPopulation"/>
+        <NamedIndividual IRI="#UncoordinatedTourist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherPopulationGroups"/>
+        <NamedIndividual IRI="#WasteSortingCitizens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UpwardWorkingAgePopulation"/>
+        <NamedIndividual IRI="#YoungRetiree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WorkingAgePopulation"/>
+        <NamedIndividual IRI="#YoungWorkingCitizens"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasApartmentType"/>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBuidlingSeries"/>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLand"/>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMajorRenovation"/>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPublicAmenity"/>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWorkType"/>
+        <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasApartmentType"/>
+        <Class IRI="#MultyAptHouse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasApartmentType"/>
+        <Class IRI="#TallMultyApt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasApartmentType"/>
+        <Class IRI="#Townhouse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBuidlingSeries"/>
+        <Class IRI="#LivingObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLand"/>
+        <Class IRI="#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMajorRenovation"/>
+        <Class IRI="#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNestedObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#CarVehicle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#CommercialOrganization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#LivingObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#Motorcycle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#TruckVehicle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPublicAmenity"/>
+        <Class IRI="#LivingObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWorkType"/>
+        <Class IRI="#MajorRenovation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasApartmentType"/>
+        <Class IRI="#ApartmentType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBuidlingSeries"/>
+        <Class IRI="#BuidlingSeries"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#FunctionalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLand"/>
+        <Class IRI="#Land"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMajorRenovation"/>
+        <Class IRI="#MajorRenovation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNestedObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPublicAmenity"/>
+        <Class IRI="#PublicObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPublicAmenity"/>
+        <Class IRI="#SportsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWorkType"/>
+        <Class IRI="#WorkType"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#CentralHotWaterWoods"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAgeGroupPercentage"/>
+        <DataProperty IRI="#hasPopulationCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasApartmentsAmount"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAreaGeneral"/>
+        <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAutoBoilerRoom"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCentralElectricity"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCentralGas"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCentralHeating"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCentralHotWater"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCentralHotWaterGas"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCommunalApartmentsAmount"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCommunalFacilitiesArea"/>
+        <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFailureStatus"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasGarbageAmount"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasInhabitableArea"/>
+        <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLiftAmount"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMaxFloors"/>
+        <DataProperty IRI="#hasFloors"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMinFloors"/>
+        <DataProperty IRI="#hasFloors"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasNotCentralGas"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasParkingArea"/>
+        <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasResidentNumber"/>
+        <DataProperty IRI="#hasPopulationCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSocialGroupPercentage"/>
+        <DataProperty IRI="#hasPopulationCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasStoveHeating"/>
+        <DataProperty IRI="#hasHousingCharacteristics"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasUninhabitableArea"/>
+        <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CentralHotWaterWoods"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAddress"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAgeGroupPercentage"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasApartmentsAmount"/>
+        <Class IRI="#MultyAptHouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasApartmentsAmount"/>
+        <Class IRI="#TallMultyApt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasApartmentsAmount"/>
+        <Class IRI="#Townhouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasArea"/>
+        <Class IRI="#AreaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAreaGeneral"/>
+        <Class IRI="#AreaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAutoBoilerRoom"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBuildingDescription"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCadastralNumber"/>
+        <Class IRI="#AreaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCentralElectricity"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCentralGas"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCentralHeating"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCentralHotWater"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCentralHotWaterGas"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCommunalApartmentsAmount"/>
+        <Class IRI="#MultyAptHouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCommunalApartmentsAmount"/>
+        <Class IRI="#TallMultyApt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCommunalApartmentsAmount"/>
+        <Class IRI="#Townhouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCommunalFacilitiesArea"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFailureStatus"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFloors"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGarbageAmount"/>
+        <Class IRI="#MultyAptHouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGarbageAmount"/>
+        <Class IRI="#TallMultyApt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGarbageAmount"/>
+        <Class IRI="#Townhouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasHeight"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIllumination"/>
+        <Class IRI="#AreaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIllumination"/>
+        <Class IRI="#RoadNetworkObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIllumination"/>
+        <Class IRI="#Tree"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInhabitableArea"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLayerDescription"/>
+        <Class IRI="#Layer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLicensePlate"/>
+        <Class IRI="#MovableObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLiftAmount"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelName"/>
+        <Class IRI="#MovableObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNotCentralGas"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasParkingArea"/>
+        <Class IRI="#Land"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasResidentNumber"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSocialGroupPercentage"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStairsAmount"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStoveHeating"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStudentsCapacity"/>
+        <Class IRI="#EducationalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUninhabitableArea"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVIN"/>
+        <Class IRI="#CarVehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVIN"/>
+        <Class IRI="#Motorcycle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVIN"/>
+        <Class IRI="#TruckVehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasYearConstruct"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasYearProduction"/>
+        <Class IRI="#MovableObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasYearRepair"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CentralHotWaterWoods"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAgeGroupPercentage"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasApartmentsAmount"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasArea"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAreaGeneral"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAutoBoilerRoom"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBuildingDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCadastralNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCentralElectricity"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCentralGas"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCentralHeating"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCentralHotWater"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCentralHotWaterGas"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCommunalApartmentsAmount"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCommunalFacilitiesArea"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFailureStatus"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFloors"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGarbageAmount"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHeight"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasIllumination"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInhabitableArea"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLayerDescription"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLicensePlate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLiftAmount"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNotCentralGas"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasParkingArea"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasResidentNumber"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSocialGroupPercentage"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStairsAmount"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStoveHeating"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStudentsCapacity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUninhabitableArea"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVIN"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasYearConstruct"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasYearProduction"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasYearRepair"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AchitectureElement</IRI>
+        <Literal>Элемент благоустройства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AdministrativeUnit</IRI>
+        <Literal>Административно-территориальная единица</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agent</IRI>
+        <Literal>Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Agent</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="en">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="ru">Агент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#param"/>
+        <IRI>#Agent</IRI>
+        <Literal>name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Apartment</IRI>
+        <Literal>Квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ApartmentType</IRI>
+        <Literal>Перечисление типов квартир по количеству комнат</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ApartmentType</IRI>
+        <Literal>Тип квартиры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AreaObject</IRI>
+        <Literal>Объект, обозначаемый площадью на карте (например, здание или парк).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AreaObject</IRI>
+        <Literal>Площадной объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AutonomousOrganization</IRI>
+        <Literal>АНО</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bar</IRI>
+        <Literal>Бар</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bicyclers</IRI>
+        <Literal>Велосипедисты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Block</IRI>
+        <Literal>Квартал</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bowling</IRI>
+        <Literal>Боулинг</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BuidlingSeries</IRI>
+        <Literal>Перечисление серий жилых домов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BuidlingSeries</IRI>
+        <Literal>Серия здания</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Building</IRI>
+        <Literal>Площадной объект, представляющий собой постройку</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Building</IRI>
+        <Literal>Сооружение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bus</IRI>
+        <Literal>Автобус</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BusinessCentre</IRI>
+        <Literal>Бизнес-центр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BusinessHub</IRI>
+        <Literal>Деловой центр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BusinessTourist</IRI>
+        <Literal>Приезжие по рабочим вопросам</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralParcel</IRI>
+        <Literal>Кадастровый участок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cafe</IRI>
+        <Literal>Кафе</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CapitalConstruction</IRI>
+        <Literal>Объект капитального строительства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CarOwner</IRI>
+        <Literal>Автовладельцы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CarVehicle</IRI>
+        <Literal>Легковой автомобиль</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cemetery</IRI>
+        <Literal>Кладбище</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CentralBank</IRI>
+        <Literal>Центральный банк</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CentralHotWaterWoods</IRI>
+        <Literal>имеет горячее водоснабжение от дровяных колонок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cinema</IRI>
+        <Literal>Кинотеатр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithEarlyChildhood</IRI>
+        <Literal>Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithInfant</IRI>
+        <Literal>Горожане с младенцами (от 0 до 1 года)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithPreschooler</IRI>
+        <Literal>Горожане с детьми дошкольного возраста (от 3 до 7 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithPrimarySchoolAge</IRI>
+        <Literal>Горожане с детьми младшего школьного возраста (от 7 до 11 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#City</IRI>
+        <Literal>Город</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CityDistrict</IRI>
+        <Literal>Район (города)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Club</IRI>
+        <Literal>Клуб</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CommercialObject</IRI>
+        <Literal>Коммерческий объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CommercialOrganization</IRI>
+        <Literal>Коммерческая организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConcertHall</IRI>
+        <Literal>Концертный зал</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CornerStore</IRI>
+        <Literal>Магазин у дома</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CreativeClass</IRI>
+        <Literal>Творческий кружок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Crosswalk</IRI>
+        <Literal>Пешеходный переход</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CulturalObject</IRI>
+        <Literal>Культурный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DisabledMovement</IRI>
+        <Literal>Лица с ограниченными возможностями передвижения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DisabledPopulation</IRI>
+        <Literal>Население с ограниченными возможностями</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DisabledSight</IRI>
+        <Literal>Лица с инвалидностью по зрению</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EarlyChildhood</IRI>
+        <Literal>Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Eatery</IRI>
+        <Literal>Общепит</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EducationalObject</IRI>
+        <Literal>Образовательный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElderlyWorkingCitizens</IRI>
+        <Literal>Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EnergeticObject</IRI>
+        <Literal>Энергетический объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#param"/>
+        <IRI>#EnergeticObject</IRI>
+        <Literal>выброс CO2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EventTourist</IRI>
+        <Literal>Приезжие к мероприятиям</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalAgency</IRI>
+        <Literal>Федеральное агенство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalCity</IRI>
+        <Literal>Город федерального значения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalGov</IRI>
+        <Literal>Федеральный орга власти</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalGovernment</IRI>
+        <Literal>Правительство РФ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalMinistry</IRI>
+        <Literal>Федеральное министерство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FunctionalObject</IRI>
+        <Literal>Описание функций физического объекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FunctionalObject</IRI>
+        <Literal>Функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Garage</IRI>
+        <Literal>Гараж</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Geometry</IRI>
+        <Literal>Геометрия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiftShop</IRI>
+        <Literal>Магазин подарков</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GovCorporation</IRI>
+        <Literal>Госкорпорация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GovernmentAuthority</IRI>
+        <Literal>Государственная организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GovernmentBody</IRI>
+        <Literal>Орган власти</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GreenObject</IRI>
+        <Literal>Зелёный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Group</IRI>
+        <Literal>Этот класс представляет собой объединение Агентов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Group</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Group</IRI>
+        <Literal xml:lang="en">Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Group</IRI>
+        <Literal xml:lang="ru">Группа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HealthyLifestyleCitizens</IRI>
+        <Literal>Горожане, ведущие здоровый образ жизни</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HelthFacility</IRI>
+        <Literal>Медицинское учреждение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hospital</IRI>
+        <Literal>Больница</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#House</IRI>
+        <Literal>Частный дом</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hypermarket</IRI>
+        <Literal>Гипермаркет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IndustrialObject</IRI>
+        <Literal>Промышленный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Infant</IRI>
+        <Literal>Младенцы (от 0 до 1 года)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#KU_state</IRI>
+        <Literal>Казенное учреждение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Land</IRI>
+        <Literal>Земельный участок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Layer</IRI>
+        <Literal>Для хранения слоёв, созданных пользователем</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Layer</IRI>
+        <Literal>Пользовательский слой</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Library</IRI>
+        <Literal>Библиотека</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LivingObject</IRI>
+        <Literal>Жилой объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MajorRenovation</IRI>
+        <Literal>Список капитальных ремонтов. Класс в будущем будет выведен в другую ветвь иерархии</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MajorRenovation</IRI>
+        <Literal>Капитальный ремонт</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MedicalObject</IRI>
+        <Literal>Медицинский объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Memorial</IRI>
+        <Literal>Памятник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MetroEntranceHall</IRI>
+        <Literal>Наземный вестибюль станции метро</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MiddleAgeWorkingCitizens</IRI>
+        <Literal>Работающие горожане среднего возраста (от 31 до 40 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MigrantWorker</IRI>
+        <Literal>Трудовые мигранты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Motorcycle</IRI>
+        <Literal>Мотоцикл</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MovableObject</IRI>
+        <Literal>Объект, который не имеет фиксированного местоположения/прикрепления к земле (например, транспорт или движимая уличная техника). Имеет обязательные аттрибуты: modelName и licencePlate (исключением могут быть трактора и иная техника, используемая в поселках, оставлять пустую строку).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MovableObject</IRI>
+        <Literal>Движимый объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MultifunctionalStore</IRI>
+        <Literal>Универсальное предприятие торговли</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MultyAptHouse</IRI>
+        <Literal>Многоквартирный дом</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MunAdministration</IRI>
+        <Literal>Муниципальная администрация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MunDepSovet</IRI>
+        <Literal>Совет муниципальных депутатов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MunicipalGov</IRI>
+        <Literal>Муниципальный орга власти</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Municipality</IRI>
+        <Literal>Муниципалитет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Museum</IRI>
+        <Literal>Музей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NatureObject</IRI>
+        <Literal>Объект живой природы (например, зелёное насаждение)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NatureObject</IRI>
+        <Literal>Природный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NetObject</IRI>
+        <Literal>Объект, обозначаемый на карте линией или сетью линий (например, дорога или система водоснабжения)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NetObject</IRI>
+        <Literal>Сетевой объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NoHealthyLifestyleCitizens</IRI>
+        <Literal>Горожане, не ведущие здоровый образ жизни</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NonProfitAssociation</IRI>
+        <Literal>Некоммерческая ассоциация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NonProfitFoundation</IRI>
+        <Literal>Некоммерческий фонд</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NonProfitOrganization</IRI>
+        <Literal>Некоммерческая организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NonProfitPartnership</IRI>
+        <Literal>Некоммерческое партнерство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OlderRetiree</IRI>
+        <Literal>Пенсионеры старших возрастов (старше 75 лет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Organization</IRI>
+        <Literal>The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Organization</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal xml:lang="en">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal xml:lang="ru">Организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization_AO</IRI>
+        <Literal>АО</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization_IP</IRI>
+        <Literal>ИП</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization_OOO</IRI>
+        <Literal>ООО</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization_ZAO</IRI>
+        <Literal>ЗАО</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OtherFunctionalCityObject</IRI>
+        <Literal>Иной функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OtherPopulationGroups</IRI>
+        <Literal>Дополнительные группы горожан</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OutletCenter</IRI>
+        <Literal>Ауилет-центр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OutpatientClinic</IRI>
+        <Literal>Поликлиника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PT_Route</IRI>
+        <Literal>Маршрут ОТ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PT_Stop</IRI>
+        <Literal>Остановка ОТ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PT_Trip</IRI>
+        <Literal>Наряд ОТ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Park</IRI>
+        <Literal>Парк</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pedestrian</IRI>
+        <Literal>Пешеходная зона</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal>The Person class represents people.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Person</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="ru">Человек</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PetOwner</IRI>
+        <Literal>Владельцы домашних животных</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pharmacy</IRI>
+        <Literal>Аптека</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Физический объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Playground</IRI>
+        <Literal>Детская площадка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PointObject</IRI>
+        <Literal>Точечный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pregnant</IRI>
+        <Literal>Беременные женщины</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Preschool</IRI>
+        <Literal>Детский сад</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Preschooler</IRI>
+        <Literal>Дети дошкольного возраста (от 3 до 7 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#President</IRI>
+        <Literal>Президент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PrimarySchoolAge</IRI>
+        <Literal>Дети младшего школьного возраста (от 7 до 11 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProsecutorOffice</IRI>
+        <Literal>Прокуратура</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicHeatingSystemObject</IRI>
+        <Literal>Отопительная система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicObject</IRI>
+        <Literal>Общественный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicOrganization</IRI>
+        <Literal>Общественная организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicPowerSystemObject</IRI>
+        <Literal>Электросетевая система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicSewerageSystemObject</IRI>
+        <Literal>Канализационная система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicSystemObject</IRI>
+        <Literal>Коммунальная система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicTransportUser</IRI>
+        <Literal>Пользователи общественного транспорта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicTransportationObject</IRI>
+        <Literal>Элемент транспортной инфраструктуры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicVehicle</IRI>
+        <Literal>Пассажирское транспортное средство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicWaterSystemObject</IRI>
+        <Literal>Система водоснабжения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reference</IRI>
+        <Literal>Справочник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Region</IRI>
+        <Literal>Регион</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegionalAdministartion</IRI>
+        <Literal>Администрация субъекта федерации</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegionalGov</IRI>
+        <Literal>Региональный орган власти</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegionalMinistry</IRI>
+        <Literal>Региональный исполнительный орган власти</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegionalParliament</IRI>
+        <Literal>Парламент субъекта федерации</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Religious</IRI>
+        <Literal>Верующие</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ReligiousObject</IRI>
+        <Literal>Религиозный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Restaurant</IRI>
+        <Literal>Ресторан</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RetailHub</IRI>
+        <Literal>Торговый центр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RetailStore</IRI>
+        <Literal>Магазин</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Road</IRI>
+        <Literal>Дорога</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RoadNetworkObject</IRI>
+        <Literal>Дорожная сеть</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#School</IRI>
+        <Literal>Школа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SelfEmployedCitizens</IRI>
+        <Literal>Самозанятые горожане</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SeniorWorkingCitizens</IRI>
+        <Literal>Работающие горожане старшего возраста (от 41 до 60 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal>Служебная сущность</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ShoppingEntertainmentCentre</IRI>
+        <Literal>Торгово-развлекательный центр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ShoppingEntertainmentMall</IRI>
+        <Literal>Торгово-развлекательный комплекс</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmallArchitecrure</IRI>
+        <Literal>МАФ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SnowCleaningMachine</IRI>
+        <Literal>Снегоуборочная техника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialGroup</IRI>
+        <Literal>Описание социальных групп населения в базе данных в соответствии с документом &quot;Дем соц группы&quot; по ссылке</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SocialGroup</IRI>
+        <Literal>https://docs.google.com/document/d/16ZIA3hXikwpipxL7rpNQGuY90LG7AHbMLhu54QeZuSw/edit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SocialGroup</IRI>
+        <Literal>Социальная группа населения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialObject</IRI>
+        <Literal>Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SocialObject</IRI>
+        <Literal>Социальный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Space</IRI>
+        <Literal>Площадной объект, представляющий собой участок земли (без учёта построек на нём)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Space</IRI>
+        <Literal>Пространство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SportsClass</IRI>
+        <Literal>Спортивная секция</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SportsObject</IRI>
+        <Literal>Спортивный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StateOrganization</IRI>
+        <Literal>Бюджетное учреждение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Student</IRI>
+        <Literal>Студенты и учащиеся</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Supermarket</IRI>
+        <Literal>Супермаркет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TallMultyApt</IRI>
+        <Literal>Высотное жилое строение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TechObjects</IRI>
+        <Literal>Техника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Teenager</IRI>
+        <Literal>Подростки старшего возраста (от 15 до 18 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemporalBuilding</IRI>
+        <Literal>Временное сооружение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemporarilyStayingCitizens</IRI>
+        <Literal>Горожане, временно пребывающие в городе</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Territory</IRI>
+        <Literal>Иная территория</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Theatre</IRI>
+        <Literal>Театр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TouristInGroup</IRI>
+        <Literal>Туристы в составе организованных групп</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TouristPopulation</IRI>
+        <Literal>Туристы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Town</IRI>
+        <Literal>Поселок городского типа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Townhouse</IRI>
+        <Literal>Таунхаус</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tractor</IRI>
+        <Literal>Трактор</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TrafficLight</IRI>
+        <Literal>Светофор</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tram</IRI>
+        <Literal>Трамвай</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TraumaCenter</IRI>
+        <Literal>Травмпункт</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tree</IRI>
+        <Literal>Зеленое насаждение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TrolleyBus</IRI>
+        <Literal>Троллейбус</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TruckVehicle</IRI>
+        <Literal>Грузовой автомобиль</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tween</IRI>
+        <Literal>Подростки младшего возраста (от 12 до 15 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UncoordinatedTourist</IRI>
+        <Literal>Неорганизованные туристы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UnderWorkingAgePopulation</IRI>
+        <Literal>Население моложе трудоспособного возраста</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#University</IRI>
+        <Literal>Университет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UpwardWorkingAgePopulation</IRI>
+        <Literal>Население старше трудоспособного возраста</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VeterinaryHospital</IRI>
+        <Literal>Ветеринарная клиника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Village</IRI>
+        <Literal>Поселок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WasteSortingCitizens</IRI>
+        <Literal>Горожане, ведущие раздельный сбор мусора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WaterObject</IRI>
+        <Literal>Водный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WorkType</IRI>
+        <Literal>Перечисление видов работ при капитальном ремонте</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorkType</IRI>
+        <Literal>Вид работ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorkingAgePopulation</IRI>
+        <Literal>Население трудоспособного возраста</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YoungRetiree</IRI>
+        <Literal>Молодые пенсионеры (65 - 75 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YoungWorkingCitizens</IRI>
+        <Literal>Молодые работающие горожане (до 30 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAddress</IRI>
+        <Literal>имеет адрес</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAgeGroupPercentage</IRI>
+        <Literal>имеет процент жителей по возрасту</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasApartmentType</IRI>
+        <Literal>имеет тип квартиры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasApartmentsAmount</IRI>
+        <Literal>имеет количество квартир</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasArea</IRI>
+        <Literal>Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasArea</IRI>
+        <Literal>имеет площадь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAreaGeneral</IRI>
+        <Literal>имеет общую площадь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAutoBoilerRoom</IRI>
+        <Literal>имеет автономную котельную</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuidlingSeries</IRI>
+        <Literal>имеет серию здания</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBuildingDescription</IRI>
+        <Literal>Текстовое описание зданий, которое генерируется в базе данных</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuildingDescription</IRI>
+        <Literal>имеет описание сооружения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBuildingSpecificProperties</IRI>
+        <Literal>Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuildingSpecificProperties</IRI>
+        <Literal>имеет свойства сооружения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralNumber</IRI>
+        <Literal>имеет кадастровый номер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCentralElectricity</IRI>
+        <Literal>имеет центральное электроснабжение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCentralGas</IRI>
+        <Literal>имеет центральное газоснабжение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCentralHeating</IRI>
+        <Literal>имеет центральное отопление</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCentralHotWater</IRI>
+        <Literal>имеет центральное горячее водоснабжение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCentralHotWaterGas</IRI>
+        <Literal>имеет горячее водоснабжение от газовых колонок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCommunalApartmentsAmount</IRI>
+        <Literal>имеет количество коммунальных квартир</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCommunalFacilitiesArea</IRI>
+        <Literal>имеет площадь помещений, входящих в состав общего имущества</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoordinates</IRI>
+        <Literal>Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoordinates</IRI>
+        <Literal>имеет координаты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDomofonAmount</IRI>
+        <Literal>имеет количество переговорно-замочных устройств</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFailureStatus</IRI>
+        <Literal>является аварийным</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFloors</IRI>
+        <Literal>имеет количество этажей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFunction</IRI>
+        <Literal>Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFunction</IRI>
+        <Literal>имеет функцию</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGarbageAmount</IRI>
+        <Literal>имеет количество мусоропроводов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHeight</IRI>
+        <Literal>имеет высоту</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasHousingCharacteristics</IRI>
+        <Literal>Семейство характеристик жилых объектов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHousingCharacteristics</IRI>
+        <Literal>имеет жилищные условия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasIllumination</IRI>
+        <Literal>имеет освещение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInhabitableArea</IRI>
+        <Literal>имеет площадь жилых помещений</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLand</IRI>
+        <Literal>расположено на земельном участке</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLayerDescription</IRI>
+        <Literal>Описание слоя, созданного пользователем</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLayerDescription</IRI>
+        <Literal>имеет описание слоя</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLicensePlate</IRI>
+        <Literal>имеет номер зарегистрированный</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLiftAmount</IRI>
+        <Literal>имеет количество лифтов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMajorRenovation</IRI>
+        <Literal>имеет капительный ремонт</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasManagingOrganization</IRI>
+        <Literal>Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasManagingOrganization</IRI>
+        <Literal>имеет управляющую организацию</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMaxFloors</IRI>
+        <Literal>имеет максимальное количество этажей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMinFloors</IRI>
+        <Literal>имеет минимальное количество этажей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelName</IRI>
+        <Literal>имеет модель и марку</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNestedObject</IRI>
+        <Literal>Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNestedObject</IRI>
+        <Literal>имеет вложенный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNotCentralGas</IRI>
+        <Literal>имеет не центральное газоснабжение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasOwner</IRI>
+        <Literal>Связывает ФИзические объекты и Организации с их владельцами-людьми</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOwner</IRI>
+        <Literal>имеет собственника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasParkingArea</IRI>
+        <Literal>Площадь парковки в границах земельного участка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasParkingArea</IRI>
+        <Literal>имеет площадь парковки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPopulationCharacteristics</IRI>
+        <Literal>имеет характеристики жителей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPublicAmenity</IRI>
+        <Literal>имеет элемент благоустройства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasResidentNumber</IRI>
+        <Literal>имеет количество проживающих</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSocialGroupPercentage</IRI>
+        <Literal>имеет процент жителей по социальной группе</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStairsAmount</IRI>
+        <Literal>имеет количество лестниц</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStoveHeating</IRI>
+        <Literal>имеет печное отопление</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStudentsCapacity</IRI>
+        <Literal>рассчитан на количество обучающихся</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasUninhabitableArea</IRI>
+        <Literal>имеет площадь нежилых помещений</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVIN</IRI>
+        <Literal>имеет VIN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWorkType</IRI>
+        <Literal>имеет вид работ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasYearConstruct</IRI>
+        <Literal>имеет год постройки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasYearProduction</IRI>
+        <Literal>имеет год производства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasYearRepair</IRI>
+        <Literal>имеет год восстановления</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

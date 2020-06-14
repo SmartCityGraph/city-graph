@@ -1,0 +1,22 @@
+@prefix : <http://people.example#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://people.example/bob>
+    {
+       :a foaf:name "Bob" .
+       :a foaf:mbox <mailto:bob@oldcorp.people.example> .
+       :a foaf:knows :b .
+
+       <http://people.example/bob> dc:publisher "Bob" .
+    }
+
+<http://people.example/alice>
+    {
+       :b foaf:name "Alice" .
+       :b foaf:mbox <mailto:alice@work.people.example> .
+
+        <http://people.example/alice> dc:publisher "Alice" .
+
+    }				
