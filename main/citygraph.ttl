@@ -225,7 +225,7 @@ cg:hasSubDoc rdf:type owl:ObjectProperty ;
 ###  http://www.w3id.org/citygraph-core#hasSurface
 cg:hasSurface rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cg:hasComp ;
-              rdfs:range cg:Surface ;
+              rdfs:range cg:Covering ;
               rdfs:label "имеет покрытие" .
 
 
@@ -318,12 +318,6 @@ cg:hasApartmentsAmount rdf:type owl:DatatypeProperty ;
                        rdfs:label "имеет количество квартир" .
 
 
-###  http://www.w3id.org/citygraph-core#hasArchElememtsParameter
-cg:hasArchElememtsParameter rdf:type owl:DatatypeProperty ;
-                            rdfs:domain cg:AchitectureElement ;
-                            rdfs:label "характеристики элементов благоустрйоства" .
-
-
 ###  http://www.w3id.org/citygraph-core#hasArchitectureType
 cg:hasArchitectureType rdf:type owl:DatatypeProperty ;
                        rdfs:domain cg:Building ;
@@ -357,7 +351,7 @@ cg:hasAutoBoilerRoom rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasBack
 cg:hasBack rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf cg:hasArchElememtsParameter ;
+           rdfs:subPropertyOf cg:topDataArchElement ;
            rdfs:domain cg:AchitectureElement ,
                        cg:Bench ;
            rdfs:range xsd:boolean ;
@@ -458,7 +452,7 @@ cg:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasCharge
 cg:hasCharge rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf cg:hasArchElememtsParameter ;
+             rdfs:subPropertyOf cg:topDataArchElement ;
              rdfs:domain cg:AchitectureElement ,
                          cg:Bench ;
              rdfs:range xsd:boolean ;
@@ -638,7 +632,9 @@ cg:hasHouseNumber rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasIllumination
 cg:hasIllumination rdf:type owl:DatatypeProperty ;
-                   rdfs:domain cg:AreaObject ,
+                   rdfs:subPropertyOf cg:topDataArchElement ;
+                   rdfs:domain cg:AchitectureElement ,
+                               cg:AreaObject ,
                                cg:Green ,
                                cg:RoadNetworkObject ;
                    rdfs:range xsd:boolean ;
@@ -1057,7 +1053,7 @@ cg:hasSchoolType rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasSeatsAmount
 cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf cg:hasArchElememtsParameter ;
+                  rdfs:subPropertyOf cg:topDataArchElement ;
                   rdfs:domain cg:AchitectureElement ,
                               cg:Bench ;
                   rdfs:range xsd:integer ;
@@ -1279,10 +1275,17 @@ cg:hasYearRepair rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#needElectricity
 cg:needElectricity rdf:type owl:DatatypeProperty ;
-                   rdfs:domain cg:StreetFurniture ;
+                   rdfs:subPropertyOf cg:topDataArchElement ;
+                   rdfs:domain cg:AchitectureElement ;
                    rdfs:range xsd:string ;
                    rdfs:comment "С указанием напряжения или иных параметров. По умолчанию можно указывать 220" ;
                    rdfs:label "требует электричества" .
+
+
+###  http://www.w3id.org/citygraph-core#topDataArchElement
+cg:topDataArchElement rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "Использовать только дочерние отношения" ;
+                      rdfs:label "характеристика элемента благоустройства" .
 
 
 #################################################################
@@ -1451,7 +1454,7 @@ cg:AreaObject rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#ArtificialRoughness
 cg:ArtificialRoughness rdf:type owl:Class ;
-                       rdfs:subClassOf cg:Surface ;
+                       rdfs:subClassOf cg:Covering ;
                        rdfs:comment "Например дорожный полицейский" ;
                        rdfs:label "Искусственная неровность" .
 
@@ -1519,7 +1522,8 @@ cg:Bathhouse rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#Bench
 cg:Bench rdf:type owl:Class ;
-         rdfs:subClassOf cg:StreetFurniture ;
+         rdfs:subClassOf cg:AchitectureElement ,
+                         cg:StreetFurniture ;
          rdfs:label "Скамья" .
 
 
@@ -1550,7 +1554,7 @@ cg:Block rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#BortStones
 cg:BortStones rdf:type owl:Class ;
-              rdfs:subClassOf cg:Surface ;
+              rdfs:subClassOf cg:Covering ;
               rdfs:label "Бортовые камни" ,
                          "Поребрки" .
 
@@ -1750,6 +1754,12 @@ cg:Country rdf:type owl:Class ;
            rdfs:label "Страна" .
 
 
+###  http://www.w3id.org/citygraph-core#Covering
+cg:Covering rdf:type owl:Class ;
+            rdfs:subClassOf cg:Component ;
+            rdfs:label "Покрытие" .
+
+
 ###  http://www.w3id.org/citygraph-core#CreativeClass
 cg:CreativeClass rdf:type owl:Class ;
                  rdfs:subClassOf cg:EducationalObject ;
@@ -1790,6 +1800,12 @@ cg:District_City rdf:type owl:Class ;
 cg:Document rdf:type owl:Class ;
             rdfs:comment "Связывает правовые нормы, документы и пр. с объектами городской среды" ;
             rdfs:label "Документ" .
+
+
+###  http://www.w3id.org/citygraph-core#DrinkFontain
+cg:DrinkFontain rdf:type owl:Class ;
+                rdfs:subClassOf cg:Fountain ;
+                rdfs:label "Питьевой фонтан" .
 
 
 ###  http://www.w3id.org/citygraph-core#Eatery
@@ -1985,6 +2001,13 @@ cg:GreenObject rdf:type owl:Class ;
                rdfs:label "Зелёный объект" .
 
 
+###  http://www.w3id.org/citygraph-core#GreenRoof
+cg:GreenRoof rdf:type owl:Class ;
+             rdfs:subClassOf cg:GreenObject ,
+                             cg:Surface ;
+             rdfs:label "Крышное озеленение" .
+
+
 ###  http://www.w3id.org/citygraph-core#GroceryStore
 cg:GroceryStore rdf:type owl:Class ;
                 rdfs:subClassOf cg:RetailStore ;
@@ -2083,7 +2106,7 @@ cg:Institute rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#InterRail
 cg:InterRail rdf:type owl:Class ;
-             rdfs:subClassOf cg:Surface ;
+             rdfs:subClassOf cg:Covering ;
              rdfs:label "Межрельсовое покрытие" .
 
 
@@ -2194,7 +2217,7 @@ cg:Market rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#Markup
 cg:Markup rdf:type owl:Class ;
-          rdfs:subClassOf cg:Surface ;
+          rdfs:subClassOf cg:Covering ;
           rdfs:label "Разметка" .
 
 
@@ -2415,7 +2438,7 @@ cg:OlympicReserveSportSchool rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#OpenLot
 cg:OpenLot rdf:type owl:Class ;
-           rdfs:subClassOf cg:Surface ;
+           rdfs:subClassOf cg:Covering ;
            rdfs:label "Открытый лоток" .
 
 
@@ -2525,7 +2548,7 @@ cg:Playground rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#Pocket
 cg:Pocket rdf:type owl:Class ;
-          rdfs:subClassOf cg:Surface ;
+          rdfs:subClassOf cg:Covering ;
           rdfs:comment "Например остановочный, изгиб дороги" ;
           rdfs:label "Карман" .
 
@@ -2810,7 +2833,7 @@ cg:SecondarySchool rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#ServiceZone
 cg:ServiceZone rdf:type owl:Class ;
-               rdfs:subClassOf cg:Surface ;
+               rdfs:subClassOf cg:Covering ;
                rdfs:label "Сервисная зона" .
 
 
@@ -2832,14 +2855,20 @@ cg:Sidewalk rdf:type owl:Class ;
             rdfs:label "Тротуар" .
 
 
+###  http://www.w3id.org/citygraph-core#Skalodrom
+cg:Skalodrom rdf:type owl:Class ;
+             rdfs:subClassOf cg:Sportground ;
+             rdfs:label "Скалодром" .
+
+
 ###  http://www.w3id.org/citygraph-core#Slope
 cg:Slope rdf:type owl:Class ;
          rdfs:subClassOf cg:Relief ;
          rdfs:label "Откос" .
 
 
-###  http://www.w3id.org/citygraph-core#SmallArchitecrure
-cg:SmallArchitecrure rdf:type owl:Class ;
+###  http://www.w3id.org/citygraph-core#SmallArchitecture
+cg:SmallArchitecture rdf:type owl:Class ;
                      rdfs:subClassOf cg:AchitectureElement ;
                      rdfs:label "МАФ" .
 
@@ -2876,6 +2905,12 @@ cg:Space rdf:type owl:Class ;
 cg:SportComplex rdf:type owl:Class ;
                 rdfs:subClassOf cg:SportsObject ;
                 rdfs:label "Спортивно-оздоровительный комплекс" .
+
+
+###  http://www.w3id.org/citygraph-core#Sportground
+cg:Sportground rdf:type owl:Class ;
+               rdfs:subClassOf cg:SportsObject ;
+               rdfs:label "Дворовая спортивная площадка" .
 
 
 ###  http://www.w3id.org/citygraph-core#SportsClass
@@ -2946,8 +2981,8 @@ cg:StreetTable rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#Surface
 cg:Surface rdf:type owl:Class ;
-           rdfs:subClassOf cg:Component ;
-           rdfs:label "Покрытие" .
+           rdfs:subClassOf cg:AreaObject ;
+           rdfs:label "Поверхность" .
 
 
 ###  http://www.w3id.org/citygraph-core#SwimmingPool
@@ -3117,6 +3152,12 @@ cg:UrbanDistrict rdf:type owl:Class ;
 cg:UrbanSettlements rdf:type owl:Class ;
                     rdfs:subClassOf cg:Municipality ;
                     rdfs:label "Городские поселения" .
+
+
+###  http://www.w3id.org/citygraph-core#VerticalGreen
+cg:VerticalGreen rdf:type owl:Class ;
+                 rdfs:subClassOf cg:StreetFurniture ;
+                 rdfs:label "Вертикальное озеленение" .
 
 
 ###  http://www.w3id.org/citygraph-core#VeterinaryHospital
@@ -3438,8 +3479,7 @@ cg:YoungWorkingCitizens rdf:type owl:NamedIndividual ,
 
 ###  http://www.w3id.org/citygraph-core#Скамья_12345
 cg:Скамья_12345 rdf:type owl:NamedIndividual ,
-                         cg:Bench ,
-                         cg:SmallArchitecrure ;
+                         cg:Bench ;
                 cg:hasCoordinates cg:Скамья_координаты ;
                 cg:hasFunction cg:StaticBench ;
                 cg:hasBack "false"^^xsd:boolean ;
