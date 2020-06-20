@@ -453,8 +453,7 @@ cg:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
 ###  http://www.w3id.org/citygraph-core#hasCharge
 cg:hasCharge rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:topDataArchElement ;
-             rdfs:domain cg:AchitectureElement ,
-                         cg:Bench ;
+             rdfs:domain cg:AchitectureElement ;
              rdfs:range xsd:boolean ;
              rdfs:label "имеет вход для зарядного устройства" .
 
@@ -463,6 +462,14 @@ cg:hasCharge rdf:type owl:DatatypeProperty ;
 cg:hasClassificationCode rdf:type owl:DatatypeProperty ;
                          rdfs:domain cg:Reference ;
                          rdfs:label "используется в классификаторе" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCoastalProtectiveStrip
+cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf cg:topDataNature ;
+                             rdfs:domain cg:NatureObject ;
+                             rdfs:range xsd:double ;
+                             rdfs:label "Прибрежная защитная полоса" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasCode
@@ -635,10 +642,16 @@ cg:hasIllumination rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf cg:topDataArchElement ;
                    rdfs:domain cg:AchitectureElement ,
                                cg:AreaObject ,
-                               cg:Green ,
                                cg:RoadNetworkObject ;
                    rdfs:range xsd:boolean ;
                    rdfs:label "имеет освещение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasIlluminationPollution
+cg:hasIlluminationPollution rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf cg:topEcologyParam ;
+                            rdfs:range xsd:double ;
+                            rdfs:label "Световое загрязнение" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasInhabitableArea
@@ -684,6 +697,13 @@ cg:hasLayerDescription rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:anyURI ;
                        rdfs:comment "Описание слоя, созданного пользователем" ;
                        rdfs:label "имеет описание слоя" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLength
+cg:hasLength rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:topDataNature ;
+             rdfs:range xsd:double ;
+             rdfs:label "Длина" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasLevel1
@@ -843,6 +863,20 @@ cg:hasOpeningHours rdf:type owl:DatatypeProperty ;
                    rdfs:label "рабочие часы" .
 
 
+###  http://www.w3id.org/citygraph-core#hasPM10value
+cg:hasPM10value rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:topEcologyParam ;
+                rdfs:range xsd:double ;
+                rdfs:label "PM 10 параметр" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPM25value
+cg:hasPM25value rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:topEcologyParam ;
+                rdfs:range xsd:double ;
+                rdfs:label "PM 2.5 параметр" .
+
+
 ###  http://www.w3id.org/citygraph-core#hasParkingArea
 cg:hasParkingArea rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf cg:hasArea ;
@@ -883,6 +917,13 @@ cg:hasProvidedForChild rdf:type owl:DatatypeProperty ;
                        rdfs:domain cg:MedicalObject ;
                        rdfs:range xsd:boolean ;
                        rdfs:label "детское отделение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRadioactivePollution
+cg:hasRadioactivePollution rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf cg:topEcologyParam ;
+                           rdfs:range xsd:double ;
+                           rdfs:label "Радиоактивное загрязнянение" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasRailwayCrossing
@@ -1054,8 +1095,7 @@ cg:hasSchoolType rdf:type owl:DatatypeProperty ;
 ###  http://www.w3id.org/citygraph-core#hasSeatsAmount
 cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf cg:topDataArchElement ;
-                  rdfs:domain cg:AchitectureElement ,
-                              cg:Bench ;
+                  rdfs:domain cg:AchitectureElement ;
                   rdfs:range xsd:integer ;
                   rdfs:label "имеет количество мест" .
 
@@ -1227,6 +1267,14 @@ cg:hasValue rdf:type owl:DatatypeProperty ;
             rdfs:label "значение" .
 
 
+###  http://www.w3id.org/citygraph-core#hasWaterSafeZone
+cg:hasWaterSafeZone rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:topDataNature ;
+                    rdfs:domain cg:NatureObject ;
+                    rdfs:range xsd:double ;
+                    rdfs:label "водоохраняемая зона" .
+
+
 ###  http://www.w3id.org/citygraph-core#hasWebDomainZone
 cg:hasWebDomainZone rdf:type owl:DatatypeProperty ;
                     rdfs:domain cg:AdministrativeUnit ;
@@ -1286,6 +1334,16 @@ cg:needElectricity rdf:type owl:DatatypeProperty ;
 cg:topDataArchElement rdf:type owl:DatatypeProperty ;
                       rdfs:comment "Использовать только дочерние отношения" ;
                       rdfs:label "характеристика элемента благоустройства" .
+
+
+###  http://www.w3id.org/citygraph-core#topDataNature
+cg:topDataNature rdf:type owl:DatatypeProperty ;
+                 rdfs:label "характеристика природного объекта" .
+
+
+###  http://www.w3id.org/citygraph-core#topEcologyParam
+cg:topEcologyParam rdf:type owl:DatatypeProperty ;
+                   rdfs:label "экологический параметр" .
 
 
 #################################################################
@@ -1427,6 +1485,12 @@ cg:AgreementDoc rdf:type owl:Class ;
                 rdfs:label "Договор" .
 
 
+###  http://www.w3id.org/citygraph-core#AirSpaceObject
+cg:AirSpaceObject rdf:type owl:Class ;
+                  rdfs:subClassOf cg:NatureObject ;
+                  rdfs:label "Воздушное пространство" .
+
+
 ###  http://www.w3id.org/citygraph-core#Airport
 cg:Airport rdf:type owl:Class ;
            rdfs:subClassOf cg:Terminal ;
@@ -1557,6 +1621,12 @@ cg:BortStones rdf:type owl:Class ;
               rdfs:subClassOf cg:Covering ;
               rdfs:label "Бортовые камни" ,
                          "Поребрки" .
+
+
+###  http://www.w3id.org/citygraph-core#Boulevard
+cg:Boulevard rdf:type owl:Class ;
+             rdfs:subClassOf cg:GreenObject ;
+             rdfs:label "Бульвар" .
 
 
 ###  http://www.w3id.org/citygraph-core#Bowling
@@ -1700,9 +1770,15 @@ cg:Cinema rdf:type owl:Class ;
           rdfs:label "Кинотеатр" .
 
 
+###  http://www.w3id.org/citygraph-core#CityForest
+cg:CityForest rdf:type owl:Class ;
+              rdfs:subClassOf cg:Forest ;
+              rdfs:label "Городской лес" .
+
+
 ###  http://www.w3id.org/citygraph-core#CityGarden
 cg:CityGarden rdf:type owl:Class ;
-              rdfs:subClassOf cg:PublicObject ;
+              rdfs:subClassOf cg:GreenObject ;
               rdfs:label "Сад" .
 
 
@@ -1746,6 +1822,12 @@ cg:Component rdf:type owl:Class ;
 cg:ConcertHall rdf:type owl:Class ;
                rdfs:subClassOf cg:CulturalObject ;
                rdfs:label "Концертный зал" .
+
+
+###  http://www.w3id.org/citygraph-core#ConservancyArea
+cg:ConservancyArea rdf:type owl:Class ;
+                   rdfs:subClassOf cg:Forest ;
+                   rdfs:label "Заповедник" .
 
 
 ###  http://www.w3id.org/citygraph-core#Country
@@ -1871,7 +1953,7 @@ cg:FederalCity rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#FederalGov
 cg:FederalGov rdf:type owl:Class ;
               rdfs:subClassOf cg:GovernmentBody ;
-              rdfs:label "Федеральный орга власти" .
+              rdfs:label "Федеральный орган власти" .
 
 
 ###  http://www.w3id.org/citygraph-core#FederalGovernment
@@ -1914,6 +1996,30 @@ cg:FireStation rdf:type owl:Class ;
 cg:Flowerbed rdf:type owl:Class ;
              rdfs:subClassOf cg:StreetFurniture ;
              rdfs:label "Клумба" .
+
+
+###  http://www.w3id.org/citygraph-core#Forest
+cg:Forest rdf:type owl:Class ;
+          rdfs:subClassOf cg:GreenObject ;
+          rdfs:label "Лесной массив" .
+
+
+###  http://www.w3id.org/citygraph-core#ForestPark
+cg:ForestPark rdf:type owl:Class ;
+              rdfs:subClassOf cg:Forest ;
+              rdfs:label "Лесопарк" .
+
+
+###  http://www.w3id.org/citygraph-core#ForestReserve
+cg:ForestReserve rdf:type owl:Class ;
+                 rdfs:subClassOf cg:Forest ;
+                 rdfs:label "Заказник" .
+
+
+###  http://www.w3id.org/citygraph-core#Forestry
+cg:Forestry rdf:type owl:Class ;
+            rdfs:subClassOf cg:StateOrganization ;
+            rdfs:label "Лесничество" .
 
 
 ###  http://www.w3id.org/citygraph-core#Fountain
@@ -2012,6 +2118,13 @@ cg:GreenRoof rdf:type owl:Class ;
 cg:GroceryStore rdf:type owl:Class ;
                 rdfs:subClassOf cg:RetailStore ;
                 rdfs:label "Продуктовый магазин" .
+
+
+###  http://www.w3id.org/citygraph-core#GroundObject
+cg:GroundObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:NatureObject ;
+                rdfs:comment "Описание почвеных слоев и элементов почвы" ;
+                rdfs:label "Почва" .
 
 
 ###  http://www.w3id.org/citygraph-core#GuestHouse
@@ -2424,6 +2537,12 @@ cg:OKTMO rdf:type owl:Class ;
          rdfs:subClassOf cg:Reference .
 
 
+###  http://www.w3id.org/citygraph-core#OOPT
+cg:OOPT rdf:type owl:Class ;
+        rdfs:subClassOf cg:NatureObject ;
+        rdfs:label "Особо охраняемая природная территория" .
+
+
 ###  http://www.w3id.org/citygraph-core#Oblast
 cg:Oblast rdf:type owl:Class ;
           rdfs:subClassOf cg:Region ;
@@ -2597,12 +2716,14 @@ cg:President rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#PresidentAdministration
 cg:PresidentAdministration rdf:type owl:Class ;
-                           rdfs:subClassOf cg:President .
+                           rdfs:subClassOf cg:President ;
+                           rdfs:label "Администрация Президента" .
 
 
 ###  http://www.w3id.org/citygraph-core#PresidentHumanRightsSovet
 cg:PresidentHumanRightsSovet rdf:type owl:Class ;
-                             rdfs:subClassOf cg:President .
+                             rdfs:subClassOf cg:President ;
+                             rdfs:label "Совет по правам человека при президенте" .
 
 
 ###  http://www.w3id.org/citygraph-core#Procedure
@@ -2759,6 +2880,12 @@ cg:Republic rdf:type owl:Class ;
             rdfs:label "Республика" .
 
 
+###  http://www.w3id.org/citygraph-core#Reservoir
+cg:Reservoir rdf:type owl:Class ;
+             rdfs:subClassOf cg:WaterObject ;
+             rdfs:label "Резервуар" .
+
+
 ###  http://www.w3id.org/citygraph-core#Restaurant
 cg:Restaurant rdf:type owl:Class ;
               rdfs:subClassOf cg:Eatery ;
@@ -2873,10 +3000,22 @@ cg:SmallArchitecture rdf:type owl:Class ;
                      rdfs:label "МАФ" .
 
 
+###  http://www.w3id.org/citygraph-core#SmallCityGarden
+cg:SmallCityGarden rdf:type owl:Class ;
+                   rdfs:subClassOf cg:SmallGarden ;
+                   rdfs:label "Городской сквер" .
+
+
 ###  http://www.w3id.org/citygraph-core#SmallGarden
 cg:SmallGarden rdf:type owl:Class ;
-               rdfs:subClassOf cg:PublicObject ;
+               rdfs:subClassOf cg:GreenObject ;
                rdfs:label "Сквер" .
+
+
+###  http://www.w3id.org/citygraph-core#SmallGardenInBlock
+cg:SmallGardenInBlock rdf:type owl:Class ;
+                      rdfs:subClassOf cg:SmallGarden ;
+                      rdfs:label "Внутриквартальный сквер" .
 
 
 ###  http://www.w3id.org/citygraph-core#SocialGroup
@@ -3201,6 +3340,12 @@ cg:WorkType rdf:type owl:Class ;
 cg:WorkingAgePopulation rdf:type owl:Class ;
                         rdfs:subClassOf cg:SocialGroup ;
                         rdfs:label "Население трудоспособного возраста" .
+
+
+###  http://www.w3id.org/citygraph-core#ZNOP
+cg:ZNOP rdf:type owl:Class ;
+        rdfs:subClassOf cg:GreenObject ;
+        rdfs:label "Зеленое насаждение общего пользования" .
 
 
 ###  http://xmlns.com/foaf/spec/#term_Agent
