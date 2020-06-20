@@ -137,6 +137,9 @@
         <Class IRI="#BortStones"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BotanicGarden"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Boulevard"/>
     </Declaration>
     <Declaration>
@@ -548,7 +551,16 @@
         <Class IRI="#NII"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#NationalPark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NatureMonument"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#NatureObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NaturePark"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NetBus"/>
@@ -1205,9 +1217,6 @@
         <DataProperty IRI="#hasCrosswalkCharacteristic"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasCulturalStatus"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasDenomination"/>
     </Declaration>
     <Declaration>
@@ -1242,6 +1251,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasGarbageAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGovStatus"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasHeight"/>
@@ -1812,6 +1824,10 @@
         <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BotanicGarden"/>
+        <Class IRI="#OOPT"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Boulevard"/>
         <Class IRI="#GreenObject"/>
     </SubClassOf>
@@ -1945,7 +1961,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConservancyArea"/>
-        <Class IRI="#Forest"/>
+        <Class IRI="#OOPT"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Country"/>
@@ -2061,7 +2077,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ForestReserve"/>
-        <Class IRI="#Forest"/>
+        <Class IRI="#OOPT"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Forestry"/>
@@ -2352,8 +2368,20 @@
         <Class IRI="#HelthFacility"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#NationalPark"/>
+        <Class IRI="#OOPT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NatureMonument"/>
+        <Class IRI="#OOPT"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#NatureObject"/>
         <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaturePark"/>
+        <Class IRI="#OOPT"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NetBus"/>
@@ -3530,7 +3558,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasFederalMeaning"/>
-        <DataProperty IRI="#hasCulturalStatus"/>
+        <DataProperty IRI="#hasGovStatus"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasFloors"/>
@@ -3606,7 +3634,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasLocalMeaning"/>
-        <DataProperty IRI="#hasCulturalStatus"/>
+        <DataProperty IRI="#hasGovStatus"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasMaxFloors"/>
@@ -3646,7 +3674,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasRegionalMeaning"/>
-        <DataProperty IRI="#hasCulturalStatus"/>
+        <DataProperty IRI="#hasGovStatus"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasReligious"/>
@@ -3778,7 +3806,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasWorldMeaning"/>
-        <DataProperty IRI="#hasCulturalStatus"/>
+        <DataProperty IRI="#hasGovStatus"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasYearConstruct"/>
@@ -4003,6 +4031,14 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasGarbageAmount"/>
         <Class IRI="#Townhouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGovStatus"/>
+        <Class IRI="#CulturalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGovStatus"/>
+        <Class IRI="#NatureObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasHeight"/>
@@ -5244,6 +5280,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BotanicGarden</IRI>
+        <Literal>Ботанический сад</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Boulevard</IRI>
         <Literal>Бульвар</Literal>
     </AnnotationAssertion>
@@ -6083,6 +6124,16 @@
         <Literal>Научно-исследовательский институт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NationalPark</IRI>
+        <Literal>Национальный парк</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NatureMonument</IRI>
+        <Literal>Природный памятник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NatureObject</IRI>
         <Literal>Объект живой природы (например, зелёное насаждение)</Literal>
@@ -6091,6 +6142,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NatureObject</IRI>
         <Literal>Природный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NaturePark</IRI>
+        <Literal>Природный парк</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7244,11 +7300,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCulturalStatus</IRI>
-        <Literal>имеет культурный статус</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDenomination</IRI>
         <Literal>конфессия</Literal>
     </AnnotationAssertion>
@@ -7316,6 +7367,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasGarbageAmount</IRI>
         <Literal>имеет количество мусоропроводов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGovStatus</IRI>
+        <Literal>имеет статус государственного значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

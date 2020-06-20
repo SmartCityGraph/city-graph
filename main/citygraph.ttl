@@ -526,11 +526,6 @@ cg:hasCrosswalkCharacteristic rdf:type owl:DatatypeProperty ;
                               rdfs:label "характеристики пешеходного перехода" .
 
 
-###  http://www.w3id.org/citygraph-core#hasCulturalStatus
-cg:hasCulturalStatus rdf:type owl:DatatypeProperty ;
-                     rdfs:label "имеет культурный статус" .
-
-
 ###  http://www.w3id.org/citygraph-core#hasDenomination
 cg:hasDenomination rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf cg:hasReligiousObjectCharacteristic ;
@@ -593,7 +588,7 @@ cg:hasFailureStatus rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasFederalMeaning
 cg:hasFederalMeaning rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf cg:hasCulturalStatus ;
+                     rdfs:subPropertyOf cg:hasGovStatus ;
                      rdfs:range xsd:boolean ;
                      rdfs:label "Федерального значения" .
 
@@ -619,6 +614,13 @@ cg:hasGarbageAmount rdf:type owl:DatatypeProperty ;
                                 cg:Townhouse ;
                     rdfs:range xsd:int ;
                     rdfs:label "имеет количество мусоропроводов" .
+
+
+###  http://www.w3id.org/citygraph-core#hasGovStatus
+cg:hasGovStatus rdf:type owl:DatatypeProperty ;
+                rdfs:domain cg:CulturalObject ,
+                            cg:NatureObject ;
+                rdfs:label "имеет статус государственного значения" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasHeight
@@ -781,7 +783,7 @@ cg:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasLocalMeaning
 cg:hasLocalMeaning rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf cg:hasCulturalStatus ;
+                   rdfs:subPropertyOf cg:hasGovStatus ;
                    rdfs:range xsd:boolean ;
                    rdfs:label "Местного значения" .
 
@@ -936,7 +938,7 @@ cg:hasRailwayCrossing rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasRegionalMeaning
 cg:hasRegionalMeaning rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf cg:hasCulturalStatus ;
+                      rdfs:subPropertyOf cg:hasGovStatus ;
                       rdfs:range xsd:boolean ;
                       rdfs:label "Регионального значения" .
 
@@ -1292,7 +1294,7 @@ cg:hasWebsite rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasWorldMeaning
 cg:hasWorldMeaning rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf cg:hasCulturalStatus ;
+                   rdfs:subPropertyOf cg:hasGovStatus ;
                    rdfs:range xsd:boolean ;
                    rdfs:label "Мирового значения" .
 
@@ -1623,6 +1625,12 @@ cg:BortStones rdf:type owl:Class ;
                          "Поребрки" .
 
 
+###  http://www.w3id.org/citygraph-core#BotanicGarden
+cg:BotanicGarden rdf:type owl:Class ;
+                 rdfs:subClassOf cg:OOPT ;
+                 rdfs:label "Ботанический сад" .
+
+
 ###  http://www.w3id.org/citygraph-core#Boulevard
 cg:Boulevard rdf:type owl:Class ;
              rdfs:subClassOf cg:GreenObject ;
@@ -1826,7 +1834,7 @@ cg:ConcertHall rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#ConservancyArea
 cg:ConservancyArea rdf:type owl:Class ;
-                   rdfs:subClassOf cg:Forest ;
+                   rdfs:subClassOf cg:OOPT ;
                    rdfs:label "Заповедник" .
 
 
@@ -2012,7 +2020,7 @@ cg:ForestPark rdf:type owl:Class ;
 
 ###  http://www.w3id.org/citygraph-core#ForestReserve
 cg:ForestReserve rdf:type owl:Class ;
-                 rdfs:subClassOf cg:Forest ;
+                 rdfs:subClassOf cg:OOPT ;
                  rdfs:label "Заказник" .
 
 
@@ -2455,11 +2463,29 @@ cg:NII rdf:type owl:Class ;
        rdfs:label "Научно-исследовательский институт" .
 
 
+###  http://www.w3id.org/citygraph-core#NationalPark
+cg:NationalPark rdf:type owl:Class ;
+                rdfs:subClassOf cg:OOPT ;
+                rdfs:label "Национальный парк" .
+
+
+###  http://www.w3id.org/citygraph-core#NatureMonument
+cg:NatureMonument rdf:type owl:Class ;
+                  rdfs:subClassOf cg:OOPT ;
+                  rdfs:label "Природный памятник" .
+
+
 ###  http://www.w3id.org/citygraph-core#NatureObject
 cg:NatureObject rdf:type owl:Class ;
                 rdfs:subClassOf cg:FunctionalObject ;
                 rdfs:comment "Объект живой природы (например, зелёное насаждение)" ;
                 rdfs:label "Природный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#NaturePark
+cg:NaturePark rdf:type owl:Class ;
+              rdfs:subClassOf cg:OOPT ;
+              rdfs:label "Природный парк" .
 
 
 ###  http://www.w3id.org/citygraph-core#NetBus
