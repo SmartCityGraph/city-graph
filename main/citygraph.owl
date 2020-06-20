@@ -71,6 +71,9 @@
         <Class IRI="#AgreementDoc"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#AirSpaceObject"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Airport"/>
     </Declaration>
     <Declaration>
@@ -132,6 +135,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#BortStones"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boulevard"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Bowling"/>
@@ -203,6 +209,9 @@
         <Class IRI="#Cinema"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CityForest"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CityGarden"/>
     </Declaration>
     <Declaration>
@@ -227,7 +236,13 @@
         <Class IRI="#ConcertHall"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ConservancyArea"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Covering"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CreativeClass"/>
@@ -249,6 +264,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrinkFontain"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Eatery"/>
@@ -305,6 +323,18 @@
         <Class IRI="#Flowerbed"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Forest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ForestPark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ForestReserve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forestry"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Fountain"/>
     </Declaration>
     <Declaration>
@@ -347,7 +377,13 @@
         <Class IRI="#GreenObject"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#GreenRoof"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#GroceryStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroundObject"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GuestHouse"/>
@@ -551,6 +587,9 @@
         <Class IRI="#OKTMO"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OOPT"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Oblast"/>
     </Declaration>
     <Declaration>
@@ -719,6 +758,9 @@
         <Class IRI="#Republic"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Reservoir"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Restaurant"/>
     </Declaration>
     <Declaration>
@@ -767,13 +809,22 @@
         <Class IRI="#Sidewalk"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Skalodrom"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Slope"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SmallArchitecrure"/>
+        <Class IRI="#SmallArchitecture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallCityGarden"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SmallGarden"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallGardenInBlock"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SocialGroup"/>
@@ -786,6 +837,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#SportComplex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sportground"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SportsClass"/>
@@ -908,6 +962,9 @@
         <Class IRI="#UrbanSettlements"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#VerticalGreen"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VeterinaryHospital"/>
     </Declaration>
     <Declaration>
@@ -927,6 +984,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#WorkingAgePopulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ZNOP"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://xmlns.com/foaf/spec/#term_Agent"/>
@@ -1064,9 +1124,6 @@
         <DataProperty IRI="#hasApartmentsAmount"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasArchElememtsParameter"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasArchitectureType"/>
     </Declaration>
     <Declaration>
@@ -1122,6 +1179,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasClassificationCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCoastalProtectiveStrip"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCode"/>
@@ -1193,6 +1253,9 @@
         <DataProperty IRI="#hasIllumination"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasIlluminationPollution"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasInhabitableArea"/>
     </Declaration>
     <Declaration>
@@ -1209,6 +1272,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLayerDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLength"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLevel1"/>
@@ -1274,6 +1340,12 @@
         <DataProperty IRI="#hasOpeningHours"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasPM10value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPM25value"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasParkingArea"/>
     </Declaration>
     <Declaration>
@@ -1290,6 +1362,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasProvidedForChild"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRadioactivePollution"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasRailwayCrossing"/>
@@ -1424,6 +1499,9 @@
         <DataProperty IRI="#hasValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasWaterSafeZone"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasWebDomainZone"/>
     </Declaration>
     <Declaration>
@@ -1443,6 +1521,15 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#needElectricity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#topDataArchElement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#topDataNature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#topEcologyParam"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Bicyclers"/>
@@ -1633,6 +1720,10 @@
         <Class IRI="#Document"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AirSpaceObject"/>
+        <Class IRI="#NatureObject"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Airport"/>
         <Class IRI="#Terminal"/>
     </SubClassOf>
@@ -1650,7 +1741,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ArtificialRoughness"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AuthorizedAction"/>
@@ -1694,6 +1785,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Bench"/>
+        <Class IRI="#AchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bench"/>
         <Class IRI="#StreetFurniture"/>
     </SubClassOf>
     <SubClassOf>
@@ -1714,7 +1809,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BortStones"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boulevard"/>
+        <Class IRI="#GreenObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Bowling"/>
@@ -1809,8 +1908,12 @@
         <Class IRI="#CulturalObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CityForest"/>
+        <Class IRI="#Forest"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CityGarden"/>
-        <Class IRI="#PublicObject"/>
+        <Class IRI="#GreenObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Club"/>
@@ -1841,8 +1944,16 @@
         <Class IRI="#CulturalObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ConservancyArea"/>
+        <Class IRI="#Forest"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Country"/>
         <Class IRI="#AdministrativeUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Covering"/>
+        <Class IRI="#Component"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CreativeClass"/>
@@ -1867,6 +1978,10 @@
     <SubClassOf>
         <Class IRI="#District_City"/>
         <Class IRI="#District"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrinkFontain"/>
+        <Class IRI="#Fountain"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Eatery"/>
@@ -1937,6 +2052,22 @@
         <Class IRI="#StreetFurniture"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Forest"/>
+        <Class IRI="#GreenObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ForestPark"/>
+        <Class IRI="#Forest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ForestReserve"/>
+        <Class IRI="#Forest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Forestry"/>
+        <Class IRI="#StateOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Fountain"/>
         <Class IRI="#StreetFurniture"/>
     </SubClassOf>
@@ -1989,8 +2120,20 @@
         <Class IRI="#NatureObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#GreenRoof"/>
+        <Class IRI="#GreenObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreenRoof"/>
+        <Class IRI="#Surface"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#GroceryStore"/>
         <Class IRI="#RetailStore"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroundObject"/>
+        <Class IRI="#NatureObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#GuestHouse"/>
@@ -2054,7 +2197,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#InterRail"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#InterSettlementTerritory"/>
@@ -2126,7 +2269,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Markup"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MedicalEduInstitution"/>
@@ -2261,6 +2404,10 @@
         <Class IRI="#Reference"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#OOPT"/>
+        <Class IRI="#NatureObject"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Oblast"/>
         <Class IRI="#Region"/>
     </SubClassOf>
@@ -2270,7 +2417,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OpenLot"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OpenStairs"/>
@@ -2338,7 +2485,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pocket"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PointObject"/>
@@ -2473,6 +2620,10 @@
         <Class IRI="#Region"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Reservoir"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Restaurant"/>
         <Class IRI="#Eatery"/>
     </SubClassOf>
@@ -2522,7 +2673,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ServiceZone"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ShoppingEntertainmentCentre"/>
@@ -2537,16 +2688,28 @@
         <Class IRI="http://www.opengis.net/citygml/transportation/2.0/TrafficArea"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Skalodrom"/>
+        <Class IRI="#Sportground"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Slope"/>
         <Class IRI="#Relief"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SmallArchitecrure"/>
+        <Class IRI="#SmallArchitecture"/>
         <Class IRI="#AchitectureElement"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SmallCityGarden"/>
         <Class IRI="#SmallGarden"/>
-        <Class IRI="#PublicObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmallGarden"/>
+        <Class IRI="#GreenObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmallGardenInBlock"/>
+        <Class IRI="#SmallGarden"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SocialGroup"/>
@@ -2562,6 +2725,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SportComplex"/>
+        <Class IRI="#SportsObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sportground"/>
         <Class IRI="#SportsObject"/>
     </SubClassOf>
     <SubClassOf>
@@ -2610,7 +2777,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Surface"/>
-        <Class IRI="#Component"/>
+        <Class IRI="#AreaObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SwimmingPool"/>
@@ -2725,6 +2892,10 @@
         <Class IRI="#Municipality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#VerticalGreen"/>
+        <Class IRI="#StreetFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#VeterinaryHospital"/>
         <Class IRI="#MedicalObject"/>
     </SubClassOf>
@@ -2751,6 +2922,10 @@
     <SubClassOf>
         <Class IRI="#WorkingAgePopulation"/>
         <Class IRI="#SocialGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ZNOP"/>
+        <Class IRI="#GreenObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://xmlns.com/foaf/spec/#term_Group"/>
@@ -2926,10 +3101,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Bench"/>
-        <NamedIndividual IRI="#Скамья_12345"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#SmallArchitecrure"/>
         <NamedIndividual IRI="#Скамья_12345"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3235,7 +3406,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSurface"/>
-        <Class IRI="#Surface"/>
+        <Class IRI="#Covering"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasWorkType"/>
@@ -3279,7 +3450,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasBack"/>
-        <DataProperty IRI="#hasArchElememtsParameter"/>
+        <DataProperty IRI="#topDataArchElement"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasBuildingDescription"/>
@@ -3315,7 +3486,11 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCharge"/>
-        <DataProperty IRI="#hasArchElememtsParameter"/>
+        <DataProperty IRI="#topDataArchElement"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCoastalProtectiveStrip"/>
+        <DataProperty IRI="#topDataNature"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCode"/>
@@ -3374,6 +3549,14 @@
         <DataProperty IRI="#hasAddress"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasIllumination"/>
+        <DataProperty IRI="#topDataArchElement"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasIlluminationPollution"/>
+        <DataProperty IRI="#topEcologyParam"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasInhabitableArea"/>
         <DataProperty IRI="#hasArea"/>
     </SubDataPropertyOf>
@@ -3384,6 +3567,10 @@
     <SubDataPropertyOf>
         <DataProperty IRI="#hasKorpus"/>
         <DataProperty IRI="#hasAddress"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLength"/>
+        <DataProperty IRI="#topDataNature"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasLevel1"/>
@@ -3438,8 +3625,20 @@
         <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasPM10value"/>
+        <DataProperty IRI="#topEcologyParam"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPM25value"/>
+        <DataProperty IRI="#topEcologyParam"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasParkingArea"/>
         <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRadioactivePollution"/>
+        <DataProperty IRI="#topEcologyParam"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasRailwayCrossing"/>
@@ -3519,7 +3718,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasSeatsAmount"/>
-        <DataProperty IRI="#hasArchElememtsParameter"/>
+        <DataProperty IRI="#topDataArchElement"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasSlopedCurb"/>
@@ -3574,6 +3773,10 @@
         <DataProperty IRI="#hasClassificationCode"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasWaterSafeZone"/>
+        <DataProperty IRI="#topDataNature"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasWorldMeaning"/>
         <DataProperty IRI="#hasCulturalStatus"/>
     </SubDataPropertyOf>
@@ -3588,6 +3791,10 @@
     <SubDataPropertyOf>
         <DataProperty IRI="#hasYearRepair"/>
         <DataProperty IRI="#hasBuildingParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#needElectricity"/>
+        <DataProperty IRI="#topDataArchElement"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -3632,10 +3839,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasApartmentsAmount"/>
         <Class IRI="#Townhouse"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasArchElememtsParameter"/>
-        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasArchitectureType"/>
@@ -3710,12 +3913,12 @@
         <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasCharge"/>
-        <Class IRI="#Bench"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasClassificationCode"/>
         <Class IRI="#Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCoastalProtectiveStrip"/>
+        <Class IRI="#NatureObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasCode"/>
@@ -3815,11 +4018,11 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasIllumination"/>
-        <Class IRI="#AreaObject"/>
+        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasIllumination"/>
-        <Class IRI="#Green"/>
+        <Class IRI="#AreaObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasIllumination"/>
@@ -4026,10 +4229,6 @@
         <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasSeatsAmount"/>
-        <Class IRI="#Bench"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasSecondTitle"/>
         <Class IRI="#AdministrativeUnit"/>
     </DataPropertyDomain>
@@ -4142,6 +4341,10 @@
         <Class IRI="#Reference"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasWaterSafeZone"/>
+        <Class IRI="#NatureObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasWebDomainZone"/>
         <Class IRI="#AdministrativeUnit"/>
     </DataPropertyDomain>
@@ -4167,7 +4370,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#needElectricity"/>
-        <Class IRI="#StreetFurniture"/>
+        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -4274,6 +4477,10 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasCoastalProtectiveStrip"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasCode"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -4350,6 +4557,10 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasIlluminationPollution"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasInhabitableArea"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
@@ -4372,6 +4583,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasLayerDescription"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLength"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasLevel1"/>
@@ -4446,6 +4661,14 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasPM10value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPM25value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasParkingArea"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
@@ -4460,6 +4683,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasProvidedForChild"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRadioactivePollution"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasRailwayCrossing"/>
@@ -4632,6 +4859,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasValue"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWaterSafeZone"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasWebDomainZone"/>
@@ -4873,6 +5104,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AirSpaceObject</IRI>
+        <Literal>Воздушное пространство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Airport</IRI>
         <Literal>Аэропорт</Literal>
     </AnnotationAssertion>
@@ -5005,6 +5241,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BortStones</IRI>
         <Literal>Поребрки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Boulevard</IRI>
+        <Literal>Бульвар</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5173,6 +5414,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CityForest</IRI>
+        <Literal>Городской лес</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CityGarden</IRI>
         <Literal>Сад</Literal>
     </AnnotationAssertion>
@@ -5213,8 +5459,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConservancyArea</IRI>
+        <Literal>Заповедник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Country</IRI>
         <Literal>Страна</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Covering</IRI>
+        <Literal>Покрытие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5270,6 +5526,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Document</IRI>
         <Literal>Документ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DrinkFontain</IRI>
+        <Literal>Питьевой фонтан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5344,7 +5605,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalGov</IRI>
-        <Literal>Федеральный орга власти</Literal>
+        <Literal>Федеральный орган власти</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5380,6 +5641,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Flowerbed</IRI>
         <Literal>Клумба</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Forest</IRI>
+        <Literal>Лесной массив</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ForestPark</IRI>
+        <Literal>Лесопарк</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ForestReserve</IRI>
+        <Literal>Заказник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Forestry</IRI>
+        <Literal>Лесничество</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5463,8 +5744,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GreenRoof</IRI>
+        <Literal>Крышное озеленение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GroceryStore</IRI>
         <Literal>Продуктовый магазин</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GroundObject</IRI>
+        <Literal>Описание почвеных слоев и элементов почвы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GroundObject</IRI>
+        <Literal>Почва</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5873,6 +6169,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OOPT</IRI>
+        <Literal>Особо охраняемая природная территория</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Oblast</IRI>
         <Literal>Область</Literal>
     </AnnotationAssertion>
@@ -6053,6 +6354,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PresidentAdministration</IRI>
+        <Literal>Администрация Президента</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PresidentHumanRightsSovet</IRI>
+        <Literal>Совет по правам человека при президенте</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PrimarySchoolAge</IRI>
         <Literal>Дети младшего школьного возраста (от 7 до 11 лет)</Literal>
     </AnnotationAssertion>
@@ -6198,6 +6509,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reservoir</IRI>
+        <Literal>Резервуар</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Restaurant</IRI>
         <Literal>Ресторан</Literal>
     </AnnotationAssertion>
@@ -6288,18 +6604,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Skalodrom</IRI>
+        <Literal>Скалодром</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Slope</IRI>
         <Literal>Откос</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#SmallArchitecrure</IRI>
+        <IRI>#SmallArchitecture</IRI>
         <Literal>МАФ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmallCityGarden</IRI>
+        <Literal>Городской сквер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SmallGarden</IRI>
         <Literal>Сквер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmallGardenInBlock</IRI>
+        <Literal>Внутриквартальный сквер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6340,6 +6671,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SportComplex</IRI>
         <Literal>Спортивно-оздоровительный комплекс</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sportground</IRI>
+        <Literal>Дворовая спортивная площадка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6409,7 +6745,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Surface</IRI>
-        <Literal>Покрытие</Literal>
+        <Literal>Поверхность</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6583,6 +6919,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VerticalGreen</IRI>
+        <Literal>Вертикальное озеленение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VeterinaryHospital</IRI>
         <Literal>Ветеринарная клиника</Literal>
     </AnnotationAssertion>
@@ -6638,6 +6979,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ZNOP</IRI>
+        <Literal>Зеленое насаждение общего пользования</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#adjoin</IRI>
         <Literal>примыкает к</Literal>
     </AnnotationAssertion>
@@ -6690,11 +7036,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasApartmentsAmount</IRI>
         <Literal>имеет количество квартир</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasArchElememtsParameter</IRI>
-        <Literal>характеристики элементов благоустрйоства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6843,6 +7184,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoastalProtectiveStrip</IRI>
+        <Literal>Прибрежная защитная полоса</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCode</IRI>
         <Literal>код</Literal>
     </AnnotationAssertion>
@@ -6983,6 +7329,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasIlluminationPollution</IRI>
+        <Literal>Световое загрязнение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasInhabitableArea</IRI>
         <Literal>имеет площадь жилых помещений</Literal>
     </AnnotationAssertion>
@@ -7015,6 +7366,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLayerDescription</IRI>
         <Literal>имеет описание слоя</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLength</IRI>
+        <Literal>Длина</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7177,6 +7533,16 @@
         <Literal>имеет собственника</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPM10value</IRI>
+        <Literal>PM 10 параметр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPM25value</IRI>
+        <Literal>PM 2.5 параметр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasParkingArea</IRI>
         <Literal>Площадь парковки в границах земельного участка</Literal>
@@ -7220,6 +7586,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPublicAmenity</IRI>
         <Literal>имеет элемент благоустройства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRadioactivePollution</IRI>
+        <Literal>Радиоактивное загрязнянение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7463,6 +7834,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWaterSafeZone</IRI>
+        <Literal>водоохраняемая зона</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWebDomainZone</IRI>
         <Literal>доменная зона</Literal>
     </AnnotationAssertion>
@@ -7510,6 +7886,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#needElectricity</IRI>
         <Literal>требует электричества</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#topDataArchElement</IRI>
+        <Literal>Использовать только дочерние отношения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topDataArchElement</IRI>
+        <Literal>характеристика элемента благоустройства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topDataNature</IRI>
+        <Literal>характеристика природного объекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#topEcologyParam</IRI>
+        <Literal>экологический параметр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
