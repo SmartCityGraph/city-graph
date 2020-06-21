@@ -2174,7 +2174,7 @@ cg:Hostel rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#Hotel
 cg:Hotel rdf:type owl:Class ;
          rdfs:subClassOf cg:CommercialObject ;
-         rdfs:label "Гостиницы" .
+         rdfs:label "Гостиница" .
 
 
 ###  http://www.w3id.org/citygraph-core#House

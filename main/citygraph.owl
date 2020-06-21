@@ -5841,7 +5841,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Hotel</IRI>
-        <Literal>Гостиницы</Literal>
+        <Literal>Гостиница</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
