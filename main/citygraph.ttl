@@ -82,7 +82,7 @@ cg:hasCadastralDistrict rdf:type owl:ObjectProperty ;
 cg:hasCadastralNumber rdf:type owl:ObjectProperty ;
                       rdfs:domain cg:CadastralParcel ;
                       rdfs:range cg:CadastreNumber ;
-                      rdfs:label "имеет Кадастровый номер" .
+                      rdfs:label "имеет кадастровый номер" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasCadastralOkrug
@@ -162,7 +162,7 @@ cg:hasNestedObject rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasNetProperty
 cg:hasNetProperty rdf:type owl:ObjectProperty ;
-                  rdfs:label "атрибуты сетевого объекта" .
+                  rdfs:label "атрибут сетевого объекта" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasOKATO
@@ -385,7 +385,7 @@ cg:hasBuildingParameter rdf:type owl:DatatypeProperty ;
 cg:hasBuildingPart rdf:type owl:DatatypeProperty ;
                    rdfs:domain cg:Building ;
                    rdfs:range xsd:string ;
-                   rdfs:label "части здания отличающиеся по высоте/этажности" .
+                   rdfs:label "часть здания отличающаяся по высоте/этажности" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasBuildingParts
@@ -469,7 +469,7 @@ cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf cg:topDataNature ;
                              rdfs:domain cg:NatureObject ;
                              rdfs:range xsd:double ;
-                             rdfs:label "Прибрежная защитная полоса" .
+                             rdfs:label "прибрежная защитная полоса" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasCode
@@ -510,7 +510,7 @@ cg:hasCompressedAir rdf:type owl:DatatypeProperty ;
 cg:hasConditionsForWheel rdf:type owl:DatatypeProperty ;
                          rdfs:domain cg:FunctionalObject ;
                          rdfs:range xsd:string ;
-                         rdfs:label "условия для людей на колёсах" .
+                         rdfs:label "условия для маломобильных граждан" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasCrossingIsland
@@ -523,7 +523,7 @@ cg:hasCrossingIsland rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasCrosswalkCharacteristic
 cg:hasCrosswalkCharacteristic rdf:type owl:DatatypeProperty ;
-                              rdfs:label "характеристики пешеходного перехода" .
+                              rdfs:label "характеристика пешеходного перехода" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasDenomination
@@ -590,7 +590,7 @@ cg:hasFailureStatus rdf:type owl:DatatypeProperty ;
 cg:hasFederalMeaning rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf cg:hasGovStatus ;
                      rdfs:range xsd:boolean ;
-                     rdfs:label "Федерального значения" .
+                     rdfs:label "федерального значения" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasFloors
@@ -603,7 +603,7 @@ cg:hasFloors rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasFunctionalParameter
 cg:hasFunctionalParameter rdf:type owl:DatatypeProperty ;
-                          rdfs:label "Параметр функционального объекта" .
+                          rdfs:label "параметр функционального объекта" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasGarbageAmount
@@ -653,7 +653,7 @@ cg:hasIllumination rdf:type owl:DatatypeProperty ;
 cg:hasIlluminationPollution rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf cg:topEcologyParam ;
                             rdfs:range xsd:double ;
-                            rdfs:label "Световое загрязнение" .
+                            rdfs:label "световое загрязнение" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasInhabitableArea
@@ -705,7 +705,7 @@ cg:hasLayerDescription rdf:type owl:DatatypeProperty ;
 cg:hasLength rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:topDataNature ;
              rdfs:range xsd:double ;
-             rdfs:label "Длина" .
+             rdfs:label "длина" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasLevel1
@@ -785,7 +785,7 @@ cg:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
 cg:hasLocalMeaning rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf cg:hasGovStatus ;
                    rdfs:range xsd:boolean ;
-                   rdfs:label "Местного значения" .
+                   rdfs:label "местного значения" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasMajorRenovationDate
@@ -911,7 +911,7 @@ cg:hasPlaygroundInventory rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasPopulationCharacteristics
 cg:hasPopulationCharacteristics rdf:type owl:DatatypeProperty ;
-                                rdfs:label "имеет характеристики жителей" .
+                                rdfs:label "имеет характеристику жителей" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasProvidedForChild
@@ -925,7 +925,7 @@ cg:hasProvidedForChild rdf:type owl:DatatypeProperty ;
 cg:hasRadioactivePollution rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf cg:topEcologyParam ;
                            rdfs:range xsd:double ;
-                           rdfs:label "Радиоактивное загрязнянение" .
+                           rdfs:label "радиоактивное загрязнянение" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasRailwayCrossing
@@ -940,7 +940,7 @@ cg:hasRailwayCrossing rdf:type owl:DatatypeProperty ;
 cg:hasRegionalMeaning rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf cg:hasGovStatus ;
                       rdfs:range xsd:boolean ;
-                      rdfs:label "Регионального значения" .
+                      rdfs:label "регионального значения" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasReligious
@@ -961,7 +961,7 @@ cg:hasReligiousBuildingType rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/citygraph-core#hasReligiousObjectCharacteristic
 cg:hasReligiousObjectCharacteristic rdf:type owl:DatatypeProperty ;
-                                    rdfs:label "характеристики религиозных объектов" .
+                                    rdfs:label "характеристика религиозных объектов" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasResidentNumber
@@ -977,7 +977,7 @@ cg:hasRooms rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf cg:hasLivingObjectParameter ;
             rdfs:domain cg:LivingObject ;
             rdfs:range xsd:int ;
-            rdfs:label "комнаты квартир" .
+            rdfs:label "количество комнат в квартире" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasRoomsCommunal
@@ -985,7 +985,7 @@ cg:hasRoomsCommunal rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf cg:hasLivingObjectParameter ;
                     rdfs:domain cg:LivingObject ;
                     rdfs:range xsd:int ;
-                    rdfs:label "комнаты коммунальных квартир" .
+                    rdfs:label "количество комнат в коммунальной квартире" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_2
@@ -1160,7 +1160,7 @@ cg:hasStoveHeating rdf:type owl:DatatypeProperty ;
 cg:hasStringCadastralNumber rdf:type owl:DatatypeProperty ;
                             rdfs:domain cg:CadastreNumber ;
                             rdfs:range xsd:string ;
-                            rdfs:label "Кадастровый номер строкой" .
+                            rdfs:label "кадастровый номер строкой" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasStringSeries
@@ -1192,7 +1192,7 @@ cg:hasSurfaceType rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
                   rdfs:domain cg:Crosswalk ;
                   rdfs:range xsd:string ;
-                  rdfs:label "Материал поверхности" .
+                  rdfs:label "материал поверхности" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasTactilePaving
@@ -1240,7 +1240,7 @@ cg:hasTrafficSignalsSound rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
                           rdfs:domain cg:Crosswalk ;
                           rdfs:range xsd:boolean ;
-                          rdfs:label "звуковые указатели" .
+                          rdfs:label "звуковой указатель" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasUninhabitableArea
@@ -1296,7 +1296,7 @@ cg:hasWebsite rdf:type owl:DatatypeProperty ;
 cg:hasWorldMeaning rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf cg:hasGovStatus ;
                    rdfs:range xsd:boolean ;
-                   rdfs:label "Мирового значения" .
+                   rdfs:label "мирового значения" .
 
 
 ###  http://www.w3id.org/citygraph-core#hasYearConstruct
@@ -1621,8 +1621,8 @@ cg:Block rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#BortStones
 cg:BortStones rdf:type owl:Class ;
               rdfs:subClassOf cg:Covering ;
-              rdfs:label "Бортовые камни" ,
-                         "Поребрки" .
+              rdfs:label "Бортовой камень" ,
+                         "Поребрик" .
 
 
 ###  http://www.w3id.org/citygraph-core#BotanicGarden
@@ -2240,19 +2240,19 @@ cg:InterSettlementTerritory rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#IntracityAreas
 cg:IntracityAreas rdf:type owl:Class ;
                   rdfs:subClassOf cg:Municipality ;
-                  rdfs:label "Внутригородские территории" .
+                  rdfs:label "Внутригородская территория" .
 
 
 ###  http://www.w3id.org/citygraph-core#IntracityMunicipality
 cg:IntracityMunicipality rdf:type owl:Class ;
                          rdfs:subClassOf cg:Municipality ;
-                         rdfs:label "Внутригородские территории городов федерального значения" .
+                         rdfs:label "Внутригородская территория города федерального значения" .
 
 
 ###  http://www.w3id.org/citygraph-core#Intracity_District
 cg:Intracity_District rdf:type owl:Class ;
                       rdfs:subClassOf cg:District ;
-                      rdfs:label "Внутригородские районы" .
+                      rdfs:label "Внутригородской район" .
 
 
 ###  http://www.w3id.org/citygraph-core#KU_state
@@ -2626,7 +2626,7 @@ cg:Orphanage rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#OtherPopulationGroups
 cg:OtherPopulationGroups rdf:type owl:Class ;
                          rdfs:subClassOf cg:SocialGroup ;
-                         rdfs:label "Дополнительные группы горожан" .
+                         rdfs:label "Дополнительная группа горожан" .
 
 
 ###  http://www.w3id.org/citygraph-core#OutletCenter
@@ -2772,7 +2772,7 @@ cg:PublicHeatingSystemObject rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#PublicHome
 cg:PublicHome rdf:type owl:Class ;
               rdfs:subClassOf cg:PublicObject ;
-              rdfs:label "Дома" .
+              rdfs:label "Дом" .
 
 
 ###  http://www.w3id.org/citygraph-core#PublicNotRegistered
@@ -2969,7 +2969,7 @@ cg:RowingClub rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#RuralSettlements
 cg:RuralSettlements rdf:type owl:Class ;
                     rdfs:subClassOf cg:Municipality ;
-                    rdfs:label "Сельские поселения" .
+                    rdfs:label "Сельское поселение" .
 
 
 ###  http://www.w3id.org/citygraph-core#School
@@ -3213,7 +3213,7 @@ cg:Timetable rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#TouristPopulation
 cg:TouristPopulation rdf:type owl:Class ;
                      rdfs:subClassOf cg:SocialGroup ;
-                     rdfs:label "Туристы" .
+                     rdfs:label "Группа туристов" .
 
 
 ###  http://www.w3id.org/citygraph-core#Townhouse
@@ -3316,7 +3316,7 @@ cg:UrbanDistrict rdf:type owl:Class ;
 ###  http://www.w3id.org/citygraph-core#UrbanSettlements
 cg:UrbanSettlements rdf:type owl:Class ;
                     rdfs:subClassOf cg:Municipality ;
-                    rdfs:label "Городские поселения" .
+                    rdfs:label "Городское поселение" .
 
 
 ###  http://www.w3id.org/citygraph-core#VerticalGreen

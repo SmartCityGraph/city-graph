@@ -5271,12 +5271,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BortStones</IRI>
-        <Literal>Бортовые камни</Literal>
+        <Literal>Бортовой камень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BortStones</IRI>
-        <Literal>Поребрки</Literal>
+        <Literal>Поребрик</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5906,17 +5906,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IntracityAreas</IRI>
-        <Literal>Внутригородские территории</Literal>
+        <Literal>Внутригородская территория</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IntracityMunicipality</IRI>
-        <Literal>Внутригородские территории городов федерального значения</Literal>
+        <Literal>Внутригородская территория города федерального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Intracity_District</IRI>
-        <Literal>Внутригородские районы</Literal>
+        <Literal>Внутригородской район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6281,7 +6281,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OtherPopulationGroups</IRI>
-        <Literal>Дополнительные группы горожан</Literal>
+        <Literal>Дополнительная группа горожан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6441,7 +6441,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicHome</IRI>
-        <Literal>Дома</Literal>
+        <Literal>Дом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6616,7 +6616,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RuralSettlements</IRI>
-        <Literal>Сельские поселения</Literal>
+        <Literal>Сельское поселение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6871,7 +6871,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TouristPopulation</IRI>
-        <Literal>Туристы</Literal>
+        <Literal>Группа туристов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6971,7 +6971,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UrbanSettlements</IRI>
-        <Literal>Городские поселения</Literal>
+        <Literal>Городское поселение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7156,7 +7156,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingPart</IRI>
-        <Literal>части здания отличающиеся по высоте/этажности</Literal>
+        <Literal>часть здания отличающаяся по высоте/этажности</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7191,7 +7191,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCadastralNumber</IRI>
-        <Literal>имеет Кадастровый номер</Literal>
+        <Literal>имеет кадастровый номер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7241,7 +7241,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCoastalProtectiveStrip</IRI>
-        <Literal>Прибрежная защитная полоса</Literal>
+        <Literal>прибрежная защитная полоса</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7276,7 +7276,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasConditionsForWheel</IRI>
-        <Literal>условия для людей на колёсах</Literal>
+        <Literal>условия для маломобильных граждан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7296,7 +7296,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCrosswalkCharacteristic</IRI>
-        <Literal>характеристики пешеходного перехода</Literal>
+        <Literal>характеристика пешеходного перехода</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7341,7 +7341,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFederalMeaning</IRI>
-        <Literal>Федерального значения</Literal>
+        <Literal>федерального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7361,7 +7361,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFunctionalParameter</IRI>
-        <Literal>Параметр функционального объекта</Literal>
+        <Literal>параметр функционального объекта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7386,7 +7386,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasIlluminationPollution</IRI>
-        <Literal>Световое загрязнение</Literal>
+        <Literal>световое загрязнение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7426,7 +7426,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLength</IRI>
-        <Literal>Длина</Literal>
+        <Literal>длина</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7476,7 +7476,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLocalMeaning</IRI>
-        <Literal>Местного значения</Literal>
+        <Literal>местного значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7546,7 +7546,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasNetProperty</IRI>
-        <Literal>атрибуты сетевого объекта</Literal>
+        <Literal>атрибут сетевого объекта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7626,7 +7626,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPopulationCharacteristics</IRI>
-        <Literal>имеет характеристики жителей</Literal>
+        <Literal>имеет характеристику жителей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7646,7 +7646,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRadioactivePollution</IRI>
-        <Literal>Радиоактивное загрязнянение</Literal>
+        <Literal>радиоактивное загрязнянение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7656,7 +7656,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRegionalMeaning</IRI>
-        <Literal>Регионального значения</Literal>
+        <Literal>регионального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7671,7 +7671,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasReligiousObjectCharacteristic</IRI>
-        <Literal>характеристики религиозных объектов</Literal>
+        <Literal>характеристика религиозных объектов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7681,12 +7681,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms</IRI>
-        <Literal>комнаты квартир</Literal>
+        <Literal>количество комнат в квартире</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal</IRI>
-        <Literal>комнаты коммунальных квартир</Literal>
+        <Literal>количество комнат в коммунальной квартире</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7806,7 +7806,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStringCadastralNumber</IRI>
-        <Literal>Кадастровый номер строкой</Literal>
+        <Literal>кадастровый номер строкой</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7841,7 +7841,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSurfaceType</IRI>
-        <Literal>Материал поверхности</Literal>
+        <Literal>материал поверхности</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7871,7 +7871,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTrafficSignalsSound</IRI>
-        <Literal>звуковые указатели</Literal>
+        <Literal>звуковой указатель</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7911,7 +7911,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWorldMeaning</IRI>
-        <Literal>Мирового значения</Literal>
+        <Literal>мирового значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
