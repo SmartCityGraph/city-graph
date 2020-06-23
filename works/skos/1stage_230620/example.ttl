@@ -1,0 +1,189 @@
+@prefix : <https://w3id.org/citygraph-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix city-graph: <https://w3id.org/city-graph#> .
+
+<https://w3id.org/citygraph-core#> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#broaderTransitive
+
+skos:broader a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+
+skos:definition a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#except
+
+skos:except a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+
+skos:hasTopConcept a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+
+skos:inScheme a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#narrowerTransitive
+
+skos:narrower a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+
+skos:notation a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+
+skos:prefLabel a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+
+skos:topConceptOf a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+
+skos:Concept a owl:Class .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+
+skos:ConceptScheme a owl:Class .
+# 
+# https://w3id.org/city-graph#OKATO
+
+city-graph:OKATO a owl:Class .
+# 
+# https://w3id.org/city-graph#OKTMO
+
+city-graph:OKTMO a owl:Class .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/citygraph-core#OKATO_01000000000
+
+:OKATO_01000000000 a owl:NamedIndividual , skos:Concept , city-graph:OKATO ;
+	skos:narrowerTrnasitive :OKATO_01201000000 ;
+	skos:definition "01000000000" ;
+	skos:notation "01" ;
+	skos:notation "First Level" ;
+	skos:prefLabel "Алтайский край" .
+# 
+# https://w3id.org/citygraph-core#OKATO_01201000000
+
+:OKATO_01201000000 a owl:NamedIndividual , skos:Concept , city-graph:OKATO ;
+	skos:narrowerTrnasitive :OKATO_01201802000 ;
+	skos:boarderTrnasitive :OKATO_01000000000 ;
+	skos:definition "01201000000" ;
+	skos:notation "201" ;
+	skos:notation "Second Level" ;
+	skos:prefLabel "Алейский район" .
+# 
+# https://w3id.org/citygraph-core#OKATO_01201802000
+
+:OKATO_01201802000 a owl:NamedIndividual , skos:Concept , city-graph:OKATO ;
+	skos:narrowerTrnasitive :OKATO_01201802001 ;
+	skos:boarderTrnasitive :OKATO_01201000000 ;
+	skos:definition "01201802000" ;
+	skos:notation "802" ;
+	skos:notation "Third Level" ;
+	skos:prefLabel "Алейский" .
+# 
+# https://w3id.org/citygraph-core#OKATO_01201802001
+
+:OKATO_01201802001 a owl:NamedIndividual , skos:Concept , city-graph:OKATO ;
+	skos:boarderTrnasitive :OKATO_01201802000 ;
+	skos:definition "01201802001" ;
+	skos:notation "001" ;
+	skos:notation "Fourth Level" ;
+	skos:prefLabel "п Алейский" .
+# 
+# https://w3id.org/citygraph-core#OKTMO_01000000000
+
+:OKTMO_01000000000 a owl:NamedIndividual , skos:Concept , city-graph:OKTMO ;
+	skos:narrowerTrnasitive :OKTMO_01601000000 ;
+	skos:definition "01000000000" ;
+	skos:notation "01" ;
+	skos:notation "First Level" ;
+	skos:prefLabel "Алтайский край" .
+# 
+# https://w3id.org/citygraph-core#OKTMO_01601000000
+
+:OKTMO_01601000000 a owl:NamedIndividual , skos:Concept , city-graph:OKTMO ;
+	skos:narrowerTrnasitive :OKTMO_01601402000 ;
+	skos:boarderTrnasitive :OKTMO_01000000000 ;
+	skos:definition "01601000000" ;
+	skos:notation "601" ;
+	skos:notation "Second Level" ;
+	skos:prefLabel "Алейский муниципальный район" .
+# 
+# https://w3id.org/citygraph-core#OKTMO_01601402000
+
+:OKTMO_01601402000 a owl:NamedIndividual , skos:Concept , city-graph:OKTMO ;
+	skos:narrowerTrnasitive :OKTMO_01601402101 ;
+	skos:boarderTrnasitive :OKTMO_01601000000 ;
+	skos:definition "01601402000" ;
+	skos:notation "402" ;
+	skos:notation "Third Level" ;
+	skos:prefLabel "Алейский сельсовет" .
+# 
+# https://w3id.org/citygraph-core#OKTMO_01601402101
+
+:OKTMO_01601402101 a owl:NamedIndividual , skos:Concept , city-graph:OKTMO ;
+	skos:boarderTrnasitive :OKTMO_01601402000 ;
+	skos:definition "01601402101" ;
+	skos:notation "101" ;
+	skos:notation "Fourth Level" ;
+	skos:prefLabel "п Алейский" .
+# 
+
+
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
