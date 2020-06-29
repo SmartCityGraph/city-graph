@@ -1,0 +1,3666 @@
+@prefix : <http://www.w3id.org/citygraph-core> .
+@prefix cg: <http://www.w3id.org/citygraph-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/citygraph-core> .
+
+<http://www.w3id.org/citygraph-core> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/citygraph-core#adjoin
+cg:adjoin rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf cg:hasNetProperty ;
+          rdfs:label "примыкает к" .
+
+
+###  http://www.w3id.org/citygraph-core#designCodeSPb
+cg:designCodeSPb rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+                 rdfs:domain cg:LivingObject .
+
+
+###  http://www.w3id.org/citygraph-core#hasAddressObj
+cg:hasAddressObj rdf:type owl:ObjectProperty ;
+                 rdfs:domain cg:PhysicalObject ;
+                 rdfs:range cg:Address ;
+                 rdfs:label "имеет адрес (объект)" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAdmUnit
+cg:hasAdmUnit rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf cg:hasAddressObj ;
+              rdfs:domain cg:Address ;
+              rdfs:range cg:AdministrativeUnit ;
+              rdfs:label "имеет административно-территориальную связь" .
+
+
+###  http://www.w3id.org/citygraph-core#hasApartmentType
+cg:hasApartmentType rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+                    rdfs:domain cg:MultyAptHouse ,
+                                cg:TallMultyApt ,
+                                cg:Townhouse ;
+                    rdfs:label "имеет тип квартиры" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuidlingSeries
+cg:hasBuidlingSeries rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+                     rdfs:domain cg:LivingObject ;
+                     rdfs:label "имеет серию здания" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuildingSpecificProperties
+cg:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
+                                 rdfs:comment "Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения" ;
+                                 rdfs:label "атрибут сооружения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCadastralBlock
+cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf cg:hasCadastralNumber ;
+                     rdfs:domain cg:CadastreNumber ;
+                     rdfs:range cg:CadastralBlock ;
+                     rdfs:label "кадастровый квартал" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCadastralDistrict
+cg:hasCadastralDistrict rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf cg:hasCadastralNumber ;
+                        rdfs:domain cg:CadastreNumber ;
+                        rdfs:range cg:CadastralDistrict ;
+                        rdfs:label "кадастровый район" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCadastralNumber
+cg:hasCadastralNumber rdf:type owl:ObjectProperty ;
+                      rdfs:domain cg:CadastralParcel ;
+                      rdfs:range cg:CadastreNumber ;
+                      rdfs:label "имеет кадастровый номер" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCadastralOkrug
+cg:hasCadastralOkrug rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf cg:hasCadastralNumber ;
+                     rdfs:domain cg:CadastreNumber ;
+                     rdfs:range cg:CadastralOkrug ;
+                     rdfs:label "кадастровый округ" .
+
+
+###  http://www.w3id.org/citygraph-core#hasComp
+cg:hasComp rdf:type owl:ObjectProperty ;
+           rdfs:label "имеет компонент" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCompanyPosition
+cg:hasCompanyPosition rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf cg:hasPosition ;
+                      rdfs:domain cg:Position ;
+                      rdfs:range <http://xmlns.com/foaf/spec/#term_Organization> ;
+                      rdfs:label "должность в компании" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCoordinates
+cg:hasCoordinates rdf:type owl:ObjectProperty ;
+                  rdfs:domain cg:PhysicalObject ;
+                  rdfs:range cg:Geometry ;
+                  rdfs:comment "Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
+                  rdfs:label "гео-координаты" .
+
+
+###  http://www.w3id.org/citygraph-core#hasFunction
+cg:hasFunction rdf:type owl:ObjectProperty ;
+               rdfs:domain cg:PhysicalObject ;
+               rdfs:range cg:FunctionalObject ;
+               rdfs:comment "Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект" ;
+               rdfs:label "имеет функцию" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLand
+cg:hasLand rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+           rdfs:domain cg:Building ;
+           rdfs:range cg:Land ;
+           rdfs:label "расположено на земельном участке" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMajorRenovation
+cg:hasMajorRenovation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+                      rdfs:domain cg:Building ;
+                      rdfs:range cg:MajorRenovation ;
+                      rdfs:label "имеет капитальный ремонт" .
+
+
+###  http://www.w3id.org/citygraph-core#hasManagingOrganization
+cg:hasManagingOrganization rdf:type owl:ObjectProperty ;
+                           rdfs:domain cg:PhysicalObject ;
+                           rdfs:range <http://xmlns.com/foaf/spec/#term_Organization> ;
+                           rdfs:comment "Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)" ;
+                           rdfs:label "имеет управляющую организацию" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMetroStation
+cg:hasMetroStation rdf:type owl:ObjectProperty ;
+                   rdfs:range cg:MetroEntranceHall ;
+                   rdfs:label "станция метро" .
+
+
+###  http://www.w3id.org/citygraph-core#hasNestedObject
+cg:hasNestedObject rdf:type owl:ObjectProperty ;
+                   rdfs:domain cg:PhysicalObject ;
+                   rdfs:range cg:PhysicalObject ;
+                   rdfs:comment "Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)" ;
+                   rdfs:label "имеет вложенный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#hasNetProperty
+cg:hasNetProperty rdf:type owl:ObjectProperty ;
+                  rdfs:label "атрибут сетевого объекта" .
+
+
+###  http://www.w3id.org/citygraph-core#hasOKATO
+cg:hasOKATO rdf:type owl:ObjectProperty ;
+            rdfs:domain cg:District ,
+                        cg:Region ;
+            rdfs:range cg:OKATO ;
+            rdfs:label "ОКАТО" .
+
+
+###  http://www.w3id.org/citygraph-core#hasOKTMO
+cg:hasOKTMO rdf:type owl:ObjectProperty ;
+            rdfs:domain cg:Municipality ,
+                        cg:Region ;
+            rdfs:range cg:OKTMO ;
+            rdfs:label "ОКТМО" .
+
+
+###  http://www.w3id.org/citygraph-core#hasOwner
+cg:hasOwner rdf:type owl:ObjectProperty ;
+            rdfs:domain cg:CarVehicle ,
+                        cg:CommercialOrganization ,
+                        cg:LivingObject ,
+                        cg:Motorcycle ,
+                        cg:TruckVehicle ;
+            rdfs:range <http://xmlns.com/foaf/spec/#term_Person> ;
+            rdfs:comment "Связывает ФИзические объекты и Организации с их владельцами-людьми" ;
+            rdfs:label "имеет собственника" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPosition
+cg:hasPosition rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://xmlns.com/foaf/spec/#term_Person> ;
+               rdfs:label "имеет должность" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPublicAmenity
+cg:hasPublicAmenity rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+                    rdfs:domain cg:LivingObject ;
+                    rdfs:range cg:PublicObject ,
+                               cg:SportsObject ;
+                    rdfs:label "имеет элемент благоустройства" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStreet
+cg:hasStreet rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf cg:hasAddressObj ;
+             rdfs:domain cg:Address ;
+             rdfs:range cg:Street ;
+             rdfs:label "улица" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSubDoc
+cg:hasSubDoc rdf:type owl:ObjectProperty ;
+             rdfs:comment "Например, подзаконные акты, приложения и пр. Часть вышестоящего документа." ;
+             rdfs:label "документ, на основе другого документа" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSurface
+cg:hasSurface rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf cg:hasComp ;
+              rdfs:range cg:Covering ;
+              rdfs:label "имеет покрытие" .
+
+
+###  http://www.w3id.org/citygraph-core#hasWorkType
+cg:hasWorkType rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf cg:hasBuildingSpecificProperties ;
+               rdfs:domain cg:MajorRenovation ;
+               rdfs:range cg:WorkType ;
+               rdfs:label "имеет вид работ" .
+
+
+###  http://www.w3id.org/citygraph-core#includedIn
+cg:includedIn rdf:type owl:ObjectProperty ;
+              rdfs:domain cg:Municipality ,
+                          cg:PhysicalObject ;
+              rdfs:range cg:AdministrativeUnit ,
+                         cg:PhysicalObject ;
+              rdfs:label "входит в" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain cg:Building ;
+                    rdfs:range xsd:int .
+
+
+###  http://www.w3id.org/citygraph-core#CentralHotWaterWoods
+cg:CentralHotWaterWoods rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                        rdfs:domain cg:LivingObject ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:label "имеет горячее водоснабжение от дровяных колонок" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAbbr
+cg:hasAbbr rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain cg:PhysicalObject ;
+           rdfs:range xsd:string ;
+           rdfs:label "имеет сокращение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAccess
+cg:hasAccess rdf:type owl:DatatypeProperty ;
+             rdfs:domain cg:FunctionalObject ;
+             rdfs:range xsd:string ;
+             rdfs:label "тип доступа" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAddress
+cg:hasAddress rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain cg:Building ;
+              rdfs:range xsd:string ;
+              rdfs:label "имеет адрес" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAdministrativeCenter
+cg:hasAdministrativeCenter rdf:type owl:DatatypeProperty ;
+                           rdfs:domain cg:AdministrativeUnit ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "административный центр" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAgeGroupPercentage
+cg:hasAgeGroupPercentage rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf cg:hasPopulationCharacteristics ;
+                         rdfs:domain cg:LivingObject ;
+                         rdfs:range xsd:int ;
+                         rdfs:label "имеет процент жителей по возрасту" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAmenity
+cg:hasAmenity rdf:type owl:DatatypeProperty ;
+              rdfs:domain cg:FunctionalObject ;
+              rdfs:range xsd:string ;
+              rdfs:label "ОСМ класс" .
+
+
+###  http://www.w3id.org/citygraph-core#hasApartmentsAmount
+cg:hasApartmentsAmount rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                       rdfs:domain cg:MultyAptHouse ,
+                                   cg:TallMultyApt ,
+                                   cg:Townhouse ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "имеет количество квартир" .
+
+
+###  http://www.w3id.org/citygraph-core#hasArchitectureType
+cg:hasArchitectureType rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cg:Building ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "архитектурный стиль" .
+
+
+###  http://www.w3id.org/citygraph-core#hasArea
+cg:hasArea rdf:type owl:DatatypeProperty ;
+           rdfs:domain cg:AreaObject ;
+           rdfs:range xsd:float ;
+           rdfs:comment "Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества" ;
+           rdfs:label "имеет площадь" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAreaGeneral
+cg:hasAreaGeneral rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cg:hasArea ;
+                  rdfs:domain cg:AreaObject ;
+                  rdfs:range xsd:float ;
+                  rdfs:label "имеет общую площадь" .
+
+
+###  http://www.w3id.org/citygraph-core#hasAutoBoilerRoom
+cg:hasAutoBoilerRoom rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                     rdfs:domain cg:LivingObject ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "имеет автономную котельную" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBack
+cg:hasBack rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf cg:topDataArchElement ;
+           rdfs:domain cg:AchitectureElement ,
+                       cg:Bench ;
+           rdfs:range xsd:boolean ;
+           rdfs:label "имеет спинку" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuildingDescription
+cg:hasBuildingDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf cg:hasBuildingParameter ;
+                          rdfs:domain cg:Building ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Текстовое описание зданий, которое генерируется в базе данных" ;
+                          rdfs:label "имеет описание сооружения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuildingMaterial
+cg:hasBuildingMaterial rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf cg:hasBuildingParameter ;
+                       rdfs:domain cg:Building ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "материал здания" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuildingParameter
+cg:hasBuildingParameter rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Семейство характеристик сооружений" ;
+                        rdfs:label "характеристика сооружения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuildingPart
+cg:hasBuildingPart rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cg:Building ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "часть здания отличающаяся по высоте/этажности" .
+
+
+###  http://www.w3id.org/citygraph-core#hasBuildingParts
+cg:hasBuildingParts rdf:type owl:DatatypeProperty ;
+                    rdfs:domain cg:Building ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "деление здания на части" .
+
+
+###  http://www.w3id.org/citygraph-core#hasButtonOperated
+cg:hasButtonOperated rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                     rdfs:domain cg:Crosswalk ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "кнопочный переключатель" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCarWash
+cg:hasCarWash rdf:type owl:DatatypeProperty ;
+              rdfs:domain cg:FillingStation ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "автомойка" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCentralElectricity
+cg:hasCentralElectricity rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                         rdfs:domain cg:LivingObject ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "имеет центральное электроснабжение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCentralGas
+cg:hasCentralGas rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                 rdfs:domain cg:LivingObject ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "имеет центральное газоснабжение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCentralHeating
+cg:hasCentralHeating rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                     rdfs:domain cg:LivingObject ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "имеет центральное отопление" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCentralHotWater
+cg:hasCentralHotWater rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "имеет центральное горячее водоснабжение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCentralHotWaterGas
+cg:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                         rdfs:domain cg:LivingObject ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "имеет горячее водоснабжение от газовых колонок" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCharge
+cg:hasCharge rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:topDataArchElement ;
+             rdfs:domain cg:AchitectureElement ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "имеет вход для зарядного устройства" .
+
+
+###  http://www.w3id.org/citygraph-core#hasClassificationCode
+cg:hasClassificationCode rdf:type owl:DatatypeProperty ;
+                         rdfs:domain cg:Reference ;
+                         rdfs:label "используется в классификаторе" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCoastalProtectiveStrip
+cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf cg:topDataNature ;
+                             rdfs:domain cg:NatureObject ;
+                             rdfs:range xsd:double ;
+                             rdfs:label "прибрежная защитная полоса" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCode
+cg:hasCode rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf cg:hasClassificationCode ;
+           rdfs:domain cg:AdministrativeUnit ,
+                       cg:Reference ;
+           rdfs:range xsd:string ;
+           rdfs:label "код" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCommunalApartmentsAmount
+cg:hasCommunalApartmentsAmount rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                               rdfs:domain cg:MultyAptHouse ,
+                                           cg:TallMultyApt ,
+                                           cg:Townhouse ;
+                               rdfs:range xsd:int ;
+                               rdfs:label "имеет количество коммунальных квартир" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCommunalFacilitiesArea
+cg:hasCommunalFacilitiesArea rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf cg:hasArea ;
+                             rdfs:domain cg:LivingObject ;
+                             rdfs:range xsd:float ;
+                             rdfs:label "имеет площадь помещений, входящих в состав общего имущества" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCompressedAir
+cg:hasCompressedAir rdf:type owl:DatatypeProperty ;
+                    rdfs:domain cg:FillingStation ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "оборудование с сжатым воздухом" .
+
+
+###  http://www.w3id.org/citygraph-core#hasConditionsForWheel
+cg:hasConditionsForWheel rdf:type owl:DatatypeProperty ;
+                         rdfs:domain cg:FunctionalObject ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "условия для маломобильных граждан" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCrossingIsland
+cg:hasCrossingIsland rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                     rdfs:domain cg:Crosswalk ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "островок безопасности" .
+
+
+###  http://www.w3id.org/citygraph-core#hasCrosswalkCharacteristic
+cg:hasCrosswalkCharacteristic rdf:type owl:DatatypeProperty ;
+                              rdfs:label "характеристика пешеходного перехода" .
+
+
+###  http://www.w3id.org/citygraph-core#hasDenomination
+cg:hasDenomination rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasReligiousObjectCharacteristic ;
+                   rdfs:domain cg:Cemetery ,
+                               cg:ReligiousObject ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "конфессия" .
+
+
+###  http://www.w3id.org/citygraph-core#hasDesignedModifed
+cg:hasDesignedModifed rdf:type owl:DatatypeProperty ;
+                      rdfs:domain cg:Building ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "изменения в дизайне после ремонта" .
+
+
+###  http://www.w3id.org/citygraph-core#hasDocDate
+cg:hasDocDate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasDocument ;
+              rdfs:domain cg:Document ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "дата документа" .
+
+
+###  http://www.w3id.org/citygraph-core#hasDocTitle
+cg:hasDocTitle rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf cg:hasDocument ;
+               rdfs:domain cg:Document ;
+               rdfs:range xsd:string ;
+               rdfs:label "название документа" .
+
+
+###  http://www.w3id.org/citygraph-core#hasDocument
+cg:hasDocument rdf:type owl:DatatypeProperty ;
+               rdfs:label "имеет документ" .
+
+
+###  http://www.w3id.org/citygraph-core#hasDomofonAmount
+cg:hasDomofonAmount rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasBuildingParameter ;
+                    rdfs:domain cg:Building ;
+                    rdfs:range xsd:int ;
+                    rdfs:label "имеет количество переговорно-замочных устройств" .
+
+
+###  http://www.w3id.org/citygraph-core#hasEmergency
+cg:hasEmergency rdf:type owl:DatatypeProperty ;
+                rdfs:domain cg:Hospital ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "скорая помощь" .
+
+
+###  http://www.w3id.org/citygraph-core#hasFailureStatus
+cg:hasFailureStatus rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasBuildingParameter ;
+                    rdfs:domain cg:Building ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "является аварийным" .
+
+
+###  http://www.w3id.org/citygraph-core#hasFederalMeaning
+cg:hasFederalMeaning rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasGovStatus ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "федерального значения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasFloors
+cg:hasFloors rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasBuildingParameter ;
+             rdfs:domain cg:Building ;
+             rdfs:range xsd:int ;
+             rdfs:label "имеет количество этажей" .
+
+
+###  http://www.w3id.org/citygraph-core#hasFunctionalParameter
+cg:hasFunctionalParameter rdf:type owl:DatatypeProperty ;
+                          rdfs:label "параметр функционального объекта" .
+
+
+###  http://www.w3id.org/citygraph-core#hasGarbageAmount
+cg:hasGarbageAmount rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                    rdfs:domain cg:MultyAptHouse ,
+                                cg:TallMultyApt ,
+                                cg:Townhouse ;
+                    rdfs:range xsd:int ;
+                    rdfs:label "имеет количество мусоропроводов" .
+
+
+###  http://www.w3id.org/citygraph-core#hasGovStatus
+cg:hasGovStatus rdf:type owl:DatatypeProperty ;
+                rdfs:domain cg:CulturalObject ,
+                            cg:NatureObject ;
+                rdfs:label "имеет статус государственного значения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasHeight
+cg:hasHeight rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasBuildingParameter ;
+             rdfs:domain cg:AchitectureElement ,
+                         cg:Building ;
+             rdfs:range xsd:int ;
+             rdfs:label "имеет высоту" .
+
+
+###  http://www.w3id.org/citygraph-core#hasHouseNumber
+cg:hasHouseNumber rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cg:hasAddress ;
+                  rdfs:domain cg:Address ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.w3id.org/citygraph-core#hasIllumination
+cg:hasIllumination rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:topDataArchElement ;
+                   rdfs:domain cg:AchitectureElement ,
+                               cg:AreaObject ,
+                               cg:RoadNetworkObject ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "имеет освещение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasIlluminationPollution
+cg:hasIlluminationPollution rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf cg:topEcologyParam ;
+                            rdfs:range xsd:double ;
+                            rdfs:label "световое загрязнение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasInhabitableArea
+cg:hasInhabitableArea rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasArea ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:float ;
+                      rdfs:label "имеет площадь жилых помещений" .
+
+
+###  http://www.w3id.org/citygraph-core#hasInitiationDate
+cg:hasInitiationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cg:OKATO ,
+                                 cg:OKTMO ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "дата введения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasKerb
+cg:hasKerb rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+           rdfs:domain cg:Crosswalk ;
+           rdfs:range xsd:string ;
+           rdfs:label "разница между переходом и тротуаром" .
+
+
+###  http://www.w3id.org/citygraph-core#hasKorpus
+cg:hasKorpus rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasAddress ;
+             rdfs:domain cg:Street ;
+             rdfs:range xsd:string .
+
+
+###  http://www.w3id.org/citygraph-core#hasLPGFuel
+cg:hasLPGFuel rdf:type owl:DatatypeProperty ;
+              rdfs:domain cg:FillingStation ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "сжиженное топливо" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLayerDescription
+cg:hasLayerDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:anyURI ;
+                       rdfs:comment "Описание слоя, созданного пользователем" ;
+                       rdfs:label "имеет описание слоя" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLength
+cg:hasLength rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:topDataNature ;
+             rdfs:range xsd:double ;
+             rdfs:label "длина" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLevel1
+cg:hasLevel1 rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasOKLevel ;
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             rdfs:range xsd:string ;
+             rdfs:label "1-ый уровень" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLevel2
+cg:hasLevel2 rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasOKLevel ;
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             rdfs:range xsd:string ;
+             rdfs:label "2-ой уровень" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLevel3
+cg:hasLevel3 rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasOKLevel ;
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             rdfs:range xsd:string ;
+             rdfs:label "3-ий уровень" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLevel4
+cg:hasLevel4 rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasOKLevel ;
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             rdfs:range xsd:string ;
+             rdfs:label "4-ый уровень" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLicensePlate
+cg:hasLicensePlate rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasMovableParameter ;
+                   rdfs:domain cg:MovableObject ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "имеет номер зарегистрированный" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLiftAmount
+cg:hasLiftAmount rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf cg:hasBuildingParameter ;
+                 rdfs:domain cg:Building ;
+                 rdfs:range xsd:int ;
+                 rdfs:label "имеет количество лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLit
+cg:hasLit rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+          rdfs:domain cg:Crosswalk ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "освещение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLitera
+cg:hasLitera rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf cg:hasAddress ;
+             rdfs:domain cg:Street ;
+             rdfs:range xsd:string .
+
+
+###  http://www.w3id.org/citygraph-core#hasLivingObjectParameter
+cg:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Семейство характеристик жилых объектов" ;
+                            rdfs:label "характеристика жилого дома" .
+
+
+###  http://www.w3id.org/citygraph-core#hasLocalMeaning
+cg:hasLocalMeaning rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasGovStatus ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "местного значения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMajorRenovationDate
+cg:hasMajorRenovationDate rdf:type owl:DatatypeProperty ;
+                          rdfs:domain cg:MajorRenovation ;
+                          rdfs:range xsd:int ;
+                          rdfs:label "дата капитального ремонта" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMaxFloors
+cg:hasMaxFloors rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:hasFloors ;
+                rdfs:domain cg:Building ;
+                rdfs:range xsd:int ;
+                rdfs:label "имеет максимальное количество этажей" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMetroCode
+cg:hasMetroCode rdf:type owl:DatatypeProperty ;
+                rdfs:domain cg:MetroEntranceHall ;
+                rdfs:range xsd:integer ;
+                rdfs:label "код метро" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMetroColor
+cg:hasMetroColor rdf:type owl:DatatypeProperty ;
+                 rdfs:domain cg:MetroEntranceHall ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "ветка метро" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMinFloors
+cg:hasMinFloors rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:hasFloors ;
+                rdfs:domain cg:Building ;
+                rdfs:range xsd:int ;
+                rdfs:label "имеет минимальное количество этажей" .
+
+
+###  http://www.w3id.org/citygraph-core#hasModelName
+cg:hasModelName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:hasMovableParameter ;
+                rdfs:domain cg:MovableObject ;
+                rdfs:range xsd:string ;
+                rdfs:label "имеет модель и марку" .
+
+
+###  http://www.w3id.org/citygraph-core#hasMovableParameter
+cg:hasMovableParameter rdf:type owl:DatatypeProperty ;
+                       rdfs:label "характеристика ТС" .
+
+
+###  http://www.w3id.org/citygraph-core#hasNotCentralGas
+cg:hasNotCentralGas rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                    rdfs:domain cg:LivingObject ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "имеет не центральное газоснабжение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasOKLevel
+cg:hasOKLevel rdf:type owl:DatatypeProperty ;
+              rdfs:label "иерархия ОКАТО/ОКТМО" .
+
+
+###  http://www.w3id.org/citygraph-core#hasOctane_98
+cg:hasOctane_98 rdf:type owl:DatatypeProperty ;
+                rdfs:domain cg:FillingStation ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "бензин октан 98" .
+
+
+###  http://www.w3id.org/citygraph-core#hasOpeningHours
+cg:hasOpeningHours rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cg:FunctionalObject ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "рабочие часы" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPM10value
+cg:hasPM10value rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:topEcologyParam ;
+                rdfs:range xsd:double ;
+                rdfs:label "PM 10 параметр" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPM25value
+cg:hasPM25value rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:topEcologyParam ;
+                rdfs:range xsd:double ;
+                rdfs:label "PM 2.5 параметр" .
+
+
+###  http://www.w3id.org/citygraph-core#hasParkingArea
+cg:hasParkingArea rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cg:hasArea ;
+                  rdfs:domain cg:Land ;
+                  rdfs:range xsd:float ;
+                  rdfs:comment "Площадь парковки в границах земельного участка" ;
+                  rdfs:label "имеет площадь парковки" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPhoneCode
+cg:hasPhoneCode rdf:type owl:DatatypeProperty ;
+                rdfs:domain cg:AdministrativeUnit ;
+                rdfs:label "телефонный код АТ ед." .
+
+
+###  http://www.w3id.org/citygraph-core#hasPhoneNumber
+cg:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                  rdfs:domain cg:FunctionalObject ,
+                              <http://xmlns.com/foaf/spec/#term_Agent> ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "телефонный номер" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPlaygroundInventory
+cg:hasPlaygroundInventory rdf:type owl:DatatypeProperty ;
+                          rdfs:domain cg:Playground ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "инвентарь детской площадки" .
+
+
+###  http://www.w3id.org/citygraph-core#hasPopulationCharacteristics
+cg:hasPopulationCharacteristics rdf:type owl:DatatypeProperty ;
+                                rdfs:label "имеет характеристику жителей" .
+
+
+###  http://www.w3id.org/citygraph-core#hasProvidedForChild
+cg:hasProvidedForChild rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cg:MedicalObject ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "детское отделение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRadioactivePollution
+cg:hasRadioactivePollution rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf cg:topEcologyParam ;
+                           rdfs:range xsd:double ;
+                           rdfs:label "радиоактивное загрязнянение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRailwayCrossing
+cg:hasRailwayCrossing rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                      rdfs:domain cg:Crosswalk ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "тип пересекаемой железной дороги" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRegionalMeaning
+cg:hasRegionalMeaning rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasGovStatus ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "регионального значения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasReligious
+cg:hasReligious rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf cg:hasReligiousObjectCharacteristic ;
+                rdfs:domain cg:Cemetery ,
+                            cg:ReligiousObject ;
+                rdfs:range xsd:string ;
+                rdfs:label "религия" .
+
+
+###  http://www.w3id.org/citygraph-core#hasReligiousBuildingType
+cg:hasReligiousBuildingType rdf:type owl:DatatypeProperty ;
+                            rdfs:domain cg:Building ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "тип религиозного здания" .
+
+
+###  http://www.w3id.org/citygraph-core#hasReligiousObjectCharacteristic
+cg:hasReligiousObjectCharacteristic rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "характеристика религиозных объектов" .
+
+
+###  http://www.w3id.org/citygraph-core#hasResidentNumber
+cg:hasResidentNumber rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasPopulationCharacteristics ;
+                     rdfs:domain cg:LivingObject ;
+                     rdfs:range xsd:int ;
+                     rdfs:label "имеет количество проживающих" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms
+cg:hasRooms rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+            rdfs:domain cg:LivingObject ;
+            rdfs:range xsd:int ;
+            rdfs:label "количество комнат в квартире" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal
+cg:hasRoomsCommunal rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                    rdfs:domain cg:LivingObject ;
+                    rdfs:range xsd:int ;
+                    rdfs:label "количество комнат в коммунальной квартире" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_2
+cg:hasRoomsCommunal_2 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasRoomsCommunal ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "2комн. комм. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_3
+cg:hasRoomsCommunal_3 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasRoomsCommunal ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "3комн. комм. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_4
+cg:hasRoomsCommunal_4 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasRoomsCommunal ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "4комн. комм. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_5
+cg:hasRoomsCommunal_5 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasRoomsCommunal ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "5комн. комм. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_6
+cg:hasRoomsCommunal_6 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasRoomsCommunal ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "6комн. комм. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRoomsCommunal_7
+cg:hasRoomsCommunal_7 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cg:hasRoomsCommunal ;
+                      rdfs:domain cg:LivingObject ;
+                      rdfs:range xsd:int ;
+                      rdfs:label "7 комн. комм. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_1
+cg:hasRooms_1 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:domain cg:LivingObject ;
+              rdfs:range xsd:int ;
+              rdfs:label "1 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_2
+cg:hasRooms_2 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:domain cg:LivingObject ;
+              rdfs:range xsd:int ;
+              rdfs:label "2 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_3
+cg:hasRooms_3 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:range xsd:int ;
+              rdfs:label "3 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_4
+cg:hasRooms_4 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:range xsd:int ;
+              rdfs:label "4 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_5
+cg:hasRooms_5 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:range xsd:int ;
+              rdfs:label "5 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_6
+cg:hasRooms_6 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:range xsd:int ;
+              rdfs:label "6 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasRooms_7
+cg:hasRooms_7 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cg:hasRooms ;
+              rdfs:range xsd:int ;
+              rdfs:label "7 комн. квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSchoolType
+cg:hasSchoolType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain cg:School ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "тип школы" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSeatsAmount
+cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cg:topDataArchElement ;
+                  rdfs:domain cg:AchitectureElement ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "имеет количество мест" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSecondTitle
+cg:hasSecondTitle rdf:type owl:DatatypeProperty ;
+                  rdfs:domain cg:AdministrativeUnit ,
+                              cg:FunctionalObject ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "второе название" .
+
+
+###  http://www.w3id.org/citygraph-core#hasShop
+cg:hasShop rdf:type owl:DatatypeProperty ;
+           rdfs:domain cg:FunctionalObject ;
+           rdfs:range xsd:boolean ;
+           rdfs:label "магазин" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSlopedCurb
+cg:hasSlopedCurb rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                 rdfs:domain cg:Crosswalk ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "пандус" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSocialGroupPercentage
+cg:hasSocialGroupPercentage rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf cg:hasPopulationCharacteristics ;
+                            rdfs:domain cg:LivingObject ;
+                            rdfs:range xsd:int ;
+                            rdfs:label "имеет процент жителей по социальной группе" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSpeciality
+cg:hasSpeciality rdf:type owl:DatatypeProperty ;
+                 rdfs:domain cg:Hospital ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "специализация" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStairsAmount
+cg:hasStairsAmount rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasBuildingParameter ;
+                   rdfs:domain cg:Building ;
+                   rdfs:range xsd:int ;
+                   rdfs:label "имеет количество лестниц" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStoveHeating
+cg:hasStoveHeating rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasLivingObjectParameter ;
+                   rdfs:domain cg:LivingObject ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "имеет печное отопление" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStringCadastralNumber
+cg:hasStringCadastralNumber rdf:type owl:DatatypeProperty ;
+                            rdfs:domain cg:CadastreNumber ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "кадастровый номер строкой" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStringSeries
+cg:hasStringSeries rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasBuildingParameter ;
+                   rdfs:domain cg:Building ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "серия здания строкой" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStringValue
+cg:hasStringValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cg:hasClassificationCode ;
+                  rdfs:domain cg:OKATO ,
+                              cg:OKTMO ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "полное текстовое значение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasStudentsCapacity
+cg:hasStudentsCapacity rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cg:EducationalObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "рассчитан на количество обучающихся" .
+
+
+###  http://www.w3id.org/citygraph-core#hasSurfaceType
+cg:hasSurfaceType rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                  rdfs:domain cg:Crosswalk ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "материал поверхности" .
+
+
+###  http://www.w3id.org/citygraph-core#hasTactilePaving
+cg:hasTactilePaving rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                    rdfs:domain cg:Crosswalk ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "тактильное покрытие" .
+
+
+###  http://www.w3id.org/citygraph-core#hasTitle
+cg:hasTitle rdf:type owl:DatatypeProperty ;
+            rdfs:domain cg:AdministrativeUnit ,
+                        cg:FunctionalObject ,
+                        cg:WorkType ,
+                        <http://xmlns.com/foaf/spec/#term_Organization> ;
+            rdfs:range xsd:string ;
+            rdfs:label "имеет название" .
+
+
+###  http://www.w3id.org/citygraph-core#hasToilets
+cg:hasToilets rdf:type owl:DatatypeProperty ;
+              rdfs:domain cg:FunctionalObject ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "туалет" .
+
+
+###  http://www.w3id.org/citygraph-core#hasTourismPlace
+cg:hasTourismPlace rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cg:FunctionalObject ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "туристический объект" .
+
+
+###  http://www.w3id.org/citygraph-core#hasTrafficSignals
+cg:hasTrafficSignals rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                     rdfs:domain cg:Crosswalk ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "тип дорожных указателей" .
+
+
+###  http://www.w3id.org/citygraph-core#hasTrafficSignalsSound
+cg:hasTrafficSignalsSound rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf cg:hasCrosswalkCharacteristic ;
+                          rdfs:domain cg:Crosswalk ;
+                          rdfs:range xsd:boolean ;
+                          rdfs:label "звуковой указатель" .
+
+
+###  http://www.w3id.org/citygraph-core#hasUninhabitableArea
+cg:hasUninhabitableArea rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf cg:hasArea ;
+                        rdfs:domain cg:LivingObject ;
+                        rdfs:range xsd:float ;
+                        rdfs:label "имеет площадь нежилых помещений" .
+
+
+###  http://www.w3id.org/citygraph-core#hasVIN
+cg:hasVIN rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf cg:hasMovableParameter ;
+          rdfs:domain cg:CarVehicle ,
+                      cg:Motorcycle ,
+                      cg:TruckVehicle ;
+          rdfs:range xsd:string ;
+          rdfs:label "имеет VIN" .
+
+
+###  http://www.w3id.org/citygraph-core#hasValue
+cg:hasValue rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf cg:hasClassificationCode ;
+            rdfs:domain cg:Reference ;
+            rdfs:range xsd:string ;
+            rdfs:label "значение" .
+
+
+###  http://www.w3id.org/citygraph-core#hasWaterSafeZone
+cg:hasWaterSafeZone rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:topDataNature ;
+                    rdfs:domain cg:NatureObject ;
+                    rdfs:range xsd:double ;
+                    rdfs:label "водоохраняемая зона" .
+
+
+###  http://www.w3id.org/citygraph-core#hasWebDomainZone
+cg:hasWebDomainZone rdf:type owl:DatatypeProperty ;
+                    rdfs:domain cg:AdministrativeUnit ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "доменная зона" .
+
+
+###  http://www.w3id.org/citygraph-core#hasWebsite
+cg:hasWebsite rdf:type owl:DatatypeProperty ;
+              rdfs:domain cg:FunctionalObject ,
+                          <http://xmlns.com/foaf/spec/#term_Agent> ;
+              rdfs:range xsd:string ;
+              rdfs:label "веб-сайт" .
+
+
+###  http://www.w3id.org/citygraph-core#hasWorldMeaning
+cg:hasWorldMeaning rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:hasGovStatus ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "мирового значения" .
+
+
+###  http://www.w3id.org/citygraph-core#hasYearConstruct
+cg:hasYearConstruct rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf cg:hasBuildingParameter ;
+                    rdfs:domain cg:Building ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:label "имеет год постройки" .
+
+
+###  http://www.w3id.org/citygraph-core#hasYearProduction
+cg:hasYearProduction rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf cg:hasMovableParameter ;
+                     rdfs:domain cg:MovableObject ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:label "имеет год производства" .
+
+
+###  http://www.w3id.org/citygraph-core#hasYearRepair
+cg:hasYearRepair rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf cg:hasBuildingParameter ;
+                 rdfs:domain cg:Building ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:label "имеет год восстановления" .
+
+
+###  http://www.w3id.org/citygraph-core#needElectricity
+cg:needElectricity rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cg:topDataArchElement ;
+                   rdfs:domain cg:AchitectureElement ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "С указанием напряжения или иных параметров. По умолчанию можно указывать 220" ;
+                   rdfs:label "требует электричества" .
+
+
+###  http://www.w3id.org/citygraph-core#topDataArchElement
+cg:topDataArchElement rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "Использовать только дочерние отношения" ;
+                      rdfs:label "характеристика элемента благоустройства" .
+
+
+###  http://www.w3id.org/citygraph-core#topDataNature
+cg:topDataNature rdf:type owl:DatatypeProperty ;
+                 rdfs:label "характеристика природного объекта" .
+
+
+###  http://www.w3id.org/citygraph-core#topEcologyParam
+cg:topEcologyParam rdf:type owl:DatatypeProperty ;
+                   rdfs:label "экологический параметр" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://vocab.gtfs.org/terms#Stop
+<http://vocab.gtfs.org/terms#Stop> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> ;
+                                   rdfs:comment "A location where passengers board or disembark from a transit vehicle."@en ;
+                                   rdfs:label "Stop"@en ,
+                                              "Остановка общественного транспорта"@ru .
+
+
+###  http://vocab.gtfs.org/terms#Trip
+<http://vocab.gtfs.org/terms#Trip> rdf:type owl:Class ;
+                                   rdfs:subClassOf cg:Timetable ;
+                                   rdfs:comment "A collection of gtfs:StopTimes followed by a transit vehicle." ;
+                                   rdfs:label "Trip"@en ,
+                                              "Наряд общественного транспорта"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea
+<http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                                                                         rdfs:comment "Denotes the relation of TransportationComplex to its parts, which are auxiliary traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none."@en ,
+                                                                                      "Type describing the class for auxiliary traffic Areas. These are the surfaces where no traffic actually takes place, but which belong to a transportation object. Examples are kerbstones, road markings and grass stripes. As subclass of _CityObject, an AuxiliaryTrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ;
+                                                                         rdfs:label "Auxiliary traffic area"@en ,
+                                                                                    "Вспомогательная зона"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Railway
+<http://www.opengis.net/citygml/transportation/2.0/Railway> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                            rdfs:comment "Type describing the class for railways. As subclass of _CityObject, a Railway inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ;
+                                                            rdfs:label "Railway"@en ,
+                                                                       "Железная дорога"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Road
+<http://www.opengis.net/citygml/transportation/2.0/Road> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                         rdfs:comment "Type describing the class for roads. As subclass of _CityObject, a Road inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ,
+                                                                      "Данный класс содержит подклассы класса Дорога (https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#k_highway) в OSM"@ru ;
+                                                         rdfs:label "Road"@en ,
+                                                                    "Дорога"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Square
+<http://www.opengis.net/citygml/transportation/2.0/Square> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                           rdfs:comment "Type describing the class for squares. A square is an open area commonly found in cities (like a plaza). As subclass of _CityObject, a Square inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ;
+                                                           rdfs:label "Square"@en ,
+                                                                      "Площадь"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Track
+<http://www.opengis.net/citygml/transportation/2.0/Track> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                          rdfs:comment "Type describing the class for tracks. A track is a small path mainly used by pedestrians. As subclass of _CityObject, a Track inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ;
+                                                          rdfs:label "Track"@en ,
+                                                                     "Дорожка"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/TrafficArea
+<http://www.opengis.net/citygml/transportation/2.0/TrafficArea> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                                                                rdfs:comment "Denotes the relation of TransportationComplex to its parts, which are traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none."@en ,
+                                                                             "Type describing the class for traffic Areas. Traffic areas are the surfaces where traffic actually takes place. As subclass of _CityObject, a TrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ;
+                                                                rdfs:label "Traffic area"@en ,
+                                                                           "Проезжая часть"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/TransportationComplex
+<http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                                                                          rdfs:comment "Type describing transportation complexes, which are aggregated features, e.g. roads, which consist of parts (traffic areas, e.g. pedestrian path, and auxiliary traffic areas). As subclass of _CityObject, a TransportationComplex inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ;
+                                                                          rdfs:label "Transportation complex"@en ,
+                                                                                     "Транспортный комплекс"@ru .
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/TransportationObject
+<http://www.opengis.net/citygml/transportation/2.0/TransportationObject> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf cg:FunctionalObject ;
+                                                                         rdfs:comment "Type describing the abstract superclass for transportation objects."@en ;
+                                                                         rdfs:label "Элемент транспортной инфраструктуры" .
+
+
+###  http://www.w3id.org/citygraph-core#AchitectureElement
+cg:AchitectureElement rdf:type owl:Class ;
+                      rdfs:subClassOf cg:PointObject ;
+                      rdfs:label "Элемент благоустройства" .
+
+
+###  http://www.w3id.org/citygraph-core#ActDoc
+cg:ActDoc rdf:type owl:Class ;
+          rdfs:subClassOf cg:Document ;
+          rdfs:label "Акт" .
+
+
+###  http://www.w3id.org/citygraph-core#Action
+cg:Action rdf:type owl:Class ;
+          rdfs:comment "Объекты могут влиять друг на друга" ;
+          rdfs:label "Действие" .
+
+
+###  http://www.w3id.org/citygraph-core#Address
+cg:Address rdf:type owl:Class ;
+           rdfs:label "Адрес" .
+
+
+###  http://www.w3id.org/citygraph-core#AdministrativeBuilding
+cg:AdministrativeBuilding rdf:type owl:Class ;
+                          rdfs:subClassOf cg:PublicObject ;
+                          rdfs:label "Административное здание" .
+
+
+###  http://www.w3id.org/citygraph-core#AdministrativeUnit
+cg:AdministrativeUnit rdf:type owl:Class ;
+                      rdfs:subClassOf cg:Space ;
+                      rdfs:label "Административно-территориальная единица" .
+
+
+###  http://www.w3id.org/citygraph-core#AdvertisingDesk
+cg:AdvertisingDesk rdf:type owl:Class ;
+                   rdfs:subClassOf cg:InformationDesk ;
+                   rdfs:label "Рекламный щит" .
+
+
+###  http://www.w3id.org/citygraph-core#AeroStation
+cg:AeroStation rdf:type owl:Class ;
+               rdfs:subClassOf cg:Terminal ;
+               rdfs:label "Аэровокзал" .
+
+
+###  http://www.w3id.org/citygraph-core#AgreementDoc
+cg:AgreementDoc rdf:type owl:Class ;
+                rdfs:subClassOf cg:Document ;
+                rdfs:label "Договор" .
+
+
+###  http://www.w3id.org/citygraph-core#AirSpaceObject
+cg:AirSpaceObject rdf:type owl:Class ;
+                  rdfs:subClassOf cg:NatureObject ;
+                  rdfs:label "Воздушное пространство" .
+
+
+###  http://www.w3id.org/citygraph-core#Airport
+cg:Airport rdf:type owl:Class ;
+           rdfs:subClassOf cg:Terminal ;
+           rdfs:label "Аэропорт" .
+
+
+###  http://www.w3id.org/citygraph-core#AparrtmentMuseum
+cg:AparrtmentMuseum rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Museum ;
+                    rdfs:label "Музей квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#Apartment
+cg:Apartment rdf:type owl:Class ;
+             rdfs:subClassOf cg:LivingObject ;
+             rdfs:label "Квартира" .
+
+
+###  http://www.w3id.org/citygraph-core#AreaObject
+cg:AreaObject rdf:type owl:Class ;
+              rdfs:subClassOf cg:PhysicalObject ;
+              rdfs:comment "Объект, обозначаемый площадью на карте (например, здание или парк)." ;
+              rdfs:label "Площадной объект" .
+
+
+###  http://www.w3id.org/citygraph-core#ArtificialRoughness
+cg:ArtificialRoughness rdf:type owl:Class ;
+                       rdfs:subClassOf cg:Covering ;
+                       rdfs:comment "Например дорожный полицейский" ;
+                       rdfs:label "Искусственная неровность" .
+
+
+###  http://www.w3id.org/citygraph-core#AuthorizedAction
+cg:AuthorizedAction rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Action ;
+                    rdfs:comment "Законное действие" ;
+                    rdfs:label "Авторизованное действие" .
+
+
+###  http://www.w3id.org/citygraph-core#AutogasFillingStation
+cg:AutogasFillingStation rdf:type owl:Class ;
+                         rdfs:subClassOf cg:FillingStation ;
+                         rdfs:label "Газозаправочная станция"@ru .
+
+
+###  http://www.w3id.org/citygraph-core#AutonomousOblast
+cg:AutonomousOblast rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Region ;
+                    rdfs:label "Автономная область" .
+
+
+###  http://www.w3id.org/citygraph-core#AutonomousOkrug
+cg:AutonomousOkrug rdf:type owl:Class ;
+                   rdfs:subClassOf cg:Region ;
+                   rdfs:label "Автономный округ" .
+
+
+###  http://www.w3id.org/citygraph-core#AutonomousOkrugMunicipality
+cg:AutonomousOkrugMunicipality rdf:type owl:Class ;
+                               rdfs:subClassOf cg:Municipality ;
+                               rdfs:label "Автномный округ" .
+
+
+###  http://www.w3id.org/citygraph-core#AutonomousOkrug_District
+cg:AutonomousOkrug_District rdf:type owl:Class ;
+                            rdfs:subClassOf cg:District ;
+                            rdfs:label "Автономный округ" .
+
+
+###  http://www.w3id.org/citygraph-core#AutonomousOrganization
+cg:AutonomousOrganization rdf:type owl:Class ;
+                          rdfs:subClassOf cg:NonProfitOrganization ;
+                          rdfs:label "АНО" .
+
+
+###  http://www.w3id.org/citygraph-core#Bar
+cg:Bar rdf:type owl:Class ;
+       rdfs:subClassOf cg:Eatery ;
+       rdfs:label "Бар" .
+
+
+###  http://www.w3id.org/citygraph-core#Barracks
+cg:Barracks rdf:type owl:Class ;
+            rdfs:subClassOf cg:MilitaryObject ;
+            rdfs:label "Казарма" .
+
+
+###  http://www.w3id.org/citygraph-core#Bathhouse
+cg:Bathhouse rdf:type owl:Class ;
+             rdfs:subClassOf cg:PublicObject ;
+             rdfs:label "Баня" .
+
+
+###  http://www.w3id.org/citygraph-core#Bench
+cg:Bench rdf:type owl:Class ;
+         rdfs:subClassOf cg:AchitectureElement ,
+                         cg:StreetFurniture ;
+         rdfs:label "Скамья" .
+
+
+###  http://www.w3id.org/citygraph-core#BikeParking
+cg:BikeParking rdf:type owl:Class ;
+               rdfs:subClassOf cg:StreetFurniture ;
+               rdfs:label "Парковка для велосипедов" .
+
+
+###  http://www.w3id.org/citygraph-core#BikeRoad
+cg:BikeRoad rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+            rdfs:label "Велосипедная дорожка" .
+
+
+###  http://www.w3id.org/citygraph-core#BlackBox
+cg:BlackBox rdf:type owl:Class ;
+            rdfs:subClassOf cg:NetObject ;
+            rdfs:comment "Концепт \"черного ящика\" с неизвестной внутренней структурой" ;
+            rdfs:label "Черный ящик" .
+
+
+###  http://www.w3id.org/citygraph-core#Block
+cg:Block rdf:type owl:Class ;
+         rdfs:subClassOf cg:Territory ;
+         rdfs:label "Квартал" .
+
+
+###  http://www.w3id.org/citygraph-core#BortStones
+cg:BortStones rdf:type owl:Class ;
+              rdfs:subClassOf cg:Covering ;
+              rdfs:label "Бортовой камень" ,
+                         "Поребрик" .
+
+
+###  http://www.w3id.org/citygraph-core#BotanicGarden
+cg:BotanicGarden rdf:type owl:Class ;
+                 rdfs:subClassOf cg:OOPT ;
+                 rdfs:label "Ботанический сад" .
+
+
+###  http://www.w3id.org/citygraph-core#Boulevard
+cg:Boulevard rdf:type owl:Class ;
+             rdfs:subClassOf cg:GreenObject ;
+             rdfs:label "Бульвар" .
+
+
+###  http://www.w3id.org/citygraph-core#Bowling
+cg:Bowling rdf:type owl:Class ;
+           rdfs:subClassOf cg:CulturalObject ;
+           rdfs:label "Боулинг" .
+
+
+###  http://www.w3id.org/citygraph-core#Bridge
+cg:Bridge rdf:type owl:Class ;
+          rdfs:subClassOf cg:NetObject ;
+          rdfs:comment "Концепт, подразумевающий, что некая линия идет поверх другой линии, не пересекая ее (разные уровни)" ;
+          rdfs:label "Мост" .
+
+
+###  http://www.w3id.org/citygraph-core#Building
+cg:Building rdf:type owl:Class ;
+            rdfs:subClassOf cg:AreaObject ;
+            rdfs:comment "Площадной объект, представляющий собой постройку" ;
+            rdfs:label "Сооружение" .
+
+
+###  http://www.w3id.org/citygraph-core#Bus
+cg:Bus rdf:type owl:Class ;
+       rdfs:subClassOf cg:MovableObject ;
+       rdfs:label "Автобус" .
+
+
+###  http://www.w3id.org/citygraph-core#BusStation
+cg:BusStation rdf:type owl:Class ;
+              rdfs:subClassOf cg:Terminal ;
+              rdfs:label "Автобусная станция" .
+
+
+###  http://www.w3id.org/citygraph-core#Bush
+cg:Bush rdf:type owl:Class ;
+        rdfs:subClassOf cg:Green ;
+        rdfs:label "Куст" .
+
+
+###  http://www.w3id.org/citygraph-core#BusinessCentre
+cg:BusinessCentre rdf:type owl:Class ;
+                  rdfs:subClassOf cg:BusinessHub ;
+                  rdfs:label "Бизнес-центр" .
+
+
+###  http://www.w3id.org/citygraph-core#BusinessHub
+cg:BusinessHub rdf:type owl:Class ;
+               rdfs:subClassOf cg:CommercialObject ;
+               rdfs:label "Деловой центр" .
+
+
+###  http://www.w3id.org/citygraph-core#CadastralBlock
+cg:CadastralBlock rdf:type owl:Class ;
+                  rdfs:subClassOf cg:CadastreNumber ;
+                  rdfs:label "Кадастровый квартал" .
+
+
+###  http://www.w3id.org/citygraph-core#CadastralDistrict
+cg:CadastralDistrict rdf:type owl:Class ;
+                     rdfs:subClassOf cg:CadastreNumber ;
+                     rdfs:label "Кадастровый район" .
+
+
+###  http://www.w3id.org/citygraph-core#CadastralOkrug
+cg:CadastralOkrug rdf:type owl:Class ;
+                  rdfs:subClassOf cg:CadastreNumber ;
+                  rdfs:label "Кадастровый округ" .
+
+
+###  http://www.w3id.org/citygraph-core#CadastralParcel
+cg:CadastralParcel rdf:type owl:Class ;
+                   rdfs:subClassOf cg:Land ;
+                   rdfs:label "Кадастровый участок" .
+
+
+###  http://www.w3id.org/citygraph-core#CadastreNumber
+cg:CadastreNumber rdf:type owl:Class ;
+                  rdfs:subClassOf cg:CadastreRegister ;
+                  rdfs:label "Кадастровый номер" .
+
+
+###  http://www.w3id.org/citygraph-core#CadastreRegister
+cg:CadastreRegister rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Reference ;
+                    rdfs:comment "Сюда добавлять все виды кадастров (земельный, лесной и пр.)" ;
+                    rdfs:label "Кадастровый реестр" .
+
+
+###  http://www.w3id.org/citygraph-core#Cafe
+cg:Cafe rdf:type owl:Class ;
+        rdfs:subClassOf cg:Eatery ;
+        rdfs:label "Кафе" .
+
+
+###  http://www.w3id.org/citygraph-core#CapitalConstruction
+cg:CapitalConstruction rdf:type owl:Class ;
+                       rdfs:subClassOf cg:Building ;
+                       rdfs:label "Объект капитального строительства" .
+
+
+###  http://www.w3id.org/citygraph-core#CarVehicle
+cg:CarVehicle rdf:type owl:Class ;
+              rdfs:subClassOf cg:MovableObject ;
+              rdfs:label "Легковой автомобиль" .
+
+
+###  http://www.w3id.org/citygraph-core#Cemetery
+cg:Cemetery rdf:type owl:Class ;
+            rdfs:subClassOf cg:PublicObject ;
+            rdfs:label "Кладбище" .
+
+
+###  http://www.w3id.org/citygraph-core#CentralBank
+cg:CentralBank rdf:type owl:Class ;
+               rdfs:subClassOf cg:GovernmentAuthority ;
+               rdfs:label "Центральный банк" .
+
+
+###  http://www.w3id.org/citygraph-core#ChargingStation
+cg:ChargingStation rdf:type owl:Class ;
+                   rdfs:subClassOf cg:FillingStation ;
+                   rdfs:label "Электрозаправка"@ru .
+
+
+###  http://www.w3id.org/citygraph-core#CharityFoundation
+cg:CharityFoundation rdf:type owl:Class ;
+                     rdfs:subClassOf cg:NonProfitOrganization ;
+                     rdfs:label "Благотворительный фонд" .
+
+
+###  http://www.w3id.org/citygraph-core#ChildrenYouthSportSchool
+cg:ChildrenYouthSportSchool rdf:type owl:Class ;
+                            rdfs:subClassOf cg:SportsObject ;
+                            rdfs:label "Детско-юношеская спортивная школа" .
+
+
+###  http://www.w3id.org/citygraph-core#Cinema
+cg:Cinema rdf:type owl:Class ;
+          rdfs:subClassOf cg:CulturalObject ;
+          rdfs:label "Кинотеатр" .
+
+
+###  http://www.w3id.org/citygraph-core#CityForest
+cg:CityForest rdf:type owl:Class ;
+              rdfs:subClassOf cg:Forest ;
+              rdfs:label "Городской лес" .
+
+
+###  http://www.w3id.org/citygraph-core#CityGarden
+cg:CityGarden rdf:type owl:Class ;
+              rdfs:subClassOf cg:GreenObject ;
+              rdfs:label "Сад" .
+
+
+###  http://www.w3id.org/citygraph-core#Club
+cg:Club rdf:type owl:Class ;
+        rdfs:subClassOf cg:CulturalObject ;
+        rdfs:label "Клуб" .
+
+
+###  http://www.w3id.org/citygraph-core#College
+cg:College rdf:type owl:Class ;
+           rdfs:subClassOf cg:EducationalObject ;
+           rdfs:label "Колледж" .
+
+
+###  http://www.w3id.org/citygraph-core#CommercialObject
+cg:CommercialObject rdf:type owl:Class ;
+                    rdfs:subClassOf cg:SocialObject ;
+                    rdfs:label "Коммерческий объект" .
+
+
+###  http://www.w3id.org/citygraph-core#CommercialOrganization
+cg:CommercialOrganization rdf:type owl:Class ;
+                          rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> ;
+                          rdfs:label "Коммерческая организация" .
+
+
+###  http://www.w3id.org/citygraph-core#CompLine
+cg:CompLine rdf:type owl:Class ;
+            rdfs:subClassOf cg:Component ;
+            rdfs:label "Полоса" .
+
+
+###  http://www.w3id.org/citygraph-core#Component
+cg:Component rdf:type owl:Class ;
+             rdfs:subClassOf cg:PhysicalObject ;
+             rdfs:label "Компонент" .
+
+
+###  http://www.w3id.org/citygraph-core#ConcertHall
+cg:ConcertHall rdf:type owl:Class ;
+               rdfs:subClassOf cg:CulturalObject ;
+               rdfs:label "Концертный зал" .
+
+
+###  http://www.w3id.org/citygraph-core#ConservancyArea
+cg:ConservancyArea rdf:type owl:Class ;
+                   rdfs:subClassOf cg:OOPT ;
+                   rdfs:label "Заповедник" .
+
+
+###  http://www.w3id.org/citygraph-core#Country
+cg:Country rdf:type owl:Class ;
+           rdfs:subClassOf cg:AdministrativeUnit ;
+           rdfs:label "Страна" .
+
+
+###  http://www.w3id.org/citygraph-core#Covering
+cg:Covering rdf:type owl:Class ;
+            rdfs:subClassOf cg:Component ;
+            rdfs:label "Покрытие" .
+
+
+###  http://www.w3id.org/citygraph-core#CreativeClass
+cg:CreativeClass rdf:type owl:Class ;
+                 rdfs:subClassOf cg:EducationalObject ;
+                 rdfs:label "Творческий кружок" .
+
+
+###  http://www.w3id.org/citygraph-core#Crosswalk
+cg:Crosswalk rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TrafficArea> ;
+             rdfs:label "Пешеходный переход" .
+
+
+###  http://www.w3id.org/citygraph-core#CulturalObject
+cg:CulturalObject rdf:type owl:Class ;
+                  rdfs:subClassOf cg:SocialObject ;
+                  rdfs:label "Культурный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#DisabledPopulation
+cg:DisabledPopulation rdf:type owl:Class ;
+                      rdfs:subClassOf cg:SocialGroup ;
+                      rdfs:label "Население с ограниченными возможностями" .
+
+
+###  http://www.w3id.org/citygraph-core#District
+cg:District rdf:type owl:Class ;
+            rdfs:subClassOf cg:AdministrativeUnit ;
+            rdfs:label "Район" .
+
+
+###  http://www.w3id.org/citygraph-core#District_City
+cg:District_City rdf:type owl:Class ;
+                 rdfs:subClassOf cg:District ;
+                 rdfs:label "Город районного значения" .
+
+
+###  http://www.w3id.org/citygraph-core#Document
+cg:Document rdf:type owl:Class ;
+            rdfs:comment "Связывает правовые нормы, документы и пр. с объектами городской среды" ;
+            rdfs:label "Документ" .
+
+
+###  http://www.w3id.org/citygraph-core#DrinkFontain
+cg:DrinkFontain rdf:type owl:Class ;
+                rdfs:subClassOf cg:Fountain ;
+                rdfs:label "Питьевой фонтан" .
+
+
+###  http://www.w3id.org/citygraph-core#Eatery
+cg:Eatery rdf:type owl:Class ;
+          rdfs:subClassOf cg:CommercialObject ;
+          rdfs:label "Общепит" .
+
+
+###  http://www.w3id.org/citygraph-core#EducationalObject
+cg:EducationalObject rdf:type owl:Class ;
+                     rdfs:subClassOf cg:SocialObject ;
+                     rdfs:label "Образовательный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#ElectroDepo
+cg:ElectroDepo rdf:type owl:Class ;
+               rdfs:subClassOf cg:Terminal ;
+               rdfs:label "Электродепо" .
+
+
+###  http://www.w3id.org/citygraph-core#Element
+cg:Element rdf:type owl:Class ;
+           rdfs:subClassOf cg:NetObject ;
+           rdfs:comment "Любой элемент сетевого объекта, Чаще всего, который состоит из других более атомарных элементов. Например, концепция площали, которая существует, и как единое целое и как составная из других дорог, элементов." ;
+           rdfs:label "Элемент" .
+
+
+###  http://www.w3id.org/citygraph-core#EnergeticObject
+cg:EnergeticObject rdf:type owl:Class ;
+                   rdfs:subClassOf cg:IndustrialObject ;
+                   rdfs:label "Энергетический объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Event
+cg:Event rdf:type owl:Class ;
+         rdfs:label "Событие" .
+
+
+###  http://www.w3id.org/citygraph-core#ExibitionHall
+cg:ExibitionHall rdf:type owl:Class ;
+                 rdfs:subClassOf cg:CulturalObject ;
+                 rdfs:label "Выставочный зал" .
+
+
+###  http://www.w3id.org/citygraph-core#Fabric
+cg:Fabric rdf:type owl:Class ;
+          rdfs:subClassOf cg:IndustrialObject ;
+          rdfs:label "Завод" .
+
+
+###  http://www.w3id.org/citygraph-core#FederalAgency
+cg:FederalAgency rdf:type owl:Class ;
+                 rdfs:subClassOf cg:FederalGov ;
+                 rdfs:label "Федеральное агенство" .
+
+
+###  http://www.w3id.org/citygraph-core#FederalCity
+cg:FederalCity rdf:type owl:Class ;
+               rdfs:subClassOf cg:Region ;
+               rdfs:label "Город федерального значения" .
+
+
+###  http://www.w3id.org/citygraph-core#FederalGov
+cg:FederalGov rdf:type owl:Class ;
+              rdfs:subClassOf cg:GovernmentBody ;
+              rdfs:label "Федеральный орган власти" .
+
+
+###  http://www.w3id.org/citygraph-core#FederalGovernment
+cg:FederalGovernment rdf:type owl:Class ;
+                     rdfs:subClassOf cg:FederalGov ;
+                     rdfs:label "Правительство РФ" .
+
+
+###  http://www.w3id.org/citygraph-core#FederalMinistry
+cg:FederalMinistry rdf:type owl:Class ;
+                   rdfs:subClassOf cg:FederalGov ;
+                   rdfs:label "Федеральное министерство" .
+
+
+###  http://www.w3id.org/citygraph-core#FederalOkrug
+cg:FederalOkrug rdf:type owl:Class ;
+                rdfs:subClassOf cg:AdministrativeUnit ;
+                rdfs:label "Федеральный округ" .
+
+
+###  http://www.w3id.org/citygraph-core#Fence
+cg:Fence rdf:type owl:Class ;
+         rdfs:subClassOf cg:StreetFurniture ;
+         rdfs:label "Забор" .
+
+
+###  http://www.w3id.org/citygraph-core#FillingStation
+cg:FillingStation rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> ;
+                  rdfs:label "Заправочная станция"@ru .
+
+
+###  http://www.w3id.org/citygraph-core#FireStation
+cg:FireStation rdf:type owl:Class ;
+               rdfs:subClassOf cg:PublicObject ;
+               rdfs:label "Пожарная станция" .
+
+
+###  http://www.w3id.org/citygraph-core#Flowerbed
+cg:Flowerbed rdf:type owl:Class ;
+             rdfs:subClassOf cg:StreetFurniture ;
+             rdfs:label "Клумба" .
+
+
+###  http://www.w3id.org/citygraph-core#Forest
+cg:Forest rdf:type owl:Class ;
+          rdfs:subClassOf cg:GreenObject ;
+          rdfs:label "Лесной массив" .
+
+
+###  http://www.w3id.org/citygraph-core#ForestPark
+cg:ForestPark rdf:type owl:Class ;
+              rdfs:subClassOf cg:Forest ;
+              rdfs:label "Лесопарк" .
+
+
+###  http://www.w3id.org/citygraph-core#ForestReserve
+cg:ForestReserve rdf:type owl:Class ;
+                 rdfs:subClassOf cg:OOPT ;
+                 rdfs:label "Заказник" .
+
+
+###  http://www.w3id.org/citygraph-core#Forestry
+cg:Forestry rdf:type owl:Class ;
+            rdfs:subClassOf cg:StateOrganization ;
+            rdfs:label "Лесничество" .
+
+
+###  http://www.w3id.org/citygraph-core#Fountain
+cg:Fountain rdf:type owl:Class ;
+            rdfs:subClassOf cg:StreetFurniture ;
+            rdfs:label "Фонтан" .
+
+
+###  http://www.w3id.org/citygraph-core#FunctionalObject
+cg:FunctionalObject rdf:type owl:Class ;
+                    rdfs:comment "Описание функций физического объекта" ;
+                    rdfs:label "Функциональный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#GK
+cg:GK rdf:type owl:Class ;
+      rdfs:subClassOf cg:NonProfitOrganization ;
+      rdfs:label "ЖК" .
+
+
+###  http://www.w3id.org/citygraph-core#GKS
+cg:GKS rdf:type owl:Class ;
+       rdfs:subClassOf cg:NonProfitOrganization ;
+       rdfs:label "ЖКС" .
+
+
+###  http://www.w3id.org/citygraph-core#GSK
+cg:GSK rdf:type owl:Class ;
+       rdfs:subClassOf cg:NonProfitOrganization ;
+       rdfs:label "ЖСК" .
+
+
+###  http://www.w3id.org/citygraph-core#GUPREP
+cg:GUPREP rdf:type owl:Class ;
+          rdfs:subClassOf cg:StateOrganization ;
+          rdfs:label "ГУПРЭП" .
+
+
+###  http://www.w3id.org/citygraph-core#Garage
+cg:Garage rdf:type owl:Class ;
+          rdfs:subClassOf cg:Building ;
+          rdfs:label "Гараж" .
+
+
+###  http://www.w3id.org/citygraph-core#Geometry
+cg:Geometry rdf:type owl:Class ;
+            rdfs:comment "Класс для хранения геокоординат. Наследуется от Feature для обеспечения совместимости с GeoSPARQL" ;
+            rdfs:label "Геометрия" .
+
+
+###  http://www.w3id.org/citygraph-core#GiftStore
+cg:GiftStore rdf:type owl:Class ;
+             rdfs:subClassOf cg:RetailStore ;
+             rdfs:label "Магазин подарков" .
+
+
+###  http://www.w3id.org/citygraph-core#GovCorporation
+cg:GovCorporation rdf:type owl:Class ;
+                  rdfs:subClassOf cg:GovernmentAuthority ;
+                  rdfs:label "Госкорпорация" .
+
+
+###  http://www.w3id.org/citygraph-core#GovernmentAuthority
+cg:GovernmentAuthority rdf:type owl:Class ;
+                       rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> ;
+                       rdfs:label "Государственная организация" .
+
+
+###  http://www.w3id.org/citygraph-core#GovernmentBody
+cg:GovernmentBody rdf:type owl:Class ;
+                  rdfs:subClassOf cg:GovernmentAuthority ;
+                  rdfs:label "Орган власти" .
+
+
+###  http://www.w3id.org/citygraph-core#Green
+cg:Green rdf:type owl:Class ;
+         rdfs:subClassOf cg:GreenObject ,
+                         cg:PointObject ;
+         rdfs:label "Зеленое насаждение" .
+
+
+###  http://www.w3id.org/citygraph-core#GreenObject
+cg:GreenObject rdf:type owl:Class ;
+               rdfs:subClassOf cg:NatureObject ;
+               rdfs:label "Зелёный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#GreenRoof
+cg:GreenRoof rdf:type owl:Class ;
+             rdfs:subClassOf cg:GreenObject ,
+                             cg:Surface ;
+             rdfs:label "Крышное озеленение" .
+
+
+###  http://www.w3id.org/citygraph-core#GroceryStore
+cg:GroceryStore rdf:type owl:Class ;
+                rdfs:subClassOf cg:RetailStore ;
+                rdfs:label "Продуктовый магазин" .
+
+
+###  http://www.w3id.org/citygraph-core#GroundObject
+cg:GroundObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:NatureObject ;
+                rdfs:comment "Описание почвеных слоев и элементов почвы" ;
+                rdfs:label "Почва" .
+
+
+###  http://www.w3id.org/citygraph-core#GuestHouse
+cg:GuestHouse rdf:type owl:Class ;
+              rdfs:subClassOf cg:Hotel ;
+              rdfs:label "Гостевой дом" .
+
+
+###  http://www.w3id.org/citygraph-core#Gymnasium
+cg:Gymnasium rdf:type owl:Class ;
+             rdfs:subClassOf cg:EducationalObject ;
+             rdfs:label "Гимназия" .
+
+
+###  http://www.w3id.org/citygraph-core#HelthFacility
+cg:HelthFacility rdf:type owl:Class ;
+                 rdfs:subClassOf cg:MedicalObject ;
+                 rdfs:label "Медицинское учреждение" .
+
+
+###  http://www.w3id.org/citygraph-core#HomelessHome
+cg:HomelessHome rdf:type owl:Class ;
+                rdfs:subClassOf cg:PublicHome ;
+                rdfs:label "Дом временного содержания бездомных" .
+
+
+###  http://www.w3id.org/citygraph-core#Hospital
+cg:Hospital rdf:type owl:Class ;
+            rdfs:subClassOf cg:HelthFacility ;
+            rdfs:label "Больница" .
+
+
+###  http://www.w3id.org/citygraph-core#Hostel
+cg:Hostel rdf:type owl:Class ;
+          rdfs:subClassOf cg:Hotel ;
+          rdfs:label "Хостел" .
+
+
+###  http://www.w3id.org/citygraph-core#Hotel
+cg:Hotel rdf:type owl:Class ;
+         rdfs:subClassOf cg:CommercialObject ;
+         rdfs:label "Гостиница" .
+
+
+###  http://www.w3id.org/citygraph-core#House
+cg:House rdf:type owl:Class ;
+         rdfs:subClassOf cg:LivingObject ;
+         rdfs:label "Частный дом" .
+
+
+###  http://www.w3id.org/citygraph-core#HouseYouthCreativity
+cg:HouseYouthCreativity rdf:type owl:Class ;
+                        rdfs:subClassOf cg:EducationalObject ;
+                        rdfs:label "Дом детско-юношеского творчества" .
+
+
+###  http://www.w3id.org/citygraph-core#Hypermarket
+cg:Hypermarket rdf:type owl:Class ;
+               rdfs:subClassOf cg:RetailStore ;
+               rdfs:label "Гипермаркет" .
+
+
+###  http://www.w3id.org/citygraph-core#IceArena
+cg:IceArena rdf:type owl:Class ;
+            rdfs:subClassOf cg:SportsObject ;
+            rdfs:label "Ледовая Арена" .
+
+
+###  http://www.w3id.org/citygraph-core#IndustrialObject
+cg:IndustrialObject rdf:type owl:Class ;
+                    rdfs:subClassOf cg:FunctionalObject ;
+                    rdfs:label "Промышленный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#InformationDesk
+cg:InformationDesk rdf:type owl:Class ;
+                   rdfs:subClassOf cg:StreetFurniture ;
+                   rdfs:label "Информационный щит" .
+
+
+###  http://www.w3id.org/citygraph-core#Installation
+cg:Installation rdf:type owl:Class ;
+                rdfs:subClassOf cg:StreetFurniture ;
+                rdfs:label "Скульптура" .
+
+
+###  http://www.w3id.org/citygraph-core#Institute
+cg:Institute rdf:type owl:Class ;
+             rdfs:subClassOf cg:EducationalObject ;
+             rdfs:label "Институт" .
+
+
+###  http://www.w3id.org/citygraph-core#InterRail
+cg:InterRail rdf:type owl:Class ;
+             rdfs:subClassOf cg:Covering ;
+             rdfs:label "Межрельсовое покрытие" .
+
+
+###  http://www.w3id.org/citygraph-core#InterSettlementTerritory
+cg:InterSettlementTerritory rdf:type owl:Class ;
+                            rdfs:subClassOf cg:Municipality ;
+                            rdfs:label "Межселенная территория" .
+
+
+###  http://www.w3id.org/citygraph-core#IntracityAreas
+cg:IntracityAreas rdf:type owl:Class ;
+                  rdfs:subClassOf cg:Municipality ;
+                  rdfs:label "Внутригородская территория" .
+
+
+###  http://www.w3id.org/citygraph-core#IntracityMunicipality
+cg:IntracityMunicipality rdf:type owl:Class ;
+                         rdfs:subClassOf cg:Municipality ;
+                         rdfs:label "Внутригородская территория города федерального значения" .
+
+
+###  http://www.w3id.org/citygraph-core#Intracity_District
+cg:Intracity_District rdf:type owl:Class ;
+                      rdfs:subClassOf cg:District ;
+                      rdfs:label "Внутригородской район" .
+
+
+###  http://www.w3id.org/citygraph-core#KU_state
+cg:KU_state rdf:type owl:Class ;
+            rdfs:subClassOf cg:GovernmentAuthority ;
+            rdfs:label "Казенное учреждение" .
+
+
+###  http://www.w3id.org/citygraph-core#Kray
+cg:Kray rdf:type owl:Class ;
+        rdfs:subClassOf cg:Region ;
+        rdfs:label "Край" .
+
+
+###  http://www.w3id.org/citygraph-core#Lake
+cg:Lake rdf:type owl:Class ;
+        rdfs:subClassOf cg:WaterObject ;
+        rdfs:label "Озеро" .
+
+
+###  http://www.w3id.org/citygraph-core#Land
+cg:Land rdf:type owl:Class ;
+        rdfs:subClassOf cg:Space ;
+        rdfs:label "Земельный участок" .
+
+
+###  http://www.w3id.org/citygraph-core#Landscape
+cg:Landscape rdf:type owl:Class ;
+             rdfs:subClassOf cg:Component ;
+             rdfs:label "Ландшафт" .
+
+
+###  http://www.w3id.org/citygraph-core#LawDoc
+cg:LawDoc rdf:type owl:Class ;
+          rdfs:subClassOf cg:Document ;
+          rdfs:label "Закон" .
+
+
+###  http://www.w3id.org/citygraph-core#Level
+cg:Level rdf:type owl:Class ;
+         rdfs:subClassOf cg:NetObject ;
+         rdfs:comment "Концепт, позволяющий расположить элементы сетевого объекта по разным уровням. В коммунальной системе - это могут быть этажи." ;
+         rdfs:label "Уровень" .
+
+
+###  http://www.w3id.org/citygraph-core#Library
+cg:Library rdf:type owl:Class ;
+           rdfs:subClassOf cg:EducationalObject ;
+           rdfs:label "Библиотека" .
+
+
+###  http://www.w3id.org/citygraph-core#Line
+cg:Line rdf:type owl:Class ;
+        rdfs:subClassOf cg:NetObject ;
+        rdfs:comment "Соединяет два узла, например, в транспорте это дорога" ;
+        rdfs:label "Линия" .
+
+
+###  http://www.w3id.org/citygraph-core#Link
+cg:Link rdf:type owl:Class ;
+        rdfs:subClassOf cg:NetObject ;
+        rdfs:comment "Плавно соединяет две линии, не образуя узла. Например, в транспорте это съезды дорог" ;
+        rdfs:label "Связь" .
+
+
+###  http://www.w3id.org/citygraph-core#LivingObject
+cg:LivingObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:FunctionalObject ;
+                rdfs:label "Жилой объект" .
+
+
+###  http://www.w3id.org/citygraph-core#MajorRenovation
+cg:MajorRenovation rdf:type owl:Class ;
+                   rdfs:subClassOf cg:Action ;
+                   rdfs:label "Капитальный ремонт" .
+
+
+###  http://www.w3id.org/citygraph-core#Market
+cg:Market rdf:type owl:Class ;
+          rdfs:subClassOf cg:CommercialObject ;
+          rdfs:label "Рынок" .
+
+
+###  http://www.w3id.org/citygraph-core#Markup
+cg:Markup rdf:type owl:Class ;
+          rdfs:subClassOf cg:Covering ;
+          rdfs:label "Разметка" .
+
+
+###  http://www.w3id.org/citygraph-core#MedicalEduInstitution
+cg:MedicalEduInstitution rdf:type owl:Class ;
+                         rdfs:subClassOf cg:HelthFacility ;
+                         rdfs:label "Медицинское учебное заведение" .
+
+
+###  http://www.w3id.org/citygraph-core#MedicalObject
+cg:MedicalObject rdf:type owl:Class ;
+                 rdfs:subClassOf cg:SocialObject ;
+                 rdfs:label "Медицинский объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Memorial
+cg:Memorial rdf:type owl:Class ;
+            rdfs:subClassOf cg:CulturalObject ;
+            rdfs:label "Памятник" .
+
+
+###  http://www.w3id.org/citygraph-core#MemorialPlaque
+cg:MemorialPlaque rdf:type owl:Class ;
+                  rdfs:subClassOf cg:Museum ;
+                  rdfs:label "Мемориальная доска" .
+
+
+###  http://www.w3id.org/citygraph-core#MetroEntranceHall
+cg:MetroEntranceHall rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> ;
+                     rdfs:label "Наземный вестибюль станции метро" .
+
+
+###  http://www.w3id.org/citygraph-core#MilitaryObject
+cg:MilitaryObject rdf:type owl:Class ;
+                  rdfs:subClassOf cg:FunctionalObject ;
+                  rdfs:label "Военный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#MillitaryEducation
+cg:MillitaryEducation rdf:type owl:Class ;
+                      rdfs:subClassOf cg:MilitaryObject ;
+                      rdfs:label "Военный учебный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Monument
+cg:Monument rdf:type owl:Class ;
+            rdfs:subClassOf cg:Memorial ;
+            rdfs:label "Монумент" .
+
+
+###  http://www.w3id.org/citygraph-core#Motorcycle
+cg:Motorcycle rdf:type owl:Class ;
+              rdfs:subClassOf cg:MovableObject ;
+              rdfs:label "Мотоцикл" .
+
+
+###  http://www.w3id.org/citygraph-core#MovableObject
+cg:MovableObject rdf:type owl:Class ;
+                 rdfs:subClassOf cg:PhysicalObject ;
+                 rdfs:comment "Объект, который не имеет фиксированного местоположения/прикрепления к земле (например, транспорт или движимая уличная техника). Имеет обязательные аттрибуты: modelName и licencePlate (исключением могут быть трактора и иная техника, используемая в поселках, оставлять пустую строку)." ;
+                 rdfs:label "Движимый объект" .
+
+
+###  http://www.w3id.org/citygraph-core#MultifunctionalStore
+cg:MultifunctionalStore rdf:type owl:Class ;
+                        rdfs:subClassOf cg:RetailStore ;
+                        rdfs:label "Супермаркет" .
+
+
+###  http://www.w3id.org/citygraph-core#MultyAptHouse
+cg:MultyAptHouse rdf:type owl:Class ;
+                 rdfs:subClassOf cg:LivingObject ;
+                 rdfs:label "Многоквартирный дом" .
+
+
+###  http://www.w3id.org/citygraph-core#MunAdministration
+cg:MunAdministration rdf:type owl:Class ;
+                     rdfs:subClassOf cg:MunicipalGov ;
+                     rdfs:label "Муниципальная администрация" .
+
+
+###  http://www.w3id.org/citygraph-core#MunDepSovet
+cg:MunDepSovet rdf:type owl:Class ;
+               rdfs:subClassOf cg:MunicipalGov ;
+               rdfs:label "Совет муниципальных депутатов" .
+
+
+###  http://www.w3id.org/citygraph-core#MunicipalDistrict
+cg:MunicipalDistrict rdf:type owl:Class ;
+                     rdfs:subClassOf cg:Municipality ;
+                     rdfs:label "Муниципальный район" .
+
+
+###  http://www.w3id.org/citygraph-core#MunicipalGov
+cg:MunicipalGov rdf:type owl:Class ;
+                rdfs:subClassOf cg:GovernmentBody ;
+                rdfs:label "Муниципальный орга власти" .
+
+
+###  http://www.w3id.org/citygraph-core#MunicipalOkrug
+cg:MunicipalOkrug rdf:type owl:Class ;
+                  rdfs:subClassOf cg:Municipality ;
+                  rdfs:label "Муниципальный округ" .
+
+
+###  http://www.w3id.org/citygraph-core#Municipality
+cg:Municipality rdf:type owl:Class ;
+                rdfs:subClassOf cg:AdministrativeUnit ;
+                rdfs:label "Муниципалитет" .
+
+
+###  http://www.w3id.org/citygraph-core#Museum
+cg:Museum rdf:type owl:Class ;
+          rdfs:subClassOf cg:CulturalObject ;
+          rdfs:label "Музей" .
+
+
+###  http://www.w3id.org/citygraph-core#NII
+cg:NII rdf:type owl:Class ;
+       rdfs:subClassOf cg:HelthFacility ;
+       rdfs:label "Научно-исследовательский институт" .
+
+
+###  http://www.w3id.org/citygraph-core#NationalPark
+cg:NationalPark rdf:type owl:Class ;
+                rdfs:subClassOf cg:OOPT ;
+                rdfs:label "Национальный парк" .
+
+
+###  http://www.w3id.org/citygraph-core#NatureMonument
+cg:NatureMonument rdf:type owl:Class ;
+                  rdfs:subClassOf cg:OOPT ;
+                  rdfs:label "Природный памятник" .
+
+
+###  http://www.w3id.org/citygraph-core#NatureObject
+cg:NatureObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:FunctionalObject ;
+                rdfs:comment "Объект живой природы (например, зелёное насаждение)" ;
+                rdfs:label "Природный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#NaturePark
+cg:NaturePark rdf:type owl:Class ;
+              rdfs:subClassOf cg:OOPT ;
+              rdfs:label "Природный парк" .
+
+
+###  http://www.w3id.org/citygraph-core#NetBus
+cg:NetBus rdf:type owl:Class ;
+          rdfs:subClassOf cg:NetObject ;
+          rdfs:comment "Концепт сетевой шины, в которую имеется какое-то количество входов и какое-то количество выходов (в том числе 1). Так в коммунальной системе так можно описать систему труб." ;
+          rdfs:label "Шина" .
+
+
+###  http://www.w3id.org/citygraph-core#NetGroup
+cg:NetGroup rdf:type owl:Class ;
+            rdfs:subClassOf cg:NetObject ;
+            rdfs:comment "Когда необходимо объединить большое количество элементов в одну систему. Например, участок цепи." ;
+            rdfs:label "Группировка элементов" .
+
+
+###  http://www.w3id.org/citygraph-core#NetLayer
+cg:NetLayer rdf:type owl:Class ;
+            rdfs:subClassOf cg:NetObject ;
+            rdfs:comment "Может группировать объекты имеющие общие свойства" ;
+            rdfs:label "Слой" .
+
+
+###  http://www.w3id.org/citygraph-core#NetObject
+cg:NetObject rdf:type owl:Class ;
+             rdfs:subClassOf cg:PhysicalObject ;
+             rdfs:comment "Объект, обозначаемый на карте линией или сетью линий (например, дорога или система водоснабжения)" ;
+             rdfs:label "Сетевой объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Node
+cg:Node rdf:type owl:Class ;
+        rdfs:subClassOf cg:NetObject ;
+        rdfs:comment "Пересечение двух линий. Например, в транспорте это перекресток" ;
+        rdfs:label "Узел" .
+
+
+###  http://www.w3id.org/citygraph-core#NonProfitAssociation
+cg:NonProfitAssociation rdf:type owl:Class ;
+                        rdfs:subClassOf cg:NonProfitOrganization ;
+                        rdfs:label "Некоммерческая ассоциация" .
+
+
+###  http://www.w3id.org/citygraph-core#NonProfitFoundation
+cg:NonProfitFoundation rdf:type owl:Class ;
+                       rdfs:subClassOf cg:NonProfitOrganization ;
+                       rdfs:label "Некоммерческий фонд" .
+
+
+###  http://www.w3id.org/citygraph-core#NonProfitOrganization
+cg:NonProfitOrganization rdf:type owl:Class ;
+                         rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> ;
+                         rdfs:label "Некоммерческая организация" .
+
+
+###  http://www.w3id.org/citygraph-core#NonProfitPartnership
+cg:NonProfitPartnership rdf:type owl:Class ;
+                        rdfs:subClassOf cg:NonProfitOrganization ;
+                        rdfs:label "Некоммерческое партнерство" .
+
+
+###  http://www.w3id.org/citygraph-core#NursingHome
+cg:NursingHome rdf:type owl:Class ;
+               rdfs:subClassOf cg:PublicHome ;
+               rdfs:label "Дом престарелых" .
+
+
+###  http://www.w3id.org/citygraph-core#OKATO
+cg:OKATO rdf:type owl:Class ;
+         rdfs:subClassOf cg:Reference .
+
+
+###  http://www.w3id.org/citygraph-core#OKTMO
+cg:OKTMO rdf:type owl:Class ;
+         rdfs:subClassOf cg:Reference .
+
+
+###  http://www.w3id.org/citygraph-core#OOPT
+cg:OOPT rdf:type owl:Class ;
+        rdfs:subClassOf cg:NatureObject ;
+        rdfs:label "Особо охраняемая природная территория" .
+
+
+###  http://www.w3id.org/citygraph-core#Oblast
+cg:Oblast rdf:type owl:Class ;
+          rdfs:subClassOf cg:Region ;
+          rdfs:label "Область" .
+
+
+###  http://www.w3id.org/citygraph-core#OlympicReserveSportSchool
+cg:OlympicReserveSportSchool rdf:type owl:Class ;
+                             rdfs:subClassOf cg:SportsObject ;
+                             rdfs:label "Спортивная детско-юношеская школа олимпийского резерва" .
+
+
+###  http://www.w3id.org/citygraph-core#OpenLot
+cg:OpenLot rdf:type owl:Class ;
+           rdfs:subClassOf cg:Covering ;
+           rdfs:label "Открытый лоток" .
+
+
+###  http://www.w3id.org/citygraph-core#OpenStairs
+cg:OpenStairs rdf:type owl:Class ;
+              rdfs:subClassOf cg:Relief ;
+              rdfs:label "Открытая лестница" .
+
+
+###  http://www.w3id.org/citygraph-core#Organization_IP
+cg:Organization_IP rdf:type owl:Class ;
+                   rdfs:subClassOf cg:CommercialOrganization ;
+                   rdfs:label "ИП" .
+
+
+###  http://www.w3id.org/citygraph-core#Organization_OAO
+cg:Organization_OAO rdf:type owl:Class ;
+                    rdfs:subClassOf cg:CommercialOrganization ;
+                    rdfs:label "ОАО" .
+
+
+###  http://www.w3id.org/citygraph-core#Organization_OOO
+cg:Organization_OOO rdf:type owl:Class ;
+                    rdfs:subClassOf cg:CommercialOrganization ;
+                    rdfs:label "ООО" .
+
+
+###  http://www.w3id.org/citygraph-core#Organization_ZAO
+cg:Organization_ZAO rdf:type owl:Class ;
+                    rdfs:subClassOf cg:CommercialOrganization ;
+                    rdfs:label "ЗАО" .
+
+
+###  http://www.w3id.org/citygraph-core#Orphanage
+cg:Orphanage rdf:type owl:Class ;
+             rdfs:subClassOf cg:PublicHome ;
+             rdfs:label "Детский дом" .
+
+
+###  http://www.w3id.org/citygraph-core#OtherPopulationGroups
+cg:OtherPopulationGroups rdf:type owl:Class ;
+                         rdfs:subClassOf cg:SocialGroup ;
+                         rdfs:label "Дополнительная группа горожан" .
+
+
+###  http://www.w3id.org/citygraph-core#OutletCenter
+cg:OutletCenter rdf:type owl:Class ;
+                rdfs:subClassOf cg:RetailHub ;
+                rdfs:label "Аутлет-центр" .
+
+
+###  http://www.w3id.org/citygraph-core#OutpatientClinic
+cg:OutpatientClinic rdf:type owl:Class ;
+                    rdfs:subClassOf cg:HelthFacility ;
+                    rdfs:label "Поликлиника" .
+
+
+###  http://www.w3id.org/citygraph-core#PT_Route
+cg:PT_Route rdf:type owl:Class ;
+            rdfs:subClassOf cg:Reference ;
+            rdfs:comment "A gtfs:Route is a commercial route followed entirely or partly by gtfs:Trips."@en ;
+            rdfs:label "Route"@en ,
+                       "Маршрут общественного транспорта"@ru .
+
+
+###  http://www.w3id.org/citygraph-core#Pandus
+cg:Pandus rdf:type owl:Class ;
+          rdfs:subClassOf cg:Relief ;
+          rdfs:label "Пандус" .
+
+
+###  http://www.w3id.org/citygraph-core#Park
+cg:Park rdf:type owl:Class ;
+        rdfs:subClassOf cg:GreenObject ;
+        rdfs:label "Парк" .
+
+
+###  http://www.w3id.org/citygraph-core#Pedestrian
+cg:Pedestrian rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+              rdfs:label "Пешеходная зона" .
+
+
+###  http://www.w3id.org/citygraph-core#PetrolFillingStation
+cg:PetrolFillingStation rdf:type owl:Class ;
+                        rdfs:subClassOf cg:FillingStation ;
+                        rdfs:label "Бензозаправочная станция"@ru .
+
+
+###  http://www.w3id.org/citygraph-core#Pharmacy
+cg:Pharmacy rdf:type owl:Class ;
+            rdfs:subClassOf cg:MedicalObject ;
+            rdfs:label "Аптека" .
+
+
+###  http://www.w3id.org/citygraph-core#PhysicalObject
+cg:PhysicalObject rdf:type owl:Class ;
+                  rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." ;
+                  rdfs:label "Физический объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Playground
+cg:Playground rdf:type owl:Class ;
+              rdfs:subClassOf cg:PublicObject ;
+              rdfs:label "Детская площадка" .
+
+
+###  http://www.w3id.org/citygraph-core#Pocket
+cg:Pocket rdf:type owl:Class ;
+          rdfs:subClassOf cg:Covering ;
+          rdfs:comment "Например остановочный, изгиб дороги" ;
+          rdfs:label "Карман" .
+
+
+###  http://www.w3id.org/citygraph-core#PointObject
+cg:PointObject rdf:type owl:Class ;
+               rdfs:subClassOf cg:PhysicalObject ;
+               rdfs:label "Точечный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Pond
+cg:Pond rdf:type owl:Class ;
+        rdfs:subClassOf cg:WaterObject ;
+        rdfs:label "Пруд" .
+
+
+###  http://www.w3id.org/citygraph-core#Position
+cg:Position rdf:type owl:Class ;
+            rdfs:subClassOf cg:Reference ;
+            rdfs:label "Должность" .
+
+
+###  http://www.w3id.org/citygraph-core#PostBox
+cg:PostBox rdf:type owl:Class ;
+           rdfs:subClassOf cg:StreetFurniture ;
+           rdfs:label "Почтовый ящик" .
+
+
+###  http://www.w3id.org/citygraph-core#PostOffice
+cg:PostOffice rdf:type owl:Class ;
+              rdfs:subClassOf cg:PublicObject ;
+              rdfs:label "Почта" .
+
+
+###  http://www.w3id.org/citygraph-core#Preschool
+cg:Preschool rdf:type owl:Class ;
+             rdfs:subClassOf cg:EducationalObject ;
+             rdfs:label "Детский сад" .
+
+
+###  http://www.w3id.org/citygraph-core#President
+cg:President rdf:type owl:Class ;
+             rdfs:subClassOf cg:FederalGov ;
+             rdfs:label "Президент" .
+
+
+###  http://www.w3id.org/citygraph-core#PresidentAdministration
+cg:PresidentAdministration rdf:type owl:Class ;
+                           rdfs:subClassOf cg:President ;
+                           rdfs:label "Администрация Президента" .
+
+
+###  http://www.w3id.org/citygraph-core#PresidentHumanRightsSovet
+cg:PresidentHumanRightsSovet rdf:type owl:Class ;
+                             rdfs:subClassOf cg:President ;
+                             rdfs:label "Совет по правам человека при президенте" .
+
+
+###  http://www.w3id.org/citygraph-core#Procedure
+cg:Procedure rdf:type owl:Class ;
+             rdfs:label "Процедура" .
+
+
+###  http://www.w3id.org/citygraph-core#ProsecutorOffice
+cg:ProsecutorOffice rdf:type owl:Class ;
+                    rdfs:subClassOf cg:GovernmentAuthority ;
+                    rdfs:label "Прокуратура" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicHeatingSystemObject
+cg:PublicHeatingSystemObject rdf:type owl:Class ;
+                             rdfs:subClassOf cg:PublicSystemObject ;
+                             rdfs:label "Отопительная система" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicHome
+cg:PublicHome rdf:type owl:Class ;
+              rdfs:subClassOf cg:PublicObject ;
+              rdfs:label "Дом" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicNotRegistered
+cg:PublicNotRegistered rdf:type owl:Class ;
+                       rdfs:subClassOf cg:NonProfitOrganization ;
+                       rdfs:label "Незарегистрированная общественная организация" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicObject
+cg:PublicObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:SocialObject ;
+                rdfs:label "Общественный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicOrganization
+cg:PublicOrganization rdf:type owl:Class ;
+                      rdfs:subClassOf cg:NonProfitOrganization ;
+                      rdfs:label "Общественная организация" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicPowerSystemObject
+cg:PublicPowerSystemObject rdf:type owl:Class ;
+                           rdfs:subClassOf cg:PublicSystemObject ;
+                           rdfs:label "Электросетевая система" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicSewerageSystemObject
+cg:PublicSewerageSystemObject rdf:type owl:Class ;
+                              rdfs:subClassOf cg:PublicSystemObject ;
+                              rdfs:label "Канализационная система" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicSign
+cg:PublicSign rdf:type owl:Class ;
+              rdfs:subClassOf cg:StreetFurniture ;
+              rdfs:label "Знак" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicSystemObject
+cg:PublicSystemObject rdf:type owl:Class ;
+                      rdfs:subClassOf cg:NetObject ;
+                      rdfs:label "Коммунальная система" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicVehicle
+cg:PublicVehicle rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                 rdfs:label "Пассажирское транспортное средство" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicWaterSystemObject
+cg:PublicWaterSystemObject rdf:type owl:Class ;
+                           rdfs:subClassOf cg:PublicSystemObject ;
+                           rdfs:label "Система водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#RailwayStation
+cg:RailwayStation rdf:type owl:Class ;
+                  rdfs:subClassOf cg:Terminal ;
+                  rdfs:label "Ж/д станция" .
+
+
+###  http://www.w3id.org/citygraph-core#RecommendationDoc
+cg:RecommendationDoc rdf:type owl:Class ;
+                     rdfs:subClassOf cg:Document ;
+                     rdfs:label "Методические рекомендации" .
+
+
+###  http://www.w3id.org/citygraph-core#Reference
+cg:Reference rdf:type owl:Class ;
+             rdfs:label "Справочник" .
+
+
+###  http://www.w3id.org/citygraph-core#Region
+cg:Region rdf:type owl:Class ;
+          rdfs:subClassOf cg:AdministrativeUnit ;
+          rdfs:label "Регион" .
+
+
+###  http://www.w3id.org/citygraph-core#Region_City
+cg:Region_City rdf:type owl:Class ;
+               rdfs:subClassOf cg:District ;
+               rdfs:label "Город республиканского, краевого, областного подчинения" .
+
+
+###  http://www.w3id.org/citygraph-core#Region_District
+cg:Region_District rdf:type owl:Class ;
+                   rdfs:subClassOf cg:District ;
+                   rdfs:label "Район, республики, края, области, автономной области, автономного округа" .
+
+
+###  http://www.w3id.org/citygraph-core#RegionalAdministartion
+cg:RegionalAdministartion rdf:type owl:Class ;
+                          rdfs:subClassOf cg:RegionalGov ;
+                          rdfs:label "Администрация субъекта федерации" .
+
+
+###  http://www.w3id.org/citygraph-core#RegionalGov
+cg:RegionalGov rdf:type owl:Class ;
+               rdfs:subClassOf cg:GovernmentBody ;
+               rdfs:label "Региональный орган власти" .
+
+
+###  http://www.w3id.org/citygraph-core#RegionalMinistry
+cg:RegionalMinistry rdf:type owl:Class ;
+                    rdfs:subClassOf cg:RegionalGov ;
+                    rdfs:label "Региональный исполнительный орган власти" .
+
+
+###  http://www.w3id.org/citygraph-core#RegionalParliament
+cg:RegionalParliament rdf:type owl:Class ;
+                      rdfs:subClassOf cg:RegionalGov ;
+                      rdfs:label "Парламент субъекта федерации" .
+
+
+###  http://www.w3id.org/citygraph-core#Relief
+cg:Relief rdf:type owl:Class ;
+          rdfs:subClassOf cg:Component ;
+          rdfs:label "Рельеф" .
+
+
+###  http://www.w3id.org/citygraph-core#ReligiousObject
+cg:ReligiousObject rdf:type owl:Class ;
+                   rdfs:subClassOf cg:SocialObject ;
+                   rdfs:label "Религиозный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Republic
+cg:Republic rdf:type owl:Class ;
+            rdfs:subClassOf cg:Region ;
+            rdfs:label "Республика" .
+
+
+###  http://www.w3id.org/citygraph-core#Reservoir
+cg:Reservoir rdf:type owl:Class ;
+             rdfs:subClassOf cg:WaterObject ;
+             rdfs:label "Резервуар" .
+
+
+###  http://www.w3id.org/citygraph-core#Restaurant
+cg:Restaurant rdf:type owl:Class ;
+              rdfs:subClassOf cg:Eatery ;
+              rdfs:label "Ресторан" .
+
+
+###  http://www.w3id.org/citygraph-core#RetailHub
+cg:RetailHub rdf:type owl:Class ;
+             rdfs:subClassOf cg:CommercialObject ;
+             rdfs:label "Торговый центр" .
+
+
+###  http://www.w3id.org/citygraph-core#RetailStore
+cg:RetailStore rdf:type owl:Class ;
+               rdfs:subClassOf cg:CommercialObject ;
+               rdfs:label "Магазин" .
+
+
+###  http://www.w3id.org/citygraph-core#RetainingWalls
+cg:RetainingWalls rdf:type owl:Class ;
+                  rdfs:subClassOf cg:Relief ;
+                  rdfs:label "Подпорная стена" .
+
+
+###  http://www.w3id.org/citygraph-core#River
+cg:River rdf:type owl:Class ;
+         rdfs:subClassOf cg:WaterObject ;
+         rdfs:label "Река" .
+
+
+###  http://www.w3id.org/citygraph-core#RiverStation
+cg:RiverStation rdf:type owl:Class ;
+                rdfs:subClassOf cg:Terminal ;
+                rdfs:label "Речной вокзал" .
+
+
+###  http://www.w3id.org/citygraph-core#RoadNetworkObject
+cg:RoadNetworkObject rdf:type owl:Class ;
+                     rdfs:subClassOf cg:NetObject ;
+                     rdfs:label "Дорожная сеть" .
+
+
+###  http://www.w3id.org/citygraph-core#RoadSign
+cg:RoadSign rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+            rdfs:label "Дорожный знак" .
+
+
+###  http://www.w3id.org/citygraph-core#RowingClub
+cg:RowingClub rdf:type owl:Class ;
+              rdfs:subClassOf cg:SportsObject ;
+              rdfs:label "Гребной клуб" .
+
+
+###  http://www.w3id.org/citygraph-core#RuralSettlements
+cg:RuralSettlements rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Municipality ;
+                    rdfs:label "Сельское поселение" .
+
+
+###  http://www.w3id.org/citygraph-core#School
+cg:School rdf:type owl:Class ;
+          rdfs:subClassOf cg:EducationalObject ;
+          rdfs:label "Школа" .
+
+
+###  http://www.w3id.org/citygraph-core#SecondarySchool
+cg:SecondarySchool rdf:type owl:Class ;
+                   rdfs:subClassOf cg:EducationalObject ;
+                   rdfs:label "Училище" .
+
+
+###  http://www.w3id.org/citygraph-core#ServiceZone
+cg:ServiceZone rdf:type owl:Class ;
+               rdfs:subClassOf cg:Covering ;
+               rdfs:label "Сервисная зона" .
+
+
+###  http://www.w3id.org/citygraph-core#ShoppingEntertainmentCentre
+cg:ShoppingEntertainmentCentre rdf:type owl:Class ;
+                               rdfs:subClassOf cg:RetailHub ;
+                               rdfs:label "Торгово-развлекательный центр" .
+
+
+###  http://www.w3id.org/citygraph-core#ShoppingEntertainmentMall
+cg:ShoppingEntertainmentMall rdf:type owl:Class ;
+                             rdfs:subClassOf cg:RetailHub ;
+                             rdfs:label "Торгово-развлекательный комплекс" .
+
+
+###  http://www.w3id.org/citygraph-core#Sidewalk
+cg:Sidewalk rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TrafficArea> ;
+            rdfs:label "Тротуар" .
+
+
+###  http://www.w3id.org/citygraph-core#Skalodrom
+cg:Skalodrom rdf:type owl:Class ;
+             rdfs:subClassOf cg:Sportground ;
+             rdfs:label "Скалодром" .
+
+
+###  http://www.w3id.org/citygraph-core#Slope
+cg:Slope rdf:type owl:Class ;
+         rdfs:subClassOf cg:Relief ;
+         rdfs:label "Откос" .
+
+
+###  http://www.w3id.org/citygraph-core#SmallArchitecture
+cg:SmallArchitecture rdf:type owl:Class ;
+                     rdfs:subClassOf cg:AchitectureElement ;
+                     rdfs:label "МАФ" .
+
+
+###  http://www.w3id.org/citygraph-core#SmallCityGarden
+cg:SmallCityGarden rdf:type owl:Class ;
+                   rdfs:subClassOf cg:SmallGarden ;
+                   rdfs:label "Городской сквер" .
+
+
+###  http://www.w3id.org/citygraph-core#SmallGarden
+cg:SmallGarden rdf:type owl:Class ;
+               rdfs:subClassOf cg:GreenObject ;
+               rdfs:label "Сквер" .
+
+
+###  http://www.w3id.org/citygraph-core#SmallGardenInBlock
+cg:SmallGardenInBlock rdf:type owl:Class ;
+                      rdfs:subClassOf cg:SmallGarden ;
+                      rdfs:label "Внутриквартальный сквер" .
+
+
+###  http://www.w3id.org/citygraph-core#SocialGroup
+cg:SocialGroup rdf:type owl:Class ;
+               rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Group> ;
+               rdfs:comment "Описание социальных групп населения в базе данных в соответствии с документом \"Дем соц группы\" по ссылке" ;
+               rdfs:isDefinedBy "https://docs.google.com/document/d/16ZIA3hXikwpipxL7rpNQGuY90LG7AHbMLhu54QeZuSw/edit" ;
+               rdfs:label "Социальная группа населения" .
+
+
+###  http://www.w3id.org/citygraph-core#SocialObject
+cg:SocialObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:FunctionalObject ;
+                rdfs:comment "Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)" ;
+                rdfs:label "Социальный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Space
+cg:Space rdf:type owl:Class ;
+         rdfs:subClassOf cg:AreaObject ;
+         rdfs:comment "Площадной объект, представляющий собой участок земли (без учёта построек на нём)" ;
+         rdfs:label "Пространство" .
+
+
+###  http://www.w3id.org/citygraph-core#SportComplex
+cg:SportComplex rdf:type owl:Class ;
+                rdfs:subClassOf cg:SportsObject ;
+                rdfs:label "Спортивно-оздоровительный комплекс" .
+
+
+###  http://www.w3id.org/citygraph-core#Sportground
+cg:Sportground rdf:type owl:Class ;
+               rdfs:subClassOf cg:SportsObject ;
+               rdfs:label "Дворовая спортивная площадка" .
+
+
+###  http://www.w3id.org/citygraph-core#SportsClass
+cg:SportsClass rdf:type owl:Class ;
+               rdfs:subClassOf cg:EducationalObject ;
+               rdfs:label "Спортивная секция" .
+
+
+###  http://www.w3id.org/citygraph-core#SportsObject
+cg:SportsObject rdf:type owl:Class ;
+                rdfs:subClassOf cg:SocialObject ;
+                rdfs:label "Спортивный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#Square
+cg:Square rdf:type owl:Class ;
+          rdfs:subClassOf cg:PublicObject ;
+          rdfs:label "Площадь" .
+
+
+###  http://www.w3id.org/citygraph-core#Stadium
+cg:Stadium rdf:type owl:Class ;
+           rdfs:subClassOf cg:SportsObject ;
+           rdfs:label "Стадион" .
+
+
+###  http://www.w3id.org/citygraph-core#StateOrganization
+cg:StateOrganization rdf:type owl:Class ;
+                     rdfs:subClassOf cg:GovernmentAuthority ;
+                     rdfs:label "Бюджетное учреждение" .
+
+
+###  http://www.w3id.org/citygraph-core#StatementDoc
+cg:StatementDoc rdf:type owl:Class ;
+                rdfs:subClassOf cg:Document ;
+                rdfs:label "Постановление" .
+
+
+###  http://www.w3id.org/citygraph-core#Street
+cg:Street rdf:type owl:Class ;
+          rdfs:subClassOf cg:Address ;
+          rdfs:label "Улица" .
+
+
+###  http://www.w3id.org/citygraph-core#StreetClock
+cg:StreetClock rdf:type owl:Class ;
+               rdfs:subClassOf cg:StreetFurniture ;
+               rdfs:label "Часы" .
+
+
+###  http://www.w3id.org/citygraph-core#StreetFurniture
+cg:StreetFurniture rdf:type owl:Class ;
+                   rdfs:subClassOf cg:PublicObject ;
+                   rdfs:label "Уличная мебель" .
+
+
+###  http://www.w3id.org/citygraph-core#StreetLamp
+cg:StreetLamp rdf:type owl:Class ;
+              rdfs:subClassOf cg:StreetFurniture ;
+              rdfs:label "Уличная лампа" .
+
+
+###  http://www.w3id.org/citygraph-core#StreetTable
+cg:StreetTable rdf:type owl:Class ;
+               rdfs:subClassOf cg:StreetFurniture ;
+               rdfs:label "Стол" .
+
+
+###  http://www.w3id.org/citygraph-core#Surface
+cg:Surface rdf:type owl:Class ;
+           rdfs:subClassOf cg:AreaObject ;
+           rdfs:label "Поверхность" .
+
+
+###  http://www.w3id.org/citygraph-core#SwimmingPool
+cg:SwimmingPool rdf:type owl:Class ;
+                rdfs:subClassOf cg:SportsObject ;
+                rdfs:label "Бассейн" .
+
+
+###  http://www.w3id.org/citygraph-core#TSG
+cg:TSG rdf:type owl:Class ;
+       rdfs:subClassOf cg:NonProfitOrganization ;
+       rdfs:label "ТСЖ" .
+
+
+###  http://www.w3id.org/citygraph-core#TSN
+cg:TSN rdf:type owl:Class ;
+       rdfs:subClassOf cg:NonProfitOrganization ;
+       rdfs:label "ТСН" .
+
+
+###  http://www.w3id.org/citygraph-core#TallMultyApt
+cg:TallMultyApt rdf:type owl:Class ;
+                rdfs:subClassOf cg:LivingObject ;
+                rdfs:label "Высотное жилое строение" .
+
+
+###  http://www.w3id.org/citygraph-core#TemporalBuilding
+cg:TemporalBuilding rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Building ;
+                    rdfs:label "Временное сооружение" .
+
+
+###  http://www.w3id.org/citygraph-core#TennisClub
+cg:TennisClub rdf:type owl:Class ;
+              rdfs:subClassOf cg:SportsObject ;
+              rdfs:label "Теннисный клуб" .
+
+
+###  http://www.w3id.org/citygraph-core#Terminal
+cg:Terminal rdf:type owl:Class ;
+            rdfs:subClassOf cg:PublicObject ;
+            rdfs:label "Вокзал" .
+
+
+###  http://www.w3id.org/citygraph-core#Territory
+cg:Territory rdf:type owl:Class ;
+             rdfs:subClassOf cg:Space ;
+             rdfs:label "Территория" .
+
+
+###  http://www.w3id.org/citygraph-core#Theatre
+cg:Theatre rdf:type owl:Class ;
+           rdfs:subClassOf cg:CulturalObject ;
+           rdfs:label "Театр" .
+
+
+###  http://www.w3id.org/citygraph-core#Timetable
+cg:Timetable rdf:type owl:Class ;
+             rdfs:subClassOf cg:Reference ;
+             rdfs:label "Расписание" .
+
+
+###  http://www.w3id.org/citygraph-core#TouristPopulation
+cg:TouristPopulation rdf:type owl:Class ;
+                     rdfs:subClassOf cg:SocialGroup ;
+                     rdfs:label "Группа туристов" .
+
+
+###  http://www.w3id.org/citygraph-core#Townhouse
+cg:Townhouse rdf:type owl:Class ;
+             rdfs:subClassOf cg:LivingObject ;
+             rdfs:label "Таунхаус" .
+
+
+###  http://www.w3id.org/citygraph-core#Tractor
+cg:Tractor rdf:type owl:Class ;
+           rdfs:subClassOf cg:MovableObject ;
+           rdfs:label "Трактор" .
+
+
+###  http://www.w3id.org/citygraph-core#TrafficLight
+cg:TrafficLight rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> ;
+                rdfs:label "Светофор"@ru .
+
+
+###  http://www.w3id.org/citygraph-core#Tram
+cg:Tram rdf:type owl:Class ;
+        rdfs:subClassOf cg:MovableObject ;
+        rdfs:label "Трамвай" .
+
+
+###  http://www.w3id.org/citygraph-core#TrashBin
+cg:TrashBin rdf:type owl:Class ;
+            rdfs:subClassOf cg:StreetFurniture ;
+            rdfs:label "Урна" .
+
+
+###  http://www.w3id.org/citygraph-core#TraumaCenter
+cg:TraumaCenter rdf:type owl:Class ;
+                rdfs:subClassOf cg:HelthFacility ;
+                rdfs:label "Травмпункт" .
+
+
+###  http://www.w3id.org/citygraph-core#Tree
+cg:Tree rdf:type owl:Class ;
+        rdfs:subClassOf cg:Green ;
+        rdfs:label "Дерево" .
+
+
+###  http://www.w3id.org/citygraph-core#TrolleyBus
+cg:TrolleyBus rdf:type owl:Class ;
+              rdfs:subClassOf cg:MovableObject ;
+              rdfs:label "Троллейбус" .
+
+
+###  http://www.w3id.org/citygraph-core#TruckVehicle
+cg:TruckVehicle rdf:type owl:Class ;
+                rdfs:subClassOf cg:MovableObject ;
+                rdfs:label "Грузовой автомобиль" .
+
+
+###  http://www.w3id.org/citygraph-core#UK
+cg:UK rdf:type owl:Class ;
+      rdfs:subClassOf cg:NonProfitOrganization ;
+      rdfs:label "УК" .
+
+
+###  http://www.w3id.org/citygraph-core#UnauthorisedAction
+cg:UnauthorisedAction rdf:type owl:Class ;
+                      rdfs:subClassOf cg:Action ;
+                      rdfs:comment "Например, самовольно построенное здание" ;
+                      rdfs:label "Самовольное действие" .
+
+
+###  http://www.w3id.org/citygraph-core#UnderWorkingAgePopulation
+cg:UnderWorkingAgePopulation rdf:type owl:Class ;
+                             rdfs:subClassOf cg:SocialGroup ;
+                             rdfs:label "Население моложе трудоспособного возраста" .
+
+
+###  http://www.w3id.org/citygraph-core#University
+cg:University rdf:type owl:Class ;
+              rdfs:subClassOf cg:EducationalObject ;
+              rdfs:label "Университет" .
+
+
+###  http://www.w3id.org/citygraph-core#University_Organization
+cg:University_Organization rdf:type owl:Class ;
+                           rdfs:subClassOf cg:StateOrganization ;
+                           rdfs:label "Администрация Университета" .
+
+
+###  http://www.w3id.org/citygraph-core#UpwardWorkingAgePopulation
+cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
+                              rdfs:subClassOf cg:SocialGroup ;
+                              rdfs:label "Население старше трудоспособного возраста" .
+
+
+###  http://www.w3id.org/citygraph-core#UrbanDistrict
+cg:UrbanDistrict rdf:type owl:Class ;
+                 rdfs:subClassOf cg:Municipality ;
+                 rdfs:label "Городской округ" .
+
+
+###  http://www.w3id.org/citygraph-core#UrbanSettlements
+cg:UrbanSettlements rdf:type owl:Class ;
+                    rdfs:subClassOf cg:Municipality ;
+                    rdfs:label "Городское поселение" .
+
+
+###  http://www.w3id.org/citygraph-core#VerticalGreen
+cg:VerticalGreen rdf:type owl:Class ;
+                 rdfs:subClassOf cg:StreetFurniture ;
+                 rdfs:label "Вертикальное озеленение" .
+
+
+###  http://www.w3id.org/citygraph-core#VeterinaryHospital
+cg:VeterinaryHospital rdf:type owl:Class ;
+                      rdfs:subClassOf cg:MedicalObject ;
+                      rdfs:label "Ветеринарная клиника" .
+
+
+###  http://www.w3id.org/citygraph-core#VideoCamera
+cg:VideoCamera rdf:type owl:Class ;
+               rdfs:subClassOf cg:StreetFurniture ;
+               rdfs:label "Видеокамера" .
+
+
+###  http://www.w3id.org/citygraph-core#Village
+cg:Village rdf:type owl:Class ;
+           rdfs:subClassOf cg:District ;
+           rdfs:label "Посёлок городского типа районного подчинения" .
+
+
+###  http://www.w3id.org/citygraph-core#VillageCouncil
+cg:VillageCouncil rdf:type owl:Class ;
+                  rdfs:subClassOf cg:District ;
+                  rdfs:label "Сельсовет" .
+
+
+###  http://www.w3id.org/citygraph-core#WaterObject
+cg:WaterObject rdf:type owl:Class ;
+               rdfs:subClassOf cg:NatureObject ;
+               rdfs:label "Водный объект" .
+
+
+###  http://www.w3id.org/citygraph-core#WorkType
+cg:WorkType rdf:type owl:Class ;
+            rdfs:subClassOf cg:MajorRenovation ;
+            rdfs:comment "Перечисление видов работ при капитальном ремонте" ;
+            rdfs:label "Вид работ" .
+
+
+###  http://www.w3id.org/citygraph-core#WorkingAgePopulation
+cg:WorkingAgePopulation rdf:type owl:Class ;
+                        rdfs:subClassOf cg:SocialGroup ;
+                        rdfs:label "Население трудоспособного возраста" .
+
+
+###  http://www.w3id.org/citygraph-core#ZNOP
+cg:ZNOP rdf:type owl:Class ;
+        rdfs:subClassOf cg:GreenObject ;
+        rdfs:label "Зеленое насаждение общего пользования" .
+
+
+###  http://xmlns.com/foaf/spec/#term_Agent
+<http://xmlns.com/foaf/spec/#term_Agent> rdf:type owl:Class ;
+                                         rdfs:comment "Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией." ;
+                                         rdfs:isDefinedBy "" ;
+                                         rdfs:label "Агент" .
+
+
+###  http://xmlns.com/foaf/spec/#term_Group
+<http://xmlns.com/foaf/spec/#term_Group> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                         rdfs:comment "The Group class represents a collection of individual agents (and may itself play the role of a Agent, ie. something that can perform actions)." ;
+                                         rdfs:label "Группа" .
+
+
+###  http://xmlns.com/foaf/spec/#term_Organization
+<http://xmlns.com/foaf/spec/#term_Organization> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                                rdfs:comment "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc." ;
+                                                rdfs:label "Организация" .
+
+
+###  http://xmlns.com/foaf/spec/#term_Person
+<http://xmlns.com/foaf/spec/#term_Person> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                          rdfs:comment "The Person class represents people." ;
+                                          rdfs:label "Человек" .
+
+
+###  https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_motorway
+<https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_motorway> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/Road> ;
+                                                                                     rdfs:label "Motorway"@en ,
+                                                                                                "Автомобильная"@ru .
+
+
+###  https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_pedestrian
+<https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_pedestrian> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/Road> ;
+                                                                                       rdfs:label "Pedestrian"@en ,
+                                                                                                  "Пешеходная"@ru .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/citygraph-core#Bicyclers
+cg:Bicyclers rdf:type owl:NamedIndividual ,
+                      cg:OtherPopulationGroups ;
+             rdfs:label "Велосипедисты" .
+
+
+###  http://www.w3id.org/citygraph-core#BusinessTourist
+cg:BusinessTourist rdf:type owl:NamedIndividual ,
+                            cg:TouristPopulation ;
+                   rdfs:label "Приезжие по рабочим вопросам" .
+
+
+###  http://www.w3id.org/citygraph-core#CarOwner
+cg:CarOwner rdf:type owl:NamedIndividual ,
+                     cg:OtherPopulationGroups ;
+            rdfs:label "Автовладельцы" .
+
+
+###  http://www.w3id.org/citygraph-core#CitizensWithEarlyChildhood
+cg:CitizensWithEarlyChildhood rdf:type owl:NamedIndividual ,
+                                       cg:WorkingAgePopulation ;
+                              rdfs:label "Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#CitizensWithInfant
+cg:CitizensWithInfant rdf:type owl:NamedIndividual ,
+                               cg:WorkingAgePopulation ;
+                      rdfs:label "Горожане с младенцами (от 0 до 1 года)" .
+
+
+###  http://www.w3id.org/citygraph-core#CitizensWithPreschooler
+cg:CitizensWithPreschooler rdf:type owl:NamedIndividual ,
+                                    cg:WorkingAgePopulation ;
+                           rdfs:label "Горожане с детьми дошкольного возраста (от 3 до 7 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#CitizensWithPrimarySchoolAge
+cg:CitizensWithPrimarySchoolAge rdf:type owl:NamedIndividual ,
+                                         cg:WorkingAgePopulation ;
+                                rdfs:label "Горожане с детьми младшего школьного возраста (от 7 до 11 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#Director
+cg:Director rdf:type owl:NamedIndividual ,
+                     cg:Position ;
+            rdfs:label "Директор" .
+
+
+###  http://www.w3id.org/citygraph-core#DisabledMovement
+cg:DisabledMovement rdf:type owl:NamedIndividual ,
+                             cg:DisabledPopulation ;
+                    rdfs:label "Лица с ограниченными возможностями передвижения" .
+
+
+###  http://www.w3id.org/citygraph-core#DisabledSight
+cg:DisabledSight rdf:type owl:NamedIndividual ,
+                          cg:DisabledPopulation ;
+                 rdfs:label "Лица с инвалидностью по зрению" .
+
+
+###  http://www.w3id.org/citygraph-core#EarlyChildhood
+cg:EarlyChildhood rdf:type owl:NamedIndividual ,
+                           cg:UnderWorkingAgePopulation ;
+                  rdfs:label "Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#ElderlyWorkingCitizens
+cg:ElderlyWorkingCitizens rdf:type owl:NamedIndividual ,
+                                   cg:WorkingAgePopulation ;
+                          rdfs:label "Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#EventTourist
+cg:EventTourist rdf:type owl:NamedIndividual ,
+                         cg:TouristPopulation ;
+                rdfs:label "Приезжие к мероприятиям" .
+
+
+###  http://www.w3id.org/citygraph-core#HealthyLifestyleCitizens
+cg:HealthyLifestyleCitizens rdf:type owl:NamedIndividual ,
+                                     cg:OtherPopulationGroups ;
+                            rdfs:label "Горожане, ведущие здоровый образ жизни" .
+
+
+###  http://www.w3id.org/citygraph-core#Infant
+cg:Infant rdf:type owl:NamedIndividual ,
+                   cg:UnderWorkingAgePopulation ;
+          rdfs:label "Младенцы (от 0 до 1 года)" .
+
+
+###  http://www.w3id.org/citygraph-core#IntraBench
+cg:IntraBench rdf:type owl:NamedIndividual ,
+                       cg:Bench ;
+              rdfs:label "Встроенная скамья" .
+
+
+###  http://www.w3id.org/citygraph-core#MiddleAgeWorkingCitizens
+cg:MiddleAgeWorkingCitizens rdf:type owl:NamedIndividual ,
+                                     cg:WorkingAgePopulation ;
+                            rdfs:label "Работающие горожане среднего возраста (от 31 до 40 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#MigrantWorker
+cg:MigrantWorker rdf:type owl:NamedIndividual ,
+                          cg:OtherPopulationGroups ;
+                 rdfs:label "Трудовые мигранты" .
+
+
+###  http://www.w3id.org/citygraph-core#MovableBench
+cg:MovableBench rdf:type owl:NamedIndividual ,
+                         cg:Bench ;
+                rdfs:label "Переносная скамья" .
+
+
+###  http://www.w3id.org/citygraph-core#OlderRetiree
+cg:OlderRetiree rdf:type owl:NamedIndividual ,
+                         cg:UpwardWorkingAgePopulation ;
+                rdfs:label "Пенсионеры старших возрастов (старше 75 лет" .
+
+
+###  http://www.w3id.org/citygraph-core#PetOwner
+cg:PetOwner rdf:type owl:NamedIndividual ,
+                     cg:OtherPopulationGroups ;
+            rdfs:label "Владельцы домашних животных" .
+
+
+###  http://www.w3id.org/citygraph-core#Pregnant
+cg:Pregnant rdf:type owl:NamedIndividual ,
+                     cg:WorkingAgePopulation ;
+            rdfs:label "Беременные женщины" .
+
+
+###  http://www.w3id.org/citygraph-core#Preschooler
+cg:Preschooler rdf:type owl:NamedIndividual ,
+                        cg:UnderWorkingAgePopulation ;
+               rdfs:label "Дети дошкольного возраста (от 3 до 7 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#PrimarySchoolAge
+cg:PrimarySchoolAge rdf:type owl:NamedIndividual ,
+                             cg:UnderWorkingAgePopulation ;
+                    rdfs:label "Дети младшего школьного возраста (от 7 до 11 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#PublicTransportUser
+cg:PublicTransportUser rdf:type owl:NamedIndividual ,
+                                cg:OtherPopulationGroups ;
+                       rdfs:label "Пользователи общественного транспорта" .
+
+
+###  http://www.w3id.org/citygraph-core#Religious
+cg:Religious rdf:type owl:NamedIndividual ,
+                      cg:OtherPopulationGroups ;
+             rdfs:label "Верующие" .
+
+
+###  http://www.w3id.org/citygraph-core#SelfEmployedCitizens
+cg:SelfEmployedCitizens rdf:type owl:NamedIndividual ,
+                                 cg:WorkingAgePopulation ;
+                        rdfs:label "Самозанятые горожане" .
+
+
+###  http://www.w3id.org/citygraph-core#SeniorWorkingCitizens
+cg:SeniorWorkingCitizens rdf:type owl:NamedIndividual ,
+                                  cg:WorkingAgePopulation ;
+                         rdfs:label "Работающие горожане старшего возраста (от 41 до 60 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#StaticBench
+cg:StaticBench rdf:type owl:NamedIndividual ,
+                        cg:Bench ;
+               rdfs:label "Стационарная скамья" .
+
+
+###  http://www.w3id.org/citygraph-core#Student
+cg:Student rdf:type owl:NamedIndividual ,
+                    cg:WorkingAgePopulation ;
+           rdfs:label "Студенты и учащиеся" .
+
+
+###  http://www.w3id.org/citygraph-core#Teenager
+cg:Teenager rdf:type owl:NamedIndividual ,
+                     cg:UnderWorkingAgePopulation ;
+            rdfs:label "Подростки старшего возраста (от 15 до 18 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#TemporarilyStayingCitizens
+cg:TemporarilyStayingCitizens rdf:type owl:NamedIndividual ,
+                                       cg:WorkingAgePopulation ;
+                              rdfs:label "Горожане, временно пребывающие в городе" .
+
+
+###  http://www.w3id.org/citygraph-core#TouristInGroup
+cg:TouristInGroup rdf:type owl:NamedIndividual ,
+                           cg:TouristPopulation ;
+                  rdfs:label "Туристы в составе организованных групп" .
+
+
+###  http://www.w3id.org/citygraph-core#Tween
+cg:Tween rdf:type owl:NamedIndividual ,
+                  cg:UnderWorkingAgePopulation ;
+         rdfs:label "Подростки младшего возраста (от 12 до 15 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#UncoordinatedTourist
+cg:UncoordinatedTourist rdf:type owl:NamedIndividual ,
+                                 cg:TouristPopulation ;
+                        rdfs:label "Неорганизованные туристы" .
+
+
+###  http://www.w3id.org/citygraph-core#WasteSortingCitizens
+cg:WasteSortingCitizens rdf:type owl:NamedIndividual ,
+                                 cg:OtherPopulationGroups ;
+                        rdfs:label "Горожане, ведущие раздельный сбор мусора" .
+
+
+###  http://www.w3id.org/citygraph-core#YoungRetiree
+cg:YoungRetiree rdf:type owl:NamedIndividual ,
+                         cg:UpwardWorkingAgePopulation ;
+                rdfs:label "Молодые пенсионеры (65 - 75 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#YoungWorkingCitizens
+cg:YoungWorkingCitizens rdf:type owl:NamedIndividual ,
+                                 cg:WorkingAgePopulation ;
+                        rdfs:label "Молодые работающие горожане (до 30 лет)" .
+
+
+###  http://www.w3id.org/citygraph-core#Скамья_12345
+cg:Скамья_12345 rdf:type owl:NamedIndividual ,
+                         cg:Bench ;
+                cg:hasCoordinates cg:Скамья_координаты ;
+                cg:hasFunction cg:StaticBench ;
+                cg:hasBack "false"^^xsd:boolean ;
+                cg:hasCharge "true"^^xsd:boolean ;
+                cg:hasSeatsAmount 5 .
+
+
+###  http://www.w3id.org/citygraph-core#Скамья_координаты
+cg:Скамья_координаты rdf:type owl:NamedIndividual ,
+                              cg:Geometry .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
