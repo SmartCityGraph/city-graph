@@ -1,10 +1,20 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3id.org/citygraph-core"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.w3id.org/citygraph-core">
     <Prefix name="" IRI="http://www.w3id.org/citygraph-core"/>
     <Prefix name="cg" IRI="http://www.w3id.org/citygraph-core#"/>
@@ -998,9 +1008,6 @@
         <Class IRI="#WorkingAgePopulation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ZNOP"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://xmlns.com/foaf/spec/#term_Agent"/>
     </Declaration>
     <Declaration>
@@ -1530,6 +1537,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasYearRepair"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isZNOP"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#needElectricity"/>
@@ -2289,6 +2299,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MedicalEduInstitution"/>
+        <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalEduInstitution"/>
         <Class IRI="#HelthFacility"/>
     </SubClassOf>
     <SubClassOf>
@@ -2301,7 +2315,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MemorialPlaque"/>
-        <Class IRI="#Museum"/>
+        <Class IRI="#Memorial"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MetroEntranceHall"/>
@@ -2365,7 +2379,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NII"/>
-        <Class IRI="#HelthFacility"/>
+        <Class IRI="#EducationalObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NationalPark"/>
@@ -2717,7 +2731,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Skalodrom"/>
-        <Class IRI="#Sportground"/>
+        <Class IRI="#SportsObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Slope"/>
@@ -2945,15 +2959,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WorkType"/>
-        <Class IRI="#MajorRenovation"/>
+        <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WorkingAgePopulation"/>
         <Class IRI="#SocialGroup"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ZNOP"/>
-        <Class IRI="#GreenObject"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://xmlns.com/foaf/spec/#term_Group"/>
@@ -3148,17 +3158,17 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasBack"/>
         <NamedIndividual IRI="#Скамья_12345"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCharge"/>
         <NamedIndividual IRI="#Скамья_12345"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSeatsAmount"/>
         <NamedIndividual IRI="#Скамья_12345"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+        <Literal datatypeIRI="&xsd;integer">5</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#adjoin"/>
@@ -4405,6 +4415,10 @@
         <Class IRI="#Building"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#isZNOP"/>
+        <Class IRI="#Green"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#needElectricity"/>
         <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
@@ -4925,3112 +4939,3131 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#isZNOP"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#needElectricity"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://vocab.gtfs.org/terms#Stop</IRI>
-        <Literal xml:lang="en">A location where passengers board or disembark from a transit vehicle.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A location where passengers board or disembark from a transit vehicle.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.gtfs.org/terms#Stop</IRI>
-        <Literal xml:lang="en">Stop</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Stop</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.gtfs.org/terms#Stop</IRI>
-        <Literal xml:lang="ru">Остановка общественного транспорта</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Остановка общественного транспорта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://vocab.gtfs.org/terms#Trip</IRI>
-        <Literal>A collection of gtfs:StopTimes followed by a transit vehicle.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A collection of gtfs:StopTimes followed by a transit vehicle.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.gtfs.org/terms#Trip</IRI>
-        <Literal xml:lang="en">Trip</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Trip</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.gtfs.org/terms#Trip</IRI>
-        <Literal xml:lang="ru">Наряд общественного транспорта</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Наряд общественного транспорта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea</IRI>
-        <Literal xml:lang="en">Denotes the relation of TransportationComplex to its parts, which are auxiliary traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Denotes the relation of TransportationComplex to its parts, which are auxiliary traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea</IRI>
-        <Literal xml:lang="en">Type describing the class for auxiliary traffic Areas. These are the surfaces where no traffic actually takes place, but which belong to a transportation object. Examples are kerbstones, road markings and grass stripes. As subclass of _CityObject, an AuxiliaryTrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the class for auxiliary traffic Areas. These are the surfaces where no traffic actually takes place, but which belong to a transportation object. Examples are kerbstones, road markings and grass stripes. As subclass of _CityObject, an AuxiliaryTrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea</IRI>
-        <Literal xml:lang="en">Auxiliary traffic area</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Auxiliary traffic area</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea</IRI>
-        <Literal xml:lang="ru">Вспомогательная зона</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Вспомогательная зона</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Railway</IRI>
-        <Literal xml:lang="en">Type describing the class for railways. As subclass of _CityObject, a Railway inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the class for railways. As subclass of _CityObject, a Railway inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Railway</IRI>
-        <Literal xml:lang="en">Railway</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Railway</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Railway</IRI>
-        <Literal xml:lang="ru">Железная дорога</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Железная дорога</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Road</IRI>
-        <Literal xml:lang="en">Type describing the class for roads. As subclass of _CityObject, a Road inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the class for roads. As subclass of _CityObject, a Road inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Road</IRI>
-        <Literal xml:lang="ru">Данный класс содержит подклассы класса Дорога (https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#k_highway) в OSM</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Данный класс содержит подклассы класса Дорога (https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#k_highway) в OSM</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Road</IRI>
-        <Literal xml:lang="en">Road</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Road</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Road</IRI>
-        <Literal xml:lang="ru">Дорога</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Дорога</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Square</IRI>
-        <Literal xml:lang="en">Type describing the class for squares. A square is an open area commonly found in cities (like a plaza). As subclass of _CityObject, a Square inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the class for squares. A square is an open area commonly found in cities (like a plaza). As subclass of _CityObject, a Square inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Square</IRI>
-        <Literal xml:lang="en">Square</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Square</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Square</IRI>
-        <Literal xml:lang="ru">Площадь</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Площадь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Track</IRI>
-        <Literal xml:lang="en">Type describing the class for tracks. A track is a small path mainly used by pedestrians. As subclass of _CityObject, a Track inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the class for tracks. A track is a small path mainly used by pedestrians. As subclass of _CityObject, a Track inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Track</IRI>
-        <Literal xml:lang="en">Track</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Track</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/Track</IRI>
-        <Literal xml:lang="ru">Дорожка</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Дорожка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TrafficArea</IRI>
-        <Literal xml:lang="en">Denotes the relation of TransportationComplex to its parts, which are traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Denotes the relation of TransportationComplex to its parts, which are traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TrafficArea</IRI>
-        <Literal xml:lang="en">Type describing the class for traffic Areas. Traffic areas are the surfaces where traffic actually takes place. As subclass of _CityObject, a TrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the class for traffic Areas. Traffic areas are the surfaces where traffic actually takes place. As subclass of _CityObject, a TrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TrafficArea</IRI>
-        <Literal xml:lang="en">Traffic area</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Traffic area</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TrafficArea</IRI>
-        <Literal xml:lang="ru">Проезжая часть</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Проезжая часть</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TransportationComplex</IRI>
-        <Literal xml:lang="en">Type describing transportation complexes, which are aggregated features, e.g. roads, which consist of parts (traffic areas, e.g. pedestrian path, and auxiliary traffic areas). As subclass of _CityObject, a TransportationComplex inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing transportation complexes, which are aggregated features, e.g. roads, which consist of parts (traffic areas, e.g. pedestrian path, and auxiliary traffic areas). As subclass of _CityObject, a TransportationComplex inherits all attributes and relations, in particular an id, names, external references, and generalization relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TransportationComplex</IRI>
-        <Literal xml:lang="en">Transportation complex</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Transportation complex</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TransportationComplex</IRI>
-        <Literal xml:lang="ru">Транспортный комплекс</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Транспортный комплекс</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TransportationObject</IRI>
-        <Literal xml:lang="en">Type describing the abstract superclass for transportation objects.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type describing the abstract superclass for transportation objects.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/citygml/transportation/2.0/TransportationObject</IRI>
-        <Literal>Элемент транспортной инфраструктуры</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Элемент транспортной инфраструктуры</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AchitectureElement</IRI>
-        <Literal>Элемент благоустройства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Элемент благоустройства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ActDoc</IRI>
-        <Literal>Акт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Акт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Action</IRI>
-        <Literal>Объекты могут влиять друг на друга</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объекты могут влиять друг на друга</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Action</IRI>
-        <Literal>Действие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Действие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Address</IRI>
-        <Literal>Адрес</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Адрес</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AdministrativeBuilding</IRI>
-        <Literal>Административное здание</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Административное здание</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AdministrativeUnit</IRI>
-        <Literal>Административно-территориальная единица</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Административно-территориальная единица</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AdvertisingDesk</IRI>
-        <Literal>Рекламный щит</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Рекламный щит</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AeroStation</IRI>
-        <Literal>Аэровокзал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Аэровокзал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AgreementDoc</IRI>
-        <Literal>Договор</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Договор</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AirSpaceObject</IRI>
-        <Literal>Воздушное пространство</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Воздушное пространство</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Airport</IRI>
-        <Literal>Аэропорт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Аэропорт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AparrtmentMuseum</IRI>
-        <Literal>Музей квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Музей квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Apartment</IRI>
-        <Literal>Квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AreaObject</IRI>
-        <Literal>Объект, обозначаемый площадью на карте (например, здание или парк).</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объект, обозначаемый площадью на карте (например, здание или парк).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AreaObject</IRI>
-        <Literal>Площадной объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Площадной объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ArtificialRoughness</IRI>
-        <Literal>Например дорожный полицейский</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Например дорожный полицейский</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ArtificialRoughness</IRI>
-        <Literal>Искусственная неровность</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Искусственная неровность</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AuthorizedAction</IRI>
-        <Literal>Законное действие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Законное действие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AuthorizedAction</IRI>
-        <Literal>Авторизованное действие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Авторизованное действие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutogasFillingStation</IRI>
-        <Literal xml:lang="ru">Газозаправочная станция</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Газозаправочная станция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutonomousOblast</IRI>
-        <Literal>Автономная область</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автономная область</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutonomousOkrug</IRI>
-        <Literal>Автономный округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автономный округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutonomousOkrugMunicipality</IRI>
-        <Literal>Автномный округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автномный округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutonomousOkrug_District</IRI>
-        <Literal>Автономный округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автономный округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutonomousOrganization</IRI>
-        <Literal>АНО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">АНО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bar</IRI>
-        <Literal>Бар</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бар</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Barracks</IRI>
-        <Literal>Казарма</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Казарма</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bathhouse</IRI>
-        <Literal>Баня</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Баня</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bench</IRI>
-        <Literal>Скамья</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Скамья</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bicyclers</IRI>
-        <Literal>Велосипедисты</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Велосипедисты</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BikeParking</IRI>
-        <Literal>Парковка для велосипедов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Парковка для велосипедов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BikeRoad</IRI>
-        <Literal>Велосипедная дорожка</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Велосипедная дорожка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#BlackBox</IRI>
-        <Literal>Концепт &quot;черного ящика&quot; с неизвестной внутренней структурой</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Концепт &quot;черного ящика&quot; с неизвестной внутренней структурой</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BlackBox</IRI>
-        <Literal>Черный ящик</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Черный ящик</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Block</IRI>
-        <Literal>Квартал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Квартал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BortStones</IRI>
-        <Literal>Бортовой камень</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бортовой камень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BortStones</IRI>
-        <Literal>Поребрик</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Поребрик</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BotanicGarden</IRI>
-        <Literal>Ботанический сад</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ботанический сад</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Boulevard</IRI>
-        <Literal>Бульвар</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бульвар</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bowling</IRI>
-        <Literal>Боулинг</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Боулинг</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Bridge</IRI>
-        <Literal>Концепт, подразумевающий, что некая линия идет поверх другой линии, не пересекая ее (разные уровни)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Концепт, подразумевающий, что некая линия идет поверх другой линии, не пересекая ее (разные уровни)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bridge</IRI>
-        <Literal>Мост</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Мост</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Building</IRI>
-        <Literal>Площадной объект, представляющий собой постройку</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Площадной объект, представляющий собой постройку</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Building</IRI>
-        <Literal>Сооружение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сооружение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bus</IRI>
-        <Literal>Автобус</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автобус</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BusStation</IRI>
-        <Literal>Автобусная станция</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автобусная станция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bush</IRI>
-        <Literal>Куст</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Куст</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BusinessCentre</IRI>
-        <Literal>Бизнес-центр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бизнес-центр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BusinessHub</IRI>
-        <Literal>Деловой центр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Деловой центр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BusinessTourist</IRI>
-        <Literal>Приезжие по рабочим вопросам</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Приезжие по рабочим вопросам</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastralBlock</IRI>
-        <Literal>Кадастровый квартал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кадастровый квартал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastralDistrict</IRI>
-        <Literal>Кадастровый район</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кадастровый район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastralOkrug</IRI>
-        <Literal>Кадастровый округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кадастровый округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastralParcel</IRI>
-        <Literal>Кадастровый участок</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кадастровый участок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CadastreNumber</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Этот класс не является подклассом Кадастрового реестра и будет перенесён</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastreNumber</IRI>
-        <Literal>Кадастровый номер</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кадастровый номер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CadastreRegister</IRI>
-        <Literal>Сюда добавлять все виды кадастров (земельный, лесной и пр.)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сюда добавлять все виды кадастров (земельный, лесной и пр.)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastreRegister</IRI>
-        <Literal>Кадастровый реестр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кадастровый реестр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Cafe</IRI>
-        <Literal>Кафе</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кафе</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CapitalConstruction</IRI>
-        <Literal>Объект капитального строительства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объект капитального строительства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CarOwner</IRI>
-        <Literal>Автовладельцы</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Автовладельцы</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CarVehicle</IRI>
-        <Literal>Легковой автомобиль</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Легковой автомобиль</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Cemetery</IRI>
-        <Literal>Кладбище</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кладбище</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CentralBank</IRI>
-        <Literal>Центральный банк</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Центральный банк</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CentralHotWaterWoods</IRI>
-        <Literal>имеет горячее водоснабжение от дровяных колонок</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет горячее водоснабжение от дровяных колонок</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ChargingStation</IRI>
-        <Literal xml:lang="ru">Электрозаправка</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Электрозаправка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CharityFoundation</IRI>
-        <Literal>Благотворительный фонд</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Благотворительный фонд</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ChildrenYouthSportSchool</IRI>
-        <Literal>Детско-юношеская спортивная школа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Детско-юношеская спортивная школа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Cinema</IRI>
-        <Literal>Кинотеатр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кинотеатр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CitizensWithEarlyChildhood</IRI>
-        <Literal>Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CitizensWithInfant</IRI>
-        <Literal>Горожане с младенцами (от 0 до 1 года)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане с младенцами (от 0 до 1 года)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CitizensWithPreschooler</IRI>
-        <Literal>Горожане с детьми дошкольного возраста (от 3 до 7 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане с детьми дошкольного возраста (от 3 до 7 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CitizensWithPrimarySchoolAge</IRI>
-        <Literal>Горожане с детьми младшего школьного возраста (от 7 до 11 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане с детьми младшего школьного возраста (от 7 до 11 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CityForest</IRI>
-        <Literal>Городской лес</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Городской лес</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CityGarden</IRI>
-        <Literal>Сад</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сад</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Club</IRI>
-        <Literal>Клуб</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Клуб</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#College</IRI>
-        <Literal>Колледж</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Колледж</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CommercialObject</IRI>
-        <Literal>Коммерческий объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Коммерческий объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CommercialOrganization</IRI>
-        <Literal>Коммерческая организация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Коммерческая организация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CompLine</IRI>
-        <Literal>Полоса</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Полоса</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Component</IRI>
-        <Literal>Компонент</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Компонент</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ConcertHall</IRI>
-        <Literal>Концертный зал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Концертный зал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ConservancyArea</IRI>
-        <Literal>Заповедник</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Заповедник</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Country</IRI>
-        <Literal>Страна</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Страна</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Covering</IRI>
-        <Literal>Покрытие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Покрытие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CreativeClass</IRI>
-        <Literal>Творческий кружок</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Творческий кружок</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Crosswalk</IRI>
-        <Literal>Пешеходный переход</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пешеходный переход</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CulturalObject</IRI>
-        <Literal>Культурный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Культурный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Director</IRI>
-        <Literal>Директор</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Директор</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DisabledMovement</IRI>
-        <Literal>Лица с ограниченными возможностями передвижения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Лица с ограниченными возможностями передвижения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DisabledPopulation</IRI>
-        <Literal>Население с ограниченными возможностями</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Население с ограниченными возможностями</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DisabledSight</IRI>
-        <Literal>Лица с инвалидностью по зрению</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Лица с инвалидностью по зрению</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#District</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Класс содержит территориальное деление по ОКАТО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#District</IRI>
-        <Literal>Район</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#District_City</IRI>
-        <Literal>Город районного значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Город районного значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Document</IRI>
-        <Literal>Связывает правовые нормы, документы и пр. с объектами городской среды</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Связывает правовые нормы, документы и пр. с объектами городской среды</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Document</IRI>
-        <Literal>Документ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Документ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DrinkFontain</IRI>
-        <Literal>Питьевой фонтан</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Питьевой фонтан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#EarlyChildhood</IRI>
-        <Literal>Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Eatery</IRI>
-        <Literal>Общепит</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Общепит</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#EducationalObject</IRI>
-        <Literal>Образовательный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Образовательный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ElderlyWorkingCitizens</IRI>
-        <Literal>Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ElectroDepo</IRI>
-        <Literal>Электродепо</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Электродепо</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Element</IRI>
-        <Literal>Любой элемент сетевого объекта, Чаще всего, который состоит из других более атомарных элементов. Например, концепция площали, которая существует, и как единое целое и как составная из других дорог, элементов.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Любой элемент сетевого объекта, Чаще всего, который состоит из других более атомарных элементов. Например, концепция площали, которая существует, и как единое целое и как составная из других дорог, элементов.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Element</IRI>
-        <Literal>Элемент</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Элемент</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#EnergeticObject</IRI>
-        <Literal>Энергетический объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Энергетический объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Event</IRI>
-        <Literal>Событие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Событие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#EventTourist</IRI>
-        <Literal>Приезжие к мероприятиям</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Приезжие к мероприятиям</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ExibitionHall</IRI>
-        <Literal>Выставочный зал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Выставочный зал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Fabric</IRI>
-        <Literal>Завод</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Завод</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalAgency</IRI>
-        <Literal>Федеральное агенство</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Федеральное агенство</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalCity</IRI>
-        <Literal>Город федерального значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Город федерального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalGov</IRI>
-        <Literal>Федеральный орган власти</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Федеральный орган власти</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalGovernment</IRI>
-        <Literal>Правительство РФ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Правительство РФ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalMinistry</IRI>
-        <Literal>Федеральное министерство</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Федеральное министерство</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalOkrug</IRI>
-        <Literal>Федеральный округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Федеральный округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Fence</IRI>
-        <Literal>Забор</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Забор</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FillingStation</IRI>
-        <Literal xml:lang="ru">Заправочная станция</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Заправочная станция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FireStation</IRI>
-        <Literal>Пожарная станция</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пожарная станция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Flowerbed</IRI>
-        <Literal>Клумба</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Клумба</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Forest</IRI>
-        <Literal>Лесной массив</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Лесной массив</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ForestPark</IRI>
-        <Literal>Лесопарк</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Лесопарк</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ForestReserve</IRI>
-        <Literal>Заказник</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Заказник</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Forestry</IRI>
-        <Literal>Лесничество</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Лесничество</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Fountain</IRI>
-        <Literal>Фонтан</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Фонтан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FunctionalObject</IRI>
-        <Literal>Описание функций физического объекта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Описание функций физического объекта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FunctionalObject</IRI>
-        <Literal>Функциональный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Функциональный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GK</IRI>
-        <Literal>ЖК</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ЖК</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GKS</IRI>
-        <Literal>ЖКС</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ЖКС</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GSK</IRI>
-        <Literal>ЖСК</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ЖСК</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GUPREP</IRI>
-        <Literal>ГУПРЭП</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ГУПРЭП</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Garage</IRI>
-        <Literal>Гараж</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Гараж</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Geometry</IRI>
-        <Literal>Класс для хранения геокоординат. Наследуется от Feature для обеспечения совместимости с GeoSPARQL</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Класс для хранения геокоординат. Наследуется от Feature для обеспечения совместимости с GeoSPARQL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Geometry</IRI>
-        <Literal>Геометрия</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Геометрия</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GiftStore</IRI>
-        <Literal>Магазин подарков</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Магазин подарков</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GovCorporation</IRI>
-        <Literal>Госкорпорация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Госкорпорация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GovernmentAuthority</IRI>
-        <Literal>Государственная организация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Государственная организация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GovernmentBody</IRI>
-        <Literal>Орган власти</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Орган власти</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Green</IRI>
-        <Literal>Зеленое насаждение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Зеленое насаждение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GreenObject</IRI>
-        <Literal>Зелёный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Зелёный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GreenRoof</IRI>
-        <Literal>Крышное озеленение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Крышное озеленение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GroceryStore</IRI>
-        <Literal>Продуктовый магазин</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Продуктовый магазин</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#GroundObject</IRI>
-        <Literal>Описание почвеных слоев и элементов почвы</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Описание почвеных слоев и элементов почвы</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GroundObject</IRI>
-        <Literal>Почва</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Почва</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GuestHouse</IRI>
-        <Literal>Гостевой дом</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Гостевой дом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Gymnasium</IRI>
-        <Literal>Гимназия</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Гимназия</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#HealthyLifestyleCitizens</IRI>
-        <Literal>Горожане, ведущие здоровый образ жизни</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане, ведущие здоровый образ жизни</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#HelthFacility</IRI>
-        <Literal>Медицинское учреждение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Медицинское учреждение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#HomelessHome</IRI>
-        <Literal>Дом временного содержания бездомных</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дом временного содержания бездомных</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Hospital</IRI>
-        <Literal>Больница</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Больница</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Hostel</IRI>
-        <Literal>Хостел</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Хостел</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Hotel</IRI>
-        <Literal>Гостиница</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Гостиница</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#House</IRI>
-        <Literal>Частный дом</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Частный дом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#HouseYouthCreativity</IRI>
-        <Literal>Дом детско-юношеского творчества</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дом детско-юношеского творчества</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Hypermarket</IRI>
-        <Literal>Гипермаркет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Гипермаркет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IceArena</IRI>
-        <Literal>Ледовая Арена</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ледовая Арена</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IndustrialObject</IRI>
-        <Literal>Промышленный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Промышленный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Infant</IRI>
-        <Literal>Младенцы (от 0 до 1 года)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Младенцы (от 0 до 1 года)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#InformationDesk</IRI>
-        <Literal>Информационный щит</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Информационный щит</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Installation</IRI>
-        <Literal>Скульптура</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Скульптура</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Institute</IRI>
-        <Literal>Институт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Институт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#InterRail</IRI>
-        <Literal>Межрельсовое покрытие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Межрельсовое покрытие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#InterSettlementTerritory</IRI>
-        <Literal>Межселенная территория</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Межселенная территория</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IntraBench</IRI>
-        <Literal>Встроенная скамья</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Встроенная скамья</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IntracityAreas</IRI>
-        <Literal>Внутригородская территория</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Внутригородская территория</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IntracityMunicipality</IRI>
-        <Literal>Внутригородская территория города федерального значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Внутригородская территория города федерального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Intracity_District</IRI>
-        <Literal>Внутригородской район</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Внутригородской район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#KU_state</IRI>
-        <Literal>Казенное учреждение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Казенное учреждение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Kray</IRI>
-        <Literal>Край</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Край</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Lake</IRI>
-        <Literal>Озеро</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Озеро</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Land</IRI>
-        <Literal>Земельный участок</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Земельный участок</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Landscape</IRI>
-        <Literal>Ландшафт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ландшафт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#LawDoc</IRI>
-        <Literal>Закон</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Закон</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Level</IRI>
-        <Literal>Концепт, позволяющий расположить элементы сетевого объекта по разным уровням. В коммунальной системе - это могут быть этажи.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Концепт, позволяющий расположить элементы сетевого объекта по разным уровням. В коммунальной системе - это могут быть этажи.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Level</IRI>
-        <Literal>Уровень</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Уровень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Library</IRI>
-        <Literal>Библиотека</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Библиотека</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Line</IRI>
-        <Literal>Соединяет два узла, например, в транспорте это дорога</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Соединяет два узла, например, в транспорте это дорога</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Line</IRI>
-        <Literal>Линия</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Линия</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Link</IRI>
-        <Literal>Плавно соединяет две линии, не образуя узла. Например, в транспорте это съезды дорог</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Плавно соединяет две линии, не образуя узла. Например, в транспорте это съезды дорог</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Link</IRI>
-        <Literal>Связь</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Связь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#LivingObject</IRI>
-        <Literal>Жилой объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Жилой объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MajorRenovation</IRI>
-        <Literal>Капитальный ремонт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Капитальный ремонт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Market</IRI>
-        <Literal>Рынок</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Рынок</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Markup</IRI>
-        <Literal>Разметка</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Разметка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MedicalEduInstitution</IRI>
-        <Literal>Медицинское учебное заведение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Медицинское учебное заведение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MedicalObject</IRI>
-        <Literal>Медицинский объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Медицинский объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Memorial</IRI>
-        <Literal>Памятник</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Памятник</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MemorialPlaque</IRI>
-        <Literal>Мемориальная доска</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Мемориальная доска</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MetroEntranceHall</IRI>
-        <Literal>Наземный вестибюль станции метро</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Наземный вестибюль станции метро</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MiddleAgeWorkingCitizens</IRI>
-        <Literal>Работающие горожане среднего возраста (от 31 до 40 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Работающие горожане среднего возраста (от 31 до 40 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MigrantWorker</IRI>
-        <Literal>Трудовые мигранты</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Трудовые мигранты</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MilitaryObject</IRI>
-        <Literal>Военный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Военный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MillitaryEducation</IRI>
-        <Literal>Военный учебный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Военный учебный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Monument</IRI>
-        <Literal>Монумент</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Монумент</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Motorcycle</IRI>
-        <Literal>Мотоцикл</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Мотоцикл</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MovableBench</IRI>
-        <Literal>Переносная скамья</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Переносная скамья</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#MovableObject</IRI>
-        <Literal>Объект, который не имеет фиксированного местоположения/прикрепления к земле (например, транспорт или движимая уличная техника). Имеет обязательные аттрибуты: modelName и licencePlate (исключением могут быть трактора и иная техника, используемая в поселках, оставлять пустую строку).</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объект, который не имеет фиксированного местоположения/прикрепления к земле (например, транспорт или движимая уличная техника). Имеет обязательные аттрибуты: modelName и licencePlate (исключением могут быть трактора и иная техника, используемая в поселках, оставлять пустую строку).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MovableObject</IRI>
-        <Literal>Движимый объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Движимый объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MultifunctionalStore</IRI>
-        <Literal>Супермаркет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Супермаркет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MultyAptHouse</IRI>
-        <Literal>Многоквартирный дом</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Многоквартирный дом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MunAdministration</IRI>
-        <Literal>Муниципальная администрация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Муниципальная администрация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MunDepSovet</IRI>
-        <Literal>Совет муниципальных депутатов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Совет муниципальных депутатов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MunicipalDistrict</IRI>
-        <Literal>Муниципальный район</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Муниципальный район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MunicipalGov</IRI>
-        <Literal>Муниципальный орга власти</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Муниципальный орган власти</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MunicipalOkrug</IRI>
-        <Literal>Муниципальный округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Муниципальный округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Municipality</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Класс содержит территориальное деление по ОКТМО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Municipality</IRI>
-        <Literal>Муниципалитет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Муниципалитет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Museum</IRI>
-        <Literal>Музей</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Музей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NII</IRI>
-        <Literal>Научно-исследовательский институт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Научно-исследовательский институт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NationalPark</IRI>
-        <Literal>Национальный парк</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Национальный парк</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NatureMonument</IRI>
-        <Literal>Природный памятник</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Природный памятник</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NatureObject</IRI>
-        <Literal>Объект живой природы (например, зелёное насаждение)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объект живой природы (например, зелёное насаждение)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NatureObject</IRI>
-        <Literal>Природный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Природный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NaturePark</IRI>
-        <Literal>Природный парк</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Природный парк</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NetBus</IRI>
-        <Literal>Концепт сетевой шины, в которую имеется какое-то количество входов и какое-то количество выходов (в том числе 1). Так в коммунальной системе так можно описать систему труб.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Концепт сетевой шины, в которую имеется какое-то количество входов и какое-то количество выходов (в том числе 1). Так в коммунальной системе так можно описать систему труб.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NetBus</IRI>
-        <Literal>Шина</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Шина</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NetGroup</IRI>
-        <Literal>Когда необходимо объединить большое количество элементов в одну систему. Например, участок цепи.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Когда необходимо объединить большое количество элементов в одну систему. Например, участок цепи.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NetGroup</IRI>
-        <Literal>Группировка элементов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Группировка элементов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NetLayer</IRI>
-        <Literal>Может группировать объекты имеющие общие свойства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Может группировать объекты имеющие общие свойства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NetLayer</IRI>
-        <Literal>Слой</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Слой</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NetObject</IRI>
-        <Literal>Объект, обозначаемый на карте линией или сетью линий (например, дорога или система водоснабжения)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объект, обозначаемый на карте линией или сетью линий (например, дорога или система водоснабжения)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NetObject</IRI>
-        <Literal>Сетевой объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сетевой объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Node</IRI>
-        <Literal>Пересечение двух линий. Например, в транспорте это перекресток</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пересечение двух линий. Например, в транспорте это перекресток</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Node</IRI>
-        <Literal>Узел</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Узел</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NonProfitAssociation</IRI>
-        <Literal>Некоммерческая ассоциация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Некоммерческая ассоциация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NonProfitFoundation</IRI>
-        <Literal>Некоммерческий фонд</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Некоммерческий фонд</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NonProfitOrganization</IRI>
-        <Literal>Некоммерческая организация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Некоммерческая организация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NonProfitPartnership</IRI>
-        <Literal>Некоммерческое партнерство</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Некоммерческое партнерство</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#NursingHome</IRI>
-        <Literal>Дом престарелых</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дом престарелых</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OOPT</IRI>
-        <Literal>Особо охраняемая природная территория</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Особо охраняемая природная территория</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Oblast</IRI>
-        <Literal>Область</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Область</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OlderRetiree</IRI>
-        <Literal>Пенсионеры старших возрастов (старше 75 лет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пенсионеры старших возрастов (старше 75 лет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OlympicReserveSportSchool</IRI>
-        <Literal>Спортивная детско-юношеская школа олимпийского резерва</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Спортивная детско-юношеская школа олимпийского резерва</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OpenLot</IRI>
-        <Literal>Открытый лоток</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Открытый лоток</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OpenStairs</IRI>
-        <Literal>Открытая лестница</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Открытая лестница</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Organization_IP</IRI>
-        <Literal>ИП</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ИП</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Organization_OAO</IRI>
-        <Literal>ОАО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОАО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Organization_OOO</IRI>
-        <Literal>ООО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ООО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Organization_ZAO</IRI>
-        <Literal>ЗАО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ЗАО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Orphanage</IRI>
-        <Literal>Детский дом</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Детский дом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OtherPopulationGroups</IRI>
-        <Literal>Дополнительная группа горожан</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дополнительная группа горожан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OutletCenter</IRI>
-        <Literal>Аутлет-центр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Аутлет-центр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OutpatientClinic</IRI>
-        <Literal>Поликлиника</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Поликлиника</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PT_Route</IRI>
-        <Literal xml:lang="en">A gtfs:Route is a commercial route followed entirely or partly by gtfs:Trips.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A gtfs:Route is a commercial route followed entirely or partly by gtfs:Trips.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PT_Route</IRI>
-        <Literal xml:lang="en">Route</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Route</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PT_Route</IRI>
-        <Literal xml:lang="ru">Маршрут общественного транспорта</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Маршрут общественного транспорта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pandus</IRI>
-        <Literal>Пандус</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пандус</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Park</IRI>
-        <Literal>Парк</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Парк</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pedestrian</IRI>
-        <Literal>Пешеходная зона</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пешеходная зона</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PetOwner</IRI>
-        <Literal>Владельцы домашних животных</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Владельцы домашних животных</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PetrolFillingStation</IRI>
-        <Literal xml:lang="ru">Бензозаправочная станция</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Бензозаправочная станция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pharmacy</IRI>
-        <Literal>Аптека</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Аптека</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PhysicalObject</IRI>
-        <Literal>Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PhysicalObject</IRI>
-        <Literal>Физический объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Физический объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Playground</IRI>
-        <Literal>Детская площадка</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Детская площадка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Pocket</IRI>
-        <Literal>Например остановочный, изгиб дороги</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Например остановочный, изгиб дороги</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pocket</IRI>
-        <Literal>Карман</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Карман</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PointObject</IRI>
-        <Literal>Точечный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Точечный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pond</IRI>
-        <Literal>Пруд</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пруд</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Position</IRI>
-        <Literal>Должность</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Должность</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PostBox</IRI>
-        <Literal>Почтовый ящик</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Почтовый ящик</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PostOffice</IRI>
-        <Literal>Почта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Почта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pregnant</IRI>
-        <Literal>Беременные женщины</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Беременные женщины</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Preschool</IRI>
-        <Literal>Детский сад</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Детский сад</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Preschooler</IRI>
-        <Literal>Дети дошкольного возраста (от 3 до 7 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дети дошкольного возраста (от 3 до 7 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#President</IRI>
-        <Literal>Президент</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Орган власти при Президенте РФ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PresidentAdministration</IRI>
-        <Literal>Администрация Президента</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Администрация Президента</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PresidentHumanRightsSovet</IRI>
-        <Literal>Совет по правам человека при президенте</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Совет по правам человека при президенте</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PrimarySchoolAge</IRI>
-        <Literal>Дети младшего школьного возраста (от 7 до 11 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дети младшего школьного возраста (от 7 до 11 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Procedure</IRI>
-        <Literal>Процедура</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Процедура</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ProsecutorOffice</IRI>
-        <Literal>Прокуратура</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Прокуратура</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicHeatingSystemObject</IRI>
-        <Literal>Отопительная система</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Отопительная система</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicHome</IRI>
-        <Literal>Дом</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicNotRegistered</IRI>
-        <Literal>Незарегистрированная общественная организация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Незарегистрированная общественная организация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicObject</IRI>
-        <Literal>Общественный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Общественный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicOrganization</IRI>
-        <Literal>Общественная организация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Общественная организация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicPowerSystemObject</IRI>
-        <Literal>Электросетевая система</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Электросетевая система</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicSewerageSystemObject</IRI>
-        <Literal>Канализационная система</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Канализационная система</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicSign</IRI>
-        <Literal>Знак</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Знак</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicSystemObject</IRI>
-        <Literal>Коммунальная система</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Коммунальная система</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicTransportUser</IRI>
-        <Literal>Пользователи общественного транспорта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пользователи общественного транспорта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicVehicle</IRI>
-        <Literal>Пассажирское транспортное средство</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пассажирское транспортное средство</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicWaterSystemObject</IRI>
-        <Literal>Система водоснабжения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Система водоснабжения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RailwayStation</IRI>
-        <Literal>Ж/д станция</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ж/д станция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RecommendationDoc</IRI>
-        <Literal>Методические рекомендации</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Методические рекомендации</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Reference</IRI>
-        <Literal>Справочник</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Справочник</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Region</IRI>
-        <Literal>Регион</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Регион</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Region_City</IRI>
-        <Literal>Город республиканского, краевого, областного подчинения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Город республиканского, краевого, областного подчинения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Region_District</IRI>
-        <Literal>Район, республики, края, области, автономной области, автономного округа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Район, республики, края, области, автономной области, автономного округа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RegionalAdministartion</IRI>
-        <Literal>Администрация субъекта федерации</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Администрация субъекта федерации</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RegionalGov</IRI>
-        <Literal>Региональный орган власти</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Региональный орган власти</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RegionalMinistry</IRI>
-        <Literal>Региональный исполнительный орган власти</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Региональный исполнительный орган власти</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RegionalParliament</IRI>
-        <Literal>Парламент субъекта федерации</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Парламент субъекта федерации</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Relief</IRI>
-        <Literal>Рельеф</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Рельеф</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Religious</IRI>
-        <Literal>Верующие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Верующие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ReligiousObject</IRI>
-        <Literal>Религиозный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Религиозный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Republic</IRI>
-        <Literal>Республика</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Республика</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Reservoir</IRI>
-        <Literal>Резервуар</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Резервуар</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Restaurant</IRI>
-        <Literal>Ресторан</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ресторан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RetailHub</IRI>
-        <Literal>Торговый центр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Торговый центр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RetailStore</IRI>
-        <Literal>Магазин</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Магазин</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RetainingWalls</IRI>
-        <Literal>Подпорная стена</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Подпорная стена</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#River</IRI>
-        <Literal>Река</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Река</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RiverStation</IRI>
-        <Literal>Речной вокзал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Речной вокзал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RoadNetworkObject</IRI>
-        <Literal>Дорожная сеть</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дорожная сеть</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RoadSign</IRI>
-        <Literal>Дорожный знак</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дорожный знак</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RowingClub</IRI>
-        <Literal>Гребной клуб</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Гребной клуб</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RuralSettlements</IRI>
-        <Literal>Сельское поселение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сельское поселение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#School</IRI>
-        <Literal>Школа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Школа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SecondarySchool</IRI>
-        <Literal>Училище</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Училище</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SelfEmployedCitizens</IRI>
-        <Literal>Самозанятые горожане</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Самозанятые горожане</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SeniorWorkingCitizens</IRI>
-        <Literal>Работающие горожане старшего возраста (от 41 до 60 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Работающие горожане старшего возраста (от 41 до 60 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ServiceZone</IRI>
-        <Literal>Сервисная зона</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сервисная зона</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ShoppingEntertainmentCentre</IRI>
-        <Literal>Торгово-развлекательный центр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Торгово-развлекательный центр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ShoppingEntertainmentMall</IRI>
-        <Literal>Торгово-развлекательный комплекс</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Торгово-развлекательный комплекс</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Sidewalk</IRI>
-        <Literal>Тротуар</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Тротуар</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Skalodrom</IRI>
-        <Literal>Скалодром</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Скалодром</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Slope</IRI>
-        <Literal>Откос</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Откос</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SmallArchitecture</IRI>
-        <Literal>МАФ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">МАФ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SmallCityGarden</IRI>
-        <Literal>Городской сквер</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Городской сквер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SmallGarden</IRI>
-        <Literal>Сквер</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сквер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SmallGardenInBlock</IRI>
-        <Literal>Внутриквартальный сквер</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Внутриквартальный сквер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SocialGroup</IRI>
-        <Literal>Описание социальных групп населения в базе данных в соответствии с документом &quot;Дем соц группы&quot; по ссылке</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Описание социальных групп населения в базе данных в соответствии с документом &quot;Дем соц группы&quot; по ссылке</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>#SocialGroup</IRI>
-        <Literal>https://docs.google.com/document/d/16ZIA3hXikwpipxL7rpNQGuY90LG7AHbMLhu54QeZuSw/edit</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://docs.google.com/document/d/16ZIA3hXikwpipxL7rpNQGuY90LG7AHbMLhu54QeZuSw/edit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SocialGroup</IRI>
-        <Literal>Социальная группа населения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Социальная группа населения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SocialObject</IRI>
-        <Literal>Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SocialObject</IRI>
-        <Literal>Социальный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Социальный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Space</IRI>
-        <Literal>Площадной объект, представляющий собой участок земли (без учёта построек на нём)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Площадной объект, представляющий собой участок земли (без учёта построек на нём)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Space</IRI>
-        <Literal>Пространство</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Пространство</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SportComplex</IRI>
-        <Literal>Спортивно-оздоровительный комплекс</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Спортивно-оздоровительный комплекс</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Sportground</IRI>
-        <Literal>Дворовая спортивная площадка</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дворовая спортивная площадка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SportsClass</IRI>
-        <Literal>Спортивная секция</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Спортивная секция</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SportsObject</IRI>
-        <Literal>Спортивный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Спортивный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Square</IRI>
-        <Literal>Площадь</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Площадь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Stadium</IRI>
-        <Literal>Стадион</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Стадион</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StateOrganization</IRI>
-        <Literal>Бюджетное учреждение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бюджетное учреждение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StatementDoc</IRI>
-        <Literal>Постановление</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Постановление</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StaticBench</IRI>
-        <Literal>Стационарная скамья</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Стационарная скамья</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Street</IRI>
-        <Literal>Улица</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Улица</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StreetClock</IRI>
-        <Literal>Часы</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Часы</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StreetFurniture</IRI>
-        <Literal>Уличная мебель</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Уличная мебель</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StreetLamp</IRI>
-        <Literal>Уличная лампа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Уличная лампа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StreetTable</IRI>
-        <Literal>Стол</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Стол</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Student</IRI>
-        <Literal>Студенты и учащиеся</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Студенты и учащиеся</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Surface</IRI>
-        <Literal>Поверхность</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Поверхность</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SwimmingPool</IRI>
-        <Literal>Бассейн</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бассейн</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TSG</IRI>
-        <Literal>ТСЖ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ТСЖ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TSN</IRI>
-        <Literal>ТСН</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ТСН</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TallMultyApt</IRI>
-        <Literal>Высотное жилое строение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Высотное жилое строение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Teenager</IRI>
-        <Literal>Подростки старшего возраста (от 15 до 18 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Подростки старшего возраста (от 15 до 18 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TemporalBuilding</IRI>
-        <Literal>Временное сооружение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Временное сооружение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TemporarilyStayingCitizens</IRI>
-        <Literal>Горожане, временно пребывающие в городе</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане, временно пребывающие в городе</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TennisClub</IRI>
-        <Literal>Теннисный клуб</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Теннисный клуб</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Terminal</IRI>
-        <Literal>Вокзал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Вокзал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Territory</IRI>
-        <Literal>Территория</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Территория</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Theatre</IRI>
-        <Literal>Театр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Театр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Timetable</IRI>
-        <Literal>Расписание</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Расписание</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TouristInGroup</IRI>
-        <Literal>Туристы в составе организованных групп</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Туристы в составе организованных групп</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TouristPopulation</IRI>
-        <Literal>Группа туристов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Группа туристов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Townhouse</IRI>
-        <Literal>Таунхаус</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Таунхаус</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Tractor</IRI>
-        <Literal>Трактор</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Трактор</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TrafficLight</IRI>
-        <Literal xml:lang="ru">Светофор</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Светофор</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Tram</IRI>
-        <Literal>Трамвай</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Трамвай</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TrashBin</IRI>
-        <Literal>Урна</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Урна</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TraumaCenter</IRI>
-        <Literal>Травмпункт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Травмпункт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Tree</IRI>
-        <Literal>Дерево</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Дерево</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TrolleyBus</IRI>
-        <Literal>Троллейбус</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Троллейбус</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TruckVehicle</IRI>
-        <Literal>Грузовой автомобиль</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Грузовой автомобиль</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Tween</IRI>
-        <Literal>Подростки младшего возраста (от 12 до 15 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Подростки младшего возраста (от 12 до 15 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UK</IRI>
-        <Literal>УК</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">УК</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#UnauthorisedAction</IRI>
-        <Literal>Например, самовольно построенное здание</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Например, самовольно построенное здание</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UnauthorisedAction</IRI>
-        <Literal>Самовольное действие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Самовольное действие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UncoordinatedTourist</IRI>
-        <Literal>Неорганизованные туристы</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Неорганизованные туристы</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UnderWorkingAgePopulation</IRI>
-        <Literal>Население моложе трудоспособного возраста</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Население моложе трудоспособного возраста</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#University</IRI>
-        <Literal>Университет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Университет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#University_Organization</IRI>
-        <Literal>Администрация Университета</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Администрация Университета</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UpwardWorkingAgePopulation</IRI>
-        <Literal>Население старше трудоспособного возраста</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Население старше трудоспособного возраста</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UrbanDistrict</IRI>
-        <Literal>Городской округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Городской округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UrbanSettlements</IRI>
-        <Literal>Городское поселение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Городское поселение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VerticalGreen</IRI>
-        <Literal>Вертикальное озеленение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Вертикальное озеленение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VeterinaryHospital</IRI>
-        <Literal>Ветеринарная клиника</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ветеринарная клиника</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VideoCamera</IRI>
-        <Literal>Видеокамера</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Видеокамера</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Village</IRI>
-        <Literal>Посёлок городского типа районного подчинения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Посёлок городского типа районного подчинения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VillageCouncil</IRI>
-        <Literal>Сельсовет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Сельсовет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WasteSortingCitizens</IRI>
-        <Literal>Горожане, ведущие раздельный сбор мусора</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Горожане, ведущие раздельный сбор мусора</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WaterObject</IRI>
-        <Literal>Водный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Водный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#WorkType</IRI>
-        <Literal>Перечисление видов работ при капитальном ремонте</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Список работ, проведённых при капитальном ремонте. Раньше назывался Вид работ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WorkType</IRI>
-        <Literal>Вид работ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Работы капитального ремонта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#WorkingAgePopulation</IRI>
-        <Literal>Население трудоспособного возраста</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Население трудоспособного возраста</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#YoungRetiree</IRI>
-        <Literal>Молодые пенсионеры (65 - 75 лет)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Молодые пенсионеры (65 - 75 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#YoungWorkingCitizens</IRI>
-        <Literal>Молодые работающие горожане (до 30 лет)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ZNOP</IRI>
-        <Literal>Зеленое насаждение общего пользования</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Молодые работающие горожане (до 30 лет)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#adjoin</IRI>
-        <Literal>примыкает к</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">примыкает к</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAbbr</IRI>
-        <Literal>имеет сокращение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет сокращение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAccess</IRI>
-        <Literal>тип доступа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">тип доступа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAddress</IRI>
-        <Literal>имеет адрес</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет адрес</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAddressObj</IRI>
-        <Literal>имеет адрес (объект)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет адрес (объект)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAdmUnit</IRI>
-        <Literal>имеет административно-территориальную связь</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет административно-территориальную связь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAdministrativeCenter</IRI>
-        <Literal>административный центр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">административный центр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAgeGroupPercentage</IRI>
-        <Literal>имеет процент жителей по возрасту</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет процент жителей по возрасту</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAmenity</IRI>
-        <Literal>ОСМ класс</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОСМ класс</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasApartmentType</IRI>
-        <Literal>имеет тип квартиры</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет тип квартиры</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasApartmentsAmount</IRI>
-        <Literal>имеет количество квартир</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество квартир</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasArchitectureType</IRI>
-        <Literal>архитектурный стиль</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">архитектурный стиль</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasArea</IRI>
-        <Literal>Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasArea</IRI>
-        <Literal>имеет площадь</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет площадь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAreaGeneral</IRI>
-        <Literal>имеет общую площадь</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет общую площадь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAutoBoilerRoom</IRI>
-        <Literal>имеет автономную котельную</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет автономную котельную</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBack</IRI>
-        <Literal>имеет спинку</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет спинку</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuidlingSeries</IRI>
-        <Literal>имеет серию здания</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет серию здания</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasBuildingDescription</IRI>
-        <Literal>Текстовое описание зданий, которое генерируется в базе данных</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Текстовое описание зданий, которое генерируется в базе данных</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingDescription</IRI>
-        <Literal>имеет описание сооружения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет описание сооружения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingMaterial</IRI>
-        <Literal>материал здания</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">материал здания</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasBuildingParameter</IRI>
-        <Literal>Семейство характеристик сооружений</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Семейство характеристик сооружений</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingParameter</IRI>
-        <Literal>характеристика сооружения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика сооружения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingPart</IRI>
-        <Literal>часть здания отличающаяся по высоте/этажности</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">часть здания отличающаяся по высоте/этажности</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingParts</IRI>
-        <Literal>деление здания на части</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">деление здания на части</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasBuildingSpecificProperties</IRI>
-        <Literal>Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingSpecificProperties</IRI>
-        <Literal>атрибут сооружения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">атрибут сооружения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasButtonOperated</IRI>
-        <Literal>кнопочный переключатель</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">кнопочный переключатель</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCadastralBlock</IRI>
-        <Literal>кадастровый квартал</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">кадастровый квартал</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCadastralDistrict</IRI>
-        <Literal>кадастровый район</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">кадастровый район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCadastralNumber</IRI>
-        <Literal>имеет кадастровый номер</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет кадастровый номер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCadastralOkrug</IRI>
-        <Literal>кадастровый округ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">кадастровый округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCarWash</IRI>
-        <Literal>автомойка</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">автомойка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCentralElectricity</IRI>
-        <Literal>имеет центральное электроснабжение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет центральное электроснабжение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCentralGas</IRI>
-        <Literal>имеет центральное газоснабжение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет центральное газоснабжение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCentralHeating</IRI>
-        <Literal>имеет центральное отопление</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет центральное отопление</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCentralHotWater</IRI>
-        <Literal>имеет центральное горячее водоснабжение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет центральное горячее водоснабжение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCentralHotWaterGas</IRI>
-        <Literal>имеет горячее водоснабжение от газовых колонок</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет горячее водоснабжение от газовых колонок</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCharge</IRI>
-        <Literal>имеет вход для зарядного устройства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет вход для зарядного устройства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasClassificationCode</IRI>
-        <Literal>используется в классификаторе</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">используется в классификаторе</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCoastalProtectiveStrip</IRI>
-        <Literal>прибрежная защитная полоса</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">прибрежная защитная полоса</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCode</IRI>
-        <Literal>код</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">код</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCommunalApartmentsAmount</IRI>
-        <Literal>имеет количество коммунальных квартир</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество коммунальных квартир</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCommunalFacilitiesArea</IRI>
-        <Literal>имеет площадь помещений, входящих в состав общего имущества</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет площадь помещений, входящих в состав общего имущества</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasComp</IRI>
-        <Literal>имеет компонент</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет компонент</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCompanyPosition</IRI>
-        <Literal>должность в компании</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">должность в компании</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCompressedAir</IRI>
-        <Literal>оборудование с сжатым воздухом</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">оборудование с сжатым воздухом</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasConditionsForWheel</IRI>
-        <Literal>условия для маломобильных граждан</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">условия для маломобильных граждан</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasCoordinates</IRI>
-        <Literal>Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCoordinates</IRI>
-        <Literal>гео-координаты</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">гео-координаты</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCrossingIsland</IRI>
-        <Literal>островок безопасности</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">островок безопасности</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCrosswalkCharacteristic</IRI>
-        <Literal>характеристика пешеходного перехода</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика пешеходного перехода</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDenomination</IRI>
-        <Literal>конфессия</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">конфессия</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDesignedModifed</IRI>
-        <Literal>изменения в дизайне после ремонта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">изменения в дизайне после ремонта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDocDate</IRI>
-        <Literal>дата документа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">дата документа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDocTitle</IRI>
-        <Literal>название документа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">название документа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDocument</IRI>
-        <Literal>имеет документ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет документ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDomofonAmount</IRI>
-        <Literal>имеет количество переговорно-замочных устройств</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество переговорно-замочных устройств</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasEmergency</IRI>
-        <Literal>скорая помощь</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">скорая помощь</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFailureStatus</IRI>
-        <Literal>является аварийным</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">является аварийным</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFederalMeaning</IRI>
-        <Literal>федерального значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">федерального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFloors</IRI>
-        <Literal>имеет количество этажей</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество этажей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasFunction</IRI>
-        <Literal>Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFunction</IRI>
-        <Literal>имеет функцию</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет функцию</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFunctionalParameter</IRI>
-        <Literal>параметр функционального объекта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">параметр функционального объекта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasGarbageAmount</IRI>
-        <Literal>имеет количество мусоропроводов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество мусоропроводов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasGovStatus</IRI>
-        <Literal>имеет статус государственного значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет статус государственного значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasHeight</IRI>
-        <Literal>имеет высоту</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет высоту</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasIllumination</IRI>
-        <Literal>имеет освещение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет освещение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasIlluminationPollution</IRI>
-        <Literal>световое загрязнение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">световое загрязнение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasInhabitableArea</IRI>
-        <Literal>имеет площадь жилых помещений</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет площадь жилых помещений</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasInitiationDate</IRI>
-        <Literal>дата введения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">дата введения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasKerb</IRI>
-        <Literal>разница между переходом и тротуаром</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">разница между переходом и тротуаром</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLPGFuel</IRI>
-        <Literal>сжиженное топливо</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">сжиженное топливо</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLand</IRI>
-        <Literal>расположено на земельном участке</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">расположено на земельном участке</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasLayerDescription</IRI>
-        <Literal>Описание слоя, созданного пользователем</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Описание слоя, созданного пользователем</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLayerDescription</IRI>
-        <Literal>имеет описание слоя</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет описание слоя</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLength</IRI>
-        <Literal>длина</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">длина</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLevel1</IRI>
-        <Literal>1-ый уровень</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1-ый уровень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLevel2</IRI>
-        <Literal>2-ой уровень</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2-ой уровень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLevel3</IRI>
-        <Literal>3-ий уровень</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">3-ий уровень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLevel4</IRI>
-        <Literal>4-ый уровень</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4-ый уровень</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLicensePlate</IRI>
-        <Literal>имеет номер зарегистрированный</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет номер зарегистрированный</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLiftAmount</IRI>
-        <Literal>имеет количество лифтов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество лифтов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLit</IRI>
-        <Literal>освещение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">освещение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasLivingObjectParameter</IRI>
-        <Literal>Семейство характеристик жилых объектов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Семейство характеристик жилых объектов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLivingObjectParameter</IRI>
-        <Literal>характеристика жилого дома</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика жилого дома</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasLocalMeaning</IRI>
-        <Literal>местного значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">местного значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMajorRenovation</IRI>
-        <Literal>имеет капитальный ремонт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет капитальный ремонт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMajorRenovationDate</IRI>
-        <Literal>дата капитального ремонта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">дата капитального ремонта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasManagingOrganization</IRI>
-        <Literal>Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasManagingOrganization</IRI>
-        <Literal>имеет управляющую организацию</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет управляющую организацию</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMaxFloors</IRI>
-        <Literal>имеет максимальное количество этажей</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет максимальное количество этажей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMetroCode</IRI>
-        <Literal>код метро</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">код метро</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMetroColor</IRI>
-        <Literal>ветка метро</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ветка метро</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMetroStation</IRI>
-        <Literal>станция метро</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">станция метро</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMinFloors</IRI>
-        <Literal>имеет минимальное количество этажей</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет минимальное количество этажей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasModelName</IRI>
-        <Literal>имеет модель и марку</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет модель и марку</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMovableParameter</IRI>
-        <Literal>характеристика ТС</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика ТС</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasNestedObject</IRI>
-        <Literal>Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasNestedObject</IRI>
-        <Literal>имеет вложенный объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет вложенный объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasNetProperty</IRI>
-        <Literal>атрибут сетевого объекта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">атрибут сетевого объекта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasNotCentralGas</IRI>
-        <Literal>имеет не центральное газоснабжение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет не центральное газоснабжение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasOKATO</IRI>
-        <Literal>ОКАТО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОКАТО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasOKLevel</IRI>
-        <Literal>иерархия ОКАТО/ОКТМО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">иерархия ОКАТО/ОКТМО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasOKTMO</IRI>
-        <Literal>ОКТМО</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ОКТМО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasOctane_98</IRI>
-        <Literal>бензин октан 98</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">бензин октан 98</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasOpeningHours</IRI>
-        <Literal>рабочие часы</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">рабочие часы</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasOwner</IRI>
-        <Literal>Связывает ФИзические объекты и Организации с их владельцами-людьми</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Связывает ФИзические объекты и Организации с их владельцами-людьми</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasOwner</IRI>
-        <Literal>имеет собственника</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет собственника</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPM10value</IRI>
-        <Literal>PM 10 параметр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PM 10 параметр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPM25value</IRI>
-        <Literal>PM 2.5 параметр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PM 2.5 параметр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasParkingArea</IRI>
-        <Literal>Площадь парковки в границах земельного участка</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Площадь парковки в границах земельного участка</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasParkingArea</IRI>
-        <Literal>имеет площадь парковки</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет площадь парковки</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPhoneCode</IRI>
-        <Literal>телефонный код АТ ед.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">телефонный код АТ ед.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPhoneNumber</IRI>
-        <Literal>телефонный номер</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">телефонный номер</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPlaygroundInventory</IRI>
-        <Literal>инвентарь детской площадки</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">инвентарь детской площадки</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPopulationCharacteristics</IRI>
-        <Literal>имеет характеристику жителей</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет характеристику жителей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPosition</IRI>
-        <Literal>имеет должность</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет должность</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasProvidedForChild</IRI>
-        <Literal>детское отделение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">детское отделение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPublicAmenity</IRI>
-        <Literal>имеет элемент благоустройства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет элемент благоустройства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRadioactivePollution</IRI>
-        <Literal>радиоактивное загрязнянение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">радиоактивное загрязнянение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRailwayCrossing</IRI>
-        <Literal>тип пересекаемой железной дороги</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">тип пересекаемой железной дороги</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRegionalMeaning</IRI>
-        <Literal>регионального значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">регионального значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasReligious</IRI>
-        <Literal>религия</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">религия</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasReligiousBuildingType</IRI>
-        <Literal>тип религиозного здания</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">тип религиозного здания</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasReligiousObjectCharacteristic</IRI>
-        <Literal>характеристика религиозных объектов</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика религиозных объектов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasResidentNumber</IRI>
-        <Literal>имеет количество проживающих</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество проживающих</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms</IRI>
-        <Literal>количество комнат в квартире</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">количество комнат в квартире</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal</IRI>
-        <Literal>количество комнат в коммунальной квартире</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">количество комнат в коммунальной квартире</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal_2</IRI>
-        <Literal>2комн. комм. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2комн. комм. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal_3</IRI>
-        <Literal>3комн. комм. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">3комн. комм. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal_4</IRI>
-        <Literal>4комн. комм. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4комн. комм. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal_5</IRI>
-        <Literal>5комн. комм. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5комн. комм. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal_6</IRI>
-        <Literal>6комн. комм. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">6комн. комм. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRoomsCommunal_7</IRI>
-        <Literal>7 комн. комм. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7 комн. комм. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_1</IRI>
-        <Literal>1 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_2</IRI>
-        <Literal>2 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_3</IRI>
-        <Literal>3 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">3 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_4</IRI>
-        <Literal>4 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_5</IRI>
-        <Literal>5 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_6</IRI>
-        <Literal>6 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">6 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasRooms_7</IRI>
-        <Literal>7 комн. квартира</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7 комн. квартира</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSchoolType</IRI>
-        <Literal>тип школы</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">тип школы</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSeatsAmount</IRI>
-        <Literal>имеет количество мест</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество мест</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSecondTitle</IRI>
-        <Literal>второе название</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">второе название</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasShop</IRI>
-        <Literal>магазин</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">магазин</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSlopedCurb</IRI>
-        <Literal>пандус</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">пандус</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSocialGroupPercentage</IRI>
-        <Literal>имеет процент жителей по социальной группе</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет процент жителей по социальной группе</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSpeciality</IRI>
-        <Literal>специализация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">специализация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStairsAmount</IRI>
-        <Literal>имеет количество лестниц</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет количество лестниц</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStoveHeating</IRI>
-        <Literal>имеет печное отопление</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет печное отопление</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStreet</IRI>
-        <Literal>улица</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">улица</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStringCadastralNumber</IRI>
-        <Literal>кадастровый номер строкой</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">кадастровый номер строкой</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStringSeries</IRI>
-        <Literal>серия здания строкой</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">серия здания строкой</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStringValue</IRI>
-        <Literal>полное текстовое значение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">полное текстовое значение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStudentsCapacity</IRI>
-        <Literal>рассчитан на количество обучающихся</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">рассчитан на количество обучающихся</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasSubDoc</IRI>
-        <Literal>Например, подзаконные акты, приложения и пр. Часть вышестоящего документа.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Например, подзаконные акты, приложения и пр. Часть вышестоящего документа.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSubDoc</IRI>
-        <Literal>документ, на основе другого документа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">документ, на основе другого документа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSurface</IRI>
-        <Literal>имеет покрытие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет покрытие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSurfaceType</IRI>
-        <Literal>материал поверхности</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">материал поверхности</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTactilePaving</IRI>
-        <Literal>тактильное покрытие</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">тактильное покрытие</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTitle</IRI>
-        <Literal>имеет название</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет название</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasToilets</IRI>
-        <Literal>туалет</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">туалет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTourismPlace</IRI>
-        <Literal>туристический объект</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">туристический объект</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTrafficSignals</IRI>
-        <Literal>тип дорожных указателей</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">тип дорожных указателей</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTrafficSignalsSound</IRI>
-        <Literal>звуковой указатель</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">звуковой указатель</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasUninhabitableArea</IRI>
-        <Literal>имеет площадь нежилых помещений</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет площадь нежилых помещений</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasVIN</IRI>
-        <Literal>имеет VIN</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет VIN</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasValue</IRI>
-        <Literal>значение</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">значение</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWaterSafeZone</IRI>
-        <Literal>водоохраняемая зона</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">водоохраняемая зона</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWebDomainZone</IRI>
-        <Literal>доменная зона</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">доменная зона</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWebsite</IRI>
-        <Literal>веб-сайт</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">веб-сайт</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWorkType</IRI>
-        <Literal>имеет вид работ</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет вид работ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasWorldMeaning</IRI>
-        <Literal>мирового значения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">мирового значения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasYearConstruct</IRI>
-        <Literal>имеет год постройки</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет год постройки</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasYearProduction</IRI>
-        <Literal>имеет год производства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет год производства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasYearRepair</IRI>
-        <Literal>имеет год восстановления</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">имеет год восстановления</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#includedIn</IRI>
-        <Literal>входит в</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">входит в</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isZNOP</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">зеленое насаждение общего пользования</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#needElectricity</IRI>
-        <Literal>С указанием напряжения или иных параметров. По умолчанию можно указывать 220</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">С указанием напряжения или иных параметров. По умолчанию можно указывать 220</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#needElectricity</IRI>
-        <Literal>требует электричества</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">требует электричества</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#topDataArchElement</IRI>
-        <Literal>Использовать только дочерние отношения</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Использовать только дочерние отношения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#topDataArchElement</IRI>
-        <Literal>характеристика элемента благоустройства</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика элемента благоустройства</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#topDataNature</IRI>
-        <Literal>характеристика природного объекта</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">характеристика природного объекта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#topEcologyParam</IRI>
-        <Literal>экологический параметр</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">экологический параметр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Agent</IRI>
-        <Literal>Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Agent</IRI>
-        <Literal></Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Agent</IRI>
-        <Literal>Агент</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Агент</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Group</IRI>
-        <Literal>The Group class represents a collection of individual agents (and may itself play the role of a Agent, ie. something that can perform actions).</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Group class represents a collection of individual agents (and may itself play the role of a Agent, ie. something that can perform actions).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Group</IRI>
-        <Literal>Группа</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Группа</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Organization</IRI>
-        <Literal>The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Organization</IRI>
-        <Literal>Организация</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Организация</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Person</IRI>
-        <Literal>The Person class represents people.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Person class represents people.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://xmlns.com/foaf/spec/#term_Person</IRI>
-        <Literal>Человек</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Человек</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_motorway</IRI>
-        <Literal xml:lang="en">Motorway</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Motorway</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_motorway</IRI>
-        <Literal xml:lang="ru">Автомобильная</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Автомобильная</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_pedestrian</IRI>
-        <Literal xml:lang="en">Pedestrian</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Pedestrian</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_pedestrian</IRI>
-        <Literal xml:lang="ru">Пешеходная</Literal>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Пешеходная</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
