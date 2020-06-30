@@ -1,6 +1,6 @@
-# Онтология Citygraph версия 1.2.200630
+﻿# Онтология Citygraph версия 1.2.200630
 
-**citygraph- ... .owl содержит:**
+**citygraph-1.2.200630.owl содержит:**
 
 - Классы
 
@@ -10,13 +10,13 @@
 
 - ключевые индивиды, которые используются другими индивидами
 
-**citygraph-  ... .ttl содержит:**
+**citygraph-1.2.200630.ttl содержит:**
 
 - Все что есть в citygraph.owl
 
-**citygraph-1.1.200610-vasileostrovskiy-full.ttl содержит:**
+**citygraph-1.1.200630-vasileostrovskiy-full.ttl содержит:**
 
-- см. предыдущие версии
+- Индивиды CapitalConstruction, LivingObject, MajorRenovation, ManagingOrganization, Address, Street, WorkType и Geometry всех домов Василеостровского района.
 
 
 ## Изменения вносили
@@ -29,30 +29,22 @@
 
 *Изменено:*
 
-- Адрес вынесен на верхний уровень
+- Лэйблы на русском языке приведены в соответствии со стандартом
 
-- Справочник вынесен на верхний уровень
+- Некоторые проперти были переименованы в "topData...", что изменило их статус в онтологии, теперь можно использовать только их дочерние проперти, но не их сами.
 
-- MajorRenovation и WorkType переехал в Action
+- Переименованы некоторые проперти и переназначены их области определения. hasIllumination и needElectricity стали дочерними проперти от topDataArchElement
 
+- Переименованы некоторые классы (например Surface переименован в Covering)
+
+- Исправлены некоторые грамматические ошибки
 
 *Добавлено:*
 
-- На верхний уровень добавлены Action (+подклассы), Procedure, Event, Document (+подклассы)
+- Новые классы (AirSpaceObject, Boulevard, Forest (CityForest, ConservancyArea, ForestPark, ForestReserve),GroundObject, ZNOP, Reservoir, OOPT (BotanicGarden, ConservancyArea, ForestReserve, NationalPark, NatureMonument, NaturePark), Forestry, DrinkFontain, GreenRoof, Skalodrom, Sportground, VerticalGreen, SmallCityGarden, SmallGardenInBlock
 
-- Новые классы (Gren, Bush, Position, MilitaryObject, классы культурных объектов, образования, медицины, общественные объекты, вокзалы, сады, скверы, почта, пожарная станция)
-
-- добавлены новые подклассы StreetFurniture (более 10 шт)
-
-- В физические объекты добавлен новый класс Component - он описывает такие элементы городской среды, как ландшафт, покрытия, полоса движения, рельеф и пр. можно дальше развивать. В NetObject добавлены подклассы для описания сетевых объектов
-
-- Добавлены Components для описания элементов городской среды (ландшафт, покрытие, полоса и пр)
-
-- Новые проперти -  hasComp (hasSurface), hasPosition (hasCompanyPosition), hasAddressObj (hasStreet, hasAdmUnit), hasSubDoc, hasNetProperty (adjoin), hasAddress (hasHouseNumber, hasKorpus, hasLitera), hasDocument (hasDocDate, hasDocTitle), hasCulturalStatus (hasLocalMeaning, hasWorldMeaning, hasRegionalMeaning, hasFederalMeaning), hasReligiousObjectCharacteristic (hasDenomination, hasReligious)
+- Новые проперти - hasGovStatus topDataNature (hasCoastalProtectiveStrip, hasLength, hasWaterSafeZone), topEcologyParam (hasIlluminationPollution, hasPM10value, hasPM25value, hasRadioactivePollution), 
 
 *Удалены:*
 
-- Служебная сущность 
-- Tree заменен на Green
-- Техника
-- OtherFunctionalCityObject
+- Индивиды Управляющих Компаний и Видов работ
