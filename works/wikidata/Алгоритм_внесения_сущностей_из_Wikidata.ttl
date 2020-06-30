@@ -1,0 +1,16 @@
+#1 Определить класс-родитель для вносимого объекта
+#2 Определить, будет ли вносимый объект классом или экземпляром
+#3 Найти объект в Wikidata (https://www.wikidata.org/wiki/Wikidata:Main_Page или https://query.wikidata.org/)
+#4 Добавить объект и его свойства, используя префиксы Wikidata:
+
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix cg: <http://www.w3id.org/citygraph-core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+wd:Q204776 rdfs:subclassOf cg:StreetFurniture ; # импорт класса "bench" в класс "Уличная мебель"
+              rdfs:label "Скамья"@ru. # присвоение русскоязычного названия
+
+# Свойства и классы, уже имеющиеся в онтологии cg имеют приоритет над импортируемыми (например, используется свойство rdfs:subclassOf вместо wdt:P279 - свойство subclass of в Wikidata)
