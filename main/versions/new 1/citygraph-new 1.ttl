@@ -1,13 +1,13 @@
 @prefix : <http://citygraph.onti.actcognitive.org/core> .
-@prefix cg: <http://citygraph.onti.actcognitive.org/citygraph-core#> .
+@prefix cg: <http://citygraph.onti.actcognitive.org/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://citygraph.onti.actcognitive.org/citygraph-core> .
+@base <http://citygraph.onti.actcognitive.org/core> .
 
-<http://citygraph.onti.actcognitive.org/citygraph-core> rdf:type owl:Ontology .
+<http://citygraph.onti.actcognitive.org/core> rdf:type owl:Ontology .
 
 
 #################################################################
@@ -17,7 +17,7 @@
 #################################################################
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#adjoin
+###  http://citygraph.onti.actcognitive.org/core#adjoin
 
 cg:adjoin rdf:type owl:ObjectProperty ;
           
@@ -27,7 +27,7 @@ cg:adjoin rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#designCodeSPb
+###  http://citygraph.onti.actcognitive.org/core#designCodeSPb
 
 cg:designCodeSPb rdf:type owl:ObjectProperty ;
                  
@@ -37,7 +37,7 @@ cg:designCodeSPb rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAddressObj
+###  http://citygraph.onti.actcognitive.org/core#hasAddressObj
 
 cg:hasAddressObj rdf:type owl:ObjectProperty ;
                  
@@ -49,7 +49,7 @@ cg:hasAddressObj rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAdmUnit
+###  http://citygraph.onti.actcognitive.org/core#hasAdmUnit
 
 cg:hasAdmUnit rdf:type owl:ObjectProperty ;
               
@@ -63,7 +63,7 @@ cg:hasAdmUnit rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasApartmentType
+###  http://citygraph.onti.actcognitive.org/core#hasApartmentType
 
 cg:hasApartmentType rdf:type owl:ObjectProperty ;
                     
@@ -77,7 +77,7 @@ cg:hasApartmentType rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuidlingSeries
+###  http://citygraph.onti.actcognitive.org/core#hasBuidlingSeries
 
 cg:hasBuidlingSeries rdf:type owl:ObjectProperty ;
                      
@@ -89,7 +89,7 @@ cg:hasBuidlingSeries rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuildingSpecificProperties
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingSpecificProperties
 
 cg:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
                                  
@@ -99,7 +99,7 @@ cg:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCadastralBlock
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralBlock
 
 cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
                      
@@ -113,7 +113,7 @@ cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCadastralDistrict
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralDistrict
 
 cg:hasCadastralDistrict rdf:type owl:ObjectProperty ;
                         
@@ -127,7 +127,7 @@ cg:hasCadastralDistrict rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCadastralNumber
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralNumber
 
 cg:hasCadastralNumber rdf:type owl:ObjectProperty ;
                       
@@ -139,7 +139,7 @@ cg:hasCadastralNumber rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCadastralOkrug
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralOkrug
 
 cg:hasCadastralOkrug rdf:type owl:ObjectProperty ;
                      
@@ -153,7 +153,7 @@ cg:hasCadastralOkrug rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasComp
+###  http://citygraph.onti.actcognitive.org/core#hasComp
 
 cg:hasComp rdf:type owl:ObjectProperty ;
            
@@ -161,7 +161,7 @@ cg:hasComp rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCompanyPosition
+###  http://citygraph.onti.actcognitive.org/core#hasCompanyPosition
 
 cg:hasCompanyPosition rdf:type owl:ObjectProperty ;
                       
@@ -175,7 +175,7 @@ cg:hasCompanyPosition rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCoordinates
+###  http://citygraph.onti.actcognitive.org/core#hasCoordinates
 
 cg:hasCoordinates rdf:type owl:ObjectProperty ;
                   
@@ -189,7 +189,7 @@ cg:hasCoordinates rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasFunction
+###  http://citygraph.onti.actcognitive.org/core#hasFunction
 
 cg:hasFunction rdf:type owl:ObjectProperty ;
                
@@ -203,7 +203,7 @@ cg:hasFunction rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLand
+###  http://citygraph.onti.actcognitive.org/core#hasLand
 
 cg:hasLand rdf:type owl:ObjectProperty ;
            
@@ -217,7 +217,7 @@ cg:hasLand rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMajorRenovation
+###  http://citygraph.onti.actcognitive.org/core#hasMajorRenovation
 
 cg:hasMajorRenovation rdf:type owl:ObjectProperty ;
                       
@@ -231,7 +231,7 @@ cg:hasMajorRenovation rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasManagingOrganization
+###  http://citygraph.onti.actcognitive.org/core#hasManagingOrganization
 
 cg:hasManagingOrganization rdf:type owl:ObjectProperty ;
                            
@@ -245,7 +245,7 @@ cg:hasManagingOrganization rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMetroStation
+###  http://citygraph.onti.actcognitive.org/core#hasMetroStation
 
 cg:hasMetroStation rdf:type owl:ObjectProperty ;
                    
@@ -255,7 +255,7 @@ cg:hasMetroStation rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasNestedObject
+###  http://citygraph.onti.actcognitive.org/core#hasNestedObject
 
 cg:hasNestedObject rdf:type owl:ObjectProperty ;
                    
@@ -269,7 +269,7 @@ cg:hasNestedObject rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasNetProperty
+###  http://citygraph.onti.actcognitive.org/core#hasNetProperty
 
 cg:hasNetProperty rdf:type owl:ObjectProperty ;
                   
@@ -277,7 +277,7 @@ cg:hasNetProperty rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasOKATO
+###  http://citygraph.onti.actcognitive.org/core#hasOKATO
 
 cg:hasOKATO rdf:type owl:ObjectProperty ;
             
@@ -291,7 +291,7 @@ cg:hasOKATO rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasOKTMO
+###  http://citygraph.onti.actcognitive.org/core#hasOKTMO
 
 cg:hasOKTMO rdf:type owl:ObjectProperty ;
             
@@ -305,7 +305,7 @@ cg:hasOKTMO rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasOwner
+###  http://citygraph.onti.actcognitive.org/core#hasOwner
 
 cg:hasOwner rdf:type owl:ObjectProperty ;
             
@@ -323,7 +323,7 @@ cg:hasOwner rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPosition
+###  http://citygraph.onti.actcognitive.org/core#hasPosition
 
 cg:hasPosition rdf:type owl:ObjectProperty ;
                
@@ -333,7 +333,7 @@ cg:hasPosition rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPublicAmenity
+###  http://citygraph.onti.actcognitive.org/core#hasPublicAmenity
 
 cg:hasPublicAmenity rdf:type owl:ObjectProperty ;
                     
@@ -348,7 +348,7 @@ cg:hasPublicAmenity rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStreet
+###  http://citygraph.onti.actcognitive.org/core#hasStreet
 
 cg:hasStreet rdf:type owl:ObjectProperty ;
              
@@ -362,7 +362,7 @@ cg:hasStreet rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSubDoc
+###  http://citygraph.onti.actcognitive.org/core#hasSubDoc
 
 cg:hasSubDoc rdf:type owl:ObjectProperty ;
              
@@ -372,7 +372,7 @@ cg:hasSubDoc rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSurface
+###  http://citygraph.onti.actcognitive.org/core#hasSurface
 
 cg:hasSurface rdf:type owl:ObjectProperty ;
               
@@ -384,7 +384,7 @@ cg:hasSurface rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasWorkType
+###  http://citygraph.onti.actcognitive.org/core#hasWorkType
 
 cg:hasWorkType rdf:type owl:ObjectProperty ;
                
@@ -398,7 +398,7 @@ cg:hasWorkType rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#includedIn
+###  http://citygraph.onti.actcognitive.org/core#includedIn
 
 cg:includedIn rdf:type owl:ObjectProperty ;
               
@@ -430,7 +430,7 @@ owl:topDataProperty rdfs:range xsd:int ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CentralHotWaterWoods
+###  http://citygraph.onti.actcognitive.org/core#CentralHotWaterWoods
 
 cg:CentralHotWaterWoods rdf:type owl:DatatypeProperty ;
                         
@@ -444,7 +444,7 @@ cg:CentralHotWaterWoods rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAbbr
+###  http://citygraph.onti.actcognitive.org/core#hasAbbr
 
 cg:hasAbbr rdf:type owl:DatatypeProperty ;
            
@@ -458,7 +458,7 @@ cg:hasAbbr rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAccess
+###  http://citygraph.onti.actcognitive.org/core#hasAccess
 
 cg:hasAccess rdf:type owl:DatatypeProperty ;
              
@@ -470,7 +470,7 @@ cg:hasAccess rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAddress
+###  http://citygraph.onti.actcognitive.org/core#hasAddress
 
 cg:hasAddress rdf:type owl:DatatypeProperty ;
               
@@ -484,7 +484,7 @@ cg:hasAddress rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAdministrativeCenter
+###  http://citygraph.onti.actcognitive.org/core#hasAdministrativeCenter
 
 cg:hasAdministrativeCenter rdf:type owl:DatatypeProperty ;
                            
@@ -496,7 +496,7 @@ cg:hasAdministrativeCenter rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAgeGroupPercentage
+###  http://citygraph.onti.actcognitive.org/core#hasAgeGroupPercentage
 
 cg:hasAgeGroupPercentage rdf:type owl:DatatypeProperty ;
                          
@@ -510,7 +510,7 @@ cg:hasAgeGroupPercentage rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAmenity
+###  http://citygraph.onti.actcognitive.org/core#hasAmenity
 
 cg:hasAmenity rdf:type owl:DatatypeProperty ;
               
@@ -522,7 +522,7 @@ cg:hasAmenity rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasApartmentsAmount
+###  http://citygraph.onti.actcognitive.org/core#hasApartmentsAmount
 
 cg:hasApartmentsAmount rdf:type owl:DatatypeProperty ;
                        
@@ -538,7 +538,7 @@ cg:hasApartmentsAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasArchitectureType
+###  http://citygraph.onti.actcognitive.org/core#hasArchitectureType
 
 cg:hasArchitectureType rdf:type owl:DatatypeProperty ;
                        
@@ -550,7 +550,7 @@ cg:hasArchitectureType rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasArea
+###  http://citygraph.onti.actcognitive.org/core#hasArea
 
 cg:hasArea rdf:type owl:DatatypeProperty ;
            
@@ -564,7 +564,7 @@ cg:hasArea rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAreaGeneral
+###  http://citygraph.onti.actcognitive.org/core#hasAreaGeneral
 
 cg:hasAreaGeneral rdf:type owl:DatatypeProperty ;
                   
@@ -578,7 +578,7 @@ cg:hasAreaGeneral rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasAutoBoilerRoom
+###  http://citygraph.onti.actcognitive.org/core#hasAutoBoilerRoom
 
 cg:hasAutoBoilerRoom rdf:type owl:DatatypeProperty ;
                      
@@ -592,7 +592,7 @@ cg:hasAutoBoilerRoom rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBack
+###  http://citygraph.onti.actcognitive.org/core#hasBack
 
 cg:hasBack rdf:type owl:DatatypeProperty ;
            
@@ -607,7 +607,7 @@ cg:hasBack rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuildingDescription
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingDescription
 
 cg:hasBuildingDescription rdf:type owl:DatatypeProperty ;
                           
@@ -623,7 +623,7 @@ cg:hasBuildingDescription rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuildingMaterial
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingMaterial
 
 cg:hasBuildingMaterial rdf:type owl:DatatypeProperty ;
                        
@@ -637,7 +637,7 @@ cg:hasBuildingMaterial rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuildingParameter
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingParameter
 
 cg:hasBuildingParameter rdf:type owl:DatatypeProperty ;
                         
@@ -647,7 +647,7 @@ cg:hasBuildingParameter rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuildingPart
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingPart
 
 cg:hasBuildingPart rdf:type owl:DatatypeProperty ;
                    
@@ -659,7 +659,7 @@ cg:hasBuildingPart rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasBuildingParts
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingParts
 
 cg:hasBuildingParts rdf:type owl:DatatypeProperty ;
                     
@@ -671,7 +671,7 @@ cg:hasBuildingParts rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasButtonOperated
+###  http://citygraph.onti.actcognitive.org/core#hasButtonOperated
 
 cg:hasButtonOperated rdf:type owl:DatatypeProperty ;
                      
@@ -685,7 +685,7 @@ cg:hasButtonOperated rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCarWash
+###  http://citygraph.onti.actcognitive.org/core#hasCarWash
 
 cg:hasCarWash rdf:type owl:DatatypeProperty ;
               
@@ -697,7 +697,7 @@ cg:hasCarWash rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCentralElectricity
+###  http://citygraph.onti.actcognitive.org/core#hasCentralElectricity
 
 cg:hasCentralElectricity rdf:type owl:DatatypeProperty ;
                          
@@ -711,7 +711,7 @@ cg:hasCentralElectricity rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCentralGas
+###  http://citygraph.onti.actcognitive.org/core#hasCentralGas
 
 cg:hasCentralGas rdf:type owl:DatatypeProperty ;
                  
@@ -725,7 +725,7 @@ cg:hasCentralGas rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCentralHeating
+###  http://citygraph.onti.actcognitive.org/core#hasCentralHeating
 
 cg:hasCentralHeating rdf:type owl:DatatypeProperty ;
                      
@@ -739,7 +739,7 @@ cg:hasCentralHeating rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCentralHotWater
+###  http://citygraph.onti.actcognitive.org/core#hasCentralHotWater
 
 cg:hasCentralHotWater rdf:type owl:DatatypeProperty ;
                       
@@ -753,7 +753,7 @@ cg:hasCentralHotWater rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCentralHotWaterGas
+###  http://citygraph.onti.actcognitive.org/core#hasCentralHotWaterGas
 
 cg:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
                          
@@ -767,7 +767,7 @@ cg:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCharge
+###  http://citygraph.onti.actcognitive.org/core#hasCharge
 
 cg:hasCharge rdf:type owl:DatatypeProperty ;
              
@@ -781,7 +781,7 @@ cg:hasCharge rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasClassificationCode
+###  http://citygraph.onti.actcognitive.org/core#hasClassificationCode
 
 cg:hasClassificationCode rdf:type owl:DatatypeProperty ;
                          
@@ -791,7 +791,7 @@ cg:hasClassificationCode rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCoastalProtectiveStrip
+###  http://citygraph.onti.actcognitive.org/core#hasCoastalProtectiveStrip
 
 cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
                              
@@ -805,7 +805,7 @@ cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCode
+###  http://citygraph.onti.actcognitive.org/core#hasCode
 
 cg:hasCode rdf:type owl:DatatypeProperty ;
            
@@ -820,7 +820,7 @@ cg:hasCode rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCommunalApartmentsAmount
+###  http://citygraph.onti.actcognitive.org/core#hasCommunalApartmentsAmount
 
 cg:hasCommunalApartmentsAmount rdf:type owl:DatatypeProperty ;
                                
@@ -836,7 +836,7 @@ cg:hasCommunalApartmentsAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCommunalFacilitiesArea
+###  http://citygraph.onti.actcognitive.org/core#hasCommunalFacilitiesArea
 
 cg:hasCommunalFacilitiesArea rdf:type owl:DatatypeProperty ;
                              
@@ -850,7 +850,7 @@ cg:hasCommunalFacilitiesArea rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCompressedAir
+###  http://citygraph.onti.actcognitive.org/core#hasCompressedAir
 
 cg:hasCompressedAir rdf:type owl:DatatypeProperty ;
                     
@@ -862,7 +862,7 @@ cg:hasCompressedAir rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasConditionsForWheel
+###  http://citygraph.onti.actcognitive.org/core#hasConditionsForWheel
 
 cg:hasConditionsForWheel rdf:type owl:DatatypeProperty ;
                          
@@ -874,7 +874,7 @@ cg:hasConditionsForWheel rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCrossingIsland
+###  http://citygraph.onti.actcognitive.org/core#hasCrossingIsland
 
 cg:hasCrossingIsland rdf:type owl:DatatypeProperty ;
                      
@@ -888,7 +888,7 @@ cg:hasCrossingIsland rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasCrosswalkCharacteristic
+###  http://citygraph.onti.actcognitive.org/core#hasCrosswalkCharacteristic
 
 cg:hasCrosswalkCharacteristic rdf:type owl:DatatypeProperty ;
                               
@@ -896,7 +896,7 @@ cg:hasCrosswalkCharacteristic rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasDenomination
+###  http://citygraph.onti.actcognitive.org/core#hasDenomination
 
 cg:hasDenomination rdf:type owl:DatatypeProperty ;
                    
@@ -911,7 +911,7 @@ cg:hasDenomination rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasDesignedModifed
+###  http://citygraph.onti.actcognitive.org/core#hasDesignedModifed
 
 cg:hasDesignedModifed rdf:type owl:DatatypeProperty ;
                       
@@ -923,7 +923,7 @@ cg:hasDesignedModifed rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasDocDate
+###  http://citygraph.onti.actcognitive.org/core#hasDocDate
 
 cg:hasDocDate rdf:type owl:DatatypeProperty ;
               
@@ -937,7 +937,7 @@ cg:hasDocDate rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasDocTitle
+###  http://citygraph.onti.actcognitive.org/core#hasDocTitle
 
 cg:hasDocTitle rdf:type owl:DatatypeProperty ;
                
@@ -951,7 +951,7 @@ cg:hasDocTitle rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasDocument
+###  http://citygraph.onti.actcognitive.org/core#hasDocument
 
 cg:hasDocument rdf:type owl:DatatypeProperty ;
                
@@ -959,7 +959,7 @@ cg:hasDocument rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasDomofonAmount
+###  http://citygraph.onti.actcognitive.org/core#hasDomofonAmount
 
 cg:hasDomofonAmount rdf:type owl:DatatypeProperty ;
                     
@@ -973,7 +973,7 @@ cg:hasDomofonAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasEmergency
+###  http://citygraph.onti.actcognitive.org/core#hasEmergency
 
 cg:hasEmergency rdf:type owl:DatatypeProperty ;
                 
@@ -985,7 +985,7 @@ cg:hasEmergency rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasFailureStatus
+###  http://citygraph.onti.actcognitive.org/core#hasFailureStatus
 
 cg:hasFailureStatus rdf:type owl:DatatypeProperty ;
                     
@@ -999,7 +999,7 @@ cg:hasFailureStatus rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasFederalMeaning
+###  http://citygraph.onti.actcognitive.org/core#hasFederalMeaning
 
 cg:hasFederalMeaning rdf:type owl:DatatypeProperty ;
                      
@@ -1011,7 +1011,7 @@ cg:hasFederalMeaning rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasFloors
+###  http://citygraph.onti.actcognitive.org/core#hasFloors
 
 cg:hasFloors rdf:type owl:DatatypeProperty ;
              
@@ -1025,7 +1025,7 @@ cg:hasFloors rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasFunctionalParameter
+###  http://citygraph.onti.actcognitive.org/core#hasFunctionalParameter
 
 cg:hasFunctionalParameter rdf:type owl:DatatypeProperty ;
                           
@@ -1033,7 +1033,7 @@ cg:hasFunctionalParameter rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasGarbageAmount
+###  http://citygraph.onti.actcognitive.org/core#hasGarbageAmount
 
 cg:hasGarbageAmount rdf:type owl:DatatypeProperty ;
                     
@@ -1049,7 +1049,7 @@ cg:hasGarbageAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasGovStatus
+###  http://citygraph.onti.actcognitive.org/core#hasGovStatus
 
 cg:hasGovStatus rdf:type owl:DatatypeProperty ;
                 
@@ -1060,7 +1060,7 @@ cg:hasGovStatus rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasHeight
+###  http://citygraph.onti.actcognitive.org/core#hasHeight
 
 cg:hasHeight rdf:type owl:DatatypeProperty ;
              
@@ -1075,7 +1075,7 @@ cg:hasHeight rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasHouseNumber
+###  http://citygraph.onti.actcognitive.org/core#hasHouseNumber
 
 cg:hasHouseNumber rdf:type owl:DatatypeProperty ;
                   
@@ -1087,7 +1087,7 @@ cg:hasHouseNumber rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasIllumination
+###  http://citygraph.onti.actcognitive.org/core#hasIllumination
 
 cg:hasIllumination rdf:type owl:DatatypeProperty ;
                    
@@ -1103,7 +1103,7 @@ cg:hasIllumination rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasIlluminationPollution
+###  http://citygraph.onti.actcognitive.org/core#hasIlluminationPollution
 
 cg:hasIlluminationPollution rdf:type owl:DatatypeProperty ;
                             
@@ -1115,7 +1115,7 @@ cg:hasIlluminationPollution rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasInhabitableArea
+###  http://citygraph.onti.actcognitive.org/core#hasInhabitableArea
 
 cg:hasInhabitableArea rdf:type owl:DatatypeProperty ;
                       
@@ -1129,7 +1129,7 @@ cg:hasInhabitableArea rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasInitiationDate
+###  http://citygraph.onti.actcognitive.org/core#hasInitiationDate
 
 cg:hasInitiationDate rdf:type owl:DatatypeProperty ;
                      
@@ -1142,7 +1142,7 @@ cg:hasInitiationDate rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasKerb
+###  http://citygraph.onti.actcognitive.org/core#hasKerb
 
 cg:hasKerb rdf:type owl:DatatypeProperty ;
            
@@ -1156,7 +1156,7 @@ cg:hasKerb rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasKorpus
+###  http://citygraph.onti.actcognitive.org/core#hasKorpus
 
 cg:hasKorpus rdf:type owl:DatatypeProperty ;
              
@@ -1168,7 +1168,7 @@ cg:hasKorpus rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLPGFuel
+###  http://citygraph.onti.actcognitive.org/core#hasLPGFuel
 
 cg:hasLPGFuel rdf:type owl:DatatypeProperty ;
               
@@ -1180,7 +1180,7 @@ cg:hasLPGFuel rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLayerDescription
+###  http://citygraph.onti.actcognitive.org/core#hasLayerDescription
 
 cg:hasLayerDescription rdf:type owl:DatatypeProperty ;
                        
@@ -1192,7 +1192,7 @@ cg:hasLayerDescription rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLength
+###  http://citygraph.onti.actcognitive.org/core#hasLength
 
 cg:hasLength rdf:type owl:DatatypeProperty ;
              
@@ -1204,7 +1204,7 @@ cg:hasLength rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLevel1
+###  http://citygraph.onti.actcognitive.org/core#hasLevel1
 
 cg:hasLevel1 rdf:type owl:DatatypeProperty ;
              
@@ -1219,7 +1219,7 @@ cg:hasLevel1 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLevel2
+###  http://citygraph.onti.actcognitive.org/core#hasLevel2
 
 cg:hasLevel2 rdf:type owl:DatatypeProperty ;
              
@@ -1234,7 +1234,7 @@ cg:hasLevel2 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLevel3
+###  http://citygraph.onti.actcognitive.org/core#hasLevel3
 
 cg:hasLevel3 rdf:type owl:DatatypeProperty ;
              
@@ -1249,7 +1249,7 @@ cg:hasLevel3 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLevel4
+###  http://citygraph.onti.actcognitive.org/core#hasLevel4
 
 cg:hasLevel4 rdf:type owl:DatatypeProperty ;
              
@@ -1264,7 +1264,7 @@ cg:hasLevel4 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLicensePlate
+###  http://citygraph.onti.actcognitive.org/core#hasLicensePlate
 
 cg:hasLicensePlate rdf:type owl:DatatypeProperty ;
                    
@@ -1278,7 +1278,7 @@ cg:hasLicensePlate rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLiftAmount
+###  http://citygraph.onti.actcognitive.org/core#hasLiftAmount
 
 cg:hasLiftAmount rdf:type owl:DatatypeProperty ;
                  
@@ -1292,7 +1292,7 @@ cg:hasLiftAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLit
+###  http://citygraph.onti.actcognitive.org/core#hasLit
 
 cg:hasLit rdf:type owl:DatatypeProperty ;
           
@@ -1306,7 +1306,7 @@ cg:hasLit rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLitera
+###  http://citygraph.onti.actcognitive.org/core#hasLitera
 
 cg:hasLitera rdf:type owl:DatatypeProperty ;
              
@@ -1318,7 +1318,7 @@ cg:hasLitera rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLivingObjectParameter
+###  http://citygraph.onti.actcognitive.org/core#hasLivingObjectParameter
 
 cg:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
                             
@@ -1328,7 +1328,7 @@ cg:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasLocalMeaning
+###  http://citygraph.onti.actcognitive.org/core#hasLocalMeaning
 
 cg:hasLocalMeaning rdf:type owl:DatatypeProperty ;
                    
@@ -1340,7 +1340,7 @@ cg:hasLocalMeaning rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMajorRenovationDate
+###  http://citygraph.onti.actcognitive.org/core#hasMajorRenovationDate
 
 cg:hasMajorRenovationDate rdf:type owl:DatatypeProperty ;
                           
@@ -1352,7 +1352,7 @@ cg:hasMajorRenovationDate rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMaxFloors
+###  http://citygraph.onti.actcognitive.org/core#hasMaxFloors
 
 cg:hasMaxFloors rdf:type owl:DatatypeProperty ;
                 
@@ -1366,7 +1366,7 @@ cg:hasMaxFloors rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMetroCode
+###  http://citygraph.onti.actcognitive.org/core#hasMetroCode
 
 cg:hasMetroCode rdf:type owl:DatatypeProperty ;
                 
@@ -1378,7 +1378,7 @@ cg:hasMetroCode rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMetroColor
+###  http://citygraph.onti.actcognitive.org/core#hasMetroColor
 
 cg:hasMetroColor rdf:type owl:DatatypeProperty ;
                  
@@ -1390,7 +1390,7 @@ cg:hasMetroColor rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMinFloors
+###  http://citygraph.onti.actcognitive.org/core#hasMinFloors
 
 cg:hasMinFloors rdf:type owl:DatatypeProperty ;
                 
@@ -1404,7 +1404,7 @@ cg:hasMinFloors rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasModelName
+###  http://citygraph.onti.actcognitive.org/core#hasModelName
 
 cg:hasModelName rdf:type owl:DatatypeProperty ;
                 
@@ -1418,7 +1418,7 @@ cg:hasModelName rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasMovableParameter
+###  http://citygraph.onti.actcognitive.org/core#hasMovableParameter
 
 cg:hasMovableParameter rdf:type owl:DatatypeProperty ;
                        
@@ -1426,7 +1426,7 @@ cg:hasMovableParameter rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasNotCentralGas
+###  http://citygraph.onti.actcognitive.org/core#hasNotCentralGas
 
 cg:hasNotCentralGas rdf:type owl:DatatypeProperty ;
                     
@@ -1440,7 +1440,7 @@ cg:hasNotCentralGas rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasOKLevel
+###  http://citygraph.onti.actcognitive.org/core#hasOKLevel
 
 cg:hasOKLevel rdf:type owl:DatatypeProperty ;
               
@@ -1448,7 +1448,7 @@ cg:hasOKLevel rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasOctane_98
+###  http://citygraph.onti.actcognitive.org/core#hasOctane_98
 
 cg:hasOctane_98 rdf:type owl:DatatypeProperty ;
                 
@@ -1460,7 +1460,7 @@ cg:hasOctane_98 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasOpeningHours
+###  http://citygraph.onti.actcognitive.org/core#hasOpeningHours
 
 cg:hasOpeningHours rdf:type owl:DatatypeProperty ;
                    
@@ -1472,7 +1472,7 @@ cg:hasOpeningHours rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPM10value
+###  http://citygraph.onti.actcognitive.org/core#hasPM10value
 
 cg:hasPM10value rdf:type owl:DatatypeProperty ;
                 
@@ -1484,7 +1484,7 @@ cg:hasPM10value rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPM25value
+###  http://citygraph.onti.actcognitive.org/core#hasPM25value
 
 cg:hasPM25value rdf:type owl:DatatypeProperty ;
                 
@@ -1496,7 +1496,7 @@ cg:hasPM25value rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasParkingArea
+###  http://citygraph.onti.actcognitive.org/core#hasParkingArea
 
 cg:hasParkingArea rdf:type owl:DatatypeProperty ;
                   
@@ -1512,7 +1512,7 @@ cg:hasParkingArea rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPhoneCode
+###  http://citygraph.onti.actcognitive.org/core#hasPhoneCode
 
 cg:hasPhoneCode rdf:type owl:DatatypeProperty ;
                 
@@ -1522,7 +1522,7 @@ cg:hasPhoneCode rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPhoneNumber
+###  http://citygraph.onti.actcognitive.org/core#hasPhoneNumber
 
 cg:hasPhoneNumber rdf:type owl:DatatypeProperty ;
                   
@@ -1535,7 +1535,7 @@ cg:hasPhoneNumber rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPlaygroundInventory
+###  http://citygraph.onti.actcognitive.org/core#hasPlaygroundInventory
 
 cg:hasPlaygroundInventory rdf:type owl:DatatypeProperty ;
                           
@@ -1547,7 +1547,7 @@ cg:hasPlaygroundInventory rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasPopulationCharacteristics
+###  http://citygraph.onti.actcognitive.org/core#hasPopulationCharacteristics
 
 cg:hasPopulationCharacteristics rdf:type owl:DatatypeProperty ;
                                 
@@ -1555,7 +1555,7 @@ cg:hasPopulationCharacteristics rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasProvidedForChild
+###  http://citygraph.onti.actcognitive.org/core#hasProvidedForChild
 
 cg:hasProvidedForChild rdf:type owl:DatatypeProperty ;
                        
@@ -1567,7 +1567,7 @@ cg:hasProvidedForChild rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRadioactivePollution
+###  http://citygraph.onti.actcognitive.org/core#hasRadioactivePollution
 
 cg:hasRadioactivePollution rdf:type owl:DatatypeProperty ;
                            
@@ -1579,7 +1579,7 @@ cg:hasRadioactivePollution rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRailwayCrossing
+###  http://citygraph.onti.actcognitive.org/core#hasRailwayCrossing
 
 cg:hasRailwayCrossing rdf:type owl:DatatypeProperty ;
                       
@@ -1593,7 +1593,7 @@ cg:hasRailwayCrossing rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRegionalMeaning
+###  http://citygraph.onti.actcognitive.org/core#hasRegionalMeaning
 
 cg:hasRegionalMeaning rdf:type owl:DatatypeProperty ;
                       
@@ -1605,7 +1605,7 @@ cg:hasRegionalMeaning rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasReligious
+###  http://citygraph.onti.actcognitive.org/core#hasReligious
 
 cg:hasReligious rdf:type owl:DatatypeProperty ;
                 
@@ -1620,7 +1620,7 @@ cg:hasReligious rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasReligiousBuildingType
+###  http://citygraph.onti.actcognitive.org/core#hasReligiousBuildingType
 
 cg:hasReligiousBuildingType rdf:type owl:DatatypeProperty ;
                             
@@ -1632,7 +1632,7 @@ cg:hasReligiousBuildingType rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasReligiousObjectCharacteristic
+###  http://citygraph.onti.actcognitive.org/core#hasReligiousObjectCharacteristic
 
 cg:hasReligiousObjectCharacteristic rdf:type owl:DatatypeProperty ;
                                     
@@ -1640,7 +1640,7 @@ cg:hasReligiousObjectCharacteristic rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasResidentNumber
+###  http://citygraph.onti.actcognitive.org/core#hasResidentNumber
 
 cg:hasResidentNumber rdf:type owl:DatatypeProperty ;
                      
@@ -1654,7 +1654,7 @@ cg:hasResidentNumber rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms
+###  http://citygraph.onti.actcognitive.org/core#hasRooms
 
 cg:hasRooms rdf:type owl:DatatypeProperty ;
             
@@ -1668,7 +1668,7 @@ cg:hasRooms rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal
 
 cg:hasRoomsCommunal rdf:type owl:DatatypeProperty ;
                     
@@ -1682,7 +1682,7 @@ cg:hasRoomsCommunal rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal_2
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_2
 
 cg:hasRoomsCommunal_2 rdf:type owl:DatatypeProperty ;
                       
@@ -1696,7 +1696,7 @@ cg:hasRoomsCommunal_2 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal_3
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_3
 
 cg:hasRoomsCommunal_3 rdf:type owl:DatatypeProperty ;
                       
@@ -1710,7 +1710,7 @@ cg:hasRoomsCommunal_3 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal_4
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_4
 
 cg:hasRoomsCommunal_4 rdf:type owl:DatatypeProperty ;
                       
@@ -1724,7 +1724,7 @@ cg:hasRoomsCommunal_4 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal_5
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_5
 
 cg:hasRoomsCommunal_5 rdf:type owl:DatatypeProperty ;
                       
@@ -1738,7 +1738,7 @@ cg:hasRoomsCommunal_5 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal_6
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_6
 
 cg:hasRoomsCommunal_6 rdf:type owl:DatatypeProperty ;
                       
@@ -1752,7 +1752,7 @@ cg:hasRoomsCommunal_6 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRoomsCommunal_7
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_7
 
 cg:hasRoomsCommunal_7 rdf:type owl:DatatypeProperty ;
                       
@@ -1766,7 +1766,7 @@ cg:hasRoomsCommunal_7 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_1
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_1
 
 cg:hasRooms_1 rdf:type owl:DatatypeProperty ;
               
@@ -1780,7 +1780,7 @@ cg:hasRooms_1 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_2
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_2
 
 cg:hasRooms_2 rdf:type owl:DatatypeProperty ;
               
@@ -1794,7 +1794,7 @@ cg:hasRooms_2 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_3
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_3
 
 cg:hasRooms_3 rdf:type owl:DatatypeProperty ;
               
@@ -1806,7 +1806,7 @@ cg:hasRooms_3 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_4
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_4
 
 cg:hasRooms_4 rdf:type owl:DatatypeProperty ;
               
@@ -1818,7 +1818,7 @@ cg:hasRooms_4 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_5
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_5
 
 cg:hasRooms_5 rdf:type owl:DatatypeProperty ;
               
@@ -1830,7 +1830,7 @@ cg:hasRooms_5 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_6
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_6
 
 cg:hasRooms_6 rdf:type owl:DatatypeProperty ;
               
@@ -1842,7 +1842,7 @@ cg:hasRooms_6 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasRooms_7
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_7
 
 cg:hasRooms_7 rdf:type owl:DatatypeProperty ;
               
@@ -1854,7 +1854,7 @@ cg:hasRooms_7 rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSchoolType
+###  http://citygraph.onti.actcognitive.org/core#hasSchoolType
 
 cg:hasSchoolType rdf:type owl:DatatypeProperty ;
                  
@@ -1866,7 +1866,7 @@ cg:hasSchoolType rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSeatsAmount
+###  http://citygraph.onti.actcognitive.org/core#hasSeatsAmount
 
 cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
                   
@@ -1880,7 +1880,7 @@ cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSecondTitle
+###  http://citygraph.onti.actcognitive.org/core#hasSecondTitle
 
 cg:hasSecondTitle rdf:type owl:DatatypeProperty ;
                   
@@ -1893,7 +1893,7 @@ cg:hasSecondTitle rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasShop
+###  http://citygraph.onti.actcognitive.org/core#hasShop
 
 cg:hasShop rdf:type owl:DatatypeProperty ;
            
@@ -1905,7 +1905,7 @@ cg:hasShop rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSlopedCurb
+###  http://citygraph.onti.actcognitive.org/core#hasSlopedCurb
 
 cg:hasSlopedCurb rdf:type owl:DatatypeProperty ;
                  
@@ -1919,7 +1919,7 @@ cg:hasSlopedCurb rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSocialGroupPercentage
+###  http://citygraph.onti.actcognitive.org/core#hasSocialGroupPercentage
 
 cg:hasSocialGroupPercentage rdf:type owl:DatatypeProperty ;
                             
@@ -1933,7 +1933,7 @@ cg:hasSocialGroupPercentage rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSpeciality
+###  http://citygraph.onti.actcognitive.org/core#hasSpeciality
 
 cg:hasSpeciality rdf:type owl:DatatypeProperty ;
                  
@@ -1945,7 +1945,7 @@ cg:hasSpeciality rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStairsAmount
+###  http://citygraph.onti.actcognitive.org/core#hasStairsAmount
 
 cg:hasStairsAmount rdf:type owl:DatatypeProperty ;
                    
@@ -1959,7 +1959,7 @@ cg:hasStairsAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStoveHeating
+###  http://citygraph.onti.actcognitive.org/core#hasStoveHeating
 
 cg:hasStoveHeating rdf:type owl:DatatypeProperty ;
                    
@@ -1973,7 +1973,7 @@ cg:hasStoveHeating rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStringCadastralNumber
+###  http://citygraph.onti.actcognitive.org/core#hasStringCadastralNumber
 
 cg:hasStringCadastralNumber rdf:type owl:DatatypeProperty ;
                             
@@ -1985,7 +1985,7 @@ cg:hasStringCadastralNumber rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStringSeries
+###  http://citygraph.onti.actcognitive.org/core#hasStringSeries
 
 cg:hasStringSeries rdf:type owl:DatatypeProperty ;
                    
@@ -1999,7 +1999,7 @@ cg:hasStringSeries rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStringValue
+###  http://citygraph.onti.actcognitive.org/core#hasStringValue
 
 cg:hasStringValue rdf:type owl:DatatypeProperty ;
                   
@@ -2014,7 +2014,7 @@ cg:hasStringValue rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasStudentsCapacity
+###  http://citygraph.onti.actcognitive.org/core#hasStudentsCapacity
 
 cg:hasStudentsCapacity rdf:type owl:DatatypeProperty ;
                        
@@ -2026,7 +2026,7 @@ cg:hasStudentsCapacity rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasSurfaceType
+###  http://citygraph.onti.actcognitive.org/core#hasSurfaceType
 
 cg:hasSurfaceType rdf:type owl:DatatypeProperty ;
                   
@@ -2040,7 +2040,7 @@ cg:hasSurfaceType rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasTactilePaving
+###  http://citygraph.onti.actcognitive.org/core#hasTactilePaving
 
 cg:hasTactilePaving rdf:type owl:DatatypeProperty ;
                     
@@ -2054,7 +2054,7 @@ cg:hasTactilePaving rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasTitle
+###  http://citygraph.onti.actcognitive.org/core#hasTitle
 
 cg:hasTitle rdf:type owl:DatatypeProperty ;
             
@@ -2069,7 +2069,7 @@ cg:hasTitle rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasToilets
+###  http://citygraph.onti.actcognitive.org/core#hasToilets
 
 cg:hasToilets rdf:type owl:DatatypeProperty ;
               
@@ -2081,7 +2081,7 @@ cg:hasToilets rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasTourismPlace
+###  http://citygraph.onti.actcognitive.org/core#hasTourismPlace
 
 cg:hasTourismPlace rdf:type owl:DatatypeProperty ;
                    
@@ -2093,7 +2093,7 @@ cg:hasTourismPlace rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasTrafficSignals
+###  http://citygraph.onti.actcognitive.org/core#hasTrafficSignals
 
 cg:hasTrafficSignals rdf:type owl:DatatypeProperty ;
                      
@@ -2107,7 +2107,7 @@ cg:hasTrafficSignals rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasTrafficSignalsSound
+###  http://citygraph.onti.actcognitive.org/core#hasTrafficSignalsSound
 
 cg:hasTrafficSignalsSound rdf:type owl:DatatypeProperty ;
                           
@@ -2121,7 +2121,7 @@ cg:hasTrafficSignalsSound rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasUninhabitableArea
+###  http://citygraph.onti.actcognitive.org/core#hasUninhabitableArea
 
 cg:hasUninhabitableArea rdf:type owl:DatatypeProperty ;
                         
@@ -2135,7 +2135,7 @@ cg:hasUninhabitableArea rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasVIN
+###  http://citygraph.onti.actcognitive.org/core#hasVIN
 
 cg:hasVIN rdf:type owl:DatatypeProperty ;
           
@@ -2151,7 +2151,7 @@ cg:hasVIN rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasValue
+###  http://citygraph.onti.actcognitive.org/core#hasValue
 
 cg:hasValue rdf:type owl:DatatypeProperty ;
             
@@ -2165,7 +2165,7 @@ cg:hasValue rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasWaterSafeZone
+###  http://citygraph.onti.actcognitive.org/core#hasWaterSafeZone
 
 cg:hasWaterSafeZone rdf:type owl:DatatypeProperty ;
                     
@@ -2179,7 +2179,7 @@ cg:hasWaterSafeZone rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasWebDomainZone
+###  http://citygraph.onti.actcognitive.org/core#hasWebDomainZone
 
 cg:hasWebDomainZone rdf:type owl:DatatypeProperty ;
                     
@@ -2191,7 +2191,7 @@ cg:hasWebDomainZone rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasWebsite
+###  http://citygraph.onti.actcognitive.org/core#hasWebsite
 
 cg:hasWebsite rdf:type owl:DatatypeProperty ;
               
@@ -2204,7 +2204,7 @@ cg:hasWebsite rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasWorldMeaning
+###  http://citygraph.onti.actcognitive.org/core#hasWorldMeaning
 
 cg:hasWorldMeaning rdf:type owl:DatatypeProperty ;
                    
@@ -2216,7 +2216,7 @@ cg:hasWorldMeaning rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasYearConstruct
+###  http://citygraph.onti.actcognitive.org/core#hasYearConstruct
 
 cg:hasYearConstruct rdf:type owl:DatatypeProperty ;
                     
@@ -2230,7 +2230,7 @@ cg:hasYearConstruct rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasYearProduction
+###  http://citygraph.onti.actcognitive.org/core#hasYearProduction
 
 cg:hasYearProduction rdf:type owl:DatatypeProperty ;
                      
@@ -2244,7 +2244,7 @@ cg:hasYearProduction rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#hasYearRepair
+###  http://citygraph.onti.actcognitive.org/core#hasYearRepair
 
 cg:hasYearRepair rdf:type owl:DatatypeProperty ;
                  
@@ -2258,7 +2258,7 @@ cg:hasYearRepair rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#isZNOP
+###  http://citygraph.onti.actcognitive.org/core#isZNOP
 
 cg:isZNOP rdf:type owl:DatatypeProperty ;
           
@@ -2270,7 +2270,7 @@ cg:isZNOP rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#needElectricity
+###  http://citygraph.onti.actcognitive.org/core#needElectricity
 
 cg:needElectricity rdf:type owl:DatatypeProperty ;
                    
@@ -2286,7 +2286,7 @@ cg:needElectricity rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#topDataArchElement
+###  http://citygraph.onti.actcognitive.org/core#topDataArchElement
 
 cg:topDataArchElement rdf:type owl:DatatypeProperty ;
                       
@@ -2296,7 +2296,7 @@ cg:topDataArchElement rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#topDataNature
+###  http://citygraph.onti.actcognitive.org/core#topDataNature
 
 cg:topDataNature rdf:type owl:DatatypeProperty ;
                  
@@ -2304,7 +2304,7 @@ cg:topDataNature rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#topEcologyParam
+###  http://citygraph.onti.actcognitive.org/core#topEcologyParam
 
 cg:topEcologyParam rdf:type owl:DatatypeProperty ;
                    
@@ -2453,7 +2453,7 @@ cg:topEcologyParam rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AchitectureElement
+###  http://citygraph.onti.actcognitive.org/core#AchitectureElement
 
 cg:AchitectureElement rdf:type owl:Class ;
                       
@@ -2463,7 +2463,7 @@ cg:AchitectureElement rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ActDoc
+###  http://citygraph.onti.actcognitive.org/core#ActDoc
 
 cg:ActDoc rdf:type owl:Class ;
           
@@ -2473,7 +2473,7 @@ cg:ActDoc rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Action
+###  http://citygraph.onti.actcognitive.org/core#Action
 
 cg:Action rdf:type owl:Class ;
           
@@ -2483,7 +2483,7 @@ cg:Action rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Address
+###  http://citygraph.onti.actcognitive.org/core#Address
 
 cg:Address rdf:type owl:Class ;
            
@@ -2491,7 +2491,7 @@ cg:Address rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AdministrativeBuilding
+###  http://citygraph.onti.actcognitive.org/core#AdministrativeBuilding
 
 cg:AdministrativeBuilding rdf:type owl:Class ;
                           
@@ -2501,7 +2501,7 @@ cg:AdministrativeBuilding rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AdministrativeUnit
+###  http://citygraph.onti.actcognitive.org/core#AdministrativeUnit
 
 cg:AdministrativeUnit rdf:type owl:Class ;
                       
@@ -2511,7 +2511,7 @@ cg:AdministrativeUnit rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AdvertisingDesk
+###  http://citygraph.onti.actcognitive.org/core#AdvertisingDesk
 
 cg:AdvertisingDesk rdf:type owl:Class ;
                    
@@ -2521,7 +2521,7 @@ cg:AdvertisingDesk rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AeroStation
+###  http://citygraph.onti.actcognitive.org/core#AeroStation
 
 cg:AeroStation rdf:type owl:Class ;
                
@@ -2531,7 +2531,7 @@ cg:AeroStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AgreementDoc
+###  http://citygraph.onti.actcognitive.org/core#AgreementDoc
 
 cg:AgreementDoc rdf:type owl:Class ;
                 
@@ -2541,7 +2541,7 @@ cg:AgreementDoc rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AirSpaceObject
+###  http://citygraph.onti.actcognitive.org/core#AirSpaceObject
 
 cg:AirSpaceObject rdf:type owl:Class ;
                   
@@ -2551,7 +2551,7 @@ cg:AirSpaceObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Airport
+###  http://citygraph.onti.actcognitive.org/core#Airport
 
 cg:Airport rdf:type owl:Class ;
            
@@ -2561,7 +2561,7 @@ cg:Airport rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AparrtmentMuseum
+###  http://citygraph.onti.actcognitive.org/core#AparrtmentMuseum
 
 cg:AparrtmentMuseum rdf:type owl:Class ;
                     
@@ -2571,7 +2571,7 @@ cg:AparrtmentMuseum rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Apartment
+###  http://citygraph.onti.actcognitive.org/core#Apartment
 
 cg:Apartment rdf:type owl:Class ;
              
@@ -2581,7 +2581,7 @@ cg:Apartment rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AreaObject
+###  http://citygraph.onti.actcognitive.org/core#AreaObject
 
 cg:AreaObject rdf:type owl:Class ;
               
@@ -2593,7 +2593,7 @@ cg:AreaObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ArtificialRoughness
+###  http://citygraph.onti.actcognitive.org/core#ArtificialRoughness
 
 cg:ArtificialRoughness rdf:type owl:Class ;
                        
@@ -2605,7 +2605,7 @@ cg:ArtificialRoughness rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AuthorizedAction
+###  http://citygraph.onti.actcognitive.org/core#AuthorizedAction
 
 cg:AuthorizedAction rdf:type owl:Class ;
                     
@@ -2617,7 +2617,7 @@ cg:AuthorizedAction rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AutogasFillingStation
+###  http://citygraph.onti.actcognitive.org/core#AutogasFillingStation
 
 cg:AutogasFillingStation rdf:type owl:Class ;
                          
@@ -2627,7 +2627,7 @@ cg:AutogasFillingStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AutonomousOblast
+###  http://citygraph.onti.actcognitive.org/core#AutonomousOblast
 
 cg:AutonomousOblast rdf:type owl:Class ;
                     
@@ -2637,7 +2637,7 @@ cg:AutonomousOblast rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AutonomousOkrug
+###  http://citygraph.onti.actcognitive.org/core#AutonomousOkrug
 
 cg:AutonomousOkrug rdf:type owl:Class ;
                    
@@ -2647,7 +2647,7 @@ cg:AutonomousOkrug rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AutonomousOkrugMunicipality
+###  http://citygraph.onti.actcognitive.org/core#AutonomousOkrugMunicipality
 
 cg:AutonomousOkrugMunicipality rdf:type owl:Class ;
                                
@@ -2657,7 +2657,7 @@ cg:AutonomousOkrugMunicipality rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AutonomousOkrug_District
+###  http://citygraph.onti.actcognitive.org/core#AutonomousOkrug_District
 
 cg:AutonomousOkrug_District rdf:type owl:Class ;
                             
@@ -2667,7 +2667,7 @@ cg:AutonomousOkrug_District rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#AutonomousOrganization
+###  http://citygraph.onti.actcognitive.org/core#AutonomousOrganization
 
 cg:AutonomousOrganization rdf:type owl:Class ;
                           
@@ -2677,7 +2677,7 @@ cg:AutonomousOrganization rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bar
+###  http://citygraph.onti.actcognitive.org/core#Bar
 
 cg:Bar rdf:type owl:Class ;
        
@@ -2687,7 +2687,7 @@ cg:Bar rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Barracks
+###  http://citygraph.onti.actcognitive.org/core#Barracks
 
 cg:Barracks rdf:type owl:Class ;
             
@@ -2697,7 +2697,7 @@ cg:Barracks rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bathhouse
+###  http://citygraph.onti.actcognitive.org/core#Bathhouse
 
 cg:Bathhouse rdf:type owl:Class ;
              
@@ -2707,7 +2707,7 @@ cg:Bathhouse rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bench
+###  http://citygraph.onti.actcognitive.org/core#Bench
 
 cg:Bench rdf:type owl:Class ;
          
@@ -2718,7 +2718,7 @@ cg:Bench rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BikeParking
+###  http://citygraph.onti.actcognitive.org/core#BikeParking
 
 cg:BikeParking rdf:type owl:Class ;
                
@@ -2728,7 +2728,7 @@ cg:BikeParking rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BikeRoad
+###  http://citygraph.onti.actcognitive.org/core#BikeRoad
 
 cg:BikeRoad rdf:type owl:Class ;
             
@@ -2738,7 +2738,7 @@ cg:BikeRoad rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BlackBox
+###  http://citygraph.onti.actcognitive.org/core#BlackBox
 
 cg:BlackBox rdf:type owl:Class ;
             
@@ -2750,7 +2750,7 @@ cg:BlackBox rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Block
+###  http://citygraph.onti.actcognitive.org/core#Block
 
 cg:Block rdf:type owl:Class ;
          
@@ -2760,7 +2760,7 @@ cg:Block rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BortStones
+###  http://citygraph.onti.actcognitive.org/core#BortStones
 
 cg:BortStones rdf:type owl:Class ;
               
@@ -2771,7 +2771,7 @@ cg:BortStones rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BotanicGarden
+###  http://citygraph.onti.actcognitive.org/core#BotanicGarden
 
 cg:BotanicGarden rdf:type owl:Class ;
                  
@@ -2781,7 +2781,7 @@ cg:BotanicGarden rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Boulevard
+###  http://citygraph.onti.actcognitive.org/core#Boulevard
 
 cg:Boulevard rdf:type owl:Class ;
              
@@ -2791,7 +2791,7 @@ cg:Boulevard rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bowling
+###  http://citygraph.onti.actcognitive.org/core#Bowling
 
 cg:Bowling rdf:type owl:Class ;
            
@@ -2801,7 +2801,7 @@ cg:Bowling rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bridge
+###  http://citygraph.onti.actcognitive.org/core#Bridge
 
 cg:Bridge rdf:type owl:Class ;
           
@@ -2813,7 +2813,7 @@ cg:Bridge rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Building
+###  http://citygraph.onti.actcognitive.org/core#Building
 
 cg:Building rdf:type owl:Class ;
             
@@ -2825,7 +2825,7 @@ cg:Building rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bus
+###  http://citygraph.onti.actcognitive.org/core#Bus
 
 cg:Bus rdf:type owl:Class ;
        
@@ -2835,7 +2835,7 @@ cg:Bus rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BusStation
+###  http://citygraph.onti.actcognitive.org/core#BusStation
 
 cg:BusStation rdf:type owl:Class ;
               
@@ -2845,7 +2845,7 @@ cg:BusStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bush
+###  http://citygraph.onti.actcognitive.org/core#Bush
 
 cg:Bush rdf:type owl:Class ;
         
@@ -2855,7 +2855,7 @@ cg:Bush rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BusinessCentre
+###  http://citygraph.onti.actcognitive.org/core#BusinessCentre
 
 cg:BusinessCentre rdf:type owl:Class ;
                   
@@ -2865,7 +2865,7 @@ cg:BusinessCentre rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BusinessHub
+###  http://citygraph.onti.actcognitive.org/core#BusinessHub
 
 cg:BusinessHub rdf:type owl:Class ;
                
@@ -2875,7 +2875,7 @@ cg:BusinessHub rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CadastralBlock
+###  http://citygraph.onti.actcognitive.org/core#CadastralBlock
 
 cg:CadastralBlock rdf:type owl:Class ;
                   
@@ -2885,7 +2885,7 @@ cg:CadastralBlock rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CadastralDistrict
+###  http://citygraph.onti.actcognitive.org/core#CadastralDistrict
 
 cg:CadastralDistrict rdf:type owl:Class ;
                      
@@ -2895,7 +2895,7 @@ cg:CadastralDistrict rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CadastralOkrug
+###  http://citygraph.onti.actcognitive.org/core#CadastralOkrug
 
 cg:CadastralOkrug rdf:type owl:Class ;
                   
@@ -2905,7 +2905,7 @@ cg:CadastralOkrug rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CadastralParcel
+###  http://citygraph.onti.actcognitive.org/core#CadastralParcel
 
 cg:CadastralParcel rdf:type owl:Class ;
                    
@@ -2915,7 +2915,7 @@ cg:CadastralParcel rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CadastreNumber
+###  http://citygraph.onti.actcognitive.org/core#CadastreNumber
 
 cg:CadastreNumber rdf:type owl:Class ;
                   
@@ -2927,7 +2927,7 @@ cg:CadastreNumber rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CadastreRegister
+###  http://citygraph.onti.actcognitive.org/core#CadastreRegister
 
 cg:CadastreRegister rdf:type owl:Class ;
                     
@@ -2939,7 +2939,7 @@ cg:CadastreRegister rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Cafe
+###  http://citygraph.onti.actcognitive.org/core#Cafe
 
 cg:Cafe rdf:type owl:Class ;
         
@@ -2949,7 +2949,7 @@ cg:Cafe rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CapitalConstruction
+###  http://citygraph.onti.actcognitive.org/core#CapitalConstruction
 
 cg:CapitalConstruction rdf:type owl:Class ;
                        
@@ -2959,7 +2959,7 @@ cg:CapitalConstruction rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CarVehicle
+###  http://citygraph.onti.actcognitive.org/core#CarVehicle
 
 cg:CarVehicle rdf:type owl:Class ;
               
@@ -2969,7 +2969,7 @@ cg:CarVehicle rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Cemetery
+###  http://citygraph.onti.actcognitive.org/core#Cemetery
 
 cg:Cemetery rdf:type owl:Class ;
             
@@ -2979,7 +2979,7 @@ cg:Cemetery rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CentralBank
+###  http://citygraph.onti.actcognitive.org/core#CentralBank
 
 cg:CentralBank rdf:type owl:Class ;
                
@@ -2989,7 +2989,7 @@ cg:CentralBank rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ChargingStation
+###  http://citygraph.onti.actcognitive.org/core#ChargingStation
 
 cg:ChargingStation rdf:type owl:Class ;
                    
@@ -2999,7 +2999,7 @@ cg:ChargingStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CharityFoundation
+###  http://citygraph.onti.actcognitive.org/core#CharityFoundation
 
 cg:CharityFoundation rdf:type owl:Class ;
                      
@@ -3009,7 +3009,7 @@ cg:CharityFoundation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ChildrenYouthSportSchool
+###  http://citygraph.onti.actcognitive.org/core#ChildrenYouthSportSchool
 
 cg:ChildrenYouthSportSchool rdf:type owl:Class ;
                             
@@ -3019,7 +3019,7 @@ cg:ChildrenYouthSportSchool rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Cinema
+###  http://citygraph.onti.actcognitive.org/core#Cinema
 
 cg:Cinema rdf:type owl:Class ;
           
@@ -3029,7 +3029,7 @@ cg:Cinema rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CityForest
+###  http://citygraph.onti.actcognitive.org/core#CityForest
 
 cg:CityForest rdf:type owl:Class ;
               
@@ -3039,7 +3039,7 @@ cg:CityForest rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CityGarden
+###  http://citygraph.onti.actcognitive.org/core#CityGarden
 
 cg:CityGarden rdf:type owl:Class ;
               
@@ -3049,7 +3049,7 @@ cg:CityGarden rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Club
+###  http://citygraph.onti.actcognitive.org/core#Club
 
 cg:Club rdf:type owl:Class ;
         
@@ -3059,7 +3059,7 @@ cg:Club rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#College
+###  http://citygraph.onti.actcognitive.org/core#College
 
 cg:College rdf:type owl:Class ;
            
@@ -3069,7 +3069,7 @@ cg:College rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CommercialObject
+###  http://citygraph.onti.actcognitive.org/core#CommercialObject
 
 cg:CommercialObject rdf:type owl:Class ;
                     
@@ -3079,7 +3079,7 @@ cg:CommercialObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CommercialOrganization
+###  http://citygraph.onti.actcognitive.org/core#CommercialOrganization
 
 cg:CommercialOrganization rdf:type owl:Class ;
                           
@@ -3089,7 +3089,7 @@ cg:CommercialOrganization rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CompLine
+###  http://citygraph.onti.actcognitive.org/core#CompLine
 
 cg:CompLine rdf:type owl:Class ;
             
@@ -3099,7 +3099,7 @@ cg:CompLine rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Component
+###  http://citygraph.onti.actcognitive.org/core#Component
 
 cg:Component rdf:type owl:Class ;
              
@@ -3109,7 +3109,7 @@ cg:Component rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ConcertHall
+###  http://citygraph.onti.actcognitive.org/core#ConcertHall
 
 cg:ConcertHall rdf:type owl:Class ;
                
@@ -3119,7 +3119,7 @@ cg:ConcertHall rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ConservancyArea
+###  http://citygraph.onti.actcognitive.org/core#ConservancyArea
 
 cg:ConservancyArea rdf:type owl:Class ;
                    
@@ -3129,7 +3129,7 @@ cg:ConservancyArea rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Country
+###  http://citygraph.onti.actcognitive.org/core#Country
 
 cg:Country rdf:type owl:Class ;
            
@@ -3139,7 +3139,7 @@ cg:Country rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Covering
+###  http://citygraph.onti.actcognitive.org/core#Covering
 
 cg:Covering rdf:type owl:Class ;
             
@@ -3149,7 +3149,7 @@ cg:Covering rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CreativeClass
+###  http://citygraph.onti.actcognitive.org/core#CreativeClass
 
 cg:CreativeClass rdf:type owl:Class ;
                  
@@ -3159,7 +3159,7 @@ cg:CreativeClass rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Crosswalk
+###  http://citygraph.onti.actcognitive.org/core#Crosswalk
 
 cg:Crosswalk rdf:type owl:Class ;
              
@@ -3169,7 +3169,7 @@ cg:Crosswalk rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CulturalObject
+###  http://citygraph.onti.actcognitive.org/core#CulturalObject
 
 cg:CulturalObject rdf:type owl:Class ;
                   
@@ -3179,7 +3179,7 @@ cg:CulturalObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#DisabledPopulation
+###  http://citygraph.onti.actcognitive.org/core#DisabledPopulation
 
 cg:DisabledPopulation rdf:type owl:Class ;
                       
@@ -3189,7 +3189,7 @@ cg:DisabledPopulation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#District
+###  http://citygraph.onti.actcognitive.org/core#District
 
 cg:District rdf:type owl:Class ;
             
@@ -3201,7 +3201,7 @@ cg:District rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#District_City
+###  http://citygraph.onti.actcognitive.org/core#District_City
 
 cg:District_City rdf:type owl:Class ;
                  
@@ -3211,7 +3211,7 @@ cg:District_City rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Document
+###  http://citygraph.onti.actcognitive.org/core#Document
 
 cg:Document rdf:type owl:Class ;
             
@@ -3221,7 +3221,7 @@ cg:Document rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#DrinkFontain
+###  http://citygraph.onti.actcognitive.org/core#DrinkFontain
 
 cg:DrinkFontain rdf:type owl:Class ;
                 
@@ -3231,7 +3231,7 @@ cg:DrinkFontain rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Eatery
+###  http://citygraph.onti.actcognitive.org/core#Eatery
 
 cg:Eatery rdf:type owl:Class ;
           
@@ -3241,7 +3241,7 @@ cg:Eatery rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#EducationalObject
+###  http://citygraph.onti.actcognitive.org/core#EducationalObject
 
 cg:EducationalObject rdf:type owl:Class ;
                      
@@ -3251,7 +3251,7 @@ cg:EducationalObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ElectroDepo
+###  http://citygraph.onti.actcognitive.org/core#ElectroDepo
 
 cg:ElectroDepo rdf:type owl:Class ;
                
@@ -3261,7 +3261,7 @@ cg:ElectroDepo rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Element
+###  http://citygraph.onti.actcognitive.org/core#Element
 
 cg:Element rdf:type owl:Class ;
            
@@ -3273,7 +3273,7 @@ cg:Element rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#EnergeticObject
+###  http://citygraph.onti.actcognitive.org/core#EnergeticObject
 
 cg:EnergeticObject rdf:type owl:Class ;
                    
@@ -3283,7 +3283,7 @@ cg:EnergeticObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Event
+###  http://citygraph.onti.actcognitive.org/core#Event
 
 cg:Event rdf:type owl:Class ;
          
@@ -3291,7 +3291,7 @@ cg:Event rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ExibitionHall
+###  http://citygraph.onti.actcognitive.org/core#ExibitionHall
 
 cg:ExibitionHall rdf:type owl:Class ;
                  
@@ -3301,7 +3301,7 @@ cg:ExibitionHall rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Fabric
+###  http://citygraph.onti.actcognitive.org/core#Fabric
 
 cg:Fabric rdf:type owl:Class ;
           
@@ -3311,7 +3311,7 @@ cg:Fabric rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FederalAgency
+###  http://citygraph.onti.actcognitive.org/core#FederalAgency
 
 cg:FederalAgency rdf:type owl:Class ;
                  
@@ -3321,7 +3321,7 @@ cg:FederalAgency rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FederalCity
+###  http://citygraph.onti.actcognitive.org/core#FederalCity
 
 cg:FederalCity rdf:type owl:Class ;
                
@@ -3331,7 +3331,7 @@ cg:FederalCity rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FederalGov
+###  http://citygraph.onti.actcognitive.org/core#FederalGov
 
 cg:FederalGov rdf:type owl:Class ;
               
@@ -3341,7 +3341,7 @@ cg:FederalGov rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FederalGovernment
+###  http://citygraph.onti.actcognitive.org/core#FederalGovernment
 
 cg:FederalGovernment rdf:type owl:Class ;
                      
@@ -3351,7 +3351,7 @@ cg:FederalGovernment rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FederalMinistry
+###  http://citygraph.onti.actcognitive.org/core#FederalMinistry
 
 cg:FederalMinistry rdf:type owl:Class ;
                    
@@ -3361,7 +3361,7 @@ cg:FederalMinistry rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FederalOkrug
+###  http://citygraph.onti.actcognitive.org/core#FederalOkrug
 
 cg:FederalOkrug rdf:type owl:Class ;
                 
@@ -3371,7 +3371,7 @@ cg:FederalOkrug rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Fence
+###  http://citygraph.onti.actcognitive.org/core#Fence
 
 cg:Fence rdf:type owl:Class ;
          
@@ -3381,7 +3381,7 @@ cg:Fence rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FillingStation
+###  http://citygraph.onti.actcognitive.org/core#FillingStation
 
 cg:FillingStation rdf:type owl:Class ;
                   
@@ -3391,7 +3391,7 @@ cg:FillingStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FireStation
+###  http://citygraph.onti.actcognitive.org/core#FireStation
 
 cg:FireStation rdf:type owl:Class ;
                
@@ -3401,7 +3401,7 @@ cg:FireStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Flowerbed
+###  http://citygraph.onti.actcognitive.org/core#Flowerbed
 
 cg:Flowerbed rdf:type owl:Class ;
              
@@ -3411,7 +3411,7 @@ cg:Flowerbed rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Forest
+###  http://citygraph.onti.actcognitive.org/core#Forest
 
 cg:Forest rdf:type owl:Class ;
           
@@ -3421,7 +3421,7 @@ cg:Forest rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ForestPark
+###  http://citygraph.onti.actcognitive.org/core#ForestPark
 
 cg:ForestPark rdf:type owl:Class ;
               
@@ -3431,7 +3431,7 @@ cg:ForestPark rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ForestReserve
+###  http://citygraph.onti.actcognitive.org/core#ForestReserve
 
 cg:ForestReserve rdf:type owl:Class ;
                  
@@ -3441,7 +3441,7 @@ cg:ForestReserve rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Forestry
+###  http://citygraph.onti.actcognitive.org/core#Forestry
 
 cg:Forestry rdf:type owl:Class ;
             
@@ -3451,7 +3451,7 @@ cg:Forestry rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Fountain
+###  http://citygraph.onti.actcognitive.org/core#Fountain
 
 cg:Fountain rdf:type owl:Class ;
             
@@ -3461,7 +3461,7 @@ cg:Fountain rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#FunctionalObject
+###  http://citygraph.onti.actcognitive.org/core#FunctionalObject
 
 cg:FunctionalObject rdf:type owl:Class ;
                     
@@ -3471,7 +3471,7 @@ cg:FunctionalObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GK
+###  http://citygraph.onti.actcognitive.org/core#GK
 
 cg:GK rdf:type owl:Class ;
       
@@ -3481,7 +3481,7 @@ cg:GK rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GKS
+###  http://citygraph.onti.actcognitive.org/core#GKS
 
 cg:GKS rdf:type owl:Class ;
        
@@ -3491,7 +3491,7 @@ cg:GKS rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GSK
+###  http://citygraph.onti.actcognitive.org/core#GSK
 
 cg:GSK rdf:type owl:Class ;
        
@@ -3501,7 +3501,7 @@ cg:GSK rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GUPREP
+###  http://citygraph.onti.actcognitive.org/core#GUPREP
 
 cg:GUPREP rdf:type owl:Class ;
           
@@ -3511,7 +3511,7 @@ cg:GUPREP rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Garage
+###  http://citygraph.onti.actcognitive.org/core#Garage
 
 cg:Garage rdf:type owl:Class ;
           
@@ -3521,7 +3521,7 @@ cg:Garage rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Geometry
+###  http://citygraph.onti.actcognitive.org/core#Geometry
 
 cg:Geometry rdf:type owl:Class ;
             
@@ -3531,7 +3531,7 @@ cg:Geometry rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GiftStore
+###  http://citygraph.onti.actcognitive.org/core#GiftStore
 
 cg:GiftStore rdf:type owl:Class ;
              
@@ -3541,7 +3541,7 @@ cg:GiftStore rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GovCorporation
+###  http://citygraph.onti.actcognitive.org/core#GovCorporation
 
 cg:GovCorporation rdf:type owl:Class ;
                   
@@ -3551,7 +3551,7 @@ cg:GovCorporation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GovernmentAuthority
+###  http://citygraph.onti.actcognitive.org/core#GovernmentAuthority
 
 cg:GovernmentAuthority rdf:type owl:Class ;
                        
@@ -3561,7 +3561,7 @@ cg:GovernmentAuthority rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GovernmentBody
+###  http://citygraph.onti.actcognitive.org/core#GovernmentBody
 
 cg:GovernmentBody rdf:type owl:Class ;
                   
@@ -3571,7 +3571,7 @@ cg:GovernmentBody rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Green
+###  http://citygraph.onti.actcognitive.org/core#Green
 
 cg:Green rdf:type owl:Class ;
          
@@ -3582,7 +3582,7 @@ cg:Green rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GreenObject
+###  http://citygraph.onti.actcognitive.org/core#GreenObject
 
 cg:GreenObject rdf:type owl:Class ;
                
@@ -3592,7 +3592,7 @@ cg:GreenObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GreenRoof
+###  http://citygraph.onti.actcognitive.org/core#GreenRoof
 
 cg:GreenRoof rdf:type owl:Class ;
              
@@ -3603,7 +3603,7 @@ cg:GreenRoof rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GroceryStore
+###  http://citygraph.onti.actcognitive.org/core#GroceryStore
 
 cg:GroceryStore rdf:type owl:Class ;
                 
@@ -3613,7 +3613,7 @@ cg:GroceryStore rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GroundObject
+###  http://citygraph.onti.actcognitive.org/core#GroundObject
 
 cg:GroundObject rdf:type owl:Class ;
                 
@@ -3625,7 +3625,7 @@ cg:GroundObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#GuestHouse
+###  http://citygraph.onti.actcognitive.org/core#GuestHouse
 
 cg:GuestHouse rdf:type owl:Class ;
               
@@ -3635,7 +3635,7 @@ cg:GuestHouse rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Gymnasium
+###  http://citygraph.onti.actcognitive.org/core#Gymnasium
 
 cg:Gymnasium rdf:type owl:Class ;
              
@@ -3645,7 +3645,7 @@ cg:Gymnasium rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#HelthFacility
+###  http://citygraph.onti.actcognitive.org/core#HelthFacility
 
 cg:HelthFacility rdf:type owl:Class ;
                  
@@ -3655,7 +3655,7 @@ cg:HelthFacility rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#HomelessHome
+###  http://citygraph.onti.actcognitive.org/core#HomelessHome
 
 cg:HomelessHome rdf:type owl:Class ;
                 
@@ -3665,7 +3665,7 @@ cg:HomelessHome rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Hospital
+###  http://citygraph.onti.actcognitive.org/core#Hospital
 
 cg:Hospital rdf:type owl:Class ;
             
@@ -3675,7 +3675,7 @@ cg:Hospital rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Hostel
+###  http://citygraph.onti.actcognitive.org/core#Hostel
 
 cg:Hostel rdf:type owl:Class ;
           
@@ -3685,7 +3685,7 @@ cg:Hostel rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Hotel
+###  http://citygraph.onti.actcognitive.org/core#Hotel
 
 cg:Hotel rdf:type owl:Class ;
          
@@ -3695,7 +3695,7 @@ cg:Hotel rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#House
+###  http://citygraph.onti.actcognitive.org/core#House
 
 cg:House rdf:type owl:Class ;
          
@@ -3705,7 +3705,7 @@ cg:House rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#HouseYouthCreativity
+###  http://citygraph.onti.actcognitive.org/core#HouseYouthCreativity
 
 cg:HouseYouthCreativity rdf:type owl:Class ;
                         
@@ -3715,7 +3715,7 @@ cg:HouseYouthCreativity rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Hypermarket
+###  http://citygraph.onti.actcognitive.org/core#Hypermarket
 
 cg:Hypermarket rdf:type owl:Class ;
                
@@ -3725,7 +3725,7 @@ cg:Hypermarket rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#IceArena
+###  http://citygraph.onti.actcognitive.org/core#IceArena
 
 cg:IceArena rdf:type owl:Class ;
             
@@ -3735,7 +3735,7 @@ cg:IceArena rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#IndustrialObject
+###  http://citygraph.onti.actcognitive.org/core#IndustrialObject
 
 cg:IndustrialObject rdf:type owl:Class ;
                     
@@ -3745,7 +3745,7 @@ cg:IndustrialObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#InformationDesk
+###  http://citygraph.onti.actcognitive.org/core#InformationDesk
 
 cg:InformationDesk rdf:type owl:Class ;
                    
@@ -3755,7 +3755,7 @@ cg:InformationDesk rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Installation
+###  http://citygraph.onti.actcognitive.org/core#Installation
 
 cg:Installation rdf:type owl:Class ;
                 
@@ -3765,7 +3765,7 @@ cg:Installation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Institute
+###  http://citygraph.onti.actcognitive.org/core#Institute
 
 cg:Institute rdf:type owl:Class ;
              
@@ -3775,7 +3775,7 @@ cg:Institute rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#InterRail
+###  http://citygraph.onti.actcognitive.org/core#InterRail
 
 cg:InterRail rdf:type owl:Class ;
              
@@ -3785,7 +3785,7 @@ cg:InterRail rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#InterSettlementTerritory
+###  http://citygraph.onti.actcognitive.org/core#InterSettlementTerritory
 
 cg:InterSettlementTerritory rdf:type owl:Class ;
                             
@@ -3795,7 +3795,7 @@ cg:InterSettlementTerritory rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#IntracityAreas
+###  http://citygraph.onti.actcognitive.org/core#IntracityAreas
 
 cg:IntracityAreas rdf:type owl:Class ;
                   
@@ -3805,7 +3805,7 @@ cg:IntracityAreas rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#IntracityMunicipality
+###  http://citygraph.onti.actcognitive.org/core#IntracityMunicipality
 
 cg:IntracityMunicipality rdf:type owl:Class ;
                          
@@ -3815,7 +3815,7 @@ cg:IntracityMunicipality rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Intracity_District
+###  http://citygraph.onti.actcognitive.org/core#Intracity_District
 
 cg:Intracity_District rdf:type owl:Class ;
                       
@@ -3825,7 +3825,7 @@ cg:Intracity_District rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#KU_state
+###  http://citygraph.onti.actcognitive.org/core#KU_state
 
 cg:KU_state rdf:type owl:Class ;
             
@@ -3835,7 +3835,7 @@ cg:KU_state rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Kray
+###  http://citygraph.onti.actcognitive.org/core#Kray
 
 cg:Kray rdf:type owl:Class ;
         
@@ -3845,7 +3845,7 @@ cg:Kray rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Lake
+###  http://citygraph.onti.actcognitive.org/core#Lake
 
 cg:Lake rdf:type owl:Class ;
         
@@ -3855,7 +3855,7 @@ cg:Lake rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Land
+###  http://citygraph.onti.actcognitive.org/core#Land
 
 cg:Land rdf:type owl:Class ;
         
@@ -3865,7 +3865,7 @@ cg:Land rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Landscape
+###  http://citygraph.onti.actcognitive.org/core#Landscape
 
 cg:Landscape rdf:type owl:Class ;
              
@@ -3875,7 +3875,7 @@ cg:Landscape rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#LawDoc
+###  http://citygraph.onti.actcognitive.org/core#LawDoc
 
 cg:LawDoc rdf:type owl:Class ;
           
@@ -3885,7 +3885,7 @@ cg:LawDoc rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Level
+###  http://citygraph.onti.actcognitive.org/core#Level
 
 cg:Level rdf:type owl:Class ;
          
@@ -3897,7 +3897,7 @@ cg:Level rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Library
+###  http://citygraph.onti.actcognitive.org/core#Library
 
 cg:Library rdf:type owl:Class ;
            
@@ -3907,7 +3907,7 @@ cg:Library rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Line
+###  http://citygraph.onti.actcognitive.org/core#Line
 
 cg:Line rdf:type owl:Class ;
         
@@ -3919,7 +3919,7 @@ cg:Line rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Link
+###  http://citygraph.onti.actcognitive.org/core#Link
 
 cg:Link rdf:type owl:Class ;
         
@@ -3931,7 +3931,7 @@ cg:Link rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#LivingObject
+###  http://citygraph.onti.actcognitive.org/core#LivingObject
 
 cg:LivingObject rdf:type owl:Class ;
                 
@@ -3941,7 +3941,7 @@ cg:LivingObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MajorRenovation
+###  http://citygraph.onti.actcognitive.org/core#MajorRenovation
 
 cg:MajorRenovation rdf:type owl:Class ;
                    
@@ -3951,7 +3951,7 @@ cg:MajorRenovation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Market
+###  http://citygraph.onti.actcognitive.org/core#Market
 
 cg:Market rdf:type owl:Class ;
           
@@ -3961,7 +3961,7 @@ cg:Market rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Markup
+###  http://citygraph.onti.actcognitive.org/core#Markup
 
 cg:Markup rdf:type owl:Class ;
           
@@ -3971,7 +3971,7 @@ cg:Markup rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MedicalEduInstitution
+###  http://citygraph.onti.actcognitive.org/core#MedicalEduInstitution
 
 cg:MedicalEduInstitution rdf:type owl:Class ;
                          
@@ -3982,7 +3982,7 @@ cg:MedicalEduInstitution rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MedicalObject
+###  http://citygraph.onti.actcognitive.org/core#MedicalObject
 
 cg:MedicalObject rdf:type owl:Class ;
                  
@@ -3992,7 +3992,7 @@ cg:MedicalObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Memorial
+###  http://citygraph.onti.actcognitive.org/core#Memorial
 
 cg:Memorial rdf:type owl:Class ;
             
@@ -4002,7 +4002,7 @@ cg:Memorial rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MemorialPlaque
+###  http://citygraph.onti.actcognitive.org/core#MemorialPlaque
 
 cg:MemorialPlaque rdf:type owl:Class ;
                   
@@ -4012,7 +4012,7 @@ cg:MemorialPlaque rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MetroEntranceHall
+###  http://citygraph.onti.actcognitive.org/core#MetroEntranceHall
 
 cg:MetroEntranceHall rdf:type owl:Class ;
                      
@@ -4022,7 +4022,7 @@ cg:MetroEntranceHall rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MilitaryObject
+###  http://citygraph.onti.actcognitive.org/core#MilitaryObject
 
 cg:MilitaryObject rdf:type owl:Class ;
                   
@@ -4032,7 +4032,7 @@ cg:MilitaryObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MillitaryEducation
+###  http://citygraph.onti.actcognitive.org/core#MillitaryEducation
 
 cg:MillitaryEducation rdf:type owl:Class ;
                       
@@ -4042,7 +4042,7 @@ cg:MillitaryEducation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Monument
+###  http://citygraph.onti.actcognitive.org/core#Monument
 
 cg:Monument rdf:type owl:Class ;
             
@@ -4052,7 +4052,7 @@ cg:Monument rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Motorcycle
+###  http://citygraph.onti.actcognitive.org/core#Motorcycle
 
 cg:Motorcycle rdf:type owl:Class ;
               
@@ -4062,7 +4062,7 @@ cg:Motorcycle rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MovableObject
+###  http://citygraph.onti.actcognitive.org/core#MovableObject
 
 cg:MovableObject rdf:type owl:Class ;
                  
@@ -4074,7 +4074,7 @@ cg:MovableObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MultifunctionalStore
+###  http://citygraph.onti.actcognitive.org/core#MultifunctionalStore
 
 cg:MultifunctionalStore rdf:type owl:Class ;
                         
@@ -4084,7 +4084,7 @@ cg:MultifunctionalStore rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MultyAptHouse
+###  http://citygraph.onti.actcognitive.org/core#MultyAptHouse
 
 cg:MultyAptHouse rdf:type owl:Class ;
                  
@@ -4094,7 +4094,7 @@ cg:MultyAptHouse rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MunAdministration
+###  http://citygraph.onti.actcognitive.org/core#MunAdministration
 
 cg:MunAdministration rdf:type owl:Class ;
                      
@@ -4104,7 +4104,7 @@ cg:MunAdministration rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MunDepSovet
+###  http://citygraph.onti.actcognitive.org/core#MunDepSovet
 
 cg:MunDepSovet rdf:type owl:Class ;
                
@@ -4114,7 +4114,7 @@ cg:MunDepSovet rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MunicipalDistrict
+###  http://citygraph.onti.actcognitive.org/core#MunicipalDistrict
 
 cg:MunicipalDistrict rdf:type owl:Class ;
                      
@@ -4124,7 +4124,7 @@ cg:MunicipalDistrict rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MunicipalGov
+###  http://citygraph.onti.actcognitive.org/core#MunicipalGov
 
 cg:MunicipalGov rdf:type owl:Class ;
                 
@@ -4134,7 +4134,7 @@ cg:MunicipalGov rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MunicipalOkrug
+###  http://citygraph.onti.actcognitive.org/core#MunicipalOkrug
 
 cg:MunicipalOkrug rdf:type owl:Class ;
                   
@@ -4144,7 +4144,7 @@ cg:MunicipalOkrug rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Municipality
+###  http://citygraph.onti.actcognitive.org/core#Municipality
 
 cg:Municipality rdf:type owl:Class ;
                 
@@ -4156,7 +4156,7 @@ cg:Municipality rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Museum
+###  http://citygraph.onti.actcognitive.org/core#Museum
 
 cg:Museum rdf:type owl:Class ;
           
@@ -4166,7 +4166,7 @@ cg:Museum rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NII
+###  http://citygraph.onti.actcognitive.org/core#NII
 
 cg:NII rdf:type owl:Class ;
        
@@ -4176,7 +4176,7 @@ cg:NII rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NationalPark
+###  http://citygraph.onti.actcognitive.org/core#NationalPark
 
 cg:NationalPark rdf:type owl:Class ;
                 
@@ -4186,7 +4186,7 @@ cg:NationalPark rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NatureMonument
+###  http://citygraph.onti.actcognitive.org/core#NatureMonument
 
 cg:NatureMonument rdf:type owl:Class ;
                   
@@ -4196,7 +4196,7 @@ cg:NatureMonument rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NatureObject
+###  http://citygraph.onti.actcognitive.org/core#NatureObject
 
 cg:NatureObject rdf:type owl:Class ;
                 
@@ -4208,7 +4208,7 @@ cg:NatureObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NaturePark
+###  http://citygraph.onti.actcognitive.org/core#NaturePark
 
 cg:NaturePark rdf:type owl:Class ;
               
@@ -4218,7 +4218,7 @@ cg:NaturePark rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NetBus
+###  http://citygraph.onti.actcognitive.org/core#NetBus
 
 cg:NetBus rdf:type owl:Class ;
           
@@ -4230,7 +4230,7 @@ cg:NetBus rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NetGroup
+###  http://citygraph.onti.actcognitive.org/core#NetGroup
 
 cg:NetGroup rdf:type owl:Class ;
             
@@ -4242,7 +4242,7 @@ cg:NetGroup rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NetLayer
+###  http://citygraph.onti.actcognitive.org/core#NetLayer
 
 cg:NetLayer rdf:type owl:Class ;
             
@@ -4254,7 +4254,7 @@ cg:NetLayer rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NetObject
+###  http://citygraph.onti.actcognitive.org/core#NetObject
 
 cg:NetObject rdf:type owl:Class ;
              
@@ -4266,7 +4266,7 @@ cg:NetObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Node
+###  http://citygraph.onti.actcognitive.org/core#Node
 
 cg:Node rdf:type owl:Class ;
         
@@ -4278,7 +4278,7 @@ cg:Node rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NonProfitAssociation
+###  http://citygraph.onti.actcognitive.org/core#NonProfitAssociation
 
 cg:NonProfitAssociation rdf:type owl:Class ;
                         
@@ -4288,7 +4288,7 @@ cg:NonProfitAssociation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NonProfitFoundation
+###  http://citygraph.onti.actcognitive.org/core#NonProfitFoundation
 
 cg:NonProfitFoundation rdf:type owl:Class ;
                        
@@ -4298,7 +4298,7 @@ cg:NonProfitFoundation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NonProfitOrganization
+###  http://citygraph.onti.actcognitive.org/core#NonProfitOrganization
 
 cg:NonProfitOrganization rdf:type owl:Class ;
                          
@@ -4308,7 +4308,7 @@ cg:NonProfitOrganization rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NonProfitPartnership
+###  http://citygraph.onti.actcognitive.org/core#NonProfitPartnership
 
 cg:NonProfitPartnership rdf:type owl:Class ;
                         
@@ -4318,7 +4318,7 @@ cg:NonProfitPartnership rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#NursingHome
+###  http://citygraph.onti.actcognitive.org/core#NursingHome
 
 cg:NursingHome rdf:type owl:Class ;
                
@@ -4328,7 +4328,7 @@ cg:NursingHome rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OKATO
+###  http://citygraph.onti.actcognitive.org/core#OKATO
 
 cg:OKATO rdf:type owl:Class ;
          
@@ -4336,7 +4336,7 @@ cg:OKATO rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OKTMO
+###  http://citygraph.onti.actcognitive.org/core#OKTMO
 
 cg:OKTMO rdf:type owl:Class ;
          
@@ -4344,7 +4344,7 @@ cg:OKTMO rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OOPT
+###  http://citygraph.onti.actcognitive.org/core#OOPT
 
 cg:OOPT rdf:type owl:Class ;
         
@@ -4354,7 +4354,7 @@ cg:OOPT rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Oblast
+###  http://citygraph.onti.actcognitive.org/core#Oblast
 
 cg:Oblast rdf:type owl:Class ;
           
@@ -4364,7 +4364,7 @@ cg:Oblast rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OlympicReserveSportSchool
+###  http://citygraph.onti.actcognitive.org/core#OlympicReserveSportSchool
 
 cg:OlympicReserveSportSchool rdf:type owl:Class ;
                              
@@ -4374,7 +4374,7 @@ cg:OlympicReserveSportSchool rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OpenLot
+###  http://citygraph.onti.actcognitive.org/core#OpenLot
 
 cg:OpenLot rdf:type owl:Class ;
            
@@ -4384,7 +4384,7 @@ cg:OpenLot rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OpenStairs
+###  http://citygraph.onti.actcognitive.org/core#OpenStairs
 
 cg:OpenStairs rdf:type owl:Class ;
               
@@ -4394,7 +4394,7 @@ cg:OpenStairs rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Organization_IP
+###  http://citygraph.onti.actcognitive.org/core#Organization_IP
 
 cg:Organization_IP rdf:type owl:Class ;
                    
@@ -4404,7 +4404,7 @@ cg:Organization_IP rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Organization_OAO
+###  http://citygraph.onti.actcognitive.org/core#Organization_OAO
 
 cg:Organization_OAO rdf:type owl:Class ;
                     
@@ -4414,7 +4414,7 @@ cg:Organization_OAO rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Organization_OOO
+###  http://citygraph.onti.actcognitive.org/core#Organization_OOO
 
 cg:Organization_OOO rdf:type owl:Class ;
                     
@@ -4424,7 +4424,7 @@ cg:Organization_OOO rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Organization_ZAO
+###  http://citygraph.onti.actcognitive.org/core#Organization_ZAO
 
 cg:Organization_ZAO rdf:type owl:Class ;
                     
@@ -4434,7 +4434,7 @@ cg:Organization_ZAO rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Orphanage
+###  http://citygraph.onti.actcognitive.org/core#Orphanage
 
 cg:Orphanage rdf:type owl:Class ;
              
@@ -4444,7 +4444,7 @@ cg:Orphanage rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OtherPopulationGroups
+###  http://citygraph.onti.actcognitive.org/core#OtherPopulationGroups
 
 cg:OtherPopulationGroups rdf:type owl:Class ;
                          
@@ -4454,7 +4454,7 @@ cg:OtherPopulationGroups rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OutletCenter
+###  http://citygraph.onti.actcognitive.org/core#OutletCenter
 
 cg:OutletCenter rdf:type owl:Class ;
                 
@@ -4464,7 +4464,7 @@ cg:OutletCenter rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OutpatientClinic
+###  http://citygraph.onti.actcognitive.org/core#OutpatientClinic
 
 cg:OutpatientClinic rdf:type owl:Class ;
                     
@@ -4474,7 +4474,7 @@ cg:OutpatientClinic rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PT_Route
+###  http://citygraph.onti.actcognitive.org/core#PT_Route
 
 cg:PT_Route rdf:type owl:Class ;
             
@@ -4487,7 +4487,7 @@ cg:PT_Route rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Pandus
+###  http://citygraph.onti.actcognitive.org/core#Pandus
 
 cg:Pandus rdf:type owl:Class ;
           
@@ -4497,7 +4497,7 @@ cg:Pandus rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Park
+###  http://citygraph.onti.actcognitive.org/core#Park
 
 cg:Park rdf:type owl:Class ;
         
@@ -4507,7 +4507,7 @@ cg:Park rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Pedestrian
+###  http://citygraph.onti.actcognitive.org/core#Pedestrian
 
 cg:Pedestrian rdf:type owl:Class ;
               
@@ -4517,7 +4517,7 @@ cg:Pedestrian rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PetrolFillingStation
+###  http://citygraph.onti.actcognitive.org/core#PetrolFillingStation
 
 cg:PetrolFillingStation rdf:type owl:Class ;
                         
@@ -4527,7 +4527,7 @@ cg:PetrolFillingStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Pharmacy
+###  http://citygraph.onti.actcognitive.org/core#Pharmacy
 
 cg:Pharmacy rdf:type owl:Class ;
             
@@ -4537,7 +4537,7 @@ cg:Pharmacy rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PhysicalObject
+###  http://citygraph.onti.actcognitive.org/core#PhysicalObject
 
 cg:PhysicalObject rdf:type owl:Class ;
                   
@@ -4547,7 +4547,7 @@ cg:PhysicalObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Playground
+###  http://citygraph.onti.actcognitive.org/core#Playground
 
 cg:Playground rdf:type owl:Class ;
               
@@ -4557,7 +4557,7 @@ cg:Playground rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Pocket
+###  http://citygraph.onti.actcognitive.org/core#Pocket
 
 cg:Pocket rdf:type owl:Class ;
           
@@ -4569,7 +4569,7 @@ cg:Pocket rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PointObject
+###  http://citygraph.onti.actcognitive.org/core#PointObject
 
 cg:PointObject rdf:type owl:Class ;
                
@@ -4579,7 +4579,7 @@ cg:PointObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Pond
+###  http://citygraph.onti.actcognitive.org/core#Pond
 
 cg:Pond rdf:type owl:Class ;
         
@@ -4589,7 +4589,7 @@ cg:Pond rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Position
+###  http://citygraph.onti.actcognitive.org/core#Position
 
 cg:Position rdf:type owl:Class ;
             
@@ -4599,7 +4599,7 @@ cg:Position rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PostBox
+###  http://citygraph.onti.actcognitive.org/core#PostBox
 
 cg:PostBox rdf:type owl:Class ;
            
@@ -4609,7 +4609,7 @@ cg:PostBox rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PostOffice
+###  http://citygraph.onti.actcognitive.org/core#PostOffice
 
 cg:PostOffice rdf:type owl:Class ;
               
@@ -4619,7 +4619,7 @@ cg:PostOffice rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Preschool
+###  http://citygraph.onti.actcognitive.org/core#Preschool
 
 cg:Preschool rdf:type owl:Class ;
              
@@ -4629,7 +4629,7 @@ cg:Preschool rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#President
+###  http://citygraph.onti.actcognitive.org/core#President
 
 cg:President rdf:type owl:Class ;
              
@@ -4639,7 +4639,7 @@ cg:President rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PresidentAdministration
+###  http://citygraph.onti.actcognitive.org/core#PresidentAdministration
 
 cg:PresidentAdministration rdf:type owl:Class ;
                            
@@ -4649,7 +4649,7 @@ cg:PresidentAdministration rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PresidentHumanRightsSovet
+###  http://citygraph.onti.actcognitive.org/core#PresidentHumanRightsSovet
 
 cg:PresidentHumanRightsSovet rdf:type owl:Class ;
                              
@@ -4659,7 +4659,7 @@ cg:PresidentHumanRightsSovet rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Procedure
+###  http://citygraph.onti.actcognitive.org/core#Procedure
 
 cg:Procedure rdf:type owl:Class ;
              
@@ -4667,7 +4667,7 @@ cg:Procedure rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ProsecutorOffice
+###  http://citygraph.onti.actcognitive.org/core#ProsecutorOffice
 
 cg:ProsecutorOffice rdf:type owl:Class ;
                     
@@ -4677,7 +4677,7 @@ cg:ProsecutorOffice rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicHeatingSystemObject
+###  http://citygraph.onti.actcognitive.org/core#PublicHeatingSystemObject
 
 cg:PublicHeatingSystemObject rdf:type owl:Class ;
                              
@@ -4687,7 +4687,7 @@ cg:PublicHeatingSystemObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicHome
+###  http://citygraph.onti.actcognitive.org/core#PublicHome
 
 cg:PublicHome rdf:type owl:Class ;
               
@@ -4697,7 +4697,7 @@ cg:PublicHome rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicNotRegistered
+###  http://citygraph.onti.actcognitive.org/core#PublicNotRegistered
 
 cg:PublicNotRegistered rdf:type owl:Class ;
                        
@@ -4707,7 +4707,7 @@ cg:PublicNotRegistered rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicObject
+###  http://citygraph.onti.actcognitive.org/core#PublicObject
 
 cg:PublicObject rdf:type owl:Class ;
                 
@@ -4717,7 +4717,7 @@ cg:PublicObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicOrganization
+###  http://citygraph.onti.actcognitive.org/core#PublicOrganization
 
 cg:PublicOrganization rdf:type owl:Class ;
                       
@@ -4727,7 +4727,7 @@ cg:PublicOrganization rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicPowerSystemObject
+###  http://citygraph.onti.actcognitive.org/core#PublicPowerSystemObject
 
 cg:PublicPowerSystemObject rdf:type owl:Class ;
                            
@@ -4737,7 +4737,7 @@ cg:PublicPowerSystemObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicSewerageSystemObject
+###  http://citygraph.onti.actcognitive.org/core#PublicSewerageSystemObject
 
 cg:PublicSewerageSystemObject rdf:type owl:Class ;
                               
@@ -4747,7 +4747,7 @@ cg:PublicSewerageSystemObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicSign
+###  http://citygraph.onti.actcognitive.org/core#PublicSign
 
 cg:PublicSign rdf:type owl:Class ;
               
@@ -4757,7 +4757,7 @@ cg:PublicSign rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicSystemObject
+###  http://citygraph.onti.actcognitive.org/core#PublicSystemObject
 
 cg:PublicSystemObject rdf:type owl:Class ;
                       
@@ -4767,7 +4767,7 @@ cg:PublicSystemObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicVehicle
+###  http://citygraph.onti.actcognitive.org/core#PublicVehicle
 
 cg:PublicVehicle rdf:type owl:Class ;
                  
@@ -4777,7 +4777,7 @@ cg:PublicVehicle rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicWaterSystemObject
+###  http://citygraph.onti.actcognitive.org/core#PublicWaterSystemObject
 
 cg:PublicWaterSystemObject rdf:type owl:Class ;
                            
@@ -4787,7 +4787,7 @@ cg:PublicWaterSystemObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RailwayStation
+###  http://citygraph.onti.actcognitive.org/core#RailwayStation
 
 cg:RailwayStation rdf:type owl:Class ;
                   
@@ -4797,7 +4797,7 @@ cg:RailwayStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RecommendationDoc
+###  http://citygraph.onti.actcognitive.org/core#RecommendationDoc
 
 cg:RecommendationDoc rdf:type owl:Class ;
                      
@@ -4807,7 +4807,7 @@ cg:RecommendationDoc rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Reference
+###  http://citygraph.onti.actcognitive.org/core#Reference
 
 cg:Reference rdf:type owl:Class ;
              
@@ -4815,7 +4815,7 @@ cg:Reference rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Region
+###  http://citygraph.onti.actcognitive.org/core#Region
 
 cg:Region rdf:type owl:Class ;
           
@@ -4825,7 +4825,7 @@ cg:Region rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Region_City
+###  http://citygraph.onti.actcognitive.org/core#Region_City
 
 cg:Region_City rdf:type owl:Class ;
                
@@ -4835,7 +4835,7 @@ cg:Region_City rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Region_District
+###  http://citygraph.onti.actcognitive.org/core#Region_District
 
 cg:Region_District rdf:type owl:Class ;
                    
@@ -4845,7 +4845,7 @@ cg:Region_District rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RegionalAdministartion
+###  http://citygraph.onti.actcognitive.org/core#RegionalAdministartion
 
 cg:RegionalAdministartion rdf:type owl:Class ;
                           
@@ -4855,7 +4855,7 @@ cg:RegionalAdministartion rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RegionalGov
+###  http://citygraph.onti.actcognitive.org/core#RegionalGov
 
 cg:RegionalGov rdf:type owl:Class ;
                
@@ -4865,7 +4865,7 @@ cg:RegionalGov rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RegionalMinistry
+###  http://citygraph.onti.actcognitive.org/core#RegionalMinistry
 
 cg:RegionalMinistry rdf:type owl:Class ;
                     
@@ -4875,7 +4875,7 @@ cg:RegionalMinistry rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RegionalParliament
+###  http://citygraph.onti.actcognitive.org/core#RegionalParliament
 
 cg:RegionalParliament rdf:type owl:Class ;
                       
@@ -4885,7 +4885,7 @@ cg:RegionalParliament rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Relief
+###  http://citygraph.onti.actcognitive.org/core#Relief
 
 cg:Relief rdf:type owl:Class ;
           
@@ -4895,7 +4895,7 @@ cg:Relief rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ReligiousObject
+###  http://citygraph.onti.actcognitive.org/core#ReligiousObject
 
 cg:ReligiousObject rdf:type owl:Class ;
                    
@@ -4905,7 +4905,7 @@ cg:ReligiousObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Republic
+###  http://citygraph.onti.actcognitive.org/core#Republic
 
 cg:Republic rdf:type owl:Class ;
             
@@ -4915,7 +4915,7 @@ cg:Republic rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Reservoir
+###  http://citygraph.onti.actcognitive.org/core#Reservoir
 
 cg:Reservoir rdf:type owl:Class ;
              
@@ -4925,7 +4925,7 @@ cg:Reservoir rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Restaurant
+###  http://citygraph.onti.actcognitive.org/core#Restaurant
 
 cg:Restaurant rdf:type owl:Class ;
               
@@ -4935,7 +4935,7 @@ cg:Restaurant rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RetailHub
+###  http://citygraph.onti.actcognitive.org/core#RetailHub
 
 cg:RetailHub rdf:type owl:Class ;
              
@@ -4945,7 +4945,7 @@ cg:RetailHub rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RetailStore
+###  http://citygraph.onti.actcognitive.org/core#RetailStore
 
 cg:RetailStore rdf:type owl:Class ;
                
@@ -4955,7 +4955,7 @@ cg:RetailStore rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RetainingWalls
+###  http://citygraph.onti.actcognitive.org/core#RetainingWalls
 
 cg:RetainingWalls rdf:type owl:Class ;
                   
@@ -4965,7 +4965,7 @@ cg:RetainingWalls rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#River
+###  http://citygraph.onti.actcognitive.org/core#River
 
 cg:River rdf:type owl:Class ;
          
@@ -4975,7 +4975,7 @@ cg:River rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RiverStation
+###  http://citygraph.onti.actcognitive.org/core#RiverStation
 
 cg:RiverStation rdf:type owl:Class ;
                 
@@ -4985,7 +4985,7 @@ cg:RiverStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RoadNetworkObject
+###  http://citygraph.onti.actcognitive.org/core#RoadNetworkObject
 
 cg:RoadNetworkObject rdf:type owl:Class ;
                      
@@ -4995,7 +4995,7 @@ cg:RoadNetworkObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RoadSign
+###  http://citygraph.onti.actcognitive.org/core#RoadSign
 
 cg:RoadSign rdf:type owl:Class ;
             
@@ -5005,7 +5005,7 @@ cg:RoadSign rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RowingClub
+###  http://citygraph.onti.actcognitive.org/core#RowingClub
 
 cg:RowingClub rdf:type owl:Class ;
               
@@ -5015,7 +5015,7 @@ cg:RowingClub rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#RuralSettlements
+###  http://citygraph.onti.actcognitive.org/core#RuralSettlements
 
 cg:RuralSettlements rdf:type owl:Class ;
                     
@@ -5025,7 +5025,7 @@ cg:RuralSettlements rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#School
+###  http://citygraph.onti.actcognitive.org/core#School
 
 cg:School rdf:type owl:Class ;
           
@@ -5035,7 +5035,7 @@ cg:School rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SecondarySchool
+###  http://citygraph.onti.actcognitive.org/core#SecondarySchool
 
 cg:SecondarySchool rdf:type owl:Class ;
                    
@@ -5045,7 +5045,7 @@ cg:SecondarySchool rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ServiceZone
+###  http://citygraph.onti.actcognitive.org/core#ServiceZone
 
 cg:ServiceZone rdf:type owl:Class ;
                
@@ -5055,7 +5055,7 @@ cg:ServiceZone rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ShoppingEntertainmentCentre
+###  http://citygraph.onti.actcognitive.org/core#ShoppingEntertainmentCentre
 
 cg:ShoppingEntertainmentCentre rdf:type owl:Class ;
                                
@@ -5065,7 +5065,7 @@ cg:ShoppingEntertainmentCentre rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ShoppingEntertainmentMall
+###  http://citygraph.onti.actcognitive.org/core#ShoppingEntertainmentMall
 
 cg:ShoppingEntertainmentMall rdf:type owl:Class ;
                              
@@ -5075,7 +5075,7 @@ cg:ShoppingEntertainmentMall rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Sidewalk
+###  http://citygraph.onti.actcognitive.org/core#Sidewalk
 
 cg:Sidewalk rdf:type owl:Class ;
             
@@ -5085,7 +5085,7 @@ cg:Sidewalk rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Skalodrom
+###  http://citygraph.onti.actcognitive.org/core#Skalodrom
 
 cg:Skalodrom rdf:type owl:Class ;
              
@@ -5095,7 +5095,7 @@ cg:Skalodrom rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Slope
+###  http://citygraph.onti.actcognitive.org/core#Slope
 
 cg:Slope rdf:type owl:Class ;
          
@@ -5105,7 +5105,7 @@ cg:Slope rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SmallArchitecture
+###  http://citygraph.onti.actcognitive.org/core#SmallArchitecture
 
 cg:SmallArchitecture rdf:type owl:Class ;
                      
@@ -5115,7 +5115,7 @@ cg:SmallArchitecture rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SmallCityGarden
+###  http://citygraph.onti.actcognitive.org/core#SmallCityGarden
 
 cg:SmallCityGarden rdf:type owl:Class ;
                    
@@ -5125,7 +5125,7 @@ cg:SmallCityGarden rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SmallGarden
+###  http://citygraph.onti.actcognitive.org/core#SmallGarden
 
 cg:SmallGarden rdf:type owl:Class ;
                
@@ -5135,7 +5135,7 @@ cg:SmallGarden rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SmallGardenInBlock
+###  http://citygraph.onti.actcognitive.org/core#SmallGardenInBlock
 
 cg:SmallGardenInBlock rdf:type owl:Class ;
                       
@@ -5145,7 +5145,7 @@ cg:SmallGardenInBlock rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SocialGroup
+###  http://citygraph.onti.actcognitive.org/core#SocialGroup
 
 cg:SocialGroup rdf:type owl:Class ;
                
@@ -5159,7 +5159,7 @@ cg:SocialGroup rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SocialObject
+###  http://citygraph.onti.actcognitive.org/core#SocialObject
 
 cg:SocialObject rdf:type owl:Class ;
                 
@@ -5171,7 +5171,7 @@ cg:SocialObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Space
+###  http://citygraph.onti.actcognitive.org/core#Space
 
 cg:Space rdf:type owl:Class ;
          
@@ -5183,7 +5183,7 @@ cg:Space rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SportComplex
+###  http://citygraph.onti.actcognitive.org/core#SportComplex
 
 cg:SportComplex rdf:type owl:Class ;
                 
@@ -5193,7 +5193,7 @@ cg:SportComplex rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Sportground
+###  http://citygraph.onti.actcognitive.org/core#Sportground
 
 cg:Sportground rdf:type owl:Class ;
                
@@ -5203,7 +5203,7 @@ cg:Sportground rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SportsClass
+###  http://citygraph.onti.actcognitive.org/core#SportsClass
 
 cg:SportsClass rdf:type owl:Class ;
                
@@ -5213,7 +5213,7 @@ cg:SportsClass rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SportsObject
+###  http://citygraph.onti.actcognitive.org/core#SportsObject
 
 cg:SportsObject rdf:type owl:Class ;
                 
@@ -5223,7 +5223,7 @@ cg:SportsObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Square
+###  http://citygraph.onti.actcognitive.org/core#Square
 
 cg:Square rdf:type owl:Class ;
           
@@ -5233,7 +5233,7 @@ cg:Square rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Stadium
+###  http://citygraph.onti.actcognitive.org/core#Stadium
 
 cg:Stadium rdf:type owl:Class ;
            
@@ -5243,7 +5243,7 @@ cg:Stadium rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StateOrganization
+###  http://citygraph.onti.actcognitive.org/core#StateOrganization
 
 cg:StateOrganization rdf:type owl:Class ;
                      
@@ -5253,7 +5253,7 @@ cg:StateOrganization rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StatementDoc
+###  http://citygraph.onti.actcognitive.org/core#StatementDoc
 
 cg:StatementDoc rdf:type owl:Class ;
                 
@@ -5263,7 +5263,7 @@ cg:StatementDoc rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Street
+###  http://citygraph.onti.actcognitive.org/core#Street
 
 cg:Street rdf:type owl:Class ;
           
@@ -5273,7 +5273,7 @@ cg:Street rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StreetClock
+###  http://citygraph.onti.actcognitive.org/core#StreetClock
 
 cg:StreetClock rdf:type owl:Class ;
                
@@ -5283,7 +5283,7 @@ cg:StreetClock rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StreetFurniture
+###  http://citygraph.onti.actcognitive.org/core#StreetFurniture
 
 cg:StreetFurniture rdf:type owl:Class ;
                    
@@ -5293,7 +5293,7 @@ cg:StreetFurniture rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StreetLamp
+###  http://citygraph.onti.actcognitive.org/core#StreetLamp
 
 cg:StreetLamp rdf:type owl:Class ;
               
@@ -5303,7 +5303,7 @@ cg:StreetLamp rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StreetTable
+###  http://citygraph.onti.actcognitive.org/core#StreetTable
 
 cg:StreetTable rdf:type owl:Class ;
                
@@ -5313,7 +5313,7 @@ cg:StreetTable rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Surface
+###  http://citygraph.onti.actcognitive.org/core#Surface
 
 cg:Surface rdf:type owl:Class ;
            
@@ -5323,7 +5323,7 @@ cg:Surface rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SwimmingPool
+###  http://citygraph.onti.actcognitive.org/core#SwimmingPool
 
 cg:SwimmingPool rdf:type owl:Class ;
                 
@@ -5333,7 +5333,7 @@ cg:SwimmingPool rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TSG
+###  http://citygraph.onti.actcognitive.org/core#TSG
 
 cg:TSG rdf:type owl:Class ;
        
@@ -5343,7 +5343,7 @@ cg:TSG rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TSN
+###  http://citygraph.onti.actcognitive.org/core#TSN
 
 cg:TSN rdf:type owl:Class ;
        
@@ -5353,7 +5353,7 @@ cg:TSN rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TallMultyApt
+###  http://citygraph.onti.actcognitive.org/core#TallMultyApt
 
 cg:TallMultyApt rdf:type owl:Class ;
                 
@@ -5363,7 +5363,7 @@ cg:TallMultyApt rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TemporalBuilding
+###  http://citygraph.onti.actcognitive.org/core#TemporalBuilding
 
 cg:TemporalBuilding rdf:type owl:Class ;
                     
@@ -5373,7 +5373,7 @@ cg:TemporalBuilding rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TennisClub
+###  http://citygraph.onti.actcognitive.org/core#TennisClub
 
 cg:TennisClub rdf:type owl:Class ;
               
@@ -5383,7 +5383,7 @@ cg:TennisClub rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Terminal
+###  http://citygraph.onti.actcognitive.org/core#Terminal
 
 cg:Terminal rdf:type owl:Class ;
             
@@ -5393,7 +5393,7 @@ cg:Terminal rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Territory
+###  http://citygraph.onti.actcognitive.org/core#Territory
 
 cg:Territory rdf:type owl:Class ;
              
@@ -5403,7 +5403,7 @@ cg:Territory rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Theatre
+###  http://citygraph.onti.actcognitive.org/core#Theatre
 
 cg:Theatre rdf:type owl:Class ;
            
@@ -5413,7 +5413,7 @@ cg:Theatre rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Timetable
+###  http://citygraph.onti.actcognitive.org/core#Timetable
 
 cg:Timetable rdf:type owl:Class ;
              
@@ -5423,7 +5423,7 @@ cg:Timetable rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TouristPopulation
+###  http://citygraph.onti.actcognitive.org/core#TouristPopulation
 
 cg:TouristPopulation rdf:type owl:Class ;
                      
@@ -5433,7 +5433,7 @@ cg:TouristPopulation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Townhouse
+###  http://citygraph.onti.actcognitive.org/core#Townhouse
 
 cg:Townhouse rdf:type owl:Class ;
              
@@ -5443,7 +5443,7 @@ cg:Townhouse rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Tractor
+###  http://citygraph.onti.actcognitive.org/core#Tractor
 
 cg:Tractor rdf:type owl:Class ;
            
@@ -5453,7 +5453,7 @@ cg:Tractor rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TrafficLight
+###  http://citygraph.onti.actcognitive.org/core#TrafficLight
 
 cg:TrafficLight rdf:type owl:Class ;
                 
@@ -5463,7 +5463,7 @@ cg:TrafficLight rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Tram
+###  http://citygraph.onti.actcognitive.org/core#Tram
 
 cg:Tram rdf:type owl:Class ;
         
@@ -5473,7 +5473,7 @@ cg:Tram rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TrashBin
+###  http://citygraph.onti.actcognitive.org/core#TrashBin
 
 cg:TrashBin rdf:type owl:Class ;
             
@@ -5483,7 +5483,7 @@ cg:TrashBin rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TraumaCenter
+###  http://citygraph.onti.actcognitive.org/core#TraumaCenter
 
 cg:TraumaCenter rdf:type owl:Class ;
                 
@@ -5493,7 +5493,7 @@ cg:TraumaCenter rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Tree
+###  http://citygraph.onti.actcognitive.org/core#Tree
 
 cg:Tree rdf:type owl:Class ;
         
@@ -5503,7 +5503,7 @@ cg:Tree rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TrolleyBus
+###  http://citygraph.onti.actcognitive.org/core#TrolleyBus
 
 cg:TrolleyBus rdf:type owl:Class ;
               
@@ -5513,7 +5513,7 @@ cg:TrolleyBus rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TruckVehicle
+###  http://citygraph.onti.actcognitive.org/core#TruckVehicle
 
 cg:TruckVehicle rdf:type owl:Class ;
                 
@@ -5523,7 +5523,7 @@ cg:TruckVehicle rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UK
+###  http://citygraph.onti.actcognitive.org/core#UK
 
 cg:UK rdf:type owl:Class ;
       
@@ -5533,7 +5533,7 @@ cg:UK rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UnauthorisedAction
+###  http://citygraph.onti.actcognitive.org/core#UnauthorisedAction
 
 cg:UnauthorisedAction rdf:type owl:Class ;
                       
@@ -5545,7 +5545,7 @@ cg:UnauthorisedAction rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UnderWorkingAgePopulation
+###  http://citygraph.onti.actcognitive.org/core#UnderWorkingAgePopulation
 
 cg:UnderWorkingAgePopulation rdf:type owl:Class ;
                              
@@ -5555,7 +5555,7 @@ cg:UnderWorkingAgePopulation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#University
+###  http://citygraph.onti.actcognitive.org/core#University
 
 cg:University rdf:type owl:Class ;
               
@@ -5565,7 +5565,7 @@ cg:University rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#University_Organization
+###  http://citygraph.onti.actcognitive.org/core#University_Organization
 
 cg:University_Organization rdf:type owl:Class ;
                            
@@ -5575,7 +5575,7 @@ cg:University_Organization rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UpwardWorkingAgePopulation
+###  http://citygraph.onti.actcognitive.org/core#UpwardWorkingAgePopulation
 
 cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
                               
@@ -5585,7 +5585,7 @@ cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UrbanDistrict
+###  http://citygraph.onti.actcognitive.org/core#UrbanDistrict
 
 cg:UrbanDistrict rdf:type owl:Class ;
                  
@@ -5595,7 +5595,7 @@ cg:UrbanDistrict rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UrbanSettlements
+###  http://citygraph.onti.actcognitive.org/core#UrbanSettlements
 
 cg:UrbanSettlements rdf:type owl:Class ;
                     
@@ -5605,7 +5605,7 @@ cg:UrbanSettlements rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#VerticalGreen
+###  http://citygraph.onti.actcognitive.org/core#VerticalGreen
 
 cg:VerticalGreen rdf:type owl:Class ;
                  
@@ -5615,7 +5615,7 @@ cg:VerticalGreen rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#VeterinaryHospital
+###  http://citygraph.onti.actcognitive.org/core#VeterinaryHospital
 
 cg:VeterinaryHospital rdf:type owl:Class ;
                       
@@ -5625,7 +5625,7 @@ cg:VeterinaryHospital rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#VideoCamera
+###  http://citygraph.onti.actcognitive.org/core#VideoCamera
 
 cg:VideoCamera rdf:type owl:Class ;
                
@@ -5635,7 +5635,7 @@ cg:VideoCamera rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Village
+###  http://citygraph.onti.actcognitive.org/core#Village
 
 cg:Village rdf:type owl:Class ;
            
@@ -5645,7 +5645,7 @@ cg:Village rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#VillageCouncil
+###  http://citygraph.onti.actcognitive.org/core#VillageCouncil
 
 cg:VillageCouncil rdf:type owl:Class ;
                   
@@ -5655,7 +5655,7 @@ cg:VillageCouncil rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#WaterObject
+###  http://citygraph.onti.actcognitive.org/core#WaterObject
 
 cg:WaterObject rdf:type owl:Class ;
                
@@ -5665,7 +5665,7 @@ cg:WaterObject rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#WorkType
+###  http://citygraph.onti.actcognitive.org/core#WorkType
 
 cg:WorkType rdf:type owl:Class ;
             
@@ -5677,7 +5677,7 @@ cg:WorkType rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#WorkingAgePopulation
+###  http://citygraph.onti.actcognitive.org/core#WorkingAgePopulation
 
 cg:WorkingAgePopulation rdf:type owl:Class ;
                         
@@ -5766,7 +5766,7 @@ cg:WorkingAgePopulation rdf:type owl:Class ;
 #################################################################
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Bicyclers
+###  http://citygraph.onti.actcognitive.org/core#Bicyclers
 
 cg:Bicyclers rdf:type owl:NamedIndividual ,
                       cg:OtherPopulationGroups ;
@@ -5775,7 +5775,7 @@ cg:Bicyclers rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#BusinessTourist
+###  http://citygraph.onti.actcognitive.org/core#BusinessTourist
 
 cg:BusinessTourist rdf:type owl:NamedIndividual ,
                             cg:TouristPopulation ;
@@ -5784,7 +5784,7 @@ cg:BusinessTourist rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CarOwner
+###  http://citygraph.onti.actcognitive.org/core#CarOwner
 
 cg:CarOwner rdf:type owl:NamedIndividual ,
                      cg:OtherPopulationGroups ;
@@ -5793,7 +5793,7 @@ cg:CarOwner rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CitizensWithEarlyChildhood
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithEarlyChildhood
 
 cg:CitizensWithEarlyChildhood rdf:type owl:NamedIndividual ,
                                        cg:WorkingAgePopulation ;
@@ -5802,7 +5802,7 @@ cg:CitizensWithEarlyChildhood rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CitizensWithInfant
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithInfant
 
 cg:CitizensWithInfant rdf:type owl:NamedIndividual ,
                                cg:WorkingAgePopulation ;
@@ -5811,7 +5811,7 @@ cg:CitizensWithInfant rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CitizensWithPreschooler
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithPreschooler
 
 cg:CitizensWithPreschooler rdf:type owl:NamedIndividual ,
                                     cg:WorkingAgePopulation ;
@@ -5820,7 +5820,7 @@ cg:CitizensWithPreschooler rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#CitizensWithPrimarySchoolAge
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithPrimarySchoolAge
 
 cg:CitizensWithPrimarySchoolAge rdf:type owl:NamedIndividual ,
                                          cg:WorkingAgePopulation ;
@@ -5829,7 +5829,7 @@ cg:CitizensWithPrimarySchoolAge rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Director
+###  http://citygraph.onti.actcognitive.org/core#Director
 
 cg:Director rdf:type owl:NamedIndividual ,
                      cg:Position ;
@@ -5838,7 +5838,7 @@ cg:Director rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#DisabledMovement
+###  http://citygraph.onti.actcognitive.org/core#DisabledMovement
 
 cg:DisabledMovement rdf:type owl:NamedIndividual ,
                              cg:DisabledPopulation ;
@@ -5847,7 +5847,7 @@ cg:DisabledMovement rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#DisabledSight
+###  http://citygraph.onti.actcognitive.org/core#DisabledSight
 
 cg:DisabledSight rdf:type owl:NamedIndividual ,
                           cg:DisabledPopulation ;
@@ -5856,7 +5856,7 @@ cg:DisabledSight rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#EarlyChildhood
+###  http://citygraph.onti.actcognitive.org/core#EarlyChildhood
 
 cg:EarlyChildhood rdf:type owl:NamedIndividual ,
                            cg:UnderWorkingAgePopulation ;
@@ -5865,7 +5865,7 @@ cg:EarlyChildhood rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#ElderlyWorkingCitizens
+###  http://citygraph.onti.actcognitive.org/core#ElderlyWorkingCitizens
 
 cg:ElderlyWorkingCitizens rdf:type owl:NamedIndividual ,
                                    cg:WorkingAgePopulation ;
@@ -5874,7 +5874,7 @@ cg:ElderlyWorkingCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#EventTourist
+###  http://citygraph.onti.actcognitive.org/core#EventTourist
 
 cg:EventTourist rdf:type owl:NamedIndividual ,
                          cg:TouristPopulation ;
@@ -5883,7 +5883,7 @@ cg:EventTourist rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#HealthyLifestyleCitizens
+###  http://citygraph.onti.actcognitive.org/core#HealthyLifestyleCitizens
 
 cg:HealthyLifestyleCitizens rdf:type owl:NamedIndividual ,
                                      cg:OtherPopulationGroups ;
@@ -5892,7 +5892,7 @@ cg:HealthyLifestyleCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Infant
+###  http://citygraph.onti.actcognitive.org/core#Infant
 
 cg:Infant rdf:type owl:NamedIndividual ,
                    cg:UnderWorkingAgePopulation ;
@@ -5901,7 +5901,7 @@ cg:Infant rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#IntraBench
+###  http://citygraph.onti.actcognitive.org/core#IntraBench
 
 cg:IntraBench rdf:type owl:NamedIndividual ,
                        cg:Bench ;
@@ -5910,7 +5910,7 @@ cg:IntraBench rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MiddleAgeWorkingCitizens
+###  http://citygraph.onti.actcognitive.org/core#MiddleAgeWorkingCitizens
 
 cg:MiddleAgeWorkingCitizens rdf:type owl:NamedIndividual ,
                                      cg:WorkingAgePopulation ;
@@ -5919,7 +5919,7 @@ cg:MiddleAgeWorkingCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MigrantWorker
+###  http://citygraph.onti.actcognitive.org/core#MigrantWorker
 
 cg:MigrantWorker rdf:type owl:NamedIndividual ,
                           cg:OtherPopulationGroups ;
@@ -5928,7 +5928,7 @@ cg:MigrantWorker rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#MovableBench
+###  http://citygraph.onti.actcognitive.org/core#MovableBench
 
 cg:MovableBench rdf:type owl:NamedIndividual ,
                          cg:Bench ;
@@ -5937,7 +5937,7 @@ cg:MovableBench rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#OlderRetiree
+###  http://citygraph.onti.actcognitive.org/core#OlderRetiree
 
 cg:OlderRetiree rdf:type owl:NamedIndividual ,
                          cg:UpwardWorkingAgePopulation ;
@@ -5946,7 +5946,7 @@ cg:OlderRetiree rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PetOwner
+###  http://citygraph.onti.actcognitive.org/core#PetOwner
 
 cg:PetOwner rdf:type owl:NamedIndividual ,
                      cg:OtherPopulationGroups ;
@@ -5955,7 +5955,7 @@ cg:PetOwner rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Pregnant
+###  http://citygraph.onti.actcognitive.org/core#Pregnant
 
 cg:Pregnant rdf:type owl:NamedIndividual ,
                      cg:WorkingAgePopulation ;
@@ -5964,7 +5964,7 @@ cg:Pregnant rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Preschooler
+###  http://citygraph.onti.actcognitive.org/core#Preschooler
 
 cg:Preschooler rdf:type owl:NamedIndividual ,
                         cg:UnderWorkingAgePopulation ;
@@ -5973,7 +5973,7 @@ cg:Preschooler rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PrimarySchoolAge
+###  http://citygraph.onti.actcognitive.org/core#PrimarySchoolAge
 
 cg:PrimarySchoolAge rdf:type owl:NamedIndividual ,
                              cg:UnderWorkingAgePopulation ;
@@ -5982,7 +5982,7 @@ cg:PrimarySchoolAge rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#PublicTransportUser
+###  http://citygraph.onti.actcognitive.org/core#PublicTransportUser
 
 cg:PublicTransportUser rdf:type owl:NamedIndividual ,
                                 cg:OtherPopulationGroups ;
@@ -5991,7 +5991,7 @@ cg:PublicTransportUser rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Religious
+###  http://citygraph.onti.actcognitive.org/core#Religious
 
 cg:Religious rdf:type owl:NamedIndividual ,
                       cg:OtherPopulationGroups ;
@@ -6000,7 +6000,7 @@ cg:Religious rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SelfEmployedCitizens
+###  http://citygraph.onti.actcognitive.org/core#SelfEmployedCitizens
 
 cg:SelfEmployedCitizens rdf:type owl:NamedIndividual ,
                                  cg:WorkingAgePopulation ;
@@ -6009,7 +6009,7 @@ cg:SelfEmployedCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#SeniorWorkingCitizens
+###  http://citygraph.onti.actcognitive.org/core#SeniorWorkingCitizens
 
 cg:SeniorWorkingCitizens rdf:type owl:NamedIndividual ,
                                   cg:WorkingAgePopulation ;
@@ -6018,7 +6018,7 @@ cg:SeniorWorkingCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#StaticBench
+###  http://citygraph.onti.actcognitive.org/core#StaticBench
 
 cg:StaticBench rdf:type owl:NamedIndividual ,
                         cg:Bench ;
@@ -6027,7 +6027,7 @@ cg:StaticBench rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Student
+###  http://citygraph.onti.actcognitive.org/core#Student
 
 cg:Student rdf:type owl:NamedIndividual ,
                     cg:WorkingAgePopulation ;
@@ -6036,7 +6036,7 @@ cg:Student rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Teenager
+###  http://citygraph.onti.actcognitive.org/core#Teenager
 
 cg:Teenager rdf:type owl:NamedIndividual ,
                      cg:UnderWorkingAgePopulation ;
@@ -6045,7 +6045,7 @@ cg:Teenager rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TemporarilyStayingCitizens
+###  http://citygraph.onti.actcognitive.org/core#TemporarilyStayingCitizens
 
 cg:TemporarilyStayingCitizens rdf:type owl:NamedIndividual ,
                                        cg:WorkingAgePopulation ;
@@ -6054,7 +6054,7 @@ cg:TemporarilyStayingCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#TouristInGroup
+###  http://citygraph.onti.actcognitive.org/core#TouristInGroup
 
 cg:TouristInGroup rdf:type owl:NamedIndividual ,
                            cg:TouristPopulation ;
@@ -6063,7 +6063,7 @@ cg:TouristInGroup rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Tween
+###  http://citygraph.onti.actcognitive.org/core#Tween
 
 cg:Tween rdf:type owl:NamedIndividual ,
                   cg:UnderWorkingAgePopulation ;
@@ -6072,7 +6072,7 @@ cg:Tween rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#UncoordinatedTourist
+###  http://citygraph.onti.actcognitive.org/core#UncoordinatedTourist
 
 cg:UncoordinatedTourist rdf:type owl:NamedIndividual ,
                                  cg:TouristPopulation ;
@@ -6081,7 +6081,7 @@ cg:UncoordinatedTourist rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#WasteSortingCitizens
+###  http://citygraph.onti.actcognitive.org/core#WasteSortingCitizens
 
 cg:WasteSortingCitizens rdf:type owl:NamedIndividual ,
                                  cg:OtherPopulationGroups ;
@@ -6090,7 +6090,7 @@ cg:WasteSortingCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#YoungRetiree
+###  http://citygraph.onti.actcognitive.org/core#YoungRetiree
 
 cg:YoungRetiree rdf:type owl:NamedIndividual ,
                          cg:UpwardWorkingAgePopulation ;
@@ -6099,7 +6099,7 @@ cg:YoungRetiree rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#YoungWorkingCitizens
+###  http://citygraph.onti.actcognitive.org/core#YoungWorkingCitizens
 
 cg:YoungWorkingCitizens rdf:type owl:NamedIndividual ,
                                  cg:WorkingAgePopulation ;
@@ -6108,7 +6108,7 @@ cg:YoungWorkingCitizens rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Скамья_12345
+###  http://citygraph.onti.actcognitive.org/core#Скамья_12345
 
 cg:Скамья_12345 rdf:type owl:NamedIndividual ,
                          cg:Bench ;
@@ -6125,7 +6125,7 @@ cg:Скамья_12345 rdf:type owl:NamedIndividual ,
 
 
 
-###  http://citygraph.onti.actcognitive.org/citygraph-core#Скамья_координаты
+###  http://citygraph.onti.actcognitive.org/core#Скамья_координаты
 
 cg:Скамья_координаты rdf:type owl:NamedIndividual ,
                               cg:Geometry .
