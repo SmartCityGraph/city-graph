@@ -49,17 +49,7 @@ cg:hasAddressObj rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasAdmUnit
 
-cg:hasAdmUnit rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "имеет административно-территориальную связь" ;
-              
-              rdfs:domain cg:Address ;
-              
-              rdfs:range cg:AdministrativeUnit ;
-              
-              rdfs:subPropertyOf cg:hasAddressObj .
 
 
 
@@ -436,15 +426,7 @@ cg:hasAddress rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasAdministrativeCenter
 
-cg:hasAdministrativeCenter rdf:type owl:DatatypeProperty ;
-                           
-                           rdfs:label "административный центр" ;
-                           
-                           rdfs:range xsd:string ;
-                           
-                           rdfs:domain cg:AdministrativeUnit .
 
 
 
@@ -757,18 +739,7 @@ cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasCode
 
-cg:hasCode rdf:type owl:DatatypeProperty ;
-           
-           rdfs:label "код" ;
-           
-           rdfs:range xsd:string ;
-           
-           rdfs:domain cg:AdministrativeUnit ,
-                       cg:Reference ;
-           
-           rdfs:subPropertyOf cg:hasClassificationCode .
 
 
 
@@ -1459,13 +1430,6 @@ cg:hasParkingArea rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasPhoneCode
-
-cg:hasPhoneCode rdf:type owl:DatatypeProperty ;
-                
-                rdfs:label "телефонный код АТ ед." ;
-                
-                rdfs:domain cg:AdministrativeUnit .
 
 
 
@@ -1827,16 +1791,6 @@ cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasSecondTitle
-
-cg:hasSecondTitle rdf:type owl:DatatypeProperty ;
-                  
-                  rdfs:label "второе название" ;
-                  
-                  rdfs:range xsd:string ;
-                  
-                  rdfs:domain cg:AdministrativeUnit ,
-                              cg:FunctionalObject .
 
 
 
@@ -2001,18 +1955,6 @@ cg:hasTactilePaving rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasTitle
-
-cg:hasTitle rdf:type owl:DatatypeProperty ;
-            
-            rdfs:label "имеет название" ;
-            
-            rdfs:range xsd:string ;
-            
-            rdfs:domain cg:AdministrativeUnit ,
-                        cg:FunctionalObject ,
-                        cg:WorkType ,
-                        <http://xmlns.com/foaf/spec/#term_Organization> .
 
 
 
@@ -2126,15 +2068,7 @@ cg:hasWaterSafeZone rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasWebDomainZone
 
-cg:hasWebDomainZone rdf:type owl:DatatypeProperty ;
-                    
-                    rdfs:label "доменная зона" ;
-                    
-                    rdfs:range xsd:string ;
-                    
-                    rdfs:domain cg:AdministrativeUnit .
 
 
 
@@ -2448,13 +2382,7 @@ cg:AdministrativeBuilding rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#AdministrativeUnit
 
-cg:AdministrativeUnit rdf:type owl:Class ;
-                      
-                      rdfs:label "Административно-территориальная единица" ;
-                      
-                      rdfs:subClassOf cg:Space .
 
 
 
@@ -3046,13 +2974,7 @@ cg:ConservancyArea rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Country
 
-cg:Country rdf:type owl:Class ;
-           
-           rdfs:label "Страна" ;
-           
-           rdfs:subClassOf cg:AdministrativeUnit .
 
 
 
@@ -3257,13 +3179,6 @@ cg:FederalMinistry rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#FederalOkrug
-
-cg:FederalOkrug rdf:type owl:Class ;
-                
-                rdfs:label "Федеральный округ" ;
-                
-                rdfs:subClassOf cg:AdministrativeUnit .
 
 
 
@@ -4643,12 +4558,6 @@ cg:RecommendationDoc rdf:type owl:Class ;
 cg:Reference rdf:type owl:Class ;
              
              rdfs:label "Справочник" .
-
-
-
-
-
-
 
 
 
