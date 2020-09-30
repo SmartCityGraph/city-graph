@@ -113,17 +113,7 @@ cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasCadastralDistrict
 
-cg:hasCadastralDistrict rdf:type owl:ObjectProperty ;
-                        
-                        rdfs:label "кадастровый район" ;
-                        
-                        rdfs:range cg:CadastralDistrict ;
-                        
-                        rdfs:domain cg:CadastreNumber ;
-                        
-                        rdfs:subPropertyOf cg:hasCadastralNumber .
 
 
 
@@ -277,32 +267,6 @@ cg:hasNetProperty rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasOKATO
-
-cg:hasOKATO rdf:type owl:ObjectProperty ;
-            
-            rdfs:label "ОКАТО" ;
-            
-            rdfs:domain cg:District ;
-            
-            rdfs:range cg:OKATO ;
-            
-            rdfs:domain cg:Region .
-
-
-
-###  http://citygraph.onti.actcognitive.org/core#hasOKTMO
-
-cg:hasOKTMO rdf:type owl:ObjectProperty ;
-            
-            rdfs:label "ОКТМО" ;
-            
-            rdfs:domain cg:Municipality ;
-            
-            rdfs:range cg:OKTMO ;
-            
-            rdfs:domain cg:Region .
-
 
 
 ###  http://citygraph.onti.actcognitive.org/core#hasOwner
@@ -398,18 +362,6 @@ cg:hasWorkType rdf:type owl:ObjectProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#includedIn
-
-cg:includedIn rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "входит в" ;
-              
-              rdfs:range cg:AdministrativeUnit ;
-              
-              rdfs:domain cg:Municipality ,
-                          cg:PhysicalObject ;
-              
-              rdfs:range cg:PhysicalObject .
 
 
 
@@ -1440,11 +1392,6 @@ cg:hasNotCentralGas rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasOKLevel
-
-cg:hasOKLevel rdf:type owl:DatatypeProperty ;
-              
-              rdfs:label "иерархия ОКАТО/ОКТМО" .
 
 
 
@@ -2627,43 +2574,13 @@ cg:AutogasFillingStation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#AutonomousOblast
-
-cg:AutonomousOblast rdf:type owl:Class ;
-                    
-                    rdfs:label "Автономная область" ;
-                    
-                    rdfs:subClassOf cg:Region .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#AutonomousOkrug
-
-cg:AutonomousOkrug rdf:type owl:Class ;
-                   
-                   rdfs:label "Автономный округ" ;
-                   
-                   rdfs:subClassOf cg:Region .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#AutonomousOkrugMunicipality
 
-cg:AutonomousOkrugMunicipality rdf:type owl:Class ;
-                               
-                               rdfs:label "Автномный округ" ;
-                               
-                               rdfs:subClassOf cg:Municipality .
-
-
-
-###  http://citygraph.onti.actcognitive.org/core#AutonomousOkrug_District
-
-cg:AutonomousOkrug_District rdf:type owl:Class ;
-                            
-                            rdfs:label "Автономный округ" ;
-                            
-                            rdfs:subClassOf cg:District .
 
 
 
@@ -3189,25 +3106,10 @@ cg:DisabledPopulation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#District
-
-cg:District rdf:type owl:Class ;
-            
-            rdfs:label "Район" ;
-            
-            rdfs:subClassOf cg:AdministrativeUnit ;
-            
-            rdfs:comment "Класс содержит территориальное деление по ОКАТО" .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#District_City
 
-cg:District_City rdf:type owl:Class ;
-                 
-                 rdfs:label "Город районного значения" ;
-                 
-                 rdfs:subClassOf cg:District .
 
 
 
@@ -3321,13 +3223,7 @@ cg:FederalAgency rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#FederalCity
 
-cg:FederalCity rdf:type owl:Class ;
-               
-               rdfs:label "Город федерального значения" ;
-               
-               rdfs:subClassOf cg:Region .
 
 
 
@@ -3785,43 +3681,12 @@ cg:InterRail rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#InterSettlementTerritory
-
-cg:InterSettlementTerritory rdf:type owl:Class ;
-                            
-                            rdfs:label "Межселенная территория" ;
-                            
-                            rdfs:subClassOf cg:Municipality .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#IntracityAreas
-
-cg:IntracityAreas rdf:type owl:Class ;
-                  
-                  rdfs:label "Внутригородская территория" ;
-                  
-                  rdfs:subClassOf cg:Municipality .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#IntracityMunicipality
-
-cg:IntracityMunicipality rdf:type owl:Class ;
-                         
-                         rdfs:label "Внутригородская территория города федерального значения" ;
-                         
-                         rdfs:subClassOf cg:Municipality .
-
-
-
-###  http://citygraph.onti.actcognitive.org/core#Intracity_District
-
-cg:Intracity_District rdf:type owl:Class ;
-                      
-                      rdfs:label "Внутригородской район" ;
-                      
-                      rdfs:subClassOf cg:District .
 
 
 
@@ -3835,13 +3700,7 @@ cg:KU_state rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Kray
 
-cg:Kray rdf:type owl:Class ;
-        
-        rdfs:label "Край" ;
-        
-        rdfs:subClassOf cg:Region .
 
 
 
@@ -4114,13 +3973,7 @@ cg:MunDepSovet rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#MunicipalDistrict
 
-cg:MunicipalDistrict rdf:type owl:Class ;
-                     
-                     rdfs:label "Муниципальный район" ;
-                     
-                     rdfs:subClassOf cg:Municipality .
 
 
 
@@ -4134,25 +3987,9 @@ cg:MunicipalGov rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#MunicipalOkrug
-
-cg:MunicipalOkrug rdf:type owl:Class ;
-                  
-                  rdfs:label "Муниципальный округ" ;
-                  
-                  rdfs:subClassOf cg:Municipality .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Municipality
-
-cg:Municipality rdf:type owl:Class ;
-                
-                rdfs:label "Муниципалитет" ;
-                
-                rdfs:subClassOf cg:AdministrativeUnit ;
-                
-                rdfs:comment "Класс содержит территориальное деление по ОКТМО" .
 
 
 
@@ -4354,13 +4191,7 @@ cg:OOPT rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Oblast
 
-cg:Oblast rdf:type owl:Class ;
-          
-          rdfs:label "Область" ;
-          
-          rdfs:subClassOf cg:Region .
 
 
 
@@ -4815,33 +4646,12 @@ cg:Reference rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Region
-
-cg:Region rdf:type owl:Class ;
-          
-          rdfs:label "Регион" ;
-          
-          rdfs:subClassOf cg:AdministrativeUnit .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Region_City
-
-cg:Region_City rdf:type owl:Class ;
-               
-               rdfs:label "Город республиканского, краевого, областного подчинения" ;
-               
-               rdfs:subClassOf cg:District .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Region_District
-
-cg:Region_District rdf:type owl:Class ;
-                   
-                   rdfs:label "Район, республики, края, области, автономной области, автономного округа" ;
-                   
-                   rdfs:subClassOf cg:District .
 
 
 
@@ -4904,14 +4714,6 @@ cg:ReligiousObject rdf:type owl:Class ;
                    rdfs:subClassOf cg:SocialObject .
 
 
-
-###  http://citygraph.onti.actcognitive.org/core#Republic
-
-cg:Republic rdf:type owl:Class ;
-            
-            rdfs:label "Республика" ;
-            
-            rdfs:subClassOf cg:Region .
 
 
 
@@ -5015,13 +4817,6 @@ cg:RowingClub rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#RuralSettlements
-
-cg:RuralSettlements rdf:type owl:Class ;
-                    
-                    rdfs:label "Сельское поселение" ;
-                    
-                    rdfs:subClassOf cg:Municipality .
 
 
 
@@ -5585,23 +5380,10 @@ cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#UrbanDistrict
-
-cg:UrbanDistrict rdf:type owl:Class ;
-                 
-                 rdfs:label "Городской округ" ;
-                 
-                 rdfs:subClassOf cg:Municipality .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#UrbanSettlements
 
-cg:UrbanSettlements rdf:type owl:Class ;
-                    
-                    rdfs:label "Городское поселение" ;
-                    
-                    rdfs:subClassOf cg:Municipality .
 
 
 
@@ -5635,23 +5417,11 @@ cg:VideoCamera rdf:type owl:Class ;
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#Village
-
-cg:Village rdf:type owl:Class ;
-           
-           rdfs:label "Посёлок городского типа районного подчинения" ;
-           
-           rdfs:subClassOf cg:District .
 
 
 
-###  http://citygraph.onti.actcognitive.org/core#VillageCouncil
 
-cg:VillageCouncil rdf:type owl:Class ;
-                  
-                  rdfs:label "Сельсовет" ;
-                  
-                  rdfs:subClassOf cg:District .
+
 
 
 
