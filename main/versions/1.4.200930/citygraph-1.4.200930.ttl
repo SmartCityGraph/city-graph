@@ -5,6 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix OGD: <http://www.w3id.org/opengovdata#> .
 @base <http://citygraph.onti.actcognitive.org/core> .
 
 <http://citygraph.onti.actcognitive.org/core> rdf:type owl:Ontology .
