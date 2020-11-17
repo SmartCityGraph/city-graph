@@ -1,0 +1,5999 @@
+@prefix : <http://citygraph.onti.actcognitive.org/core> .
+@prefix cg: <http://citygraph.onti.actcognitive.org/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix OGD: <http://www.w3id.org/opengovdata#> .
+@base <http://citygraph.onti.actcognitive.org/core> .
+
+<http://citygraph.onti.actcognitive.org/core> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://citygraph.onti.actcognitive.org/core#adjoin
+
+cg:adjoin rdf:type owl:ObjectProperty ;
+          
+          rdfs:label "примыкает к" ;
+          
+          rdfs:subPropertyOf cg:hasNetProperty .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#designCodeSPb
+
+cg:designCodeSPb rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:domain cg:LivingObject ;
+                 
+                 rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAddressObj
+
+cg:hasAddressObj rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:label "имеет адрес (объект)" ;
+                 
+                 rdfs:range cg:Address ;
+                 
+                 rdfs:domain cg:PhysicalObject .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasApartmentType
+
+cg:hasApartmentType rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:label "имеет тип квартиры" ;
+                    
+                    rdfs:domain cg:MultyAptHouse ,
+                                cg:TallMultyApt ,
+                                cg:Townhouse ;
+                    
+                    rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuidlingSeries
+
+cg:hasBuidlingSeries rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:label "имеет серию здания" ;
+                     
+                     rdfs:domain cg:LivingObject ;
+                     
+                     rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingSpecificProperties
+
+cg:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
+                                 
+                                 rdfs:label "атрибут сооружения" ;
+                                 
+                                 rdfs:comment "Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralBlock
+
+cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:label "кадастровый квартал" ;
+                     
+                     rdfs:range cg:CadastralBlock ;
+                     
+                     rdfs:domain cg:CadastreNumber ;
+                     
+                     rdfs:subPropertyOf cg:hasCadastralNumber .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralNumber
+
+cg:hasCadastralNumber rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:label "имеет кадастровый номер" ;
+                      
+                      rdfs:domain cg:CadastralParcel ;
+                      
+                      rdfs:range cg:CadastreNumber .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCadastralOkrug
+
+cg:hasCadastralOkrug rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:label "кадастровый округ" ;
+                     
+                     rdfs:range cg:CadastralOkrug ;
+                     
+                     rdfs:domain cg:CadastreNumber ;
+                     
+                     rdfs:subPropertyOf cg:hasCadastralNumber .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasComp
+
+cg:hasComp rdf:type owl:ObjectProperty ;
+           
+           rdfs:label "имеет компонент" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCompanyPosition
+
+cg:hasCompanyPosition rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:label "должность в компании" ;
+                      
+                      rdfs:domain cg:Position ;
+                      
+                      rdfs:subPropertyOf cg:hasPosition ;
+                      
+                      rdfs:range <http://xmlns.com/foaf/spec/#term_Organization> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCoordinates
+
+cg:hasCoordinates rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:label "гео-координаты" ;
+                  
+                  rdfs:comment "Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
+                  
+                  rdfs:range cg:Geometry ;
+                  
+                  rdfs:domain cg:PhysicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasFunction
+
+cg:hasFunction rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "имеет функцию" ;
+               
+               rdfs:comment "Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект" ;
+               
+               rdfs:range cg:FunctionalObject ;
+               
+               rdfs:domain cg:PhysicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLand
+
+cg:hasLand rdf:type owl:ObjectProperty ;
+           
+           rdfs:label "расположено на земельном участке" ;
+           
+           rdfs:domain cg:Building ;
+           
+           rdfs:range cg:Land ;
+           
+           rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMajorRenovation
+
+cg:hasMajorRenovation rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:label "имеет капитальный ремонт" ;
+                      
+                      rdfs:domain cg:Building ;
+                      
+                      rdfs:range cg:MajorRenovation ;
+                      
+                      rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasManagingOrganization
+
+cg:hasManagingOrganization rdf:type owl:ObjectProperty ;
+                           
+                           rdfs:label "имеет управляющую организацию" ;
+                           
+                           rdfs:comment "Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)" ;
+                           
+                           rdfs:domain cg:PhysicalObject ;
+                           
+                           rdfs:range <http://xmlns.com/foaf/spec/#term_Organization> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMetroStation
+
+cg:hasMetroStation rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:label "станция метро" ;
+                   
+                   rdfs:range cg:MetroEntranceHall .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasNestedObject
+
+cg:hasNestedObject rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:label "имеет вложенный объект" ;
+                   
+                   rdfs:comment "Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)" ;
+                   
+                   rdfs:domain cg:PhysicalObject ;
+                   
+                   rdfs:range cg:PhysicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasNetProperty
+
+cg:hasNetProperty rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:label "атрибут сетевого объекта" .
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasOwner
+
+cg:hasOwner rdf:type owl:ObjectProperty ;
+            
+            rdfs:label "имеет собственника" ;
+            
+            rdfs:comment "Связывает ФИзические объекты и Организации с их владельцами-людьми" ;
+            
+            rdfs:domain cg:CarVehicle ,
+                        cg:CommercialOrganization ,
+                        cg:LivingObject ,
+                        cg:Motorcycle ,
+                        cg:TruckVehicle ;
+            
+            rdfs:range <http://xmlns.com/foaf/spec/#term_Person> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPosition
+
+cg:hasPosition rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "имеет должность" ;
+               
+               rdfs:domain <http://xmlns.com/foaf/spec/#term_Person> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPublicAmenity
+
+cg:hasPublicAmenity rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:label "имеет элемент благоустройства" ;
+                    
+                    rdfs:domain cg:LivingObject ;
+                    
+                    rdfs:range cg:PublicObject ,
+                               cg:SportsObject ;
+                    
+                    rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStreet
+
+cg:hasStreet rdf:type owl:ObjectProperty ;
+             
+             rdfs:label "улица" ;
+             
+             rdfs:domain cg:Address ;
+             
+             rdfs:range cg:Street ;
+             
+             rdfs:subPropertyOf cg:hasAddressObj .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSubDoc
+
+cg:hasSubDoc rdf:type owl:ObjectProperty ;
+             
+             rdfs:label "документ, на основе другого документа" ;
+             
+             rdfs:comment "Например, подзаконные акты, приложения и пр. Часть вышестоящего документа." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSurface
+
+cg:hasSurface rdf:type owl:ObjectProperty ;
+              
+              rdfs:label "имеет покрытие" ;
+              
+              rdfs:range cg:Covering ;
+              
+              rdfs:subPropertyOf cg:hasComp .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasWorkType
+
+cg:hasWorkType rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "имеет вид работ" ;
+               
+               rdfs:domain cg:MajorRenovation ;
+               
+               rdfs:range cg:WorkType ;
+               
+               rdfs:subPropertyOf cg:hasBuildingSpecificProperties .
+
+
+
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+
+owl:topDataProperty rdfs:range xsd:int ;
+                    
+                    rdfs:domain cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CentralHotWaterWoods
+
+cg:CentralHotWaterWoods rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:label "имеет горячее водоснабжение от дровяных колонок" ;
+                        
+                        rdfs:range xsd:boolean ;
+                        
+                        rdfs:domain cg:LivingObject ;
+                        
+                        rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAbbr
+
+cg:hasAbbr rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "имеет сокращение" ;
+           
+           rdfs:range xsd:string ;
+           
+           rdfs:subPropertyOf owl:topDataProperty ;
+           
+           rdfs:domain cg:PhysicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAccess
+
+cg:hasAccess rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "тип доступа" ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAddress
+
+cg:hasAddress rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "имеет адрес" ;
+              
+              rdfs:range xsd:string ;
+              
+              rdfs:subPropertyOf owl:topDataProperty ;
+              
+              rdfs:domain cg:Building .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAgeGroupPercentage
+
+cg:hasAgeGroupPercentage rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:label "имеет процент жителей по возрасту" ;
+                         
+                         rdfs:range xsd:int ;
+                         
+                         rdfs:domain cg:LivingObject ;
+                         
+                         rdfs:subPropertyOf cg:hasPopulationCharacteristics .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAmenity
+
+cg:hasAmenity rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "ОСМ класс" ;
+              
+              rdfs:range xsd:string ;
+              
+              rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasApartmentsAmount
+
+cg:hasApartmentsAmount rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "имеет количество квартир" ;
+                       
+                       rdfs:range xsd:int ;
+                       
+                       rdfs:domain cg:MultyAptHouse ,
+                                   cg:TallMultyApt ,
+                                   cg:Townhouse ;
+                       
+                       rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasArchitectureType
+
+cg:hasArchitectureType rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "архитектурный стиль" ;
+                       
+                       rdfs:range xsd:string ;
+                       
+                       rdfs:domain cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasArea
+
+cg:hasArea rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "имеет площадь" ;
+           
+           rdfs:comment "Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества" ;
+           
+           rdfs:range xsd:float ;
+           
+           rdfs:domain cg:AreaObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAreaGeneral
+
+cg:hasAreaGeneral rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "имеет общую площадь" ;
+                  
+                  rdfs:range xsd:float ;
+                  
+                  rdfs:domain cg:AreaObject ;
+                  
+                  rdfs:subPropertyOf cg:hasArea .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasAutoBoilerRoom
+
+cg:hasAutoBoilerRoom rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "имеет автономную котельную" ;
+                     
+                     rdfs:range xsd:boolean ;
+                     
+                     rdfs:domain cg:LivingObject ;
+                     
+                     rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBack
+
+cg:hasBack rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "имеет спинку" ;
+           
+           rdfs:range xsd:boolean ;
+           
+           rdfs:domain cg:AchitectureElement ,
+                       cg:Bench ;
+           
+           rdfs:subPropertyOf cg:topDataArchElement .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingDescription
+
+cg:hasBuildingDescription rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:label "имеет описание сооружения" ;
+                          
+                          rdfs:comment "Текстовое описание зданий, которое генерируется в базе данных" ;
+                          
+                          rdfs:range xsd:string ;
+                          
+                          rdfs:domain cg:Building ;
+                          
+                          rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingMaterial
+
+cg:hasBuildingMaterial rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "материал здания" ;
+                       
+                       rdfs:range xsd:string ;
+                       
+                       rdfs:domain cg:Building ;
+                       
+                       rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingParameter
+
+cg:hasBuildingParameter rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:label "характеристика сооружения" ;
+                        
+                        rdfs:comment "Семейство характеристик сооружений" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingPart
+
+cg:hasBuildingPart rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "часть здания отличающаяся по высоте/этажности" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasBuildingParts
+
+cg:hasBuildingParts rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "деление здания на части" ;
+                    
+                    rdfs:range xsd:string ;
+                    
+                    rdfs:domain cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasButtonOperated
+
+cg:hasButtonOperated rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "кнопочный переключатель" ;
+                     
+                     rdfs:range xsd:boolean ;
+                     
+                     rdfs:domain cg:Crosswalk ;
+                     
+                     rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCarWash
+
+cg:hasCarWash rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "автомойка" ;
+              
+              rdfs:range xsd:boolean ;
+              
+              rdfs:domain cg:FillingStation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCentralElectricity
+
+cg:hasCentralElectricity rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:label "имеет центральное электроснабжение" ;
+                         
+                         rdfs:range xsd:boolean ;
+                         
+                         rdfs:domain cg:LivingObject ;
+                         
+                         rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCentralGas
+
+cg:hasCentralGas rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "имеет центральное газоснабжение" ;
+                 
+                 rdfs:range xsd:boolean ;
+                 
+                 rdfs:domain cg:LivingObject ;
+                 
+                 rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCentralHeating
+
+cg:hasCentralHeating rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "имеет центральное отопление" ;
+                     
+                     rdfs:range xsd:boolean ;
+                     
+                     rdfs:domain cg:LivingObject ;
+                     
+                     rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCentralHotWater
+
+cg:hasCentralHotWater rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "имеет центральное горячее водоснабжение" ;
+                      
+                      rdfs:range xsd:boolean ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCentralHotWaterGas
+
+cg:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:label "имеет горячее водоснабжение от газовых колонок" ;
+                         
+                         rdfs:range xsd:boolean ;
+                         
+                         rdfs:domain cg:LivingObject ;
+                         
+                         rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCharge
+
+cg:hasCharge rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "имеет вход для зарядного устройства" ;
+             
+             rdfs:range xsd:boolean ;
+             
+             rdfs:domain cg:AchitectureElement ;
+             
+             rdfs:subPropertyOf cg:topDataArchElement .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasClassificationCode
+
+cg:hasClassificationCode rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:label "используется в классификаторе" ;
+                         
+                         rdfs:domain cg:Reference .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCoastalProtectiveStrip
+
+cg:hasCoastalProtectiveStrip rdf:type owl:DatatypeProperty ;
+                             
+                             rdfs:label "прибрежная защитная полоса" ;
+                             
+                             rdfs:range xsd:double ;
+                             
+                             rdfs:domain cg:NatureObject ;
+                             
+                             rdfs:subPropertyOf cg:topDataNature .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCommunalApartmentsAmount
+
+cg:hasCommunalApartmentsAmount rdf:type owl:DatatypeProperty ;
+                               
+                               rdfs:label "имеет количество коммунальных квартир" ;
+                               
+                               rdfs:range xsd:int ;
+                               
+                               rdfs:domain cg:MultyAptHouse ,
+                                           cg:TallMultyApt ,
+                                           cg:Townhouse ;
+                               
+                               rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCommunalFacilitiesArea
+
+cg:hasCommunalFacilitiesArea rdf:type owl:DatatypeProperty ;
+                             
+                             rdfs:label "имеет площадь помещений, входящих в состав общего имущества" ;
+                             
+                             rdfs:range xsd:float ;
+                             
+                             rdfs:domain cg:LivingObject ;
+                             
+                             rdfs:subPropertyOf cg:hasArea .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCompressedAir
+
+cg:hasCompressedAir rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "оборудование с сжатым воздухом" ;
+                    
+                    rdfs:range xsd:boolean ;
+                    
+                    rdfs:domain cg:FillingStation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasConditionsForWheel
+
+cg:hasConditionsForWheel rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:label "условия для маломобильных граждан" ;
+                         
+                         rdfs:range xsd:string ;
+                         
+                         rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCrossingIsland
+
+cg:hasCrossingIsland rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "островок безопасности" ;
+                     
+                     rdfs:range xsd:boolean ;
+                     
+                     rdfs:domain cg:Crosswalk ;
+                     
+                     rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasCrosswalkCharacteristic
+
+cg:hasCrosswalkCharacteristic rdf:type owl:DatatypeProperty ;
+                              
+                              rdfs:label "характеристика пешеходного перехода" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasDenomination
+
+cg:hasDenomination rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "конфессия" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:Cemetery ,
+                               cg:ReligiousObject ;
+                   
+                   rdfs:subPropertyOf cg:hasReligiousObjectCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasDesignedModifed
+
+cg:hasDesignedModifed rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "изменения в дизайне после ремонта" ;
+                      
+                      rdfs:range xsd:string ;
+                      
+                      rdfs:domain cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasDocDate
+
+cg:hasDocDate rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "дата документа" ;
+              
+              rdfs:range xsd:dateTime ;
+              
+              rdfs:domain cg:Document ;
+              
+              rdfs:subPropertyOf cg:hasDocument .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasDocTitle
+
+cg:hasDocTitle rdf:type owl:DatatypeProperty ;
+               
+               rdfs:label "название документа" ;
+               
+               rdfs:range xsd:string ;
+               
+               rdfs:domain cg:Document ;
+               
+               rdfs:subPropertyOf cg:hasDocument .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasDocument
+
+cg:hasDocument rdf:type owl:DatatypeProperty ;
+               
+               rdfs:label "имеет документ" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasDomofonAmount
+
+cg:hasDomofonAmount rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "имеет количество переговорно-замочных устройств" ;
+                    
+                    rdfs:range xsd:int ;
+                    
+                    rdfs:domain cg:Building ;
+                    
+                    rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasEmergency
+
+cg:hasEmergency rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "скорая помощь" ;
+                
+                rdfs:range xsd:boolean ;
+                
+                rdfs:domain cg:Hospital .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasFailureStatus
+
+cg:hasFailureStatus rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "является аварийным" ;
+                    
+                    rdfs:range xsd:boolean ;
+                    
+                    rdfs:domain cg:Building ;
+                    
+                    rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasFederalMeaning
+
+cg:hasFederalMeaning rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "федерального значения" ;
+                     
+                     rdfs:range xsd:boolean ;
+                     
+                     rdfs:subPropertyOf cg:hasGovStatus .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasFloors
+
+cg:hasFloors rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "имеет количество этажей" ;
+             
+             rdfs:range xsd:int ;
+             
+             rdfs:domain cg:Building ;
+             
+             rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasFunctionalParameter
+
+cg:hasFunctionalParameter rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:label "параметр функционального объекта" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasGarbageAmount
+
+cg:hasGarbageAmount rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "имеет количество мусоропроводов" ;
+                    
+                    rdfs:range xsd:int ;
+                    
+                    rdfs:domain cg:MultyAptHouse ,
+                                cg:TallMultyApt ,
+                                cg:Townhouse ;
+                    
+                    rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasGovStatus
+
+cg:hasGovStatus rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "имеет статус государственного значения" ;
+                
+                rdfs:domain cg:CulturalObject ,
+                            cg:NatureObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasHeight
+
+cg:hasHeight rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "имеет высоту" ;
+             
+             rdfs:range xsd:int ;
+             
+             rdfs:domain cg:AchitectureElement ,
+                         cg:Building ;
+             
+             rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasHouseNumber
+
+cg:hasHouseNumber rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:range xsd:string ;
+                  
+                  rdfs:domain cg:Address ;
+                  
+                  rdfs:subPropertyOf cg:hasAddress .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasIllumination
+
+cg:hasIllumination rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "имеет освещение" ;
+                   
+                   rdfs:range xsd:boolean ;
+                   
+                   rdfs:domain cg:AchitectureElement ,
+                               cg:AreaObject ,
+                               cg:RoadNetworkObject ;
+                   
+                   rdfs:subPropertyOf cg:topDataArchElement .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasIlluminationPollution
+
+cg:hasIlluminationPollution rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:label "световое загрязнение" ;
+                            
+                            rdfs:range xsd:double ;
+                            
+                            rdfs:subPropertyOf cg:topEcologyParam .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasInhabitableArea
+
+cg:hasInhabitableArea rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "имеет площадь жилых помещений" ;
+                      
+                      rdfs:range xsd:float ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasArea .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasInitiationDate
+
+cg:hasInitiationDate rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "дата введения" ;
+                     
+                     rdfs:range xsd:string ;
+                     
+                     rdfs:domain cg:OKATO ,
+                                 cg:OKTMO .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasKerb
+
+cg:hasKerb rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "разница между переходом и тротуаром" ;
+           
+           rdfs:range xsd:string ;
+           
+           rdfs:domain cg:Crosswalk ;
+           
+           rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasKorpus
+
+cg:hasKorpus rdf:type owl:DatatypeProperty ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:Street ;
+             
+             rdfs:subPropertyOf cg:hasAddress .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLPGFuel
+
+cg:hasLPGFuel rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "сжиженное топливо" ;
+              
+              rdfs:range xsd:boolean ;
+              
+              rdfs:domain cg:FillingStation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLayerDescription
+
+cg:hasLayerDescription rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "имеет описание слоя" ;
+                       
+                       rdfs:comment "Описание слоя, созданного пользователем" ;
+                       
+                       rdfs:range xsd:anyURI .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLength
+
+cg:hasLength rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "длина" ;
+             
+             rdfs:range xsd:double ;
+             
+             rdfs:subPropertyOf cg:topDataNature .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLevel1
+
+cg:hasLevel1 rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "1-ый уровень" ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             
+             rdfs:subPropertyOf cg:hasOKLevel .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLevel2
+
+cg:hasLevel2 rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "2-ой уровень" ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             
+             rdfs:subPropertyOf cg:hasOKLevel .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLevel3
+
+cg:hasLevel3 rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "3-ий уровень" ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             
+             rdfs:subPropertyOf cg:hasOKLevel .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLevel4
+
+cg:hasLevel4 rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "4-ый уровень" ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:OKATO ,
+                         cg:OKTMO ;
+             
+             rdfs:subPropertyOf cg:hasOKLevel .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLicensePlate
+
+cg:hasLicensePlate rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "имеет номер зарегистрированный" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:MovableObject ;
+                   
+                   rdfs:subPropertyOf cg:hasMovableParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLiftAmount
+
+cg:hasLiftAmount rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "имеет количество лифтов" ;
+                 
+                 rdfs:range xsd:int ;
+                 
+                 rdfs:domain cg:Building ;
+                 
+                 rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLit
+
+cg:hasLit rdf:type owl:DatatypeProperty ;
+          
+          rdfs:label "освещение" ;
+          
+          rdfs:range xsd:boolean ;
+          
+          rdfs:domain cg:Crosswalk ;
+          
+          rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLitera
+
+cg:hasLitera rdf:type owl:DatatypeProperty ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain cg:Street ;
+             
+             rdfs:subPropertyOf cg:hasAddress .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLivingObjectParameter
+
+cg:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:label "характеристика жилого дома" ;
+                            
+                            rdfs:comment "Семейство характеристик жилых объектов" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasLocalMeaning
+
+cg:hasLocalMeaning rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "местного значения" ;
+                   
+                   rdfs:range xsd:boolean ;
+                   
+                   rdfs:subPropertyOf cg:hasGovStatus .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMajorRenovationDate
+
+cg:hasMajorRenovationDate rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:label "дата капитального ремонта" ;
+                          
+                          rdfs:range xsd:int ;
+                          
+                          rdfs:domain cg:MajorRenovation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMaxFloors
+
+cg:hasMaxFloors rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "имеет максимальное количество этажей" ;
+                
+                rdfs:range xsd:int ;
+                
+                rdfs:domain cg:Building ;
+                
+                rdfs:subPropertyOf cg:hasFloors .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMetroCode
+
+cg:hasMetroCode rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "код метро" ;
+                
+                rdfs:range xsd:integer ;
+                
+                rdfs:domain cg:MetroEntranceHall .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMetroColor
+
+cg:hasMetroColor rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "ветка метро" ;
+                 
+                 rdfs:range xsd:string ;
+                 
+                 rdfs:domain cg:MetroEntranceHall .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMinFloors
+
+cg:hasMinFloors rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "имеет минимальное количество этажей" ;
+                
+                rdfs:range xsd:int ;
+                
+                rdfs:domain cg:Building ;
+                
+                rdfs:subPropertyOf cg:hasFloors .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasModelName
+
+cg:hasModelName rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "имеет модель и марку" ;
+                
+                rdfs:range xsd:string ;
+                
+                rdfs:domain cg:MovableObject ;
+                
+                rdfs:subPropertyOf cg:hasMovableParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasMovableParameter
+
+cg:hasMovableParameter rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "характеристика ТС" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasNotCentralGas
+
+cg:hasNotCentralGas rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "имеет не центральное газоснабжение" ;
+                    
+                    rdfs:range xsd:boolean ;
+                    
+                    rdfs:domain cg:LivingObject ;
+                    
+                    rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasOctane_98
+
+cg:hasOctane_98 rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "бензин октан 98" ;
+                
+                rdfs:range xsd:boolean ;
+                
+                rdfs:domain cg:FillingStation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasOpeningHours
+
+cg:hasOpeningHours rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "рабочие часы" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPM10value
+
+cg:hasPM10value rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "PM 10 параметр" ;
+                
+                rdfs:range xsd:double ;
+                
+                rdfs:subPropertyOf cg:topEcologyParam .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPM25value
+
+cg:hasPM25value rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "PM 2.5 параметр" ;
+                
+                rdfs:range xsd:double ;
+                
+                rdfs:subPropertyOf cg:topEcologyParam .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasParkingArea
+
+cg:hasParkingArea rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "имеет площадь парковки" ;
+                  
+                  rdfs:comment "Площадь парковки в границах земельного участка" ;
+                  
+                  rdfs:range xsd:float ;
+                  
+                  rdfs:domain cg:Land ;
+                  
+                  rdfs:subPropertyOf cg:hasArea .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPhoneNumber
+
+cg:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "телефонный номер" ;
+                  
+                  rdfs:range xsd:string ;
+                  
+                  rdfs:domain cg:FunctionalObject ,
+                              <http://xmlns.com/foaf/spec/#term_Agent> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPlaygroundInventory
+
+cg:hasPlaygroundInventory rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:label "инвентарь детской площадки" ;
+                          
+                          rdfs:range xsd:string ;
+                          
+                          rdfs:domain cg:Playground .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasPopulationCharacteristics
+
+cg:hasPopulationCharacteristics rdf:type owl:DatatypeProperty ;
+                                
+                                rdfs:label "имеет характеристику жителей" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasProvidedForChild
+
+cg:hasProvidedForChild rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "детское отделение" ;
+                       
+                       rdfs:range xsd:boolean ;
+                       
+                       rdfs:domain cg:MedicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRadioactivePollution
+
+cg:hasRadioactivePollution rdf:type owl:DatatypeProperty ;
+                           
+                           rdfs:label "радиоактивное загрязнянение" ;
+                           
+                           rdfs:range xsd:double ;
+                           
+                           rdfs:subPropertyOf cg:topEcologyParam .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRailwayCrossing
+
+cg:hasRailwayCrossing rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "тип пересекаемой железной дороги" ;
+                      
+                      rdfs:range xsd:string ;
+                      
+                      rdfs:domain cg:Crosswalk ;
+                      
+                      rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRegionalMeaning
+
+cg:hasRegionalMeaning rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "регионального значения" ;
+                      
+                      rdfs:range xsd:boolean ;
+                      
+                      rdfs:subPropertyOf cg:hasGovStatus .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasReligious
+
+cg:hasReligious rdf:type owl:DatatypeProperty ;
+                
+                rdfs:label "религия" ;
+                
+                rdfs:range xsd:string ;
+                
+                rdfs:domain cg:Cemetery ,
+                            cg:ReligiousObject ;
+                
+                rdfs:subPropertyOf cg:hasReligiousObjectCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasReligiousBuildingType
+
+cg:hasReligiousBuildingType rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:label "тип религиозного здания" ;
+                            
+                            rdfs:range xsd:string ;
+                            
+                            rdfs:domain cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasReligiousObjectCharacteristic
+
+cg:hasReligiousObjectCharacteristic rdf:type owl:DatatypeProperty ;
+                                    
+                                    rdfs:label "характеристика религиозных объектов" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasResidentNumber
+
+cg:hasResidentNumber rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "имеет количество проживающих" ;
+                     
+                     rdfs:range xsd:int ;
+                     
+                     rdfs:domain cg:LivingObject ;
+                     
+                     rdfs:subPropertyOf cg:hasPopulationCharacteristics .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms
+
+cg:hasRooms rdf:type owl:DatatypeProperty ;
+            
+            rdfs:label "количество комнат в квартире" ;
+            
+            rdfs:range xsd:int ;
+            
+            rdfs:domain cg:LivingObject ;
+            
+            rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal
+
+cg:hasRoomsCommunal rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "количество комнат в коммунальной квартире" ;
+                    
+                    rdfs:range xsd:int ;
+                    
+                    rdfs:domain cg:LivingObject ;
+                    
+                    rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_2
+
+cg:hasRoomsCommunal_2 rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "2комн. комм. квартира" ;
+                      
+                      rdfs:range xsd:int ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasRoomsCommunal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_3
+
+cg:hasRoomsCommunal_3 rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "3комн. комм. квартира" ;
+                      
+                      rdfs:range xsd:int ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasRoomsCommunal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_4
+
+cg:hasRoomsCommunal_4 rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "4комн. комм. квартира" ;
+                      
+                      rdfs:range xsd:int ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasRoomsCommunal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_5
+
+cg:hasRoomsCommunal_5 rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "5комн. комм. квартира" ;
+                      
+                      rdfs:range xsd:int ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasRoomsCommunal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_6
+
+cg:hasRoomsCommunal_6 rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "6комн. комм. квартира" ;
+                      
+                      rdfs:range xsd:int ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasRoomsCommunal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRoomsCommunal_7
+
+cg:hasRoomsCommunal_7 rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "7 комн. комм. квартира" ;
+                      
+                      rdfs:range xsd:int ;
+                      
+                      rdfs:domain cg:LivingObject ;
+                      
+                      rdfs:subPropertyOf cg:hasRoomsCommunal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_1
+
+cg:hasRooms_1 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "1 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:domain cg:LivingObject ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_2
+
+cg:hasRooms_2 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "2 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:domain cg:LivingObject ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_3
+
+cg:hasRooms_3 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "3 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_4
+
+cg:hasRooms_4 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "4 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_5
+
+cg:hasRooms_5 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "5 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_6
+
+cg:hasRooms_6 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "6 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasRooms_7
+
+cg:hasRooms_7 rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "7 комн. квартира" ;
+              
+              rdfs:range xsd:int ;
+              
+              rdfs:subPropertyOf cg:hasRooms .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSchoolType
+
+cg:hasSchoolType rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "тип школы" ;
+                 
+                 rdfs:range xsd:string ;
+                 
+                 rdfs:domain cg:School .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSeatsAmount
+
+cg:hasSeatsAmount rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "имеет количество мест" ;
+                  
+                  rdfs:range xsd:integer ;
+                  
+                  rdfs:domain cg:AchitectureElement ;
+                  
+                  rdfs:subPropertyOf cg:topDataArchElement .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasShop
+
+cg:hasShop rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "магазин" ;
+           
+           rdfs:range xsd:boolean ;
+           
+           rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSlopedCurb
+
+cg:hasSlopedCurb rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "пандус" ;
+                 
+                 rdfs:range xsd:boolean ;
+                 
+                 rdfs:domain cg:Crosswalk ;
+                 
+                 rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSocialGroupPercentage
+
+cg:hasSocialGroupPercentage rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:label "имеет процент жителей по социальной группе" ;
+                            
+                            rdfs:range xsd:int ;
+                            
+                            rdfs:domain cg:LivingObject ;
+                            
+                            rdfs:subPropertyOf cg:hasPopulationCharacteristics .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSpeciality
+
+cg:hasSpeciality rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "специализация" ;
+                 
+                 rdfs:range xsd:string ;
+                 
+                 rdfs:domain cg:Hospital .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStairsAmount
+
+cg:hasStairsAmount rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "имеет количество лестниц" ;
+                   
+                   rdfs:range xsd:int ;
+                   
+                   rdfs:domain cg:Building ;
+                   
+                   rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStoveHeating
+
+cg:hasStoveHeating rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "имеет печное отопление" ;
+                   
+                   rdfs:range xsd:boolean ;
+                   
+                   rdfs:domain cg:LivingObject ;
+                   
+                   rdfs:subPropertyOf cg:hasLivingObjectParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStringCadastralNumber
+
+cg:hasStringCadastralNumber rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:label "кадастровый номер строкой" ;
+                            
+                            rdfs:range xsd:string ;
+                            
+                            rdfs:domain cg:CadastreNumber .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStringSeries
+
+cg:hasStringSeries rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "серия здания строкой" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:Building ;
+                   
+                   rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStringValue
+
+cg:hasStringValue rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "полное текстовое значение" ;
+                  
+                  rdfs:range xsd:string ;
+                  
+                  rdfs:domain cg:OKATO ,
+                              cg:OKTMO ;
+                  
+                  rdfs:subPropertyOf cg:hasClassificationCode .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasStudentsCapacity
+
+cg:hasStudentsCapacity rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "рассчитан на количество обучающихся" ;
+                       
+                       rdfs:range xsd:int ;
+                       
+                       rdfs:domain cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasSurfaceType
+
+cg:hasSurfaceType rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "материал поверхности" ;
+                  
+                  rdfs:range xsd:string ;
+                  
+                  rdfs:domain cg:Crosswalk ;
+                  
+                  rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasTactilePaving
+
+cg:hasTactilePaving rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "тактильное покрытие" ;
+                    
+                    rdfs:range xsd:boolean ;
+                    
+                    rdfs:domain cg:Crosswalk ;
+                    
+                    rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasToilets
+
+cg:hasToilets rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "туалет" ;
+              
+              rdfs:range xsd:boolean ;
+              
+              rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasTourismPlace
+
+cg:hasTourismPlace rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "туристический объект" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasTrafficSignals
+
+cg:hasTrafficSignals rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "тип дорожных указателей" ;
+                     
+                     rdfs:range xsd:string ;
+                     
+                     rdfs:domain cg:Crosswalk ;
+                     
+                     rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasTrafficSignalsSound
+
+cg:hasTrafficSignalsSound rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:label "звуковой указатель" ;
+                          
+                          rdfs:range xsd:boolean ;
+                          
+                          rdfs:domain cg:Crosswalk ;
+                          
+                          rdfs:subPropertyOf cg:hasCrosswalkCharacteristic .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasUninhabitableArea
+
+cg:hasUninhabitableArea rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:label "имеет площадь нежилых помещений" ;
+                        
+                        rdfs:range xsd:float ;
+                        
+                        rdfs:domain cg:LivingObject ;
+                        
+                        rdfs:subPropertyOf cg:hasArea .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasVIN
+
+cg:hasVIN rdf:type owl:DatatypeProperty ;
+          
+          rdfs:label "имеет VIN" ;
+          
+          rdfs:range xsd:string ;
+          
+          rdfs:domain cg:CarVehicle ,
+                      cg:Motorcycle ,
+                      cg:TruckVehicle ;
+          
+          rdfs:subPropertyOf cg:hasMovableParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasValue
+
+cg:hasValue rdf:type owl:DatatypeProperty ;
+            
+            rdfs:label "значение" ;
+            
+            rdfs:range xsd:string ;
+            
+            rdfs:domain cg:Reference ;
+            
+            rdfs:subPropertyOf cg:hasClassificationCode .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasWaterSafeZone
+
+cg:hasWaterSafeZone rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "водоохраняемая зона" ;
+                    
+                    rdfs:range xsd:double ;
+                    
+                    rdfs:domain cg:NatureObject ;
+                    
+                    rdfs:subPropertyOf cg:topDataNature .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasWebsite
+
+cg:hasWebsite rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "веб-сайт" ;
+              
+              rdfs:range xsd:string ;
+              
+              rdfs:domain cg:FunctionalObject ,
+                          <http://xmlns.com/foaf/spec/#term_Agent> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasWorldMeaning
+
+cg:hasWorldMeaning rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "мирового значения" ;
+                   
+                   rdfs:range xsd:boolean ;
+                   
+                   rdfs:subPropertyOf cg:hasGovStatus .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasYearConstruct
+
+cg:hasYearConstruct rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:label "имеет год постройки" ;
+                    
+                    rdfs:range xsd:dateTime ;
+                    
+                    rdfs:domain cg:Building ;
+                    
+                    rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasYearProduction
+
+cg:hasYearProduction rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "имеет год производства" ;
+                     
+                     rdfs:range xsd:dateTime ;
+                     
+                     rdfs:domain cg:MovableObject ;
+                     
+                     rdfs:subPropertyOf cg:hasMovableParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasYearRepair
+
+cg:hasYearRepair rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "имеет год восстановления" ;
+                 
+                 rdfs:range xsd:dateTime ;
+                 
+                 rdfs:domain cg:Building ;
+                 
+                 rdfs:subPropertyOf cg:hasBuildingParameter .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#isZNOP
+
+cg:isZNOP rdf:type owl:DatatypeProperty ;
+          
+          rdfs:label "зеленое насаждение общего пользования" ;
+          
+          rdfs:range xsd:boolean ;
+          
+          rdfs:domain cg:Green .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#needElectricity
+
+cg:needElectricity rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "требует электричества" ;
+                   
+                   rdfs:comment "С указанием напряжения или иных параметров. По умолчанию можно указывать 220" ;
+                   
+                   rdfs:range xsd:string ;
+                   
+                   rdfs:domain cg:AchitectureElement ;
+                   
+                   rdfs:subPropertyOf cg:topDataArchElement .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#topDataArchElement
+
+cg:topDataArchElement rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "характеристика элемента благоустройства" ;
+                      
+                      rdfs:comment "Использовать только дочерние отношения" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#topDataNature
+
+cg:topDataNature rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "характеристика природного объекта" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#topEcologyParam
+
+cg:topEcologyParam rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "экологический параметр" .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://vocab.gtfs.org/terms#Stop
+
+<http://vocab.gtfs.org/terms#Stop> rdf:type owl:Class ;
+                                   
+                                   rdfs:label "Stop"@en ,
+                                              "Остановка общественного транспорта"@ru ;
+                                   
+                                   rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> ;
+                                   
+                                   rdfs:comment "A location where passengers board or disembark from a transit vehicle."@en .
+
+
+
+###  http://vocab.gtfs.org/terms#Trip
+
+<http://vocab.gtfs.org/terms#Trip> rdf:type owl:Class ;
+                                   
+                                   rdfs:label "Trip"@en ,
+                                              "Наряд общественного транспорта"@ru ;
+                                   
+                                   rdfs:subClassOf cg:Timetable ;
+                                   
+                                   rdfs:comment "A collection of gtfs:StopTimes followed by a transit vehicle." .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea
+
+<http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Auxiliary traffic area"@en ,
+                                                                                    "Вспомогательная зона"@ru ;
+                                                                         
+                                                                         rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                                                                         
+                                                                         rdfs:comment "Denotes the relation of TransportationComplex to its parts, which are auxiliary traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none."@en ,
+                                                                                      "Type describing the class for auxiliary traffic Areas. These are the surfaces where no traffic actually takes place, but which belong to a transportation object. Examples are kerbstones, road markings and grass stripes. As subclass of _CityObject, an AuxiliaryTrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Railway
+
+<http://www.opengis.net/citygml/transportation/2.0/Railway> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Railway"@en ,
+                                                                       "Железная дорога"@ru ;
+                                                            
+                                                            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                            
+                                                            rdfs:comment "Type describing the class for railways. As subclass of _CityObject, a Railway inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Road
+
+<http://www.opengis.net/citygml/transportation/2.0/Road> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Road"@en ,
+                                                                    "Дорога"@ru ;
+                                                         
+                                                         rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                         
+                                                         rdfs:comment "Type describing the class for roads. As subclass of _CityObject, a Road inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en ,
+                                                                      "Данный класс содержит подклассы класса Дорога (https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#k_highway) в OSM"@ru .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Square
+
+<http://www.opengis.net/citygml/transportation/2.0/Square> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:label "Square"@en ,
+                                                                      "Площадь"@ru ;
+                                                           
+                                                           rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                           
+                                                           rdfs:comment "Type describing the class for squares. A square is an open area commonly found in cities (like a plaza). As subclass of _CityObject, a Square inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/Track
+
+<http://www.opengis.net/citygml/transportation/2.0/Track> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Track"@en ,
+                                                                     "Дорожка"@ru ;
+                                                          
+                                                          rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> ;
+                                                          
+                                                          rdfs:comment "Type describing the class for tracks. A track is a small path mainly used by pedestrians. As subclass of _CityObject, a Track inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/TrafficArea
+
+<http://www.opengis.net/citygml/transportation/2.0/TrafficArea> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Traffic area"@en ,
+                                                                           "Проезжая часть"@ru ;
+                                                                
+                                                                rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                                                                
+                                                                rdfs:comment "Denotes the relation of TransportationComplex to its parts, which are traffic areas. The TrafficArea element must either carry a reference to a TrafficArea object or contain a TrafficArea object inline, but neither both nor none."@en ,
+                                                                             "Type describing the class for traffic Areas. Traffic areas are the surfaces where traffic actually takes place. As subclass of _CityObject, a TrafficArea inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/TransportationComplex
+
+<http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:label "Transportation complex"@en ,
+                                                                                     "Транспортный комплекс"@ru ;
+                                                                          
+                                                                          rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+                                                                          
+                                                                          rdfs:comment "Type describing transportation complexes, which are aggregated features, e.g. roads, which consist of parts (traffic areas, e.g. pedestrian path, and auxiliary traffic areas). As subclass of _CityObject, a TransportationComplex inherits all attributes and relations, in particular an id, names, external references, and generalization relations."@en .
+
+
+
+###  http://www.opengis.net/citygml/transportation/2.0/TransportationObject
+
+<http://www.opengis.net/citygml/transportation/2.0/TransportationObject> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Элемент транспортной инфраструктуры" ;
+                                                                         
+                                                                         rdfs:subClassOf cg:FunctionalObject ;
+                                                                         
+                                                                         rdfs:comment "Type describing the abstract superclass for transportation objects."@en .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AchitectureElement
+
+cg:AchitectureElement rdf:type owl:Class ;
+                      
+                      rdfs:label "Элемент благоустройства" ;
+                      
+                      rdfs:subClassOf cg:PointObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ActDoc
+
+cg:ActDoc rdf:type owl:Class ;
+          
+          rdfs:label "Акт" ;
+          
+          rdfs:subClassOf cg:Document .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Action
+
+cg:Action rdf:type owl:Class ;
+          
+          rdfs:label "Действие" ;
+          
+          rdfs:comment "Объекты могут влиять друг на друга" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Address
+
+cg:Address rdf:type owl:Class ;
+           
+           rdfs:label "Адрес" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AdministrativeBuilding
+
+cg:AdministrativeBuilding rdf:type owl:Class ;
+                          
+                          rdfs:label "Административное здание" ;
+                          
+                          rdfs:subClassOf cg:PublicObject .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AdvertisingDesk
+
+cg:AdvertisingDesk rdf:type owl:Class ;
+                   
+                   rdfs:label "Рекламный щит" ;
+                   
+                   rdfs:subClassOf cg:InformationDesk .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AeroStation
+
+cg:AeroStation rdf:type owl:Class ;
+               
+               rdfs:label "Аэровокзал" ;
+               
+               rdfs:subClassOf cg:Terminal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AgreementDoc
+
+cg:AgreementDoc rdf:type owl:Class ;
+                
+                rdfs:label "Договор" ;
+                
+                rdfs:subClassOf cg:Document .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AirSpaceObject
+
+cg:AirSpaceObject rdf:type owl:Class ;
+                  
+                  rdfs:label "Воздушное пространство" ;
+                  
+                  rdfs:subClassOf cg:NatureObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Airport
+
+cg:Airport rdf:type owl:Class ;
+           
+           rdfs:label "Аэропорт" ;
+           
+           rdfs:subClassOf cg:Terminal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AparrtmentMuseum
+
+cg:AparrtmentMuseum rdf:type owl:Class ;
+                    
+                    rdfs:label "Музей квартира" ;
+                    
+                    rdfs:subClassOf cg:Museum .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Apartment
+
+cg:Apartment rdf:type owl:Class ;
+             
+             rdfs:label "Квартира" ;
+             
+             rdfs:subClassOf cg:LivingObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AreaObject
+
+cg:AreaObject rdf:type owl:Class ;
+              
+              rdfs:label "Площадной объект" ;
+              
+              rdfs:subClassOf cg:PhysicalObject ;
+              
+              rdfs:comment "Объект, обозначаемый площадью на карте (например, здание или парк)." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ArtificialRoughness
+
+cg:ArtificialRoughness rdf:type owl:Class ;
+                       
+                       rdfs:label "Искусственная неровность" ;
+                       
+                       rdfs:subClassOf cg:Covering ;
+                       
+                       rdfs:comment "Например дорожный полицейский" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AuthorizedAction
+
+cg:AuthorizedAction rdf:type owl:Class ;
+                    
+                    rdfs:label "Авторизованное действие" ;
+                    
+                    rdfs:subClassOf cg:Action ;
+                    
+                    rdfs:comment "Законное действие" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AutogasFillingStation
+
+cg:AutogasFillingStation rdf:type owl:Class ;
+                         
+                         rdfs:label "Газозаправочная станция"@ru ;
+                         
+                         rdfs:subClassOf cg:FillingStation .
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#AutonomousOrganization
+
+cg:AutonomousOrganization rdf:type owl:Class ;
+                          
+                          rdfs:label "АНО" ;
+                          
+                          rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bar
+
+cg:Bar rdf:type owl:Class ;
+       
+       rdfs:label "Бар" ;
+       
+       rdfs:subClassOf cg:Eatery .
+
+###  http://citygraph.onti.actcognitive.org/core#Bakery
+
+cg:Bakery rdf:type owl:Class ;
+       
+       rdfs:label "Булочная" ;
+       
+       rdfs:subClassOf cg:Eatery .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Barracks
+
+cg:Barracks rdf:type owl:Class ;
+            
+            rdfs:label "Казарма" ;
+            
+            rdfs:subClassOf cg:MilitaryObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bathhouse
+
+cg:Bathhouse rdf:type owl:Class ;
+             
+             rdfs:label "Баня" ;
+             
+             rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bench
+
+cg:Bench rdf:type owl:Class ;
+         
+         rdfs:label "Скамья" ;
+         
+         rdfs:subClassOf cg:AchitectureElement ,
+                         cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BikeParking
+
+cg:BikeParking rdf:type owl:Class ;
+               
+               rdfs:label "Парковка для велосипедов" ;
+               
+               rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BikeRoad
+
+cg:BikeRoad rdf:type owl:Class ;
+            
+            rdfs:label "Велосипедная дорожка" ;
+            
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BlackBox
+
+cg:BlackBox rdf:type owl:Class ;
+            
+            rdfs:label "Черный ящик" ;
+            
+            rdfs:subClassOf cg:NetObject ;
+            
+            rdfs:comment "Концепт \"черного ящика\" с неизвестной внутренней структурой" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Block
+
+cg:Block rdf:type owl:Class ;
+         
+         rdfs:label "Квартал" ;
+         
+         rdfs:subClassOf cg:Territory .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BortStones
+
+cg:BortStones rdf:type owl:Class ;
+              
+              rdfs:label "Бортовой камень" ,
+                         "Поребрик" ;
+              
+              rdfs:subClassOf cg:Covering .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BotanicGarden
+
+cg:BotanicGarden rdf:type owl:Class ;
+                 
+                 rdfs:label "Ботанический сад" ;
+                 
+                 rdfs:subClassOf cg:OOPT .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Boulevard
+
+cg:Boulevard rdf:type owl:Class ;
+             
+             rdfs:label "Бульвар" ;
+             
+             rdfs:subClassOf cg:GreenObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bowling
+
+cg:Bowling rdf:type owl:Class ;
+           
+           rdfs:label "Боулинг" ;
+           
+           rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bridge
+
+cg:Bridge rdf:type owl:Class ;
+          
+          rdfs:label "Мост" ;
+          
+          rdfs:subClassOf cg:NetObject ;
+          
+          rdfs:comment "Концепт, подразумевающий, что некая линия идет поверх другой линии, не пересекая ее (разные уровни)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Building
+
+cg:Building rdf:type owl:Class ;
+            
+            rdfs:label "Сооружение" ;
+            
+            rdfs:subClassOf cg:AreaObject ;
+            
+            rdfs:comment "Площадной объект, представляющий собой постройку" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bus
+
+cg:Bus rdf:type owl:Class ;
+       
+       rdfs:label "Автобус" ;
+       
+       rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BusStation
+
+cg:BusStation rdf:type owl:Class ;
+              
+              rdfs:label "Автобусная станция" ;
+              
+              rdfs:subClassOf cg:Terminal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bush
+
+cg:Bush rdf:type owl:Class ;
+        
+        rdfs:label "Куст" ;
+        
+        rdfs:subClassOf cg:Green .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BusinessCentre
+
+cg:BusinessCentre rdf:type owl:Class ;
+                  
+                  rdfs:label "Бизнес-центр" ;
+                  
+                  rdfs:subClassOf cg:BusinessHub .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BusinessHub
+
+cg:BusinessHub rdf:type owl:Class ;
+               
+               rdfs:label "Деловой центр" ;
+               
+               rdfs:subClassOf cg:CommercialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CadastralBlock
+
+cg:CadastralBlock rdf:type owl:Class ;
+                  
+                  rdfs:label "Кадастровый квартал" ;
+                  
+                  rdfs:subClassOf cg:CadastreNumber .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CadastralDistrict
+
+cg:CadastralDistrict rdf:type owl:Class ;
+                     
+                     rdfs:label "Кадастровый район" ;
+                     
+                     rdfs:subClassOf cg:CadastreNumber .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CadastralOkrug
+
+cg:CadastralOkrug rdf:type owl:Class ;
+                  
+                  rdfs:label "Кадастровый округ" ;
+                  
+                  rdfs:subClassOf cg:CadastreNumber .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CadastralParcel
+
+cg:CadastralParcel rdf:type owl:Class ;
+                   
+                   rdfs:label "Кадастровый участок" ;
+                   
+                   rdfs:subClassOf cg:Land .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CadastreNumber
+
+cg:CadastreNumber rdf:type owl:Class ;
+                  
+                  rdfs:label "Кадастровый номер" ;
+                  
+                  rdfs:subClassOf cg:CadastreRegister ;
+                  
+                  rdfs:comment "Этот класс не является подклассом Кадастрового реестра и будет перенесён" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CadastreRegister
+
+cg:CadastreRegister rdf:type owl:Class ;
+                    
+                    rdfs:label "Кадастровый реестр" ;
+                    
+                    rdfs:subClassOf cg:Reference ;
+                    
+                    rdfs:comment "Сюда добавлять все виды кадастров (земельный, лесной и пр.)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Cafe
+
+cg:Cafe rdf:type owl:Class ;
+        
+        rdfs:label "Кафе" ;
+        
+        rdfs:subClassOf cg:Eatery .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CapitalConstruction
+
+cg:CapitalConstruction rdf:type owl:Class ;
+                       
+                       rdfs:label "Объект капитального строительства" ;
+                       
+                       rdfs:subClassOf cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CarVehicle
+
+cg:CarVehicle rdf:type owl:Class ;
+              
+              rdfs:label "Легковой автомобиль" ;
+              
+              rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Cemetery
+
+cg:Cemetery rdf:type owl:Class ;
+            
+            rdfs:label "Кладбище" ;
+            
+            rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CentralBank
+
+cg:CentralBank rdf:type owl:Class ;
+               
+               rdfs:label "Центральный банк" ;
+               
+               rdfs:subClassOf cg:GovernmentAuthority .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ChargingStation
+
+cg:ChargingStation rdf:type owl:Class ;
+                   
+                   rdfs:label "Электрозаправка"@ru ;
+                   
+                   rdfs:subClassOf cg:FillingStation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CharityFoundation
+
+cg:CharityFoundation rdf:type owl:Class ;
+                     
+                     rdfs:label "Благотворительный фонд" ;
+                     
+                     rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ChildrenYouthSportSchool
+
+cg:ChildrenYouthSportSchool rdf:type owl:Class ;
+                            
+                            rdfs:label "Детско-юношеская спортивная школа" ;
+                            
+                            rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Cinema
+
+cg:Cinema rdf:type owl:Class ;
+          
+          rdfs:label "Кинотеатр" ;
+          
+          rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CityForest
+
+cg:CityForest rdf:type owl:Class ;
+              
+              rdfs:label "Городской лес" ;
+              
+              rdfs:subClassOf cg:Forest .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CityGarden
+
+cg:CityGarden rdf:type owl:Class ;
+              
+              rdfs:label "Сад" ;
+              
+              rdfs:subClassOf cg:GreenObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Club
+
+cg:Club rdf:type owl:Class ;
+        
+        rdfs:label "Клуб" ;
+        
+        rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#College
+
+cg:College rdf:type owl:Class ;
+           
+           rdfs:label "Колледж" ;
+           
+           rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CommercialObject
+
+cg:CommercialObject rdf:type owl:Class ;
+                    
+                    rdfs:label "Коммерческий объект" ;
+                    
+                    rdfs:subClassOf cg:SocialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CommercialOrganization
+
+cg:CommercialOrganization rdf:type owl:Class ;
+                          
+                          rdfs:label "Коммерческая организация" ;
+                          
+                          rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CompLine
+
+cg:CompLine rdf:type owl:Class ;
+            
+            rdfs:label "Полоса" ;
+            
+            rdfs:subClassOf cg:Component .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Component
+
+cg:Component rdf:type owl:Class ;
+             
+             rdfs:label "Компонент" ;
+             
+             rdfs:subClassOf cg:PhysicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ConcertHall
+
+cg:ConcertHall rdf:type owl:Class ;
+               
+               rdfs:label "Концертный зал" ;
+               
+               rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ConservancyArea
+
+cg:ConservancyArea rdf:type owl:Class ;
+                   
+                   rdfs:label "Заповедник" ;
+                   
+                   rdfs:subClassOf cg:OOPT .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Covering
+
+cg:Covering rdf:type owl:Class ;
+            
+            rdfs:label "Покрытие" ;
+            
+            rdfs:subClassOf cg:Component .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CreativeClass
+
+cg:CreativeClass rdf:type owl:Class ;
+                 
+                 rdfs:label "Творческий кружок" ;
+                 
+                 rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Crosswalk
+
+cg:Crosswalk rdf:type owl:Class ;
+             
+             rdfs:label "Пешеходный переход" ;
+             
+             rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TrafficArea> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CulturalObject
+
+cg:CulturalObject rdf:type owl:Class ;
+                  
+                  rdfs:label "Культурный объект" ;
+                  
+                  rdfs:subClassOf cg:SocialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#DisabledPopulation
+
+cg:DisabledPopulation rdf:type owl:Class ;
+                      
+                      rdfs:label "Население с ограниченными возможностями" ;
+                      
+                      rdfs:subClassOf cg:SocialGroup .
+
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Document
+
+cg:Document rdf:type owl:Class ;
+            
+            rdfs:label "Документ" ;
+            
+            rdfs:comment "Связывает правовые нормы, документы и пр. с объектами городской среды" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#DrinkFontain
+
+cg:DrinkFontain rdf:type owl:Class ;
+                
+                rdfs:label "Питьевой фонтан" ;
+                
+                rdfs:subClassOf cg:Fountain .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Eatery
+
+cg:Eatery rdf:type owl:Class ;
+          
+          rdfs:label "Общепит" ;
+          
+          rdfs:subClassOf cg:CommercialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#EducationalObject
+
+cg:EducationalObject rdf:type owl:Class ;
+                     
+                     rdfs:label "Образовательный объект" ;
+                     
+                     rdfs:subClassOf cg:SocialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ElectroDepo
+
+cg:ElectroDepo rdf:type owl:Class ;
+               
+               rdfs:label "Электродепо" ;
+               
+               rdfs:subClassOf cg:Terminal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Element
+
+cg:Element rdf:type owl:Class ;
+           
+           rdfs:label "Элемент" ;
+           
+           rdfs:subClassOf cg:NetObject ;
+           
+           rdfs:comment "Любой элемент сетевого объекта, Чаще всего, который состоит из других более атомарных элементов. Например, концепция площали, которая существует, и как единое целое и как составная из других дорог, элементов." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#EnergeticObject
+
+cg:EnergeticObject rdf:type owl:Class ;
+                   
+                   rdfs:label "Энергетический объект" ;
+                   
+                   rdfs:subClassOf cg:IndustrialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Event
+
+cg:Event rdf:type owl:Class ;
+         
+         rdfs:label "Событие" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ExibitionHall
+
+cg:ExibitionHall rdf:type owl:Class ;
+                 
+                 rdfs:label "Выставочный зал" ;
+                 
+                 rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Fabric
+
+cg:Fabric rdf:type owl:Class ;
+          
+          rdfs:label "Завод" ;
+          
+          rdfs:subClassOf cg:IndustrialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FederalAgency
+
+cg:FederalAgency rdf:type owl:Class ;
+                 
+                 rdfs:label "Федеральное агенство" ;
+                 
+                 rdfs:subClassOf cg:FederalGov .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FederalGov
+
+cg:FederalGov rdf:type owl:Class ;
+              
+              rdfs:label "Федеральный орган власти" ;
+              
+              rdfs:subClassOf cg:GovernmentBody .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FederalGovernment
+
+cg:FederalGovernment rdf:type owl:Class ;
+                     
+                     rdfs:label "Правительство РФ" ;
+                     
+                     rdfs:subClassOf cg:FederalGov .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FederalMinistry
+
+cg:FederalMinistry rdf:type owl:Class ;
+                   
+                   rdfs:label "Федеральное министерство" ;
+                   
+                   rdfs:subClassOf cg:FederalGov .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Fence
+
+cg:Fence rdf:type owl:Class ;
+         
+         rdfs:label "Забор" ;
+         
+         rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FillingStation
+
+cg:FillingStation rdf:type owl:Class ;
+                  
+                  rdfs:label "Заправочная станция"@ru ;
+                  
+                  rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FireStation
+
+cg:FireStation rdf:type owl:Class ;
+               
+               rdfs:label "Пожарная станция" ;
+               
+               rdfs:subClassOf cg:PublicObject .
+
+###  http://citygraph.onti.actcognitive.org/core#PoliceStation
+
+cg:PoliceStation rdf:type owl:Class ;
+                    
+                    rdfs:label "Полицейский участок" ;
+                    
+                    rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Flowerbed
+
+cg:Flowerbed rdf:type owl:Class ;
+             
+             rdfs:label "Клумба" ;
+             
+             rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Forest
+
+cg:Forest rdf:type owl:Class ;
+          
+          rdfs:label "Лесной массив" ;
+          
+          rdfs:subClassOf cg:GreenObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ForestPark
+
+cg:ForestPark rdf:type owl:Class ;
+              
+              rdfs:label "Лесопарк" ;
+              
+              rdfs:subClassOf cg:Forest .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ForestReserve
+
+cg:ForestReserve rdf:type owl:Class ;
+                 
+                 rdfs:label "Заказник" ;
+                 
+                 rdfs:subClassOf cg:OOPT .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Forestry
+
+cg:Forestry rdf:type owl:Class ;
+            
+            rdfs:label "Лесничество" ;
+            
+            rdfs:subClassOf cg:StateOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Fountain
+
+cg:Fountain rdf:type owl:Class ;
+            
+            rdfs:label "Фонтан" ;
+            
+            rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#FunctionalObject
+
+cg:FunctionalObject rdf:type owl:Class ;
+                    
+                    rdfs:label "Функциональный объект" ;
+                    
+                    rdfs:comment "Описание функций физического объекта" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GK
+
+cg:GK rdf:type owl:Class ;
+      
+      rdfs:label "ЖК" ;
+      
+      rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GKS
+
+cg:GKS rdf:type owl:Class ;
+       
+       rdfs:label "ЖКС" ;
+       
+       rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GSK
+
+cg:GSK rdf:type owl:Class ;
+       
+       rdfs:label "ЖСК" ;
+       
+       rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GUPREP
+
+cg:GUPREP rdf:type owl:Class ;
+          
+          rdfs:label "ГУПРЭП" ;
+          
+          rdfs:subClassOf cg:StateOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Garage
+
+cg:Garage rdf:type owl:Class ;
+          
+          rdfs:label "Гараж" ;
+          
+          rdfs:subClassOf cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Geometry
+
+cg:Geometry rdf:type owl:Class ;
+            
+            rdfs:label "Геометрия" ;
+            
+            rdfs:comment "Класс для хранения геокоординат. Наследуется от Feature для обеспечения совместимости с GeoSPARQL" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GiftStore
+
+cg:GiftStore rdf:type owl:Class ;
+             
+             rdfs:label "Магазин подарков" ;
+             
+             rdfs:subClassOf cg:RetailStore .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GovCorporation
+
+cg:GovCorporation rdf:type owl:Class ;
+                  
+                  rdfs:label "Госкорпорация" ;
+                  
+                  rdfs:subClassOf cg:GovernmentAuthority .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GovernmentAuthority
+
+cg:GovernmentAuthority rdf:type owl:Class ;
+                       
+                       rdfs:label "Государственная организация" ;
+                       
+                       rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GovernmentBody
+
+cg:GovernmentBody rdf:type owl:Class ;
+                  
+                  rdfs:label "Орган власти" ;
+                  
+                  rdfs:subClassOf cg:GovernmentAuthority .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Green
+
+cg:Green rdf:type owl:Class ;
+         
+         rdfs:label "Зеленое насаждение" ;
+         
+         rdfs:subClassOf cg:GreenObject ,
+                         cg:PointObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GreenObject
+
+cg:GreenObject rdf:type owl:Class ;
+               
+               rdfs:label "Зелёный объект" ;
+               
+               rdfs:subClassOf cg:NatureObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GreenRoof
+
+cg:GreenRoof rdf:type owl:Class ;
+             
+             rdfs:label "Крышное озеленение" ;
+             
+             rdfs:subClassOf cg:GreenObject ,
+                             cg:Surface .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GroceryStore
+
+cg:GroceryStore rdf:type owl:Class ;
+                
+                rdfs:label "Продуктовый магазин" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+###  http://citygraph.onti.actcognitive.org/core#HardwareStore
+
+cg:HardwareStore rdf:type owl:Class ;
+                
+                rdfs:label "Строительный магазин" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+###  http://citygraph.onti.actcognitive.org/core#HouseholdStore
+
+cg:HouseholdStore rdf:type owl:Class ;
+                
+                rdfs:label "Хозяйственный магазин" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#AutoStore
+
+cg:AutoStore rdf:type owl:Class ;
+                
+                rdfs:label "Автомагазин" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#ElectronicsStore
+
+cg:ElectronicsStore rdf:type owl:Class ;
+                
+                rdfs:label "Магазин электроники" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ClothingStore
+
+cg:ClothingStore rdf:type owl:Class ;
+                
+                rdfs:label "Магазин одежды и обуви" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#PlumbingStore
+
+cg:PlumbingStore rdf:type owl:Class ;
+                
+                rdfs:label "Магазин сантехники" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+###  http://citygraph.onti.actcognitive.org/core#PetStore
+
+cg:PetStore rdf:type owl:Class ;
+                
+                rdfs:label "Зоомагазин" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#SouvenirStore
+
+cg:SouvenirStore rdf:type owl:Class ;
+                
+                rdfs:label "Сувенирный магазин" ;
+                
+                rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#GroundObject
+
+cg:GroundObject rdf:type owl:Class ;
+                
+                rdfs:label "Почва" ;
+                
+                rdfs:subClassOf cg:NatureObject ;
+                
+                rdfs:comment "Описание почвеных слоев и элементов почвы" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#GuestHouse
+
+cg:GuestHouse rdf:type owl:Class ;
+              
+              rdfs:label "Гостевой дом" ;
+              
+              rdfs:subClassOf cg:Hotel .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Gymnasium
+
+cg:Gymnasium rdf:type owl:Class ;
+             
+             rdfs:label "Гимназия" ;
+             
+             rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#HelthFacility
+
+cg:HelthFacility rdf:type owl:Class ;
+                 
+                 rdfs:label "Медицинское учреждение" ;
+                 
+                 rdfs:subClassOf cg:MedicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#HomelessHome
+
+cg:HomelessHome rdf:type owl:Class ;
+                
+                rdfs:label "Дом временного содержания бездомных" ;
+                
+                rdfs:subClassOf cg:PublicHome .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Hospital
+
+cg:Hospital rdf:type owl:Class ;
+            
+            rdfs:label "Больница" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Clinic
+
+cg:Clinic rdf:type owl:Class ;
+            
+            rdfs:label "Клиника" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#WomanClinic
+
+cg:WomanClinic rdf:type owl:Class ;
+            
+            rdfs:label "Женская консультация" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#BirthHospital
+
+cg:BirthHospital rdf:type owl:Class ;
+            
+            rdfs:label "Роддом" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Dentist
+
+cg:Dentist rdf:type owl:Class ;
+            
+            rdfs:label "Стоматология" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Optics
+
+cg:Optics rdf:type owl:Class ;
+            
+            rdfs:label "Оптика" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Hospis
+
+cg:Hospis rdf:type owl:Class ;
+            
+            rdfs:label "Хоспис" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+###  http://citygraph.onti.actcognitive.org/core#Dispensary
+
+cg:Dispensary rdf:type owl:Class ;
+            
+            rdfs:label "Диспансер" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Emergency 
+
+cg:Emergency rdf:type owl:Class ;
+            
+            rdfs:label "Станция скорой помощи" ;
+            
+            rdfs:subClassOf cg:HelthFacility .
+
+
+###  http://citygraph.onti.actcognitive.org/core#Hostel
+
+cg:Hostel rdf:type owl:Class ;
+          
+          rdfs:label "Хостел" ;
+          
+          rdfs:subClassOf cg:Hotel .
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Hotel
+
+cg:Hotel rdf:type owl:Class ;
+         
+         rdfs:label "Гостиница" ;
+         
+         rdfs:subClassOf cg:CommercialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#House
+
+cg:House rdf:type owl:Class ;
+         
+         rdfs:label "Частный дом" ;
+         
+         rdfs:subClassOf cg:LivingObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#HouseYouthCreativity
+
+cg:HouseYouthCreativity rdf:type owl:Class ;
+                        
+                        rdfs:label "Дом детско-юношеского творчества" ;
+                        
+                        rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Hypermarket
+
+cg:Hypermarket rdf:type owl:Class ;
+               
+               rdfs:label "Гипермаркет" ;
+               
+               rdfs:subClassOf cg:RetailStore .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#IceArena
+
+cg:IceArena rdf:type owl:Class ;
+            
+            rdfs:label "Ледовая Арена" ;
+            
+            rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#IndustrialObject
+
+cg:IndustrialObject rdf:type owl:Class ;
+                    
+                    rdfs:label "Промышленный объект" ;
+                    
+                    rdfs:subClassOf cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#InformationDesk
+
+cg:InformationDesk rdf:type owl:Class ;
+                   
+                   rdfs:label "Информационный щит" ;
+                   
+                   rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Installation
+
+cg:Installation rdf:type owl:Class ;
+                
+                rdfs:label "Скульптура" ;
+                
+                rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Institute
+
+cg:Institute rdf:type owl:Class ;
+             
+             rdfs:label "Институт" ;
+             
+             rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#InterRail
+
+cg:InterRail rdf:type owl:Class ;
+             
+             rdfs:label "Межрельсовое покрытие" ;
+             
+             rdfs:subClassOf cg:Covering .
+
+
+
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#KU_state
+
+cg:KU_state rdf:type owl:Class ;
+            
+            rdfs:label "Казенное учреждение" ;
+            
+            rdfs:subClassOf cg:GovernmentAuthority .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Lake
+
+cg:Lake rdf:type owl:Class ;
+        
+        rdfs:label "Озеро" ;
+        
+        rdfs:subClassOf cg:WaterObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Land
+
+cg:Land rdf:type owl:Class ;
+        
+        rdfs:label "Земельный участок" ;
+        
+        rdfs:subClassOf cg:Space .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Landscape
+
+cg:Landscape rdf:type owl:Class ;
+             
+             rdfs:label "Ландшафт" ;
+             
+             rdfs:subClassOf cg:Component .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#LawDoc
+
+cg:LawDoc rdf:type owl:Class ;
+          
+          rdfs:label "Закон" ;
+          
+          rdfs:subClassOf cg:Document .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Level
+
+cg:Level rdf:type owl:Class ;
+         
+         rdfs:label "Уровень" ;
+         
+         rdfs:subClassOf cg:NetObject ;
+         
+         rdfs:comment "Концепт, позволяющий расположить элементы сетевого объекта по разным уровням. В коммунальной системе - это могут быть этажи." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Library
+
+cg:Library rdf:type owl:Class ;
+           
+           rdfs:label "Библиотека" ;
+           
+           rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Line
+
+cg:Line rdf:type owl:Class ;
+        
+        rdfs:label "Линия" ;
+        
+        rdfs:subClassOf cg:NetObject ;
+        
+        rdfs:comment "Соединяет два узла, например, в транспорте это дорога" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Link
+
+cg:Link rdf:type owl:Class ;
+        
+        rdfs:label "Связь" ;
+        
+        rdfs:subClassOf cg:NetObject ;
+        
+        rdfs:comment "Плавно соединяет две линии, не образуя узла. Например, в транспорте это съезды дорог" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#LivingObject
+
+cg:LivingObject rdf:type owl:Class ;
+                
+                rdfs:label "Жилой объект" ;
+                
+                rdfs:subClassOf cg:FunctionalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MajorRenovation
+
+cg:MajorRenovation rdf:type owl:Class ;
+                   
+                   rdfs:label "Капитальный ремонт" ;
+                   
+                   rdfs:subClassOf cg:Action .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Market
+
+cg:Market rdf:type owl:Class ;
+          
+          rdfs:label "Рынок" ;
+          
+          rdfs:subClassOf cg:CommercialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Markup
+
+cg:Markup rdf:type owl:Class ;
+          
+          rdfs:label "Разметка" ;
+          
+          rdfs:subClassOf cg:Covering .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MedicalEduInstitution
+
+cg:MedicalEduInstitution rdf:type owl:Class ;
+                         
+                         rdfs:label "Медицинское учебное заведение" ;
+                         
+                         rdfs:subClassOf cg:EducationalObject ,
+                                         cg:HelthFacility .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MedicalObject
+
+cg:MedicalObject rdf:type owl:Class ;
+                 
+                 rdfs:label "Медицинский объект" ;
+                 
+                 rdfs:subClassOf cg:SocialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Memorial
+
+cg:Memorial rdf:type owl:Class ;
+            
+            rdfs:label "Памятник" ;
+            
+            rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MemorialPlaque
+
+cg:MemorialPlaque rdf:type owl:Class ;
+                  
+                  rdfs:label "Мемориальная доска" ;
+                  
+                  rdfs:subClassOf cg:Memorial .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MetroEntranceHall
+
+cg:MetroEntranceHall rdf:type owl:Class ;
+                     
+                     rdfs:label "Наземный вестибюль станции метро" ;
+                     
+                     rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MilitaryObject
+
+cg:MilitaryObject rdf:type owl:Class ;
+                  
+                  rdfs:label "Военный объект" ;
+                  
+                  rdfs:subClassOf cg:FunctionalObject .
+
+###  http://citygraph.onti.actcognitive.org/core#RubbishObject
+
+cg:RubbishObject rdf:type owl:Class ;
+                  
+                  rdfs:label "Мусор" ;
+                  
+                  rdfs:subClassOf cg:FunctionalObject .
+
+
+###  http://citygraph.onti.actcognitive.org/core#MillitaryEducation
+
+cg:MillitaryEducation rdf:type owl:Class ;
+                      
+                      rdfs:label "Военный учебный объект" ;
+                      
+                      rdfs:subClassOf cg:MilitaryObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Monument
+
+cg:Monument rdf:type owl:Class ;
+            
+            rdfs:label "Монумент" ;
+            
+            rdfs:subClassOf cg:Memorial .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Motorcycle
+
+cg:Motorcycle rdf:type owl:Class ;
+              
+              rdfs:label "Мотоцикл" ;
+              
+              rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MovableObject
+
+cg:MovableObject rdf:type owl:Class ;
+                 
+                 rdfs:label "Движимый объект" ;
+                 
+                 rdfs:subClassOf cg:PhysicalObject ;
+                 
+                 rdfs:comment "Объект, который не имеет фиксированного местоположения/прикрепления к земле (например, транспорт или движимая уличная техника). Имеет обязательные аттрибуты: modelName и licencePlate (исключением могут быть трактора и иная техника, используемая в поселках, оставлять пустую строку)." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Supermarket
+
+cg:Supermarket rdf:type owl:Class ;
+                        
+                        rdfs:label "Супермаркет" ;
+                        
+                        rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#MultifunctionalStore
+
+cg:MultifunctionalStore rdf:type owl:Class ;
+                        
+                        rdfs:label "Универсам" ;
+                        
+                        rdfs:subClassOf cg:RetailStore .
+
+
+###  http://citygraph.onti.actcognitive.org/core#MultyAptHouse
+
+cg:MultyAptHouse rdf:type owl:Class ;
+                 
+                 rdfs:label "Многоквартирный дом" ;
+                 
+                 rdfs:subClassOf cg:LivingObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MunAdministration
+
+cg:MunAdministration rdf:type owl:Class ;
+                     
+                     rdfs:label "Муниципальная администрация" ;
+                     
+                     rdfs:subClassOf cg:MunicipalGov .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MunDepSovet
+
+cg:MunDepSovet rdf:type owl:Class ;
+               
+               rdfs:label "Совет муниципальных депутатов" ;
+               
+               rdfs:subClassOf cg:MunicipalGov .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MunicipalGov
+
+cg:MunicipalGov rdf:type owl:Class ;
+                
+                rdfs:label "Муниципальный орган власти" ;
+                
+                rdfs:subClassOf cg:GovernmentBody .
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Museum
+
+cg:Museum rdf:type owl:Class ;
+          
+          rdfs:label "Музей" ;
+          
+          rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NII
+
+cg:NII rdf:type owl:Class ;
+       
+       rdfs:label "Научно-исследовательский институт" ;
+       
+       rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NationalPark
+
+cg:NationalPark rdf:type owl:Class ;
+                
+                rdfs:label "Национальный парк" ;
+                
+                rdfs:subClassOf cg:OOPT .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NatureMonument
+
+cg:NatureMonument rdf:type owl:Class ;
+                  
+                  rdfs:label "Природный памятник" ;
+                  
+                  rdfs:subClassOf cg:OOPT .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NatureObject
+
+cg:NatureObject rdf:type owl:Class ;
+                
+                rdfs:label "Природный объект" ;
+                
+                rdfs:subClassOf cg:FunctionalObject ;
+                
+                rdfs:comment "Объект живой природы (например, зелёное насаждение)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NaturePark
+
+cg:NaturePark rdf:type owl:Class ;
+              
+              rdfs:label "Природный парк" ;
+              
+              rdfs:subClassOf cg:OOPT .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NetBus
+
+cg:NetBus rdf:type owl:Class ;
+          
+          rdfs:label "Шина" ;
+          
+          rdfs:subClassOf cg:NetObject ;
+          
+          rdfs:comment "Концепт сетевой шины, в которую имеется какое-то количество входов и какое-то количество выходов (в том числе 1). Так в коммунальной системе так можно описать систему труб." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NetGroup
+
+cg:NetGroup rdf:type owl:Class ;
+            
+            rdfs:label "Группировка элементов" ;
+            
+            rdfs:subClassOf cg:NetObject ;
+            
+            rdfs:comment "Когда необходимо объединить большое количество элементов в одну систему. Например, участок цепи." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NetLayer
+
+cg:NetLayer rdf:type owl:Class ;
+            
+            rdfs:label "Слой" ;
+            
+            rdfs:subClassOf cg:NetObject ;
+            
+            rdfs:comment "Может группировать объекты имеющие общие свойства" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NetObject
+
+cg:NetObject rdf:type owl:Class ;
+             
+             rdfs:label "Сетевой объект" ;
+             
+             rdfs:subClassOf cg:PhysicalObject ;
+             
+             rdfs:comment "Объект, обозначаемый на карте линией или сетью линий (например, дорога или система водоснабжения)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Node
+
+cg:Node rdf:type owl:Class ;
+        
+        rdfs:label "Узел" ;
+        
+        rdfs:subClassOf cg:NetObject ;
+        
+        rdfs:comment "Пересечение двух линий. Например, в транспорте это перекресток" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NonProfitAssociation
+
+cg:NonProfitAssociation rdf:type owl:Class ;
+                        
+                        rdfs:label "Некоммерческая ассоциация" ;
+                        
+                        rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NonProfitFoundation
+
+cg:NonProfitFoundation rdf:type owl:Class ;
+                       
+                       rdfs:label "Некоммерческий фонд" ;
+                       
+                       rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NonProfitOrganization
+
+cg:NonProfitOrganization rdf:type owl:Class ;
+                         
+                         rdfs:label "Некоммерческая организация" ;
+                         
+                         rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NonProfitPartnership
+
+cg:NonProfitPartnership rdf:type owl:Class ;
+                        
+                        rdfs:label "Некоммерческое партнерство" ;
+                        
+                        rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#NursingHome
+
+cg:NursingHome rdf:type owl:Class ;
+               
+               rdfs:label "Дом престарелых" ;
+               
+               rdfs:subClassOf cg:PublicHome .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OKATO
+
+cg:OKATO rdf:type owl:Class ;
+         
+         rdfs:subClassOf cg:Reference .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OKTMO
+
+cg:OKTMO rdf:type owl:Class ;
+         
+         rdfs:subClassOf cg:Reference .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OOPT
+
+cg:OOPT rdf:type owl:Class ;
+        
+        rdfs:label "Особо охраняемая природная территория" ;
+        
+        rdfs:subClassOf cg:NatureObject .
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OlympicReserveSportSchool
+
+cg:OlympicReserveSportSchool rdf:type owl:Class ;
+                             
+                             rdfs:label "Спортивная детско-юношеская школа олимпийского резерва" ;
+                             
+                             rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OpenLot
+
+cg:OpenLot rdf:type owl:Class ;
+           
+           rdfs:label "Открытый лоток" ;
+           
+           rdfs:subClassOf cg:Covering .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OpenStairs
+
+cg:OpenStairs rdf:type owl:Class ;
+              
+              rdfs:label "Открытая лестница" ;
+              
+              rdfs:subClassOf cg:Relief .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Organization_IP
+
+cg:Organization_IP rdf:type owl:Class ;
+                   
+                   rdfs:label "ИП" ;
+                   
+                   rdfs:subClassOf cg:CommercialOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Organization_OAO
+
+cg:Organization_OAO rdf:type owl:Class ;
+                    
+                    rdfs:label "ОАО" ;
+                    
+                    rdfs:subClassOf cg:CommercialOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Organization_OOO
+
+cg:Organization_OOO rdf:type owl:Class ;
+                    
+                    rdfs:label "ООО" ;
+                    
+                    rdfs:subClassOf cg:CommercialOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Organization_ZAO
+
+cg:Organization_ZAO rdf:type owl:Class ;
+                    
+                    rdfs:label "ЗАО" ;
+                    
+                    rdfs:subClassOf cg:CommercialOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Orphanage
+
+cg:Orphanage rdf:type owl:Class ;
+             
+             rdfs:label "Детский дом" ;
+             
+             rdfs:subClassOf cg:PublicHome .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OtherPopulationGroups
+
+cg:OtherPopulationGroups rdf:type owl:Class ;
+                         
+                         rdfs:label "Дополнительная группа горожан" ;
+                         
+                         rdfs:subClassOf cg:SocialGroup .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OutletCenter
+
+cg:OutletCenter rdf:type owl:Class ;
+                
+                rdfs:label "Аутлет-центр" ;
+                
+                rdfs:subClassOf cg:RetailHub .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OutpatientClinic
+
+cg:OutpatientClinic rdf:type owl:Class ;
+                    
+                    rdfs:label "Поликлиника" ;
+                    
+                    rdfs:subClassOf cg:HelthFacility .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PT_Route
+
+cg:PT_Route rdf:type owl:Class ;
+            
+            rdfs:label "Route"@en ,
+                       "Маршрут общественного транспорта"@ru ;
+            
+            rdfs:subClassOf cg:Reference ;
+            
+            rdfs:comment "A gtfs:Route is a commercial route followed entirely or partly by gtfs:Trips."@en .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Pandus
+
+cg:Pandus rdf:type owl:Class ;
+          
+          rdfs:label "Пандус" ;
+          
+          rdfs:subClassOf cg:Relief .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Park
+
+cg:Park rdf:type owl:Class ;
+        
+        rdfs:label "Парк" ;
+        
+        rdfs:subClassOf cg:GreenObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Pedestrian
+
+cg:Pedestrian rdf:type owl:Class ;
+              
+              rdfs:label "Пешеходная зона" ;
+              
+              rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PetrolFillingStation
+
+cg:PetrolFillingStation rdf:type owl:Class ;
+                        
+                        rdfs:label "Бензозаправочная станция"@ru ;
+                        
+                        rdfs:subClassOf cg:FillingStation .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Pharmacy
+
+cg:Pharmacy rdf:type owl:Class ;
+            
+            rdfs:label "Аптека" ;
+            
+            rdfs:subClassOf cg:MedicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PhysicalObject
+
+cg:PhysicalObject rdf:type owl:Class ;
+                  
+                  rdfs:label "Физический объект" ;
+                  
+                  rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Playground
+
+cg:Playground rdf:type owl:Class ;
+              
+              rdfs:label "Детская площадка" ;
+              
+              rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Pocket
+
+cg:Pocket rdf:type owl:Class ;
+          
+          rdfs:label "Карман" ;
+          
+          rdfs:subClassOf cg:Covering ;
+          
+          rdfs:comment "Например остановочный, изгиб дороги" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PointObject
+
+cg:PointObject rdf:type owl:Class ;
+               
+               rdfs:label "Точечный объект" ;
+               
+               rdfs:subClassOf cg:PhysicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Pond
+
+cg:Pond rdf:type owl:Class ;
+        
+        rdfs:label "Пруд" ;
+        
+        rdfs:subClassOf cg:WaterObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Position
+
+cg:Position rdf:type owl:Class ;
+            
+            rdfs:label "Должность" ;
+            
+            rdfs:subClassOf cg:Reference .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PostBox
+
+cg:PostBox rdf:type owl:Class ;
+           
+           rdfs:label "Почтовый ящик" ;
+           
+           rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PostOffice
+
+cg:PostOffice rdf:type owl:Class ;
+              
+              rdfs:label "Почта" ;
+              
+              rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Preschool
+
+cg:Preschool rdf:type owl:Class ;
+             
+             rdfs:label "Детский сад" ;
+             
+             rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#President
+
+cg:President rdf:type owl:Class ;
+             
+             rdfs:label "Орган власти при Президенте РФ" ;
+             
+             rdfs:subClassOf cg:FederalGov .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PresidentAdministration
+
+cg:PresidentAdministration rdf:type owl:Class ;
+                           
+                           rdfs:label "Администрация Президента" ;
+                           
+                           rdfs:subClassOf cg:President .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PresidentHumanRightsSovet
+
+cg:PresidentHumanRightsSovet rdf:type owl:Class ;
+                             
+                             rdfs:label "Совет по правам человека при президенте" ;
+                             
+                             rdfs:subClassOf cg:President .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Procedure
+
+cg:Procedure rdf:type owl:Class ;
+             
+             rdfs:label "Процедура" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ProsecutorOffice
+
+cg:ProsecutorOffice rdf:type owl:Class ;
+                    
+                    rdfs:label "Прокуратура" ;
+                    
+                    rdfs:subClassOf cg:GovernmentAuthority .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicHeatingSystemObject
+
+cg:PublicHeatingSystemObject rdf:type owl:Class ;
+                             
+                             rdfs:label "Отопительная система" ;
+                             
+                             rdfs:subClassOf cg:PublicSystemObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicHome
+
+cg:PublicHome rdf:type owl:Class ;
+              
+              rdfs:label "Дом" ;
+              
+              rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicNotRegistered
+
+cg:PublicNotRegistered rdf:type owl:Class ;
+                       
+                       rdfs:label "Незарегистрированная общественная организация" ;
+                       
+                       rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicObject
+
+cg:PublicObject rdf:type owl:Class ;
+                
+                rdfs:label "Общественный объект" ;
+                
+                rdfs:subClassOf cg:SocialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicOrganization
+
+cg:PublicOrganization rdf:type owl:Class ;
+                      
+                      rdfs:label "Общественная организация" ;
+                      
+                      rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicPowerSystemObject
+
+cg:PublicPowerSystemObject rdf:type owl:Class ;
+                           
+                           rdfs:label "Электросетевая система" ;
+                           
+                           rdfs:subClassOf cg:PublicSystemObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicSewerageSystemObject
+
+cg:PublicSewerageSystemObject rdf:type owl:Class ;
+                              
+                              rdfs:label "Канализационная система" ;
+                              
+                              rdfs:subClassOf cg:PublicSystemObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicSign
+
+cg:PublicSign rdf:type owl:Class ;
+              
+              rdfs:label "Знак" ;
+              
+              rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicSystemObject
+
+cg:PublicSystemObject rdf:type owl:Class ;
+                      
+                      rdfs:label "Коммунальная система" ;
+                      
+                      rdfs:subClassOf cg:NetObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicVehicle
+
+cg:PublicVehicle rdf:type owl:Class ;
+                 
+                 rdfs:label "Пассажирское транспортное средство" ;
+                 
+                 rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicWaterSystemObject
+
+cg:PublicWaterSystemObject rdf:type owl:Class ;
+                           
+                           rdfs:label "Система водоснабжения" ;
+                           
+                           rdfs:subClassOf cg:PublicSystemObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RailwayStation
+
+cg:RailwayStation rdf:type owl:Class ;
+                  
+                  rdfs:label "Ж/д станция" ;
+                  
+                  rdfs:subClassOf cg:Terminal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RecommendationDoc
+
+cg:RecommendationDoc rdf:type owl:Class ;
+                     
+                     rdfs:label "Методические рекомендации" ;
+                     
+                     rdfs:subClassOf cg:Document .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Reference
+
+cg:Reference rdf:type owl:Class ;
+             
+             rdfs:label "Справочник" .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RegionalAdministartion
+
+cg:RegionalAdministartion rdf:type owl:Class ;
+                          
+                          rdfs:label "Администрация субъекта федерации" ;
+                          
+                          rdfs:subClassOf cg:RegionalGov .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RegionalGov
+
+cg:RegionalGov rdf:type owl:Class ;
+               
+               rdfs:label "Региональный орган власти" ;
+               
+               rdfs:subClassOf cg:GovernmentBody .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RegionalMinistry
+
+cg:RegionalMinistry rdf:type owl:Class ;
+                    
+                    rdfs:label "Региональный исполнительный орган власти" ;
+                    
+                    rdfs:subClassOf cg:RegionalGov .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RegionalParliament
+
+cg:RegionalParliament rdf:type owl:Class ;
+                      
+                      rdfs:label "Парламент субъекта федерации" ;
+                      
+                      rdfs:subClassOf cg:RegionalGov .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Relief
+
+cg:Relief rdf:type owl:Class ;
+          
+          rdfs:label "Рельеф" ;
+          
+          rdfs:subClassOf cg:Component .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ReligiousObject
+
+cg:ReligiousObject rdf:type owl:Class ;
+                   
+                   rdfs:label "Религиозный объект" ;
+                   
+                   rdfs:subClassOf cg:SocialObject .
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Reservoir
+
+cg:Reservoir rdf:type owl:Class ;
+             
+             rdfs:label "Резервуар" ;
+             
+             rdfs:subClassOf cg:WaterObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Restaurant
+
+cg:Restaurant rdf:type owl:Class ;
+              
+              rdfs:label "Ресторан" ;
+              
+              rdfs:subClassOf cg:Eatery .
+
+
+###  http://citygraph.onti.actcognitive.org/core#FastFood
+
+cg:FastFood rdf:type owl:Class ;
+              
+              rdfs:label "Фастфуд" ;
+              
+              rdfs:subClassOf cg:Eatery .
+
+
+###  http://citygraph.onti.actcognitive.org/core#RetailHub
+
+cg:RetailHub rdf:type owl:Class ;
+             
+             rdfs:label "Торговый центр" ;
+             
+             rdfs:subClassOf cg:CommercialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RetailStore
+
+cg:RetailStore rdf:type owl:Class ;
+               
+               rdfs:label "Магазин" ;
+               
+               rdfs:subClassOf cg:CommercialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RetainingWalls
+
+cg:RetainingWalls rdf:type owl:Class ;
+                  
+                  rdfs:label "Подпорная стена" ;
+                  
+                  rdfs:subClassOf cg:Relief .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#River
+
+cg:River rdf:type owl:Class ;
+         
+         rdfs:label "Река" ;
+         
+         rdfs:subClassOf cg:WaterObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RiverStation
+
+cg:RiverStation rdf:type owl:Class ;
+                
+                rdfs:label "Речной вокзал" ;
+                
+                rdfs:subClassOf cg:Terminal .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RoadNetworkObject
+
+cg:RoadNetworkObject rdf:type owl:Class ;
+                     
+                     rdfs:label "Дорожная сеть" ;
+                     
+                     rdfs:subClassOf cg:NetObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RoadSign
+
+cg:RoadSign rdf:type owl:Class ;
+            
+            rdfs:label "Дорожный знак" ;
+            
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#RowingClub
+
+cg:RowingClub rdf:type owl:Class ;
+              
+              rdfs:label "Гребной клуб" ;
+              
+              rdfs:subClassOf cg:SportsObject .
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#School
+
+cg:School rdf:type owl:Class ;
+          
+          rdfs:label "Школа" ;
+          
+          rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SecondarySchool
+
+cg:SecondarySchool rdf:type owl:Class ;
+                   
+                   rdfs:label "Училище" ;
+                   
+                   rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ServiceZone
+
+cg:ServiceZone rdf:type owl:Class ;
+               
+               rdfs:label "Сервисная зона" ;
+               
+               rdfs:subClassOf cg:Covering .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ShoppingEntertainmentCentre
+
+cg:ShoppingEntertainmentCentre rdf:type owl:Class ;
+                               
+                               rdfs:label "Торгово-развлекательный центр" ;
+                               
+                               rdfs:subClassOf cg:RetailHub .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ShoppingEntertainmentMall
+
+cg:ShoppingEntertainmentMall rdf:type owl:Class ;
+                             
+                             rdfs:label "Торгово-развлекательный комплекс" ;
+                             
+                             rdfs:subClassOf cg:RetailHub .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Sidewalk
+
+cg:Sidewalk rdf:type owl:Class ;
+            
+            rdfs:label "Тротуар" ;
+            
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TrafficArea> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Skalodrom
+
+cg:Skalodrom rdf:type owl:Class ;
+             
+             rdfs:label "Скалодром" ;
+             
+             rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Slope
+
+cg:Slope rdf:type owl:Class ;
+         
+         rdfs:label "Откос" ;
+         
+         rdfs:subClassOf cg:Relief .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SmallArchitecture
+
+cg:SmallArchitecture rdf:type owl:Class ;
+                     
+                     rdfs:label "МАФ" ;
+                     
+                     rdfs:subClassOf cg:AchitectureElement .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SmallCityGarden
+
+cg:SmallCityGarden rdf:type owl:Class ;
+                   
+                   rdfs:label "Городской сквер" ;
+                   
+                   rdfs:subClassOf cg:SmallGarden .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SmallGarden
+
+cg:SmallGarden rdf:type owl:Class ;
+               
+               rdfs:label "Сквер" ;
+               
+               rdfs:subClassOf cg:GreenObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SmallGardenInBlock
+
+cg:SmallGardenInBlock rdf:type owl:Class ;
+                      
+                      rdfs:label "Внутриквартальный сквер" ;
+                      
+                      rdfs:subClassOf cg:SmallGarden .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SocialGroup
+
+cg:SocialGroup rdf:type owl:Class ;
+               
+               rdfs:label "Социальная группа населения" ;
+               
+               rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Group> ;
+               
+               rdfs:isDefinedBy "https://docs.google.com/document/d/16ZIA3hXikwpipxL7rpNQGuY90LG7AHbMLhu54QeZuSw/edit" ;
+               
+               rdfs:comment "Описание социальных групп населения в базе данных в соответствии с документом \"Дем соц группы\" по ссылке" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SocialObject
+
+cg:SocialObject rdf:type owl:Class ;
+                
+                rdfs:label "Социальный объект" ;
+                
+                rdfs:subClassOf cg:FunctionalObject ;
+                
+                rdfs:comment "Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Space
+
+cg:Space rdf:type owl:Class ;
+         
+         rdfs:label "Пространство" ;
+         
+         rdfs:subClassOf cg:AreaObject ;
+         
+         rdfs:comment "Площадной объект, представляющий собой участок земли (без учёта построек на нём)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SportComplex
+
+cg:SportComplex rdf:type owl:Class ;
+                
+                rdfs:label "Спортивно-оздоровительный комплекс" ;
+                
+                rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Sportground
+
+cg:Sportground rdf:type owl:Class ;
+               
+               rdfs:label "Дворовая спортивная площадка" ;
+               
+               rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SportsClass
+
+cg:SportsClass rdf:type owl:Class ;
+               
+               rdfs:label "Спортивная секция" ;
+               
+               rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SportsObject
+
+cg:SportsObject rdf:type owl:Class ;
+                
+                rdfs:label "Спортивный объект" ;
+                
+                rdfs:subClassOf cg:SocialObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Square
+
+cg:Square rdf:type owl:Class ;
+          
+          rdfs:label "Площадь" ;
+          
+          rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Stadium
+
+cg:Stadium rdf:type owl:Class ;
+           
+           rdfs:label "Стадион" ;
+           
+           rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StateOrganization
+
+cg:StateOrganization rdf:type owl:Class ;
+                     
+                     rdfs:label "Бюджетное учреждение" ;
+                     
+                     rdfs:subClassOf cg:GovernmentAuthority .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StatementDoc
+
+cg:StatementDoc rdf:type owl:Class ;
+                
+                rdfs:label "Постановление" ;
+                
+                rdfs:subClassOf cg:Document .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Street
+
+cg:Street rdf:type owl:Class ;
+          
+          rdfs:label "Улица" ;
+          
+          rdfs:subClassOf cg:Address .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StreetClock
+
+cg:StreetClock rdf:type owl:Class ;
+               
+               rdfs:label "Часы" ;
+               
+               rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StreetFurniture
+
+cg:StreetFurniture rdf:type owl:Class ;
+                   
+                   rdfs:label "Уличная мебель" ;
+                   
+                   rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StreetLamp
+
+cg:StreetLamp rdf:type owl:Class ;
+              
+              rdfs:label "Уличная лампа" ;
+              
+              rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StreetTable
+
+cg:StreetTable rdf:type owl:Class ;
+               
+               rdfs:label "Стол" ;
+               
+               rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Surface
+
+cg:Surface rdf:type owl:Class ;
+           
+           rdfs:label "Поверхность" ;
+           
+           rdfs:subClassOf cg:AreaObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SwimmingPool
+
+cg:SwimmingPool rdf:type owl:Class ;
+                
+                rdfs:label "Бассейн" ;
+                
+                rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TSG
+
+cg:TSG rdf:type owl:Class ;
+       
+       rdfs:label "ТСЖ" ;
+       
+       rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TSN
+
+cg:TSN rdf:type owl:Class ;
+       
+       rdfs:label "ТСН" ;
+       
+       rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TallMultyApt
+
+cg:TallMultyApt rdf:type owl:Class ;
+                
+                rdfs:label "Высотное жилое строение" ;
+                
+                rdfs:subClassOf cg:LivingObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TemporalBuilding
+
+cg:TemporalBuilding rdf:type owl:Class ;
+                    
+                    rdfs:label "Временное сооружение" ;
+                    
+                    rdfs:subClassOf cg:Building .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TennisClub
+
+cg:TennisClub rdf:type owl:Class ;
+              
+              rdfs:label "Теннисный клуб" ;
+              
+              rdfs:subClassOf cg:SportsObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Terminal
+
+cg:Terminal rdf:type owl:Class ;
+            
+            rdfs:label "Вокзал" ;
+            
+            rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Territory
+
+cg:Territory rdf:type owl:Class ;
+             
+             rdfs:label "Территория" ;
+             
+             rdfs:subClassOf cg:Space .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Theatre
+
+cg:Theatre rdf:type owl:Class ;
+           
+           rdfs:label "Театр" ;
+           
+           rdfs:subClassOf cg:CulturalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Timetable
+
+cg:Timetable rdf:type owl:Class ;
+             
+             rdfs:label "Расписание" ;
+             
+             rdfs:subClassOf cg:Reference .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TouristPopulation
+
+cg:TouristPopulation rdf:type owl:Class ;
+                     
+                     rdfs:label "Группа туристов" ;
+                     
+                     rdfs:subClassOf cg:SocialGroup .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Townhouse
+
+cg:Townhouse rdf:type owl:Class ;
+             
+             rdfs:label "Таунхаус" ;
+             
+             rdfs:subClassOf cg:LivingObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Tractor
+
+cg:Tractor rdf:type owl:Class ;
+           
+           rdfs:label "Трактор" ;
+           
+           rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TrafficLight
+
+cg:TrafficLight rdf:type owl:Class ;
+                
+                rdfs:label "Светофор"@ru ;
+                
+                rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea> .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Tram
+
+cg:Tram rdf:type owl:Class ;
+        
+        rdfs:label "Трамвай" ;
+        
+        rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TrashBin
+
+cg:TrashBin rdf:type owl:Class ;
+            
+            rdfs:label "Урна" ;
+            
+            rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TraumaCenter
+
+cg:TraumaCenter rdf:type owl:Class ;
+                
+                rdfs:label "Травмпункт" ;
+                
+                rdfs:subClassOf cg:HelthFacility .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Tree
+
+cg:Tree rdf:type owl:Class ;
+        
+        rdfs:label "Дерево" ;
+        
+        rdfs:subClassOf cg:Green .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TrolleyBus
+
+cg:TrolleyBus rdf:type owl:Class ;
+              
+              rdfs:label "Троллейбус" ;
+              
+              rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TruckVehicle
+
+cg:TruckVehicle rdf:type owl:Class ;
+                
+                rdfs:label "Грузовой автомобиль" ;
+                
+                rdfs:subClassOf cg:MovableObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#UK
+
+cg:UK rdf:type owl:Class ;
+      
+      rdfs:label "УК" ;
+      
+      rdfs:subClassOf cg:NonProfitOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#UnauthorisedAction
+
+cg:UnauthorisedAction rdf:type owl:Class ;
+                      
+                      rdfs:label "Самовольное действие" ;
+                      
+                      rdfs:subClassOf cg:Action ;
+                      
+                      rdfs:comment "Например, самовольно построенное здание" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#UnderWorkingAgePopulation
+
+cg:UnderWorkingAgePopulation rdf:type owl:Class ;
+                             
+                             rdfs:label "Население моложе трудоспособного возраста" ;
+                             
+                             rdfs:subClassOf cg:SocialGroup .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#University
+
+cg:University rdf:type owl:Class ;
+              
+              rdfs:label "Университет" ;
+              
+              rdfs:subClassOf cg:EducationalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#University_Organization
+
+cg:University_Organization rdf:type owl:Class ;
+                           
+                           rdfs:label "Администрация Университета" ;
+                           
+                           rdfs:subClassOf cg:StateOrganization .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#UpwardWorkingAgePopulation
+
+cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
+                              
+                              rdfs:label "Население старше трудоспособного возраста" ;
+                              
+                              rdfs:subClassOf cg:SocialGroup .
+
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#VerticalGreen
+
+cg:VerticalGreen rdf:type owl:Class ;
+                 
+                 rdfs:label "Вертикальное озеленение" ;
+                 
+                 rdfs:subClassOf cg:StreetFurniture .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#VeterinaryHospital
+
+cg:VeterinaryHospital rdf:type owl:Class ;
+                      
+                      rdfs:label "Ветеринарная клиника" ;
+                      
+                      rdfs:subClassOf cg:MedicalObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#VideoCamera
+
+cg:VideoCamera rdf:type owl:Class ;
+               
+               rdfs:label "Видеокамера" ;
+               
+               rdfs:subClassOf cg:StreetFurniture .
+
+
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#WaterObject
+
+cg:WaterObject rdf:type owl:Class ;
+               
+               rdfs:label "Водный объект" ;
+               
+               rdfs:subClassOf cg:NatureObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#WorkType
+
+cg:WorkType rdf:type owl:Class ;
+            
+            rdfs:label "Работы капитального ремонта" ;
+            
+            rdfs:subClassOf cg:Action ;
+            
+            rdfs:comment "Список работ, проведённых при капитальном ремонте. Раньше назывался Вид работ" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#WorkingAgePopulation
+
+cg:WorkingAgePopulation rdf:type owl:Class ;
+                        
+                        rdfs:label "Население трудоспособного возраста" ;
+                        
+                        rdfs:subClassOf cg:SocialGroup .
+
+
+
+###  http://xmlns.com/foaf/spec/#term_Agent
+
+<http://xmlns.com/foaf/spec/#term_Agent> rdf:type owl:Class ;
+                                         
+                                         rdfs:label "Агент" ;
+                                         
+                                         rdfs:isDefinedBy "" ;
+                                         
+                                         rdfs:comment "Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией." .
+
+
+
+###  http://xmlns.com/foaf/spec/#term_Group
+
+<http://xmlns.com/foaf/spec/#term_Group> rdf:type owl:Class ;
+                                         
+                                         rdfs:label "Группа" ;
+                                         
+                                         rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                         
+                                         rdfs:comment "The Group class represents a collection of individual agents (and may itself play the role of a Agent, ie. something that can perform actions)." .
+
+
+
+###  http://xmlns.com/foaf/spec/#term_Organization
+
+<http://xmlns.com/foaf/spec/#term_Organization> rdf:type owl:Class ;
+                                                
+                                                rdfs:label "Организация" ;
+                                                
+                                                rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                                
+                                                rdfs:comment "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc." .
+
+
+
+###  http://xmlns.com/foaf/spec/#term_Person
+
+<http://xmlns.com/foaf/spec/#term_Person> rdf:type owl:Class ;
+                                          
+                                          rdfs:label "Человек" ;
+                                          
+                                          rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                          
+                                          rdfs:comment "The Person class represents people." .
+
+
+
+###  https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_motorway
+
+<https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_motorway> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:label "Motorway"@en ,
+                                                                                                "Автомобильная"@ru ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/Road> .
+
+
+
+###  https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_pedestrian
+
+<https://raw.github.com/doroam/planning-do-roam/master/Ontology/tags.owl#v_pedestrian> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:label "Pedestrian"@en ,
+                                                                                                  "Пешеходная"@ru ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/Road> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://citygraph.onti.actcognitive.org/core#Bicyclers
+
+cg:Bicyclers rdf:type owl:NamedIndividual ,
+                      cg:OtherPopulationGroups ;
+             
+             rdfs:label "Велосипедисты" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#BusinessTourist
+
+cg:BusinessTourist rdf:type owl:NamedIndividual ,
+                            cg:TouristPopulation ;
+                   
+                   rdfs:label "Приезжие по рабочим вопросам" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CarOwner
+
+cg:CarOwner rdf:type owl:NamedIndividual ,
+                     cg:OtherPopulationGroups ;
+            
+            rdfs:label "Автовладельцы" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithEarlyChildhood
+
+cg:CitizensWithEarlyChildhood rdf:type owl:NamedIndividual ,
+                                       cg:WorkingAgePopulation ;
+                              
+                              rdfs:label "Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithInfant
+
+cg:CitizensWithInfant rdf:type owl:NamedIndividual ,
+                               cg:WorkingAgePopulation ;
+                      
+                      rdfs:label "Горожане с младенцами (от 0 до 1 года)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithPreschooler
+
+cg:CitizensWithPreschooler rdf:type owl:NamedIndividual ,
+                                    cg:WorkingAgePopulation ;
+                           
+                           rdfs:label "Горожане с детьми дошкольного возраста (от 3 до 7 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#CitizensWithPrimarySchoolAge
+
+cg:CitizensWithPrimarySchoolAge rdf:type owl:NamedIndividual ,
+                                         cg:WorkingAgePopulation ;
+                                
+                                rdfs:label "Горожане с детьми младшего школьного возраста (от 7 до 11 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Director
+
+cg:Director rdf:type owl:NamedIndividual ,
+                     cg:Position ;
+            
+            rdfs:label "Директор" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#DisabledMovement
+
+cg:DisabledMovement rdf:type owl:NamedIndividual ,
+                             cg:DisabledPopulation ;
+                    
+                    rdfs:label "Лица с ограниченными возможностями передвижения" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#DisabledSight
+
+cg:DisabledSight rdf:type owl:NamedIndividual ,
+                          cg:DisabledPopulation ;
+                 
+                 rdfs:label "Лица с инвалидностью по зрению" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#EarlyChildhood
+
+cg:EarlyChildhood rdf:type owl:NamedIndividual ,
+                           cg:UnderWorkingAgePopulation ;
+                  
+                  rdfs:label "Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#ElderlyWorkingCitizens
+
+cg:ElderlyWorkingCitizens rdf:type owl:NamedIndividual ,
+                                   cg:WorkingAgePopulation ;
+                          
+                          rdfs:label "Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#EventTourist
+
+cg:EventTourist rdf:type owl:NamedIndividual ,
+                         cg:TouristPopulation ;
+                
+                rdfs:label "Приезжие к мероприятиям" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#HealthyLifestyleCitizens
+
+cg:HealthyLifestyleCitizens rdf:type owl:NamedIndividual ,
+                                     cg:OtherPopulationGroups ;
+                            
+                            rdfs:label "Горожане, ведущие здоровый образ жизни" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Infant
+
+cg:Infant rdf:type owl:NamedIndividual ,
+                   cg:UnderWorkingAgePopulation ;
+          
+          rdfs:label "Младенцы (от 0 до 1 года)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#IntraBench
+
+cg:IntraBench rdf:type owl:NamedIndividual ,
+                       cg:Bench ;
+              
+              rdfs:label "Встроенная скамья" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MiddleAgeWorkingCitizens
+
+cg:MiddleAgeWorkingCitizens rdf:type owl:NamedIndividual ,
+                                     cg:WorkingAgePopulation ;
+                            
+                            rdfs:label "Работающие горожане среднего возраста (от 31 до 40 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MigrantWorker
+
+cg:MigrantWorker rdf:type owl:NamedIndividual ,
+                          cg:OtherPopulationGroups ;
+                 
+                 rdfs:label "Трудовые мигранты" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#MovableBench
+
+cg:MovableBench rdf:type owl:NamedIndividual ,
+                         cg:Bench ;
+                
+                rdfs:label "Переносная скамья" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#OlderRetiree
+
+cg:OlderRetiree rdf:type owl:NamedIndividual ,
+                         cg:UpwardWorkingAgePopulation ;
+                
+                rdfs:label "Пенсионеры старших возрастов (старше 75 лет" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PetOwner
+
+cg:PetOwner rdf:type owl:NamedIndividual ,
+                     cg:OtherPopulationGroups ;
+            
+            rdfs:label "Владельцы домашних животных" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Pregnant
+
+cg:Pregnant rdf:type owl:NamedIndividual ,
+                     cg:WorkingAgePopulation ;
+            
+            rdfs:label "Беременные женщины" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Preschooler
+
+cg:Preschooler rdf:type owl:NamedIndividual ,
+                        cg:UnderWorkingAgePopulation ;
+               
+               rdfs:label "Дети дошкольного возраста (от 3 до 7 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PrimarySchoolAge
+
+cg:PrimarySchoolAge rdf:type owl:NamedIndividual ,
+                             cg:UnderWorkingAgePopulation ;
+                    
+                    rdfs:label "Дети младшего школьного возраста (от 7 до 11 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#PublicTransportUser
+
+cg:PublicTransportUser rdf:type owl:NamedIndividual ,
+                                cg:OtherPopulationGroups ;
+                       
+                       rdfs:label "Пользователи общественного транспорта" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Religious
+
+cg:Religious rdf:type owl:NamedIndividual ,
+                      cg:OtherPopulationGroups ;
+             
+             rdfs:label "Верующие" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SelfEmployedCitizens
+
+cg:SelfEmployedCitizens rdf:type owl:NamedIndividual ,
+                                 cg:WorkingAgePopulation ;
+                        
+                        rdfs:label "Самозанятые горожане" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#SeniorWorkingCitizens
+
+cg:SeniorWorkingCitizens rdf:type owl:NamedIndividual ,
+                                  cg:WorkingAgePopulation ;
+                         
+                         rdfs:label "Работающие горожане старшего возраста (от 41 до 60 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#StaticBench
+
+cg:StaticBench rdf:type owl:NamedIndividual ,
+                        cg:Bench ;
+               
+               rdfs:label "Стационарная скамья" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Student
+
+cg:Student rdf:type owl:NamedIndividual ,
+                    cg:WorkingAgePopulation ;
+           
+           rdfs:label "Студенты и учащиеся" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Teenager
+
+cg:Teenager rdf:type owl:NamedIndividual ,
+                     cg:UnderWorkingAgePopulation ;
+            
+            rdfs:label "Подростки старшего возраста (от 15 до 18 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TemporarilyStayingCitizens
+
+cg:TemporarilyStayingCitizens rdf:type owl:NamedIndividual ,
+                                       cg:WorkingAgePopulation ;
+                              
+                              rdfs:label "Горожане, временно пребывающие в городе" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#TouristInGroup
+
+cg:TouristInGroup rdf:type owl:NamedIndividual ,
+                           cg:TouristPopulation ;
+                  
+                  rdfs:label "Туристы в составе организованных групп" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Tween
+
+cg:Tween rdf:type owl:NamedIndividual ,
+                  cg:UnderWorkingAgePopulation ;
+         
+         rdfs:label "Подростки младшего возраста (от 12 до 15 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#UncoordinatedTourist
+
+cg:UncoordinatedTourist rdf:type owl:NamedIndividual ,
+                                 cg:TouristPopulation ;
+                        
+                        rdfs:label "Неорганизованные туристы" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#WasteSortingCitizens
+
+cg:WasteSortingCitizens rdf:type owl:NamedIndividual ,
+                                 cg:OtherPopulationGroups ;
+                        
+                        rdfs:label "Горожане, ведущие раздельный сбор мусора" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#YoungRetiree
+
+cg:YoungRetiree rdf:type owl:NamedIndividual ,
+                         cg:UpwardWorkingAgePopulation ;
+                
+                rdfs:label "Молодые пенсионеры (65 - 75 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#YoungWorkingCitizens
+
+cg:YoungWorkingCitizens rdf:type owl:NamedIndividual ,
+                                 cg:WorkingAgePopulation ;
+                        
+                        rdfs:label "Молодые работающие горожане (до 30 лет)" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Скамья_12345
+
+cg:Скамья_12345 rdf:type owl:NamedIndividual ,
+                         cg:Bench ;
+                
+                cg:hasSeatsAmount 5 ;
+                
+                cg:hasBack "false"^^xsd:boolean ;
+                
+                cg:hasCharge "true"^^xsd:boolean ;
+                
+                cg:hasFunction cg:StaticBench ;
+                
+                cg:hasCoordinates cg:Скамья_координаты .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Скамья_координаты
+
+cg:Скамья_координаты rdf:type owl:NamedIndividual ,
+                              cg:Geometry .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
