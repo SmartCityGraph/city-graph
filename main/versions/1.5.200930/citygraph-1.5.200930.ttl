@@ -3961,13 +3961,7 @@ cg:MilitaryObject rdf:type owl:Class ;
                   
                   rdfs:subClassOf cg:FunctionalObject .
 
-###  http://citygraph.onti.actcognitive.org/core#RubbishObject
 
-cg:RubbishObject rdf:type owl:Class ;
-                  
-                  rdfs:label "Мусор" ;
-                  
-                  rdfs:subClassOf cg:FunctionalObject .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#MillitaryEducation
