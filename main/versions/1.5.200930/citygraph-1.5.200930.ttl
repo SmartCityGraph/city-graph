@@ -2382,10 +2382,45 @@ cg:AdministrativeBuilding rdf:type owl:Class ;
                           rdfs:subClassOf cg:PublicObject .
 
 
+###  http://citygraph.onti.actcognitive.org/core#PensionFund
 
+cg:PensionFund rdf:type owl:Class ;
+             
+             rdfs:label "Пенсионный фонд" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .
 
+###  http://citygraph.onti.actcognitive.org/core#MigrationService
 
+cg:Migration rdf:type owl:Class ;
+             
+             rdfs:label "Миграционная служба" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .
 
+###  http://citygraph.onti.actcognitive.org/core#PassportService
+
+cg:PassportService rdf:type owl:Class ;
+             
+             rdfs:label "Паспортный стол" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .
+
+###  http://citygraph.onti.actcognitive.org/core#MultiFunctionalCentre
+
+cg:MultiFunctionalCentre rdf:type owl:Class ;
+             
+             rdfs:label "Многофункциональный сервис (МФЦ)" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .            
+
+###  http://citygraph.onti.actcognitive.org/core#SocialSupportService
+
+cg:SocialSupportService rdf:type owl:Class ;
+             
+             rdfs:label "Центр социальной помощи" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .    
 
 ###  http://citygraph.onti.actcognitive.org/core#AdvertisingDesk
 
@@ -2558,7 +2593,13 @@ cg:Bathhouse rdf:type owl:Class ;
              
              rdfs:subClassOf cg:PublicObject .
 
+###  http://citygraph.onti.actcognitive.org/core#Bank
 
+cg:Bank rdf:type owl:Class ;
+             
+             rdfs:label "Банк" ;
+             
+             rdfs:subClassOf cg:PublicObject .
 
 ###  http://citygraph.onti.actcognitive.org/core#Bench
 
@@ -2652,7 +2693,13 @@ cg:Bowling rdf:type owl:Class ;
            
            rdfs:subClassOf cg:CulturalObject .
 
+###  http://citygraph.onti.actcognitive.org/core#Bookmaker
 
+cg:Bookmaker rdf:type owl:Class ;
+           
+           rdfs:label "Букмекерская контора" ;
+           
+           rdfs:subClassOf cg:CulturalObject .
 
 ###  http://citygraph.onti.actcognitive.org/core#Bridge
 
@@ -2930,7 +2977,78 @@ cg:CommercialObject rdf:type owl:Class ;
                     
                     rdfs:subClassOf cg:SocialObject .
 
+###  http://citygraph.onti.actcognitive.org/core#Service
 
+cg:Service rdf:type owl:Class ;
+                    
+                    rdfs:label "Услуги" ;
+                    
+                    rdfs:subClassOf cg:CommercialObject .
+
+###  http://citygraph.onti.actcognitive.org/core#KeyService
+
+cg:KeyService rdf:type owl:Class ;
+                    
+                    rdfs:label "Ремонт и ихготовление ключей" ;
+                    
+                    rdfs:subClassOf cg:Service .          
+
+
+###  http://citygraph.onti.actcognitive.org/core#DeliveryService
+
+cg:DeliveryService rdf:type owl:Class ;
+                    
+                    rdfs:label "Отделение курьерской службы" ;
+                    
+                    rdfs:subClassOf cg:Service .   
+
+###  http://citygraph.onti.actcognitive.org/core#Pawnshop
+
+cg:Pawnshop rdf:type owl:Class ;
+                    
+                    rdfs:label "Ломбард" ;
+                    
+                    rdfs:subClassOf cg:Service .     
+
+###  http://citygraph.onti.actcognitive.org/core#ClothingService
+
+cg:ClothingService rdf:type owl:Class ;
+                    
+                    rdfs:label "Ремонт одежды и обуви" ;
+                    
+                    rdfs:subClassOf cg:Service .          
+
+###  http://citygraph.onti.actcognitive.org/core#PhotoService
+
+cg:PhotoService rdf:type owl:Class ;
+                    
+                    rdfs:label "Фотоуслуги" ;
+                    
+                    rdfs:subClassOf cg:Service .     
+
+###  http://citygraph.onti.actcognitive.org/core#ClockService
+
+cg:ClockService rdf:type owl:Class ;
+                    
+                    rdfs:label "Ремонт часов" ;
+                    
+                    rdfs:subClassOf cg:Service .                      
+
+###  http://citygraph.onti.actcognitive.org/core#FuneralService
+
+cg:FuneralService rdf:type owl:Class ;
+                    
+                    rdfs:label "Похоронные услуги" ;
+                    
+                    rdfs:subClassOf cg:Service .      
+
+###  http://citygraph.onti.actcognitive.org/core#JewelerService
+
+cg:JewelerService rdf:type owl:Class ;
+                    
+                    rdfs:label "Ювелирные услуги" ;
+                    
+                    rdfs:subClassOf cg:Service . 
 
 ###  http://citygraph.onti.actcognitive.org/core#CommercialOrganization
 
@@ -3141,7 +3259,13 @@ cg:Fabric rdf:type owl:Class ;
           
           rdfs:subClassOf cg:IndustrialObject .
 
+###  http://citygraph.onti.actcognitive.org/core#RubbishFabric
 
+cg:RubbishFabric rdf:type owl:Class ;
+          
+          rdfs:label "Мусоро-перерабатывающий завод" ;
+          
+          rdfs:subClassOf cg:Fabric .
 
 ###  http://citygraph.onti.actcognitive.org/core#FederalAgency
 
@@ -3222,10 +3346,27 @@ cg:FireStation rdf:type owl:Class ;
 
 cg:PoliceStation rdf:type owl:Class ;
                     
-                    rdfs:label "Полицейский участок" ;
+                    rdfs:label "Полицейское отделение" ;
                     
                     rdfs:subClassOf cg:PublicObject .
 
+###  http://citygraph.onti.actcognitive.org/core#Prison
+
+cg:Prison rdf:type owl:Class ;
+                    
+                    rdfs:label "Тюрьма" ;
+                    
+                    rdfs:subClassOf cg:PublicObject .
+
+
+
+###  http://citygraph.onti.actcognitive.org/core#Court
+
+cg:Court rdf:type owl:Class ;
+                    
+                    rdfs:label "Суд" ;
+                    
+                    rdfs:subClassOf cg:PublicObject .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Flowerbed
@@ -3428,7 +3569,21 @@ cg:GreenRoof rdf:type owl:Class ;
              rdfs:subClassOf cg:GreenObject ,
                              cg:Surface .
 
+###  http://citygraph.onti.actcognitive.org/core#RecreationZone
 
+cg:RecreationZone rdf:type owl:Class ;
+             
+             rdfs:label "Рекреационная зона" ;
+             
+             rdfs:subClassOf cg:GreenObject .
+
+###  http://citygraph.onti.actcognitive.org/core#Beach
+
+cg:Beach rdf:type owl:Class ;
+             
+             rdfs:label "Пляж" ;
+             
+             rdfs:subClassOf cg:GreenObject .
 
 ###  http://citygraph.onti.actcognitive.org/core#GroceryStore
 
@@ -5212,7 +5367,13 @@ cg:SwimmingPool rdf:type owl:Class ;
                 
                 rdfs:subClassOf cg:SportsObject .
 
+###  http://citygraph.onti.actcognitive.org/core#Fitness
 
+cg:Fitness rdf:type owl:Class ;
+                
+                rdfs:label "Фитнес клуб" ;
+                
+                rdfs:subClassOf cg:SportsObject .
 
 ###  http://citygraph.onti.actcognitive.org/core#TSG
 
@@ -5292,7 +5453,13 @@ cg:Theatre rdf:type owl:Class ;
            
            rdfs:subClassOf cg:CulturalObject .
 
+###  http://citygraph.onti.actcognitive.org/core#Zoo
 
+cg:Zoo rdf:type owl:Class ;
+           
+           rdfs:label "Зоопарк" ;
+           
+           rdfs:subClassOf cg:CulturalObject .
 
 ###  http://citygraph.onti.actcognitive.org/core#Timetable
 
