@@ -5181,6 +5181,13 @@ cg:School rdf:type owl:Class ;
           
           rdfs:subClassOf cg:EducationalObject .
 
+###  http://citygraph.onti.actcognitive.org/core#AutoSchool
+
+cg:AutoSchool rdf:type owl:Class ;
+          
+          rdfs:label "Автошкола" ;
+          
+          rdfs:subClassOf cg:EducationalObject .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#SecondarySchool
