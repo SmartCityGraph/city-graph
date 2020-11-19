@@ -2343,7 +2343,21 @@ cg:AchitectureElement rdf:type owl:Class ;
                       
                       rdfs:subClassOf cg:PointObject .
 
+###  http://citygraph.onti.actcognitive.org/core#CarParking
 
+cg:CarParking rdf:type owl:Class ;
+                      
+                      rdfs:label "Автостоянка" ;
+                      
+                      rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> .
+
+###  http://citygraph.onti.actcognitive.org/core#ATM
+
+cg:ATM rdf:type owl:Class ;
+                      
+                      rdfs:label "Банкомат" ;
+                      
+                      rdfs:subClassOf cg:PointObject .
 
 ###  http://citygraph.onti.actcognitive.org/core#ActDoc
 
@@ -2387,6 +2401,30 @@ cg:AdministrativeBuilding rdf:type owl:Class ;
 cg:PensionFund rdf:type owl:Class ;
              
              rdfs:label "Пенсионный фонд" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .
+
+###  http://citygraph.onti.actcognitive.org/core#VisaCentre
+
+cg:VisaCentre rdf:type owl:Class ;
+             
+             rdfs:label "Визовый центр" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .
+
+###  http://citygraph.onti.actcognitive.org/core#Embassy
+
+cg:Embassy rdf:type owl:Class ;
+             
+             rdfs:label "Посольство" ;
+             
+             rdfs:subClassOf cg:AdministrativeBuilding .
+
+###  http://citygraph.onti.actcognitive.org/core#Consulate
+
+cg:Consulate rdf:type owl:Class ;
+             
+             rdfs:label "Консульство" ;
              
              rdfs:subClassOf cg:AdministrativeBuilding .
 
@@ -2981,7 +3019,7 @@ cg:CommercialObject rdf:type owl:Class ;
 
 cg:Service rdf:type owl:Class ;
                     
-                    rdfs:label "Услуги" ;
+                    rdfs:label "Мастерская" ;
                     
                     rdfs:subClassOf cg:CommercialObject .
 
@@ -2989,10 +3027,35 @@ cg:Service rdf:type owl:Class ;
 
 cg:KeyService rdf:type owl:Class ;
                     
-                    rdfs:label "Ремонт и ихготовление ключей" ;
+                    rdfs:label "Ремонт и изготовление ключей" ;
                     
                     rdfs:subClassOf cg:Service .          
 
+###  http://citygraph.onti.actcognitive.org/core#HairDresser
+
+cg:HairDresser rdf:type owl:Class ;
+                    
+                    rdfs:label "Парикмахерская" ;
+                    
+                    rdfs:subClassOf cg:PublicObject .  
+
+
+###  http://citygraph.onti.actcognitive.org/core#AutoRepair
+
+cg:AutoRepair rdf:type owl:Class ;
+                    
+                    rdfs:label "Автосервис" ;
+                    
+                    rdfs:subClassOf cg:SocialObject .  
+
+
+###  http://citygraph.onti.actcognitive.org/core#SPA
+
+cg:SPA rdf:type owl:Class ;
+                    
+                    rdfs:label "Спа" ;
+                    
+                    rdfs:subClassOf cg:PublicObject .  
 
 ###  http://citygraph.onti.actcognitive.org/core#DeliveryService
 
@@ -3266,6 +3329,33 @@ cg:RubbishFabric rdf:type owl:Class ;
           rdfs:label "Мусоро-перерабатывающий завод" ;
           
           rdfs:subClassOf cg:Fabric .
+
+
+###  http://citygraph.onti.actcognitive.org/core#RubbishObject
+
+cg:RubbishObject rdf:type owl:Class ;
+          
+          rdfs:label "Мусорный объект" ;
+          
+          rdfs:subClassOf cg:IndustrialObject .
+
+###  http://citygraph.onti.actcognitive.org/core#landfill
+
+cg:Landfill rdf:type owl:Class ;
+          
+          rdfs:label "Мусорный полигон" ;
+          
+          rdfs:subClassOf cg:RubbishObject .
+
+
+###  http://citygraph.onti.actcognitive.org/core#SortingPoint
+
+cg:SortingPoint rdf:type owl:Class ;
+          
+          rdfs:label "Точки раздельного сбора мусора" ;
+          
+          rdfs:subClassOf cg:RubbishObject .
+
 
 ###  http://citygraph.onti.actcognitive.org/core#FederalAgency
 
@@ -4086,6 +4176,14 @@ cg:Memorial rdf:type owl:Class ;
             
             rdfs:subClassOf cg:CulturalObject .
 
+###  http://citygraph.onti.actcognitive.org/core#ViewPoint
+
+cg:ViewPoint rdf:type owl:Class ;
+            
+            rdfs:label "Смотровая площадка" ;
+            
+            rdfs:subClassOf cg:CulturalObject .
+
 
 
 ###  http://citygraph.onti.actcognitive.org/core#MemorialPlaque
@@ -4582,7 +4680,21 @@ cg:Pedestrian rdf:type owl:Class ;
               
               rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationComplex> .
 
+###  http://citygraph.onti.actcognitive.org/core#PedestrianTrails
 
+cg:PedestrianTrails rdf:type owl:Class ;
+              
+              rdfs:label "Пешеходные дорожки" ;
+              
+              rdfs:subClassOf cg:Pedestrian .
+
+###  http://citygraph.onti.actcognitive.org/core#Backyard
+
+cg:Backyard rdf:type owl:Class ;
+              
+              rdfs:label "Двор" ;
+              
+              rdfs:subClassOf cg:Pedestrian .
 
 ###  http://citygraph.onti.actcognitive.org/core#PetrolFillingStation
 
