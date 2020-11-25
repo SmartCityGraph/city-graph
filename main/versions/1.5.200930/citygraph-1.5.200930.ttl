@@ -56,14 +56,6 @@ cg:hasBuidlingSeries rdf:type owl:ObjectProperty ;
                      rdfs:label "имеет серию здания" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#hasManagedOrganisation
-cg:hasManagedOrganisation rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:domain cg:Organization ;
-                     rdfs:range cg:Organization;
-                     rdfs:label "имеет организацию-родитель" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#hasBuildingSpecificProperties
 cg:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
                                  rdfs:comment "Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения" ;
@@ -136,6 +128,13 @@ cg:hasMajorRenovation rdf:type owl:ObjectProperty ;
                       rdfs:domain cg:Building ;
                       rdfs:range cg:MajorRenovation ;
                       rdfs:label "имеет капитальный ремонт" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#hasManagedOrganisation
+cg:hasManagedOrganisation rdf:type owl:ObjectProperty ;
+                          rdfs:domain cg:Organization ;
+                          rdfs:range cg:Organization ;
+                          rdfs:label "имеет организацию-родитель" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#hasManagingOrganization
@@ -2741,6 +2740,10 @@ cg:Optics rdf:type owl:Class ;
           rdfs:label "Оптика" .
 
 
+###  http://citygraph.onti.actcognitive.org/core#Organization
+cg:Organization rdf:type owl:Class .
+
+
 ###  http://citygraph.onti.actcognitive.org/core#Organization_IP
 cg:Organization_IP rdf:type owl:Class ;
                    rdfs:subClassOf cg:CommercialOrganization ;
@@ -3475,7 +3478,7 @@ cg:TennisClub rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Terminal
 cg:Terminal rdf:type owl:Class ;
-            rdfs:subClassOf cg:PublicObject ;
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
             rdfs:label "Вокзал" .
 
 
