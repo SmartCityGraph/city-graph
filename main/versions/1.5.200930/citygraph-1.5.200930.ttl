@@ -1841,6 +1841,12 @@ cg:CommercialOrganization rdf:type owl:Class ;
                           rdfs:label "Коммерческая организация" .
 
 
+###  http://citygraph.onti.actcognitive.org/core#Commitet
+cg:Commitet rdf:type owl:Class ;
+            rdfs:subClassOf cg:ExececutiveBoby ;
+            rdfs:label "Комитет" .
+
+
 ###  http://citygraph.onti.actcognitive.org/core#Committee
 cg:Committee rdf:type owl:Class ;
              rdfs:subClassOf cg:RegionalAdministartion ;
@@ -1941,6 +1947,12 @@ cg:DisabledPopulation rdf:type owl:Class ;
 cg:Dispensary rdf:type owl:Class ;
               rdfs:subClassOf cg:HelthFacility ;
               rdfs:label "Диспансер" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#DistrictAdministration
+cg:DistrictAdministration rdf:type owl:Class ;
+                          rdfs:subClassOf cg:ExececutiveBoby ;
+                          rdfs:label "Администрация района" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Document
@@ -2477,6 +2489,12 @@ cg:MajorRenovation rdf:type owl:Class ;
                    rdfs:label "Капитальный ремонт" .
 
 
+###  http://citygraph.onti.actcognitive.org/core#Managment
+cg:Managment rdf:type owl:Class ;
+             rdfs:subClassOf cg:ExececutiveBoby ;
+             rdfs:label "Управление" .
+
+
 ###  http://citygraph.onti.actcognitive.org/core#Market
 cg:Market rdf:type owl:Class ;
           rdfs:subClassOf cg:CommercialObject ;
@@ -2590,6 +2608,12 @@ cg:MunAdministration rdf:type owl:Class ;
 cg:MunDepSovet rdf:type owl:Class ;
                rdfs:subClassOf cg:MunicipalGov ;
                rdfs:label "Совет муниципальных депутатов" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#MunicipOrganisation
+cg:MunicipOrganisation rdf:type owl:Class ;
+                       rdfs:subClassOf cg:ExececutiveBoby ;
+                       rdfs:label "Муниципальный совет" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#MunicipalGov
@@ -3372,6 +3396,12 @@ cg:Square rdf:type owl:Class ;
 cg:Stadium rdf:type owl:Class ;
            rdfs:subClassOf cg:SportsObject ;
            rdfs:label "Стадион" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#StateInspection
+cg:StateInspection rdf:type owl:Class ;
+                   rdfs:subClassOf cg:ExececutiveBoby ;
+                   rdfs:label "Государственная инспекция" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#StateOrganization
