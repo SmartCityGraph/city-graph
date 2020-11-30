@@ -102,7 +102,7 @@ cg:hasCompanyPosition rdf:type owl:ObjectProperty ;
 cg:hasCoordinates rdf:type owl:ObjectProperty ;
                   rdfs:domain cg:PhysicalObject ;
                   rdfs:range cg:Geometry ;
-                  rdfs:comment "Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
+                  rdfs:comment "Координаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
                   rdfs:label "гео-координаты" .
 
 
@@ -128,13 +128,6 @@ cg:hasMajorRenovation rdf:type owl:ObjectProperty ;
                       rdfs:domain cg:Building ;
                       rdfs:range cg:MajorRenovation ;
                       rdfs:label "имеет капитальный ремонт" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#hasManagedOrganisation
-cg:hasManagedOrganisation rdf:type owl:ObjectProperty ;
-                          rdfs:domain cg:Organization ;
-                          rdfs:range cg:Organization ;
-                          rdfs:label "имеет организацию-родитель" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#hasManagingOrganization
@@ -3508,7 +3501,7 @@ cg:TennisClub rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Terminal
 cg:Terminal rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/TransportationObject> ;
+            rdfs:subClassOf <http://www.opengis.net/citygml/transportation/2.0/Railway> ;
             rdfs:label "Вокзал" .
 
 
@@ -3828,46 +3821,6 @@ cg:Zoo rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://citygraph.onti.actcognitive.org/core#Bicyclers
-cg:Bicyclers rdf:type owl:NamedIndividual ,
-                      cg:OtherPopulationGroups ;
-             rdfs:label "Велосипедисты" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#BusinessTourist
-cg:BusinessTourist rdf:type owl:NamedIndividual ,
-                            cg:TouristPopulation ;
-                   rdfs:label "Приезжие по рабочим вопросам" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#CarOwner
-cg:CarOwner rdf:type owl:NamedIndividual ,
-                     cg:OtherPopulationGroups ;
-            rdfs:label "Автовладельцы" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#CitizensWithEarlyChildhood
-cg:CitizensWithEarlyChildhood rdf:type owl:NamedIndividual ,
-                                       cg:WorkingAgePopulation ;
-                              rdfs:label "Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#CitizensWithInfant
-cg:CitizensWithInfant rdf:type owl:NamedIndividual ,
-                               cg:WorkingAgePopulation ;
-                      rdfs:label "Горожане с младенцами (от 0 до 1 года)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#CitizensWithPreschooler
-cg:CitizensWithPreschooler rdf:type owl:NamedIndividual ,
-                                    cg:WorkingAgePopulation ;
-                           rdfs:label "Горожане с детьми дошкольного возраста (от 3 до 7 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#CitizensWithPrimarySchoolAge
-cg:CitizensWithPrimarySchoolAge rdf:type owl:NamedIndividual ,
-                                         cg:WorkingAgePopulation ;
-                                rdfs:label "Горожане с детьми младшего школьного возраста (от 7 до 11 лет)" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Director
@@ -3876,47 +3829,6 @@ cg:Director rdf:type owl:NamedIndividual ,
             rdfs:label "Директор" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#DisabledMovement
-cg:DisabledMovement rdf:type owl:NamedIndividual ,
-                             cg:DisabledPopulation ;
-                    rdfs:label "Лица с ограниченными возможностями передвижения" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#DisabledSight
-cg:DisabledSight rdf:type owl:NamedIndividual ,
-                          cg:DisabledPopulation ;
-                 rdfs:label "Лица с инвалидностью по зрению" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#EarlyChildhood
-cg:EarlyChildhood rdf:type owl:NamedIndividual ,
-                           cg:UnderWorkingAgePopulation ;
-                  rdfs:label "Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#ElderlyWorkingCitizens
-cg:ElderlyWorkingCitizens rdf:type owl:NamedIndividual ,
-                                   cg:WorkingAgePopulation ;
-                          rdfs:label "Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#EventTourist
-cg:EventTourist rdf:type owl:NamedIndividual ,
-                         cg:TouristPopulation ;
-                rdfs:label "Приезжие к мероприятиям" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#HealthyLifestyleCitizens
-cg:HealthyLifestyleCitizens rdf:type owl:NamedIndividual ,
-                                     cg:OtherPopulationGroups ;
-                            rdfs:label "Горожане, ведущие здоровый образ жизни" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#Infant
-cg:Infant rdf:type owl:NamedIndividual ,
-                   cg:UnderWorkingAgePopulation ;
-          rdfs:label "Младенцы (от 0 до 1 года)" .
-
 
 ###  http://citygraph.onti.actcognitive.org/core#IntraBench
 cg:IntraBench rdf:type owl:NamedIndividual ,
@@ -3924,16 +3836,6 @@ cg:IntraBench rdf:type owl:NamedIndividual ,
               rdfs:label "Встроенная скамья" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#MiddleAgeWorkingCitizens
-cg:MiddleAgeWorkingCitizens rdf:type owl:NamedIndividual ,
-                                     cg:WorkingAgePopulation ;
-                            rdfs:label "Работающие горожане среднего возраста (от 31 до 40 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#MigrantWorker
-cg:MigrantWorker rdf:type owl:NamedIndividual ,
-                          cg:OtherPopulationGroups ;
-                 rdfs:label "Трудовые мигранты" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#MovableBench
@@ -3942,58 +3844,6 @@ cg:MovableBench rdf:type owl:NamedIndividual ,
                 rdfs:label "Переносная скамья" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#OlderRetiree
-cg:OlderRetiree rdf:type owl:NamedIndividual ,
-                         cg:UpwardWorkingAgePopulation ;
-                rdfs:label "Пенсионеры старших возрастов (старше 75 лет" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#PetOwner
-cg:PetOwner rdf:type owl:NamedIndividual ,
-                     cg:OtherPopulationGroups ;
-            rdfs:label "Владельцы домашних животных" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#Pregnant
-cg:Pregnant rdf:type owl:NamedIndividual ,
-                     cg:WorkingAgePopulation ;
-            rdfs:label "Беременные женщины" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#Preschooler
-cg:Preschooler rdf:type owl:NamedIndividual ,
-                        cg:UnderWorkingAgePopulation ;
-               rdfs:label "Дети дошкольного возраста (от 3 до 7 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#PrimarySchoolAge
-cg:PrimarySchoolAge rdf:type owl:NamedIndividual ,
-                             cg:UnderWorkingAgePopulation ;
-                    rdfs:label "Дети младшего школьного возраста (от 7 до 11 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#PublicTransportUser
-cg:PublicTransportUser rdf:type owl:NamedIndividual ,
-                                cg:OtherPopulationGroups ;
-                       rdfs:label "Пользователи общественного транспорта" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#Religious
-cg:Religious rdf:type owl:NamedIndividual ,
-                      cg:OtherPopulationGroups ;
-             rdfs:label "Верующие" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#SelfEmployedCitizens
-cg:SelfEmployedCitizens rdf:type owl:NamedIndividual ,
-                                 cg:WorkingAgePopulation ;
-                        rdfs:label "Самозанятые горожане" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#SeniorWorkingCitizens
-cg:SeniorWorkingCitizens rdf:type owl:NamedIndividual ,
-                                  cg:WorkingAgePopulation ;
-                         rdfs:label "Работающие горожане старшего возраста (от 41 до 60 лет)" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#StaticBench
@@ -4001,59 +3851,6 @@ cg:StaticBench rdf:type owl:NamedIndividual ,
                         cg:Bench ;
                rdfs:label "Стационарная скамья" .
 
-
-###  http://citygraph.onti.actcognitive.org/core#Student
-cg:Student rdf:type owl:NamedIndividual ,
-                    cg:WorkingAgePopulation ;
-           rdfs:label "Студенты и учащиеся" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#Teenager
-cg:Teenager rdf:type owl:NamedIndividual ,
-                     cg:UnderWorkingAgePopulation ;
-            rdfs:label "Подростки старшего возраста (от 15 до 18 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#TemporarilyStayingCitizens
-cg:TemporarilyStayingCitizens rdf:type owl:NamedIndividual ,
-                                       cg:WorkingAgePopulation ;
-                              rdfs:label "Горожане, временно пребывающие в городе" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#TouristInGroup
-cg:TouristInGroup rdf:type owl:NamedIndividual ,
-                           cg:TouristPopulation ;
-                  rdfs:label "Туристы в составе организованных групп" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#Tween
-cg:Tween rdf:type owl:NamedIndividual ,
-                  cg:UnderWorkingAgePopulation ;
-         rdfs:label "Подростки младшего возраста (от 12 до 15 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#UncoordinatedTourist
-cg:UncoordinatedTourist rdf:type owl:NamedIndividual ,
-                                 cg:TouristPopulation ;
-                        rdfs:label "Неорганизованные туристы" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#WasteSortingCitizens
-cg:WasteSortingCitizens rdf:type owl:NamedIndividual ,
-                                 cg:OtherPopulationGroups ;
-                        rdfs:label "Горожане, ведущие раздельный сбор мусора" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#YoungRetiree
-cg:YoungRetiree rdf:type owl:NamedIndividual ,
-                         cg:UpwardWorkingAgePopulation ;
-                rdfs:label "Молодые пенсионеры (65 - 75 лет)" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#YoungWorkingCitizens
-cg:YoungWorkingCitizens rdf:type owl:NamedIndividual ,
-                                 cg:WorkingAgePopulation ;
-                        rdfs:label "Молодые работающие горожане (до 30 лет)" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Скамья_12345
