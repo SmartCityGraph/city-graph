@@ -628,8 +628,6 @@ cg:hasInhabitableArea rdf:type owl:DatatypeProperty ;
 
 ###  http://citygraph.onti.actcognitive.org/core#hasInitiationDate
 cg:hasInitiationDate rdf:type owl:DatatypeProperty ;
-                     rdfs:domain cg:OKATO ,
-                                 cg:OKTMO ;
                      rdfs:range xsd:string ;
                      rdfs:label "дата введения" .
 
@@ -673,8 +671,6 @@ cg:hasLength rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel1
 cg:hasLevel1 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "1-ый уровень" .
 
@@ -682,8 +678,6 @@ cg:hasLevel1 rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel2
 cg:hasLevel2 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "2-ой уровень" .
 
@@ -691,8 +685,6 @@ cg:hasLevel2 rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel3
 cg:hasLevel3 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "3-ий уровень" .
 
@@ -700,8 +692,6 @@ cg:hasLevel3 rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel4
 cg:hasLevel4 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "4-ый уровень" .
 
@@ -1137,8 +1127,6 @@ cg:hasStringSeries rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasStringValue
 cg:hasStringValue rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf cg:hasClassificationCode ;
-                  rdfs:domain cg:OKATO ,
-                              cg:OKTMO ;
                   rdfs:range xsd:string ;
                   rdfs:label "полное текстовое значение" .
 
@@ -2709,8 +2697,6 @@ cg:NonProfitPartnership rdf:type owl:Class ;
 cg:NursingHome rdf:type owl:Class ;
                rdfs:subClassOf cg:PublicHome ;
                rdfs:label "Дом престарелых" .
-
-
 
 
 ###  http://citygraph.onti.actcognitive.org/core#OOPT
