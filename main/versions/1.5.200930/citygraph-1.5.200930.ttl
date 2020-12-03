@@ -3223,7 +3223,7 @@ cg:RubbishFabric rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#RubbishObject
 cg:RubbishObject rdf:type owl:Class ;
-                 rdfs:subClassOf cg:FunctionalObject ;
+                 rdfs:subClassOf cg:IndustrialObject ;
                  rdfs:label "Мусорный объект" .
 
 
