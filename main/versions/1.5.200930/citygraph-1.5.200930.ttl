@@ -1520,12 +1520,6 @@ cg:Bathhouse rdf:type owl:Class ;
              rdfs:label "Баня" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#Beach
-cg:Beach rdf:type owl:Class ;
-         rdfs:subClassOf cg:GreenObject ;
-         rdfs:label "Пляж" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Bench
 cg:Bench rdf:type owl:Class ;
          rdfs:subClassOf cg:AchitectureElement ,
@@ -2757,10 +2751,6 @@ cg:Optics rdf:type owl:Class ;
           rdfs:label "Оптика" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#Organization
-cg:Organization rdf:type owl:Class .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Organization_IP
 cg:Organization_IP rdf:type owl:Class ;
                    rdfs:subClassOf cg:CommercialOrganization ;
@@ -3181,6 +3171,12 @@ cg:RetainingWalls rdf:type owl:Class ;
 cg:River rdf:type owl:Class ;
          rdfs:subClassOf cg:WaterObject ;
          rdfs:label "Река" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#RiverBank
+cg:RiverBank rdf:type owl:Class ;
+             rdfs:subClassOf cg:GreenObject ;
+             rdfs:label "Набережная" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#RiverStation
@@ -3821,13 +3817,10 @@ cg:Zoo rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Director
 cg:Director rdf:type owl:NamedIndividual ,
                      cg:Position ;
             rdfs:label "Директор" .
-
 
 
 ###  http://citygraph.onti.actcognitive.org/core#IntraBench
@@ -3836,21 +3829,16 @@ cg:IntraBench rdf:type owl:NamedIndividual ,
               rdfs:label "Встроенная скамья" .
 
 
-
-
 ###  http://citygraph.onti.actcognitive.org/core#MovableBench
 cg:MovableBench rdf:type owl:NamedIndividual ,
                          cg:Bench ;
                 rdfs:label "Переносная скамья" .
 
 
-
-
 ###  http://citygraph.onti.actcognitive.org/core#StaticBench
 cg:StaticBench rdf:type owl:NamedIndividual ,
                         cg:Bench ;
                rdfs:label "Стационарная скамья" .
-
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Скамья_12345
