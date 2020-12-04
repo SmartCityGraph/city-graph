@@ -1,6 +1,5 @@
 @prefix : <http://citygraph.onti.actcognitive.org/core> .
 @prefix cg: <http://citygraph.onti.actcognitive.org/core#> .
-@prefix OGD: <http://www.w3id.org/opengovdata#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -628,8 +627,6 @@ cg:hasInhabitableArea rdf:type owl:DatatypeProperty ;
 
 ###  http://citygraph.onti.actcognitive.org/core#hasInitiationDate
 cg:hasInitiationDate rdf:type owl:DatatypeProperty ;
-                     rdfs:domain cg:OKATO ,
-                                 cg:OKTMO ;
                      rdfs:range xsd:string ;
                      rdfs:label "дата введения" .
 
@@ -673,8 +670,6 @@ cg:hasLength rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel1
 cg:hasLevel1 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "1-ый уровень" .
 
@@ -682,8 +677,6 @@ cg:hasLevel1 rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel2
 cg:hasLevel2 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "2-ой уровень" .
 
@@ -691,8 +684,6 @@ cg:hasLevel2 rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel3
 cg:hasLevel3 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "3-ий уровень" .
 
@@ -700,8 +691,6 @@ cg:hasLevel3 rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasLevel4
 cg:hasLevel4 rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf cg:hasOKLevel ;
-             rdfs:domain cg:OKATO ,
-                         cg:OKTMO ;
              rdfs:range xsd:string ;
              rdfs:label "4-ый уровень" .
 
@@ -1137,8 +1126,6 @@ cg:hasStringSeries rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasStringValue
 cg:hasStringValue rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf cg:hasClassificationCode ;
-                  rdfs:domain cg:OKATO ,
-                              cg:OKTMO ;
                   rdfs:range xsd:string ;
                   rdfs:label "полное текстовое значение" .
 
@@ -1377,6 +1364,13 @@ cg:AdvertisingDesk rdf:type owl:Class ;
 cg:AeroStation rdf:type owl:Class ;
                rdfs:subClassOf cg:Terminal ;
                rdfs:label "Аэровокзал" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#AgeGroup
+cg:AgeGroup rdf:type owl:Class ;
+            rdfs:subClassOf cg:SocialGroup ;
+            rdfs:comment "Группа населения относительно их возраста" ;
+            rdfs:label "Возрастная группа" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#AgreementDoc
@@ -1932,8 +1926,8 @@ cg:Dentist rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#DisabledPopulation
 cg:DisabledPopulation rdf:type owl:Class ;
-                      rdfs:subClassOf cg:SocialGroup ;
-                      rdfs:label "Население с ограниченными возможностями" .
+                      rdfs:subClassOf cg:OtherGroup ;
+                      rdfs:label "Инвалиды" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Dispensary
@@ -2717,16 +2711,6 @@ cg:NursingHome rdf:type owl:Class ;
                rdfs:label "Дом престарелых" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#OKATO
-cg:OKATO rdf:type owl:Class ;
-         rdfs:subClassOf cg:Reference .
-
-
-###  http://citygraph.onti.actcognitive.org/core#OKTMO
-cg:OKTMO rdf:type owl:Class ;
-         rdfs:subClassOf cg:Reference .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#OOPT
 cg:OOPT rdf:type owl:Class ;
         rdfs:subClassOf cg:NatureObject ;
@@ -2791,10 +2775,17 @@ cg:Orphanage rdf:type owl:Class ;
              rdfs:label "Детский дом" .
 
 
+###  http://citygraph.onti.actcognitive.org/core#OtherGroup
+cg:OtherGroup rdf:type owl:Class ;
+              rdfs:subClassOf cg:SocialGroup ;
+              rdfs:comment "Дополнительная характеристика группы людей, которые не исключают друг друга" ;
+              rdfs:label "Дополнительная группа" .
+
+
 ###  http://citygraph.onti.actcognitive.org/core#OtherPopulationGroups
 cg:OtherPopulationGroups rdf:type owl:Class ;
-                         rdfs:subClassOf cg:SocialGroup ;
-                         rdfs:label "Дополнительная группа горожан" .
+                         rdfs:subClassOf cg:OtherGroup ;
+                         rdfs:label "Спецаильная группа" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#OutletCenter
@@ -2948,6 +2939,12 @@ cg:PoliceStation rdf:type owl:Class ;
 cg:Pond rdf:type owl:Class ;
         rdfs:subClassOf cg:WaterObject ;
         rdfs:label "Пруд" .
+
+
+###  http://citygraph.onti.actcognitive.org/core#PopulationWithChildren
+cg:PopulationWithChildren rdf:type owl:Class ;
+                          rdfs:subClassOf cg:OtherGroup ;
+                          rdfs:label "Горожане с детьми" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Position
@@ -3525,7 +3522,7 @@ cg:Timetable rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#TouristPopulation
 cg:TouristPopulation rdf:type owl:Class ;
-                     rdfs:subClassOf cg:SocialGroup ;
+                     rdfs:subClassOf cg:OtherGroup ;
                      rdfs:label "Группа туристов" .
 
 
@@ -3598,8 +3595,8 @@ cg:UnauthorisedAction rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#UnderWorkingAgePopulation
 cg:UnderWorkingAgePopulation rdf:type owl:Class ;
-                             rdfs:subClassOf cg:SocialGroup ;
-                             rdfs:label "Население моложе трудоспособного возраста" .
+                             rdfs:subClassOf cg:AgeGroup ;
+                             rdfs:label "Несовершеннолетние" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#University
@@ -3616,7 +3613,7 @@ cg:University_Organization rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#UpwardWorkingAgePopulation
 cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
-                              rdfs:subClassOf cg:SocialGroup ;
+                              rdfs:subClassOf cg:AgeGroup ;
                               rdfs:label "Население старше трудоспособного возраста" .
 
 
@@ -3677,7 +3674,7 @@ cg:WorkType rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#WorkingAgePopulation
 cg:WorkingAgePopulation rdf:type owl:Class ;
-                        rdfs:subClassOf cg:SocialGroup ;
+                        rdfs:subClassOf cg:AgeGroup ;
                         rdfs:label "Население трудоспособного возраста" .
 
 
@@ -3821,13 +3818,10 @@ cg:Zoo rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Director
 cg:Director rdf:type owl:NamedIndividual ,
                      cg:Position ;
             rdfs:label "Директор" .
-
 
 
 ###  http://citygraph.onti.actcognitive.org/core#IntraBench
@@ -3836,21 +3830,16 @@ cg:IntraBench rdf:type owl:NamedIndividual ,
               rdfs:label "Встроенная скамья" .
 
 
-
-
 ###  http://citygraph.onti.actcognitive.org/core#MovableBench
 cg:MovableBench rdf:type owl:NamedIndividual ,
                          cg:Bench ;
                 rdfs:label "Переносная скамья" .
 
 
-
-
 ###  http://citygraph.onti.actcognitive.org/core#StaticBench
 cg:StaticBench rdf:type owl:NamedIndividual ,
                         cg:Bench ;
                rdfs:label "Стационарная скамья" .
-
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Скамья_12345
