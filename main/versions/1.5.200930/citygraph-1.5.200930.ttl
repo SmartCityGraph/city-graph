@@ -1514,12 +1514,6 @@ cg:Bathhouse rdf:type owl:Class ;
              rdfs:label "Баня" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#Beach
-cg:Beach rdf:type owl:Class ;
-         rdfs:subClassOf cg:GreenObject ;
-         rdfs:label "Пляж" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Bench
 cg:Bench rdf:type owl:Class ;
          rdfs:subClassOf cg:AchitectureElement ,
@@ -2741,10 +2735,6 @@ cg:Optics rdf:type owl:Class ;
           rdfs:label "Оптика" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#Organization
-cg:Organization rdf:type owl:Class .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Organization_IP
 cg:Organization_IP rdf:type owl:Class ;
                    rdfs:subClassOf cg:CommercialOrganization ;
@@ -3180,6 +3170,12 @@ cg:River rdf:type owl:Class ;
          rdfs:label "Река" .
 
 
+###  http://citygraph.onti.actcognitive.org/core#RiverBank
+cg:RiverBank rdf:type owl:Class ;
+             rdfs:subClassOf cg:GreenObject ;
+             rdfs:label "Набережная" .
+
+
 ###  http://citygraph.onti.actcognitive.org/core#RiverStation
 cg:RiverStation rdf:type owl:Class ;
                 rdfs:subClassOf cg:Terminal ;
@@ -3224,7 +3220,7 @@ cg:RubbishFabric rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#RubbishObject
 cg:RubbishObject rdf:type owl:Class ;
-                 rdfs:subClassOf cg:FunctionalObject ;
+                 rdfs:subClassOf cg:IndustrialObject ;
                  rdfs:label "Мусорный объект" .
 
 
