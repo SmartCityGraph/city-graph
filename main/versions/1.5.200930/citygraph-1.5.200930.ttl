@@ -64,7 +64,7 @@ cg:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasCadastralBlock
 cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf cg:hasCadastralNumber ;
-                     rdfs:domain cg:CadastreNumber ;
+                     rdfs:domain cg:CadastreElement ;
                      rdfs:range cg:CadastralBlock ;
                      rdfs:label "кадастровый квартал" .
 
@@ -72,14 +72,14 @@ cg:hasCadastralBlock rdf:type owl:ObjectProperty ;
 ###  http://citygraph.onti.actcognitive.org/core#hasCadastralNumber
 cg:hasCadastralNumber rdf:type owl:ObjectProperty ;
                       rdfs:domain cg:CadastralParcel ;
-                      rdfs:range cg:CadastreNumber ;
+                      rdfs:range cg:CadastreElement ;
                       rdfs:label "имеет кадастровый номер" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#hasCadastralOkrug
 cg:hasCadastralOkrug rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf cg:hasCadastralNumber ;
-                     rdfs:domain cg:CadastreNumber ;
+                     rdfs:domain cg:CadastreElement ;
                      rdfs:range cg:CadastralOkrug ;
                      rdfs:label "кадастровый округ" .
 
@@ -1110,7 +1110,7 @@ cg:hasStoveHeating rdf:type owl:DatatypeProperty ;
 
 ###  http://citygraph.onti.actcognitive.org/core#hasStringCadastralNumber
 cg:hasStringCadastralNumber rdf:type owl:DatatypeProperty ;
-                            rdfs:domain cg:CadastreNumber ;
+                            rdfs:domain cg:CadastreElement ;
                             rdfs:range xsd:string ;
                             rdfs:label "кадастровый номер строкой" .
 
@@ -1630,19 +1630,19 @@ cg:BusinessHub rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastralBlock
 cg:CadastralBlock rdf:type owl:Class ;
-                  rdfs:subClassOf cg:CadastreNumber ;
+                  rdfs:subClassOf cg:CadastreElement ;
                   rdfs:label "Кадастровый квартал" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastralDistrict
 cg:CadastralDistrict rdf:type owl:Class ;
-                     rdfs:subClassOf cg:CadastreNumber ;
+                     rdfs:subClassOf cg:CadastreElement ;
                      rdfs:label "Кадастровый район" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastralOkrug
 cg:CadastralOkrug rdf:type owl:Class ;
-                  rdfs:subClassOf cg:CadastreNumber ;
+                  rdfs:subClassOf cg:CadastreElement ;
                   rdfs:label "Кадастровый округ" .
 
 
@@ -1652,16 +1652,17 @@ cg:CadastralParcel rdf:type owl:Class ;
                    rdfs:label "Кадастровый участок" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#CadastreNumber
-cg:CadastreNumber rdf:type owl:Class ;
-                  rdfs:subClassOf cg:CadastreRegister ;
-                  rdfs:comment "Этот класс не является подклассом Кадастрового реестра и будет перенесён" ;
-                  rdfs:label "Кадастровый номер" .
+###  http://citygraph.onti.actcognitive.org/core#CadastreElement
+cg:CadastreElement rdf:type owl:Class ;
+                   rdfs:subClassOf cg:Reference ;
+                   rdfs:comment "Индивиды этого класса и его подклассов, должны иметь IRI-ссылку на индивид класса \"Кадастровый реестр\" в своей аннотации \"IsDefinedBy\"." ,
+                                "Этот класс не является подклассом Кадастрового реестра и будет перенесён" ;
+                   rdfs:label "Кадастровый элемент" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastreRegister
 cg:CadastreRegister rdf:type owl:Class ;
-                    rdfs:subClassOf cg:Reference ;
+                    rdfs:subClassOf cg:Document ;
                     rdfs:comment "Сюда добавлять все виды кадастров (земельный, лесной и пр.)" ;
                     rdfs:label "Кадастровый реестр" .
 

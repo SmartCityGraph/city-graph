@@ -5,6 +5,7 @@
 #include <Windows.h>
 #include <vector>
 #include <stdlib.h>
+#include <map>
 using namespace std;
 
 ///// Нахождение необходимого символа в строке. Необходимо для выделения атрибутов из объекта.
@@ -51,7 +52,7 @@ string clean_from_date_address(string line) {
         int linee2 = atoi(line2.c_str());
         line = to_string(linee1) + "/" + to_string(linee2);
     }
-   
+
     return line;
 }
 
@@ -63,9 +64,9 @@ string clean_from_date_float(string line) {
         int linee2 = atoi(line2.c_str());
         line = to_string(linee1) + "." + to_string(linee2);
     }
-   
-        return line;
-    
+
+    return line;
+
 }
 
 ///// Очистка строки от лишних кавычек (все, кроме первой и последней экранируются. Необходимо для формата TTL).
@@ -226,13 +227,13 @@ boolean check_number(string line) {
 
 string street_name(string line) {
     int q;
-    for (int i = line.length()-1; i > -1; i--) {
+    for (int i = line.length() - 1; i > -1; i--) {
         if ((line[i] != '1') && (line[i] != '2') && (line[i] != '3') && (line[i] != '4') && (line[i] != '5') && (line[i] != '6') && (line[i] != '7') && (line[i] != '8') && (line[i] != '9') && (line[i] != '0')) {
             q = i;
             break;
         }
     }
-    line = line.substr(0, (q+1));
+    line = line.substr(0, (q + 1));
     return line;
 }
 
@@ -244,6 +245,11 @@ int main()
     SetConsoleOutputCP(1251);
     setlocale(LC_ALL, "Russian");
     ///////// Переменные для составления строк
+
+    map <string, int> street_map;
+    map <string, string> uk_map;
+    map <string, int> work_type_map;
+
     string str_b = "cg:";
     string str_2_e = " a owl:NamedIndividual,";
     string tabulation = "\t\t\t\t\t";
@@ -258,13 +264,20 @@ int main()
     string object_name_2 = "MAH_";
     string object_name_3 = "MR_";
     string object_name_4 = "Addr_number_";
-    ///////// Функциональные переменные
-    string object_container;               /////// Объект который мы берём из CSV
-    string atribut_container;              /////// Строчка в которую мы будем записывать значение атрибута 
-    string atribut_container_2;
-    string uk_container;
 
-    int object_amount = 21291;
+    ///////// Функциональные переменные
+    string object_container = "object_container";               /////// Объект который мы берём из CSV
+    string uk_container;
+    string street_container;
+    string work_type_container;
+    string atribut_container;                                   /////// Строчка в которую мы будем записывать значение атрибута 
+    string atribut_container_2;
+
+
+    int object_amount = 0;
+    int street_amount = 0;
+    int uk_amount = 0;
+    int work_type_amount = 0;
     int MR_amount = 1;
 
     ifstream object_data("data.csv");      /////// Объекты считывания, нужно предварительно создать и заполнить.
@@ -279,45 +292,87 @@ int main()
     living_objects.open("database_living_objects.txt");
     addresses.open("database_addresses.txt");
     streets.open("database_streets.txt");
+
+
+
     getline(object_data, object_container); ///////// Пропуск первой служебной строки в файле CSV
+    
     ifstream street_all("street_data.txt");
-    for (int q = 0; q < 1524; q++) {
-        string street_container;
-        getline(street_all, street_container);
-        streets << str_b << "Street_" << (q + 1) << str_2_e << endl;
+    getline(street_all, street_container);
+    while (street_container != "") 
+    {
+        street_amount++;
+        streets << "###  http://citygraph.onti.actcognitive.org/core#" << "Street_" << (street_amount) << endl;
+        streets << str_b << "Street_" << (street_amount) << str_2_e << endl;
         streets << tabulation << tabulation << str_b << "Street" << str_e_1 << endl;
         streets << tabulation << str_b << "hasTitle \"" << street_name(street_container) << "\"" << str_e_2 << endl << endl << endl;
+        street_map[street_name(street_container)] = street_amount;
+        getline(street_all, street_container);
     }
+    cout << "Street amount: " << street_amount;
     street_all.close();
 
-    ///////// Основная часть создания объекта
-    for (int i = 0; i < object_amount; i++) {
+
+    /*while (object_container != "")
+    {
         getline(object_data, object_container);
-        cout << i;
+        object_amount++;
+    }
+    cout << object_amount;
+    object_data.close();
+    ifstream object_data("data.csv");*/
+
+    ifstream uk_data("uk_data.txt");
+    getline(uk_data, uk_container);
+    while (uk_container != "")
+    {
+        uk_amount++;
+        int x = char_pos(uk_container, ' ', 1);
+        string uk_id = uk_container.substr(0, x);
+        uk_container = clean_from_id(uk_container);
+        uk_container = clean_quotes_full(uk_container);
+        uk_container = clean_spaces_full(uk_container);
+        
+        uk_map[uk_container] = uk_id;
+        getline(uk_data, uk_container);
+    }
+    cout << "UK_amount: " << uk_amount;
+    uk_data.close();
+
+    ifstream work_type_data("work_type_data.txt");
+    getline(work_type_data, work_type_container);
+    while (work_type_container != "")
+    {
+        
+        work_type_container = work_type_container.substr(0, char_pos(work_type_container, '\t', 1));
+        work_type_map[work_type_container] = work_type_amount;
+        getline(work_type_data, work_type_container);
+        work_type_amount++;
+    }
+    cout << "Work type amount: " << work_type_amount;
+    work_type_data.close();
+
+
+    getline(object_data, object_container);
+    ///////// Основная часть создания объекта
+    while (object_container != "") {
+        object_amount++;
+        if (object_amount % 100 == 0)
+        {
+            cout << object_amount;
+        }
         ///////////// Создаём Физический объект
-       buildings << str_b << object_name << (i + 1) << str_2_e << endl;
+        buildings << "###  http://citygraph.onti.actcognitive.org/core#" << object_name << (object_amount) << endl;
+        buildings << str_b << object_name << (object_amount) << str_2_e << endl;
         buildings << tabulation << tabulation << str_b << object_class << str_e_1 << endl;
-        buildings << tabulation << str_b << "hasFunction " << str_b << object_name_2 << (i + 1);
+        buildings << tabulation << str_b << "hasFunction " << str_b << object_name_2 << (object_amount);
         /////////// Указываем адрес
-        buildings << str_e_1 << endl << tabulation << str_b << "hasAddressObj " << str_b << object_name_4 << (i + 1);
-        addresses << str_b << object_name_4 << (i + 1) << str_2_e << endl;
+        buildings << str_e_1 << endl << tabulation << str_b << "hasAddressObj " << str_b << object_name_4 << (object_amount) ;
+        addresses << "###  http://citygraph.onti.actcognitive.org/core#" << object_name_4 << (object_amount) << endl;
+        addresses << str_b << object_name_4 << (object_amount) << str_2_e << endl;
         addresses << tabulation << tabulation << str_b << object_class_4;
-        ifstream street_data("street_data.txt");
-        for (int q = 0; q < 1524; q++) {
-            string street_container;
-            getline(street_data, street_container);
-            if (street_name(street_container) == clean_quotes_full(atribut(6, object_container))) {
-                addresses << str_e_1 << endl << tabulation << str_b << "hasStreet " << str_b << "Street_" << (q + 1);
-            }
-        }
-        ifstream district_data("district_data.txt");
-        for (int q = 0; q < 18; q++) {
-            string district_container;
-            getline(district_data, district_container);
-            if (district_container.find(atribut(10, object_container)) != -1) {
-                addresses << str_e_1 << endl << tabulation << str_b << "hasAdmUnit " << district_container.substr((char_pos(district_container, ' ', 1) + 1), 31);
-            }
-        }
+        addresses << str_e_1 << endl << tabulation << str_b << "hasStreet " << str_b << "Street_" << street_map[clean_quotes_full(atribut(6, object_container))];
+
         if (atribut(7, object_container) != "null") {
             addresses << str_e_1 << endl << tabulation << str_b << "hasHouseNumber \"" << clean_from_date_address(atribut(7, object_container)) << "\"";
         }
@@ -334,53 +389,39 @@ int main()
 
             atribut_container = "null";
             string uk_containers_temp;
-            string uk_temp;
-            string uk_temp_clean;
-            for (int m = 0; m < (counter('%', uk_containers) + 1); m++) {
-                ifstream uk_data("uk_data.txt");
+            for (int m = 0; m < (counter('%', uk_containers) + 1); m++) 
+            {
                 uk_containers_temp = atribut_uk(m + 1, uk_containers);
-                for (int j = 0; j < 3685; j++) {
-                    getline(uk_data, uk_temp);
-                    uk_temp_clean = clean_from_id(uk_temp);
-                    uk_temp_clean = clean_quotes_full(uk_temp_clean);
-                    uk_temp_clean = clean_spaces_full(uk_temp_clean);
-                    if (uk_temp_clean == uk_containers_temp) {
-                        atribut_container = uk_temp.substr(0, char_pos(uk_temp, ' ', 1));
-                    }
-                }
-                uk_data.close();
-                if (atribut_container != "null") {
-
-                    buildings << str_e_1 << endl << tabulation << str_b << "hasManagingOrganization " << str_b << atribut_container;
-                }
+                atribut_container = uk_map[uk_containers_temp];
+            }
+            if (atribut_container != "") 
+            {
+            buildings << str_e_1 << endl << tabulation << str_b << "hasManagingOrganization " << str_b << atribut_container;
             }
         }
         //////////////// Указываем капитальные ремонты
         atribut_container = clean_quotes_full(atribut(46, object_container));
         atribut_container_2 = clean_quotes_full(atribut(48, object_container));
         int MR_obj_amount = atoi(atribut(47, object_container).c_str());
-        for (int j = 0; j < MR_obj_amount; j++) {
-            ifstream work_type_data("work_type_data.txt");
+        for (int j = 0; j < MR_obj_amount; j++) 
+        {
             string wt_temp;
             string major_data = atribut(j + 1, atribut_container);
             string major_type = atribut_mr(j + 1, atribut_container_2);
             if (j > 0) {
                 major_type = major_type.substr(1, major_type.length() - 1);
             }
-            for (int k = 0; k < 392; k++) {
-                getline(work_type_data, wt_temp);
-                wt_temp = wt_temp.substr(0, char_pos(wt_temp, '\t', 1));
-                if ((wt_temp == major_type) && check_number(major_data) == 1) {
+            if (work_type_map[major_type] > 0 && check_number(major_data) == 1) 
+            {
+                    major_renovation << "###  http://citygraph.onti.actcognitive.org/core#" << object_name_3 << MR_amount << endl;
                     major_renovation << str_b << object_name_3 << MR_amount << str_2_e << endl;
                     major_renovation << tabulation << tabulation << str_b << object_class_3 << str_e_1 << endl;
-                    major_renovation << tabulation << str_b << "hasWorkType " << str_b << "WT_" << k << str_e_1 << endl;
+                    major_renovation << tabulation << str_b << "hasWorkType " << str_b << "WT_" << work_type_map[major_type] << str_e_1 << endl;
                     major_renovation << tabulation << str_b << "hasMajorRenovationDate " << major_data << str_e_2 << endl << endl << endl;
 
                     buildings << str_e_1 << endl << tabulation << str_b << "hasMajorRenovation " << str_b << "MR_" << MR_amount;
                     MR_amount++;
-                }
             }
-            work_type_data.close();
         }
 
         ///////////////// Указываем остальные атрибуты
@@ -438,7 +479,8 @@ int main()
         buildings << str_e_2 << endl << endl << endl;
 
         ////////////////////////////////////////// Создаём функциональный объект и указываем для него атрибуты
-        living_objects << str_b << object_name_2 << (i + 1) << str_2_e << endl;
+        living_objects << "###  http://citygraph.onti.actcognitive.org/core#" << object_name_2 << (object_amount) << endl;
+        living_objects << str_b << object_name_2 << (object_amount) << str_2_e << endl;
         living_objects << tabulation << tabulation << str_b << object_class_2;
         atribut_container = atribut(19, object_container);
         if (atribut_container != "null" && check_number(atribut_container) == 1) {
@@ -530,19 +572,22 @@ int main()
             living_objects << str_e_1 << endl << tabulation << str_b << "hasApartmentsAmount " << room_amount;
         }
         living_objects << str_e_2 << endl << endl << endl;
-        street_data.close();
-        district_data.close();
+        getline(object_data, object_container);
+
 
     }
-    
+
 
     /////////Конец создания Объекта
 
     //////////Служебная часть, закрытие файла и конец кода
+    addresses.close();
     buildings.close();
     living_objects.close();
     major_renovation.close();
+    streets.close();
 
     object_data.close();
+    cout << "Object_amount: " << object_amount;
     return 0;
 }

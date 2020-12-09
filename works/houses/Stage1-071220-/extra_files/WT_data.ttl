@@ -1,0 +1,2350 @@
+###  http://www.w3id.org/citygraph-core#WT_0
+cg:WT_0 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "Аварийный ремонт балконов и лоджий" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_1
+cg:WT_1 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_10
+cg:WT_10 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Благоустройство дворовых территорий" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_100
+cg:WT_100 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ замена розлива центрального отопления в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_101
+cg:WT_101 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ наружные теплосетти" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_102
+cg:WT_102 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/АВР нар. втор. сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_103
+cg:WT_103 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/благоустройство" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_104
+cg:WT_104 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/гидроизоляция подвала" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_105
+cg:WT_105 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена втор. нгаружн. сетей ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_106
+cg:WT_106 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена нар. втор. сетей ХВС между домами" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_107
+cg:WT_107 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена нар.втор.сетей ХВС между домами по Дибуновской ул. д.39-41-43-47 Школьная ул. д.56-58" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_108
+cg:WT_108 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена наруж. втор. сетей ХВС между домами" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_109
+cg:WT_109 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена наружн. теплосетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_11
+cg:WT_11 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Благоустройство придомовой территории" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_110
+cg:WT_110 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена наружных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_111
+cg:WT_111 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена розлива ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_112
+cg:WT_112 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена розлива и участков инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_113
+cg:WT_113 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена розлива ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_114
+cg:WT_114 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена розливов ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_115
+cg:WT_115 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена розливов ЦО в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_116
+cg:WT_116 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена системы холодного водоснабжения в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_117
+cg:WT_117 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена трубопроводов  каналализации в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_118
+cg:WT_118 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена трубопроводов в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_119
+cg:WT_119 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена трубопроводов канализации в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_12
+cg:WT_12 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Благоустройство придомовой территории (Контейнерная площадка)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_120
+cg:WT_120 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена трубопроводов ЦО в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_121
+cg:WT_121 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена участков трубопроводов инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_122
+cg:WT_122 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена электросетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_123
+cg:WT_123 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/замена электросетей в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_124
+cg:WT_124 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/изготовление ПСД на инженерные сети" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_125
+cg:WT_125 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/изготовление ПСД на лифты" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_126
+cg:WT_126 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/капитальный ремонт квартир" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_127
+cg:WT_127 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ликвидация последствий пожара" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_128
+cg:WT_128 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/наружные теплосети между домами" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_129
+cg:WT_129 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование дома на предмет аварийности" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_13
+cg:WT_13 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Благоустройство придомовой территории (Устройство набивных дорожек)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_130
+cg:WT_130 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование жилого дома" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_131
+cg:WT_131 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование и экспертная оценка аварийности дома" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_132
+cg:WT_132 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование МКД" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_133
+cg:WT_133 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование МКД (вместе с Лахтинским 106)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_134
+cg:WT_134 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование МКД на предмет его аварийности" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_135
+cg:WT_135 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/обследование МКД на предмет признания его аварийным" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_136
+cg:WT_136 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/общестроительные работы по ликвидации последствий пожара" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_137
+cg:WT_137 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/работа по нормализации температурно-влажного режима крыш" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_138
+cg:WT_138 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/работы по нормализации температурно-влажного режима" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_139
+cg:WT_139 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/расходы на изготовление проектно-сметной документации на замену внутр. инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_14
+cg:WT_14 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Благоустройство территории" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_140
+cg:WT_140 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт )замена( изношенныхвнутриквартальных инжененых наружных сетей (вторичные сети)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_141
+cg:WT_141 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт водопровода и канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_142
+cg:WT_142 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт вторич. наружн. сетей теплотрасы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_143
+cg:WT_143 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт и установка узлов учета" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_144
+cg:WT_144 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт или замена внутридомовых инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_145
+cg:WT_145 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт или замена системы канализации и водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_146
+cg:WT_146 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт канализац. стояков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_147
+cg:WT_147 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт системы горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_148
+cg:WT_148 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт системы канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_149
+cg:WT_149 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные виды работ/ремонт системы теплоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_15
+cg:WT_15 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Внутренние инженерные сети" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_150
+cg:WT_150 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/ремонт системы электроснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_151
+cg:WT_151 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/узлы учета электроэнергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_152
+cg:WT_152 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/усиление конструкций надпольного перекрытия лест. марша" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_153
+cg:WT_153 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/установка общедомовых приборов учета потребления теплловой энергии на нужды отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_154
+cg:WT_154 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/установка общедомовых приборов учета потребления тепловой энергии на нужды газа" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_155
+cg:WT_155 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/установка узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_156
+cg:WT_156 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/установка узлов учета" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_157
+cg:WT_157 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/установка УУТЭ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_158
+cg:WT_158 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные виды работ/устройство пандусов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_159
+cg:WT_159 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_16
+cg:WT_16 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Водопровод и канализация" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_160
+cg:WT_160 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы - замена розливов ГВС в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_161
+cg:WT_161 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы - замена розливов ХВС в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_162
+cg:WT_162 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы - ремонт трубопровода канализации в подвале (2 пар.)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_163
+cg:WT_163 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы (канализация)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_164
+cg:WT_164 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы (ремонт крылец)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_165
+cg:WT_165 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы (ремонт лестничных клеток)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_166
+cg:WT_166 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы (сан)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_167
+cg:WT_167 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы (трубопроводы канализации)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_168
+cg:WT_168 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Разные работы (усил)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_169
+cg:WT_169 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ замена розлива ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_17
+cg:WT_17 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Восстановление пожарного водопровода" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_170
+cg:WT_170 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/замена противопожарных стояков ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_171
+cg:WT_171 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/замена трубопров. канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_172
+cg:WT_172 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/замена трубопроводов ГВС  на тех.этаже и  чердаке" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_173
+cg:WT_173 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/замена участков труб ГВС в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_174
+cg:WT_174 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/замена-ремонт наруж. теплосетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_175
+cg:WT_175 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/обследование многоквартирного дома" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_176
+cg:WT_176 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ремонт выгребных ям" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_177
+cg:WT_177 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ремонт канал-и стояков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_178
+cg:WT_178 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ремонт нижнего розлива ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_179
+cg:WT_179 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ремонт систем канал-и" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_18
+cg:WT_18 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "ГВС-розлив" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_180
+cg:WT_180 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ремонт системы теплоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_181
+cg:WT_181 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/ремонт теплотрассы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_182
+cg:WT_182 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "разные работы/установка узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_183
+cg:WT_183 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Расходы на изготовление проектно-сметной документации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_184
+cg:WT_184 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "расходы на изготовление ПСД" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_185
+cg:WT_185 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Расходы на строительный контроль (технадзор)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_186
+cg:WT_186 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "реконструкция и модернизация лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_187
+cg:WT_187 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Реконструкция инженерных сетей по программе АПКВ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_188
+cg:WT_188 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Реконструкция элеваторного узла" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_189
+cg:WT_189 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Реконструкция элеваторных узлов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_19
+cg:WT_19 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Герметизация горизонтальных и вертикальных стыков стеновых панелей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_190
+cg:WT_190 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "рем. ИТП" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_191
+cg:WT_191 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "рем.козырьков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_192
+cg:WT_192 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "рем.системы ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_193
+cg:WT_193 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "рем.теплотрассы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_194
+cg:WT_194 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт  (замена)изношенных внутриквартальных   инженерных наружных сетей  (вторичные сети)  с присоединением к существующим   магистральным сетям при расстоянии от ввода до точки подключения к магистралям до 150 м" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_195
+cg:WT_195 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт аварийного балкона" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_196
+cg:WT_196 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт аварийных балконов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_197
+cg:WT_197 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт аварийных балконов и лоджий" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_198
+cg:WT_198 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт аварийных стояков холодного водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_199
+cg:WT_199 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт аварийных стояков холодного и горячего водоснабжений" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_2
+cg:WT_2 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (балконы)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_20
+cg:WT_20 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Герметизация стыков стеновых панелей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_200
+cg:WT_200 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт АППЗ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_201
+cg:WT_201 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт балконов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_202
+cg:WT_202 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт балконов и козырьков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_203
+cg:WT_203 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт балконов и эркеров" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_204
+cg:WT_204 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт в/к" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_205
+cg:WT_205 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутренних  инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_206
+cg:WT_206 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутренних инженерных систем" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_207
+cg:WT_207 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_208
+cg:WT_208 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем (ВК)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_209
+cg:WT_209 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_21
+cg:WT_21 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Гидроизоляция подвала" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_210
+cg:WT_210 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем горячего водоснабжения (ГВС)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_211
+cg:WT_211 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем теплоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_212
+cg:WT_212 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем холодного водоснабжения (ХВС)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_213
+cg:WT_213 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт внутридомовых инженерных систем электроснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_214
+cg:WT_214 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт дренажа" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_215
+cg:WT_215 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт и восстановление озеленения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_216
+cg:WT_216 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт и замена инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_217
+cg:WT_217 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт и замена покрытий крыш" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_218
+cg:WT_218 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление АППЗ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_219
+cg:WT_219 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление внутридомовых инженерных систем" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_22
+cg:WT_22 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "гидроизоляция стен и пола подвала" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_220
+cg:WT_220 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление внутридомовых инженерных систем (нижние розливы)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_221
+cg:WT_221 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление внутридомовых инженерных систем (розлив ЦО)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_222
+cg:WT_222 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление внутридомовых инженерных систем холодного горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_223
+cg:WT_223 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление ОДС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_224
+cg:WT_224 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или восстановление системы ПЗУ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_225
+cg:WT_225 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ремонт или восстановление участков внутридомовых инженерных систем" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_226
+cg:WT_226 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена внутридомовых инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_227
+cg:WT_227 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена внутридомовых инженерных систем (ВК)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_228
+cg:WT_228 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ремонт или замена дренажной системы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_229
+cg:WT_229 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_23
+cg:WT_23 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Гидроизоляция тех.этажа" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_230
+cg:WT_230 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена лифтвого оборудования" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_231
+cg:WT_231 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_232
+cg:WT_232 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы газоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_233
+cg:WT_233 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_234
+cg:WT_234 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы горячего водоснабжения. Ремонт или замена системы отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_235
+cg:WT_235 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы канализования и водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_236
+cg:WT_236 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_237
+cg:WT_237 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы отопления. Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы горячего водоснабжения. Ремонт или замена системы канализования и водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_238
+cg:WT_238 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы холодного водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_239
+cg:WT_239 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы холодного водоснабжения (верхний розлив)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_24
+cg:WT_24 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Детские площадки" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_240
+cg:WT_240 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы горячего водоснабжения." .
+
+
+###  http://www.w3id.org/citygraph-core#WT_241
+cg:WT_241 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы канализования и водоотведения." .
+
+
+###  http://www.w3id.org/citygraph-core#WT_242
+cg:WT_242 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы отопления.Ремонт или замена системы горячего водоснабжения." .
+
+
+###  http://www.w3id.org/citygraph-core#WT_243
+cg:WT_243 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы электроснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_244
+cg:WT_244 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена системы электроснабжения (разделение узла учета)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_245
+cg:WT_245 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт или замена холодного системы холодного водоснабжени и канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_246
+cg:WT_246 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт инженерных сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_247
+cg:WT_247 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт козырьков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_248
+cg:WT_248 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт конструкций и замена покрытий крыш" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_249
+cg:WT_249 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт кровли (инвестиции)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_25
+cg:WT_25 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Диагностика лифтового оборудования" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_250
+cg:WT_250 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт крылец" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_251
+cg:WT_251 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт крыши" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_252
+cg:WT_252 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лестниц" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_253
+cg:WT_253 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лестничных клеток" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_254
+cg:WT_254 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт ливнестоков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_255
+cg:WT_255 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_256
+cg:WT_256 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лифтов с техническим освидетельством" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_257
+cg:WT_257 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лифтового оборудования" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_258
+cg:WT_258 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лифтового оборудования (рег 40479-Б)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_259
+cg:WT_259 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лифтового оборудования с заменой крупных узлов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_26
+cg:WT_26 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена верхнего розлива центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_260
+cg:WT_260 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт лицевого фасада" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_261
+cg:WT_261 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт наружного водопровода" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_262
+cg:WT_262 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ремонт наружных сетей теплоснабжения (вторичные сети)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_263
+cg:WT_263 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ремонт наружныхсетей теплоснабжения (вторичные сети) Приморский пр. д.57/1-57/2" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_264
+cg:WT_264 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт насосных" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_265
+cg:WT_265 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт нижнего розлива" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_266
+cg:WT_266 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт нижнего розлива ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_267
+cg:WT_267 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт нижнего розлива отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_268
+cg:WT_268 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт нижнего розлива холодного водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_269
+cg:WT_269 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт нижнего розлива ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_27
+cg:WT_27 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена кабины пассажирских и грузовых лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_270
+cg:WT_270 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт нижних розливов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_271
+cg:WT_271 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт подвальных помещений" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_272
+cg:WT_272 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт пожарного водопровода" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_273
+cg:WT_273 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт пожарного гидранта" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_274
+cg:WT_274 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлив трубопроводов ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_275
+cg:WT_275 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлива ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_276
+cg:WT_276 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлива отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_277
+cg:WT_277 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлива ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_278
+cg:WT_278 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлива холодного водоснабжения. Ремонт розлива отопления.Ремонт розлива горячего водоснабжения." .
+
+
+###  http://www.w3id.org/citygraph-core#WT_279
+cg:WT_279 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлива центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_28
+cg:WT_28 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена нижнего розлива центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_280
+cg:WT_280 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розлива ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_281
+cg:WT_281 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розливов систем холодного водоснабжения и канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_282
+cg:WT_282 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розливов ХВС и ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_283
+cg:WT_283 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розливов холодного и горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_284
+cg:WT_284 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт розливов ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_285
+cg:WT_285 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт сетей канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_286
+cg:WT_286 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт сетей канализации и водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_287
+cg:WT_287 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_288
+cg:WT_288 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_289
+cg:WT_289 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы теплоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_29
+cg:WT_29 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена нижних розливов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_290
+cg:WT_290 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы ХВС и канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_291
+cg:WT_291 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы холодного водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_292
+cg:WT_292 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы холодного водоснабжения и канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_293
+cg:WT_293 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы электроснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_294
+cg:WT_294 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы электроснабжения (разделение узла учета)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_295
+cg:WT_295 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт системы электроснабжения (рзаделения узла учета)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_296
+cg:WT_296 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт систмы ХВС и ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_297
+cg:WT_297 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт стояков горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_298
+cg:WT_298 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт стояков ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_299
+cg:WT_299 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт стояков холодного и горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_3
+cg:WT_3 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (л/кл)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_30
+cg:WT_30 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена пожарных гидрантов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_300
+cg:WT_300 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт стояков центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_301
+cg:WT_301 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт т/пункта" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_302
+cg:WT_302 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт т/ц" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_303
+cg:WT_303 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт тепловых сетей в подвале" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_304
+cg:WT_304 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт теплотрассы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_305
+cg:WT_305 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ремонт технических помещений с установкой металлических дверей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_306
+cg:WT_306 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопровода (розлива) водоотведения в подвальном помещении" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_307
+cg:WT_307 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопровода (розлива) горячего водоснабжения в подвальном помещении" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_308
+cg:WT_308 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопровода (розлива) канализации в подвальном помещении" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_309
+cg:WT_309 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопровода (розлива) холодного водоснабжения в подвальном помещении" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_31
+cg:WT_31 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена розлива горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_310
+cg:WT_310 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопровода (розлива) центрального отопления в подвальном помещении" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_311
+cg:WT_311 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопровода канализации и водоотведения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_312
+cg:WT_312 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов (розливов) теплоснабжения в подвальном помещении" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_313
+cg:WT_313 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_314
+cg:WT_314 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов горячего водоснабжения и центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_315
+cg:WT_315 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_316
+cg:WT_316 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов системы  канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_317
+cg:WT_317 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов ХВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_318
+cg:WT_318 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов холодного и горячего водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_319
+cg:WT_319 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт трубопроводов центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_32
+cg:WT_32 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена розлива холодного водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_320
+cg:WT_320 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт уч. инж. сетей" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_321
+cg:WT_321 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ремонт участков стен подвалов и пола" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_322
+cg:WT_322 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасада" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_323
+cg:WT_323 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасада (Герметизация стыков стеновых панелей)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_324
+cg:WT_324 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасада (двор)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_325
+cg:WT_325 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасада (лицевой)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_326
+cg:WT_326 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасадов без утепления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_327
+cg:WT_327 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасадов и эркеров" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_328
+cg:WT_328 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фасадов с утеплением" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_329
+cg:WT_329 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт фундаментов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_33
+cg:WT_33 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена розливов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_330
+cg:WT_330 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт ХВС и канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_331
+cg:WT_331 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт элеваторных узлов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_332
+cg:WT_332 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт электросети" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_333
+cg:WT_333 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонт эркера" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_334
+cg:WT_334 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонтно-строительные работы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_335
+cg:WT_335 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Ремонтно-строительные работы (козырек)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_336
+cg:WT_336 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Розлив хвс" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_337
+cg:WT_337 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Санация (двери)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_338
+cg:WT_338 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Санация (окна)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_339
+cg:WT_339 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Сети ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_34
+cg:WT_34 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена стояков ХВС и ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_340
+cg:WT_340 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Система канализации" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_341
+cg:WT_341 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Скоростные водонагреватели" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_342
+cg:WT_342 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Скоростные водонагреватели-установка" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_343
+cg:WT_343 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Смена стояков и пож.гидр" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_344
+cg:WT_344 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Стояки пожаротушения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_345
+cg:WT_345 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ТВР чердачного помещения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_346
+cg:WT_346 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "ТВР чердачных помещений" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_347
+cg:WT_347 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Тепловой ввод" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_348
+cg:WT_348 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Теплотрассы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_349
+cg:WT_349 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Техническое обследование дома" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_35
+cg:WT_35 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена трубопродов (стояков) холодного водоснабжения" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_350
+cg:WT_350 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Техническое обследование здания" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_351
+cg:WT_351 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Техническое обследование МКД" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_352
+cg:WT_352 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "УВТЭ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_353
+cg:WT_353 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Узел учёта" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_354
+cg:WT_354 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "узлы ввода ЦО и ГВС" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_355
+cg:WT_355 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Узлы учёта" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_356
+cg:WT_356 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление конструкиц здания" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_357
+cg:WT_357 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление конструкций здания" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_358
+cg:WT_358 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление конструкций лестничных маршей (где кв. 34)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_359
+cg:WT_359 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление наружн стены" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_36
+cg:WT_36 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена холодного водорозлива подвала" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_360
+cg:WT_360 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление несущих конструкций" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_361
+cg:WT_361 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление основных конструкций" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_362
+cg:WT_362 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление стен и фундаментов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_363
+cg:WT_363 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Усиление участков стен (колонн кирпичной вставки по проекту)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_364
+cg:WT_364 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка бойлеров" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_365
+cg:WT_365 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "установка ИТП" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_366
+cg:WT_366 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка коммерческих узлов учета тепловой энергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_367
+cg:WT_367 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "установка МАФ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_368
+cg:WT_368 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка обратных клапанов системы центрального отопления" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_369
+cg:WT_369 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка общедомового прибора учета потребления тепловой энергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_37
+cg:WT_37 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Замена электрощитов на лест. клетках" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_370
+cg:WT_370 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_371
+cg:WT_371 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка узлов учета" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_372
+cg:WT_372 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка узлов учета ХВС на здание" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_373
+cg:WT_373 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Установка УУТЭ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_374
+cg:WT_374 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "устр.набивных дорожек" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_375
+cg:WT_375 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Устранение аварийного состояния строительных конструкций" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_376
+cg:WT_376 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Устройство детских и спортивных площадок" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_377
+cg:WT_377 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Устройство детских площадок" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_378
+cg:WT_378 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "устройство контейнерных площадок" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_379
+cg:WT_379 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Устройство набивных дорожек" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_38
+cg:WT_38 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Инженерное обследование здания" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_380
+cg:WT_380 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Устройство набивных покрытий" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_381
+cg:WT_381 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Устройство пандуса" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_382
+cg:WT_382 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Утепление и ремонт фасада" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_383
+cg:WT_383 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Утепление чердака" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_384
+cg:WT_384 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Утепление чердаков" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_385
+cg:WT_385 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "УУТЭ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_386
+cg:WT_386 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Экспертиза лифта" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_387
+cg:WT_387 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Экспертиза лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_388
+cg:WT_388 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Экспертиза лифтов отработавших нормативный срок службы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_389
+cg:WT_389 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Экспертиза строительных конструкций" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_39
+cg:WT_39 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Инженерные сети" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_390
+cg:WT_390 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Эркеры" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_391
+cg:WT_391 rdf:type owl:NamedIndividual ,
+                    cg:WorkType ;
+           cg:hasTitle "Эркеры (где кв.17)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_4
+cg:WT_4 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (ремонт балконов и эркеров)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_40
+cg:WT_40 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт крыши и водосточной системы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_41
+cg:WT_41 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_42
+cg:WT_42 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт лифтов (с заменой крупных узлов)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_43
+cg:WT_43 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт лифтов с полной  заменой оборудования: реконструкция  лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_44
+cg:WT_44 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт лифтов с полной заменой оборудования: реконструкция лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_45
+cg:WT_45 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт лифтов с частичной заменой оборудования: модернизация лифтов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_46
+cg:WT_46 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Капитальный ремонт лифтов с частичной заменой оборудования: модернизация лифтов 1 ед." .
+
+
+###  http://www.w3id.org/citygraph-core#WT_47
+cg:WT_47 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "ККР" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_48
+cg:WT_48 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Комплексное благоустройство" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_49
+cg:WT_49 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Комплексный капитальный ремонт" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_5
+cg:WT_5 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (ремонт козырьков)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_50
+cg:WT_50 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Контейнерные площадки" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_51
+cg:WT_51 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "МАФ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_52
+cg:WT_52 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Металлические ворота" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_53
+cg:WT_53 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Металлические двери" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_54
+cg:WT_54 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Монтаж ИТП" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_55
+cg:WT_55 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Монтаж ПЗУ" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_56
+cg:WT_56 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Монтаж системы вентел." .
+
+
+###  http://www.w3id.org/citygraph-core#WT_57
+cg:WT_57 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Монтаж узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_58
+cg:WT_58 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "монтаж узлов ввода т/э" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_59
+cg:WT_59 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Мощение" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_6
+cg:WT_6 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (ремонт одной квартиры)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_60
+cg:WT_60 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Наружные инженерные сети ЦО" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_61
+cg:WT_61 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "обследование дома и экспертная оценка аварийности дома" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_62
+cg:WT_62 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "обследование конструкций жилых домов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_63
+cg:WT_63 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "обследование МВК" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_64
+cg:WT_64 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Обследование МКД" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_65
+cg:WT_65 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "обследование многоквартирного дома" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_66
+cg:WT_66 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Обследование технического состояния существующих строительных конструкций" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_67
+cg:WT_67 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "общ.работы (уст-во пандусов)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_68
+cg:WT_68 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Общестроительные работы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_69
+cg:WT_69 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Общестроительные работы (ремонт лест.клеток)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_7
+cg:WT_7 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (усиление л/кл)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_70
+cg:WT_70 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Общестроительные работы (ремонт оконных проемов)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_71
+cg:WT_71 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Общестроительные работы (ремонт фасадной плитки)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_72
+cg:WT_72 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Пожарный водопровод" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_73
+cg:WT_73 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Пожарный гидрант" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_74
+cg:WT_74 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Полная реконструкция здания с расселением" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_75
+cg:WT_75 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "ППКР" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_76
+cg:WT_76 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "признан аварийным и подлежит сносу решение от 27.08.14" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_77
+cg:WT_77 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Проектные работы" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_78
+cg:WT_78 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Проектные работы на усиление стен в квартире 14" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_79
+cg:WT_79 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Проектные работы на устройство козырька" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_8
+cg:WT_8 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "АВКР (усиление оконных проемов)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_80
+cg:WT_80 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Промывка фасадов" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_81
+cg:WT_81 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Противокапилярная защита стен" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_82
+cg:WT_82 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие виды работ (ремонт балконов и эркеров)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_83
+cg:WT_83 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие виды работ (ремонт балконов)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_84
+cg:WT_84 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие виды работ (ремонт лестничных клеток)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_85
+cg:WT_85 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустойству (монтаж металлических ограждений)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_86
+cg:WT_86 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_87
+cg:WT_87 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (восстановление кирпичной кладки приямка с оштукатуриванием и окраской)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_88
+cg:WT_88 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (демонтаж ж/б плит)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_89
+cg:WT_89 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "прочие работы по благоустройству (разборка ж/б конструкций)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_9
+cg:WT_9 rdf:type owl:NamedIndividual ,
+                  cg:WorkType ;
+         cg:hasTitle "Асфальтирование и замощение придомовой территории" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_90
+cg:WT_90 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "прочие работы по благоустройству (разборка ж/б плит и вывоз)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_91
+cg:WT_91 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "прочие работы по благоустройству (разборка плитки тротуарной)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_92
+cg:WT_92 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (ремонт ворот)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_93
+cg:WT_93 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (ремонт кирпичной кладки с оштукатуриванием и окраской)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_94
+cg:WT_94 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (снос деревьев с корчевкой пней)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_95
+cg:WT_95 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (установка вазонов)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_96
+cg:WT_96 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (устройство набивных дорожек)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_97
+cg:WT_97 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Прочие работы по благоустройству (устройство патрубков)" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_98
+cg:WT_98 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "ПСР" .
+
+
+###  http://www.w3id.org/citygraph-core#WT_99
+cg:WT_99 rdf:type owl:NamedIndividual ,
+                   cg:WorkType ;
+          cg:hasTitle "Разделение узла учета электроэнергии" .
