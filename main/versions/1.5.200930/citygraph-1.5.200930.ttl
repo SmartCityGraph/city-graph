@@ -1315,30 +1315,34 @@ owl:topDataProperty rdfs:domain cg:Building ;
 ###  http://citygraph.onti.actcognitive.org/core#ATM
 cg:ATM rdf:type owl:Class ;
        rdfs:subClassOf cg:AutomatedMachine ;
+       rdfs:comment "Аппарат для выдачи и приёма денег, а также оплаты услуг и погашения кредитов без участия сотрудника банка, с использованием банковских карт." ;
        rdfs:label "Банкомат" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#AchitectureElement
 cg:AchitectureElement rdf:type owl:Class ;
                       rdfs:subClassOf cg:PointObject ;
+                      rdfs:comment "Декоративные, технические, планировочные, конструктивные устройства, растительные компоненты, различные виды оборудования и оформления, малые архитектурные формы, некапитальные нестационарные сооружения, наружная реклама и информация, используемые как составные части благоустройства." ;
                       rdfs:label "Элемент благоустройства" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#ActDoc
 cg:ActDoc rdf:type owl:Class ;
           rdfs:subClassOf cg:Document ;
+          rdfs:comment "Официальный документ, который констатирует произошедшее действие или факт хозяйственной жизни." ;
           rdfs:label "Акт" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Action
 cg:Action rdf:type owl:Class ;
           rdfs:subClassOf cg:Process ;
-          rdfs:comment "Объекты могут влиять друг на друга" ;
+          rdfs:comment "Cтруктурная единица деятельности; относительно завершенный отдельный акт человеческой деятельности, для которого характерны направленность на достижение определенной осознаваемой цели, произвольность и преднамеренность индивидуальной активности." ;
           rdfs:label "Действие" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Address
 cg:Address rdf:type owl:Class ;
+           rdfs:comment "Условная кодификация места нахождения объекта в пространстве, применяемая для ориентирования в пространстве заселённым человеком." ;
            rdfs:label "Адрес" .
 
 
@@ -1376,6 +1380,7 @@ cg:AgeGroup rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#AgreementDoc
 cg:AgreementDoc rdf:type owl:Class ;
                 rdfs:subClassOf cg:Document ;
+                rdfs:comment "Документ, закрепляющий правовые отношения юридических лиц,контрагентов, или физического лица с юридическим лицом." ;
                 rdfs:label "Договор" .
 
 
@@ -1425,7 +1430,7 @@ cg:AreaObject rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#AuthorizedAction
 cg:AuthorizedAction rdf:type owl:Class ;
                     rdfs:subClassOf cg:Action ;
-                    rdfs:comment "Законное действие" ;
+                    rdfs:comment "Действие согласованное с юридической точки зрения со всеми необходимыми документами, регламентами, инстанциями." ;
                     rdfs:label "Авторизованное действие" .
 
 
@@ -1456,6 +1461,7 @@ cg:AutogasFillingStation rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#AutomatedMachine
 cg:AutomatedMachine rdf:type owl:Class ;
                     rdfs:subClassOf cg:PointObject ;
+                    rdfs:comment "Машина, самостоятельно действующее устройство (или совокупность устройств), выполняющее по жёстко заданной программе, без непосредственного участия человека, процессы получения, преобразования, передачи и использования энергии, материала и информации. Автоматы применяются для обеспечения комфортных условий жизни человека, повышения производительности, облегчения и обеспечения безопасности его труда." ;
                     rdfs:label "Автомат" .
 
 
@@ -1511,6 +1517,7 @@ cg:Bathhouse rdf:type owl:Class ;
 cg:Bench rdf:type owl:Class ;
          rdfs:subClassOf cg:AchitectureElement ,
                          cg:StreetFurniture ;
+         rdfs:comment "Мебельное изделие с узким, обыкновенно длинным сиденьем для нескольких человек, разновидностью скамьи является лавка." ;
          rdfs:label "Скамья" .
 
 
@@ -1542,6 +1549,7 @@ cg:BlackBox rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Block
 cg:Block rdf:type owl:Class ;
          rdfs:subClassOf cg:Territory ;
+         rdfs:comment "Административно-территориальная единица второго уровня в Российской Федерации." ;
          rdfs:label "Квартал" ,
                     "Район" .
 
@@ -1587,6 +1595,7 @@ cg:Building rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Bus
 cg:Bus rdf:type owl:Class ;
        rdfs:subClassOf cg:MovableObject ;
+       rdfs:comment "Безрельсовое механическое моторное транспортное средство, технически предназначенное для перевозки девяти и более пассажиров и способное маневрировать на дороге, приводимое в движение источником энергии, запасённым или производимым из топлива, хранящегося на борту (бывают аккумуляторные, бензиновые, газотопливные, дизельные, суперкондесаторные, а также автобусы на прочих топливных элементах)." ;
        rdfs:label "Автобус" .
 
 
@@ -1599,6 +1608,7 @@ cg:BusStation rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Bush
 cg:Bush rdf:type owl:Class ;
         rdfs:subClassOf cg:Green ;
+        rdfs:comment "Жизненная форма растений; многолетние деревянистые растения высотой 0,8—6 метров, в отличие от деревьев не имеющие во взрослом состоянии главного ствола, а имеющие несколько или много стеблей, часто существующих бок о бок и сменяющих друг друга." ;
         rdfs:label "Куст" .
 
 
@@ -1617,24 +1627,28 @@ cg:BusinessHub rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#CadastralBlock
 cg:CadastralBlock rdf:type owl:Class ;
                   rdfs:subClassOf cg:CadastreElement ;
+                  rdfs:comment "Кадастровый квартал кодируется в кадастровом номере \"АА:ВВ:CCCCСCC:КК\"  в виде 6-ти или 7-ми цифр на месте CCCCCCC." ;
                   rdfs:label "Кадастровый квартал" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastralDistrict
 cg:CadastralDistrict rdf:type owl:Class ;
                      rdfs:subClassOf cg:CadastreElement ;
+                     rdfs:comment "Кадастровый район кодируется в кадастровом номере \"АА:ВВ:CCCCСCC:КК\"  в виде двух цифр на месте BB." ;
                      rdfs:label "Кадастровый район" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastralOkrug
 cg:CadastralOkrug rdf:type owl:Class ;
                   rdfs:subClassOf cg:CadastreElement ;
+                  rdfs:comment "Кадастровый округ кодируется в кадастровом номере \"АА:ВВ:CCCCСCC:КК\"  в виде двух цифр на месте AA." ;
                   rdfs:label "Кадастровый округ" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastralParcel
 cg:CadastralParcel rdf:type owl:Class ;
                    rdfs:subClassOf cg:Land ;
+                   rdfs:comment "Земельный участок отражённый в кадастровом реестре." ;
                    rdfs:label "Кадастровый участок" .
 
 
@@ -1642,14 +1656,14 @@ cg:CadastralParcel rdf:type owl:Class ;
 cg:CadastreElement rdf:type owl:Class ;
                    rdfs:subClassOf cg:Reference ;
                    rdfs:comment "Индивиды этого класса и его подклассов, должны иметь IRI-ссылку на индивид класса \"Кадастровый реестр\" в своей аннотации \"IsDefinedBy\"." ,
-                                "Этот класс не является подклассом Кадастрового реестра и будет перенесён" ;
+                                "Элемент кадастрового учёта." ;
                    rdfs:label "Кадастровый элемент" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CadastreRegister
 cg:CadastreRegister rdf:type owl:Class ;
                     rdfs:subClassOf cg:Document ;
-                    rdfs:comment "Сюда добавлять все виды кадастров (земельный, лесной и пр.)" ;
+                    rdfs:comment "Упорядоченный список, реестр каких-либо важных объектов, официально составляемый государством на основании данных наблюдений, осуществляемых периодически или непрерывно. Кадастр используется для определения прямых реальных сумм налогов (поземельного, подомового, промыслового), платы за пользование природными ресурсами, оценки стоимости объектов (кадастровой стоимости) и тому подобного." ;
                     rdfs:label "Кадастровый реестр" .
 
 
@@ -1674,6 +1688,7 @@ cg:CarParking rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#CarVehicle
 cg:CarVehicle rdf:type owl:Class ;
               rdfs:subClassOf cg:MovableObject ;
+              rdfs:comment "Автомобиль, предназначенный для перевозки пассажиров и багажа, вместимостью от 2 до 8 человек. Требует для управления водительские права категории «B»." ;
               rdfs:label "Легковой автомобиль" .
 
 
@@ -1686,6 +1701,7 @@ cg:Cemetery rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#CentralBank
 cg:CentralBank rdf:type owl:Class ;
                rdfs:subClassOf cg:GovernmentAuthority ;
+               rdfs:comment "Организация, отвечающая за денежно-кредитную политику и обеспечение работы платёжной системы, а также в ряде случаев за регулирование и надзор в финансовом секторе в национальной экономике или группе стран. Центральный банк является одной из форм денежных властей." ;
                rdfs:label "Центральный банк" .
 
 
@@ -1800,12 +1816,14 @@ cg:ColonySettlement rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#CommercialObject
 cg:CommercialObject rdf:type owl:Class ;
                     rdfs:subClassOf cg:SocialObject ;
+                    rdfs:comment "Индивиды этого класса отражают объекты, предназначенные для предпринимательства, получения прибыли." ;
                     rdfs:label "Коммерческий объект" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#CommercialOrganization
 cg:CommercialOrganization rdf:type owl:Class ;
                           rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> ;
+                          rdfs:comment "Организационно-правовая форма юридического лица, преследующего прибыль в качестве основной цели своей деятельности, в отличие от некоммерческой организации, которая не имеет целью извлечение прибыли и не распределяет полученную прибыль между участниками." ;
                           rdfs:label "Коммерческая организация" .
 
 
@@ -1842,6 +1860,7 @@ cg:Consulate rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Court
 cg:Court rdf:type owl:Class ;
          rdfs:subClassOf cg:GovernmentAuthority ;
+         rdfs:comment "Орган государственной власти, осуществляющий правосудие в форме рассмотрения и разрешения уголовных, гражданских, административных и иных категорий дел в установленном законом конкретного государства процессуальном порядке." ;
          rdfs:label "Суд" .
 
 
@@ -1872,6 +1891,7 @@ cg:Crosswalk rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#CulturalObject
 cg:CulturalObject rdf:type owl:Class ;
                   rdfs:subClassOf cg:SocialObject ;
+                  rdfs:comment "Класс представляет объекты культуры предназначенные для развлечения, человеческого самовыражения, самопознания, получения накопленных человечеством знаний в созерцательной форме и т.д." ;
                   rdfs:label "Культурный объект" .
 
 
@@ -1890,6 +1910,7 @@ cg:Dentist rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#DisabledPopulation
 cg:DisabledPopulation rdf:type owl:Class ;
                       rdfs:subClassOf cg:OtherGroup ;
+                      rdfs:comment "Сюда входят группы людей с ограниченными возможностями, которым необходимы специальные городские условия для комфортной жизни." ;
                       rdfs:label "Инвалиды" .
 
 
@@ -1926,6 +1947,7 @@ cg:Eatery rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#EducationalObject
 cg:EducationalObject rdf:type owl:Class ;
                      rdfs:subClassOf cg:SocialObject ;
+                     rdfs:comment "Класс отражает учреждения, осуществляющие образовательный процесс, то есть реализующие одну или несколько образовательных программ и (или) обеспечивающие содержание и воспитание обучающихся, воспитанников." ;
                      rdfs:label "Образовательный объект" .
 
 
@@ -2149,12 +2171,14 @@ cg:GiftStore rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#GovCorporation
 cg:GovCorporation rdf:type owl:Class ;
                   rdfs:subClassOf cg:GovernmentAuthority ;
+                  rdfs:comment "Предприятие, которым полностью или в значительной мере владеет государство. Названия организаций и их организационно-правовая форма не всегда верно указывает на статус предприятия." ;
                   rdfs:label "Госкорпорация" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#GovernmentAuthority
 cg:GovernmentAuthority rdf:type owl:Class ;
                        rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> ;
+                       rdfs:comment "Конкретные организации и абстрактные субъекты и объекты, предназначенные для управления государством на разных уровнях. Их разделяют на: высшие низшие центральные федеральные региональные местные и так далее." ;
                        rdfs:label "Государственная организация" .
 
 
@@ -2174,6 +2198,7 @@ cg:GovernmentRegionalService rdf:type owl:Class ;
 cg:Green rdf:type owl:Class ;
          rdfs:subClassOf cg:GreenObject ,
                          cg:PointObject ;
+         rdfs:comment "Древесные, кустарниковые и травянистые растения на определённой территории." ;
          rdfs:label "Зеленое насаждение" .
 
 
@@ -2187,6 +2212,7 @@ cg:GreenObject rdf:type owl:Class ;
 cg:GreenRoof rdf:type owl:Class ;
              rdfs:subClassOf cg:GreenObject ,
                              cg:Surface ;
+             rdfs:comment "Озелительное покрытие на крышах домов." ;
              rdfs:label "Крышное озеленение" .
 
 
@@ -2308,6 +2334,7 @@ cg:IceArena rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#IndustrialObject
 cg:IndustrialObject rdf:type owl:Class ;
                     rdfs:subClassOf cg:FunctionalObject ;
+                    rdfs:comment "Класс представляет собой промышленные объекты - предприятия, цеха, участки, агрегаты и другие производственные подразделения, используемые для осуществления промышленной деятельности." ;
                     rdfs:label "Промышленный объект" .
 
 
@@ -2350,6 +2377,7 @@ cg:JudicialBranch rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#KU_state
 cg:KU_state rdf:type owl:Class ;
             rdfs:subClassOf cg:GovernmentAuthority ;
+            rdfs:comment "Зарегистрированное в установленном порядке юридическое лицо, при регистрации которого указана организационно-правовая форма (ОПФ) – казенное учреждение." ;
             rdfs:label "Казенное учреждение" .
 
 
@@ -2368,6 +2396,7 @@ cg:Lake rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Land
 cg:Land rdf:type owl:Class ;
         rdfs:subClassOf cg:Space ;
+        rdfs:comment "Часть земной поверхности, имеющая фиксированную границу принадлежащая какому-то лицу." ;
         rdfs:label "Земельный участок" .
 
 
@@ -2380,6 +2409,7 @@ cg:Landfill rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#LawDoc
 cg:LawDoc rdf:type owl:Class ;
           rdfs:subClassOf cg:Document ;
+          rdfs:comment "Нормативно-правовой акт, который принимается представительным (законодательным) органом государственной власти в особом порядке, регулирует определённые общественные отношения и обеспечивается возможностью применения мер государственного принуждения. Кроме того, в широком смысле под законом понимается любой нормативно-правовой акт, действующий в рамках конкретной правовой системы." ;
           rdfs:label "Закон" .
 
 
@@ -2413,12 +2443,14 @@ cg:Link rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#LivingObject
 cg:LivingObject rdf:type owl:Class ;
                 rdfs:subClassOf cg:FunctionalObject ;
+                rdfs:comment "Объекты, основная функция которых - проживание людей. В соответствии с этим, большинство атрибутов этого класса описывают свойства объекта, относящиеся к качеству проживания (наличие отопления и т.д.)." ;
                 rdfs:label "Жилой объект" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#MajorRenovation
 cg:MajorRenovation rdf:type owl:Class ;
                    rdfs:subClassOf cg:AuthorizedAction ;
+                   rdfs:comment "Плановый ремонт, выполняемый для восстановления исправности и полного или близкого к полному ресурса объекта с заменой или восстановлением любых его частей, включая базовые." ;
                    rdfs:label "Капитальный ремонт" .
 
 
@@ -2443,6 +2475,7 @@ cg:MedicalCentre rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#MedicalObject
 cg:MedicalObject rdf:type owl:Class ;
                  rdfs:subClassOf cg:SocialObject ;
+                 rdfs:comment "Лечебно-профилактические и другие виды заведений, в которых людям, в том числе с какими-либо заболеваниями, оказываются медицинские услуги: диагностика, лечение, реабилитация после перенесенных болезней." ;
                  rdfs:label "Медицинский объект" .
 
 
@@ -2473,6 +2506,7 @@ cg:Migration rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#MilitaryObject
 cg:MilitaryObject rdf:type owl:Class ;
                   rdfs:subClassOf cg:FunctionalObject ;
+                  rdfs:comment "Специально оборудованная территория, важная в стратегическом или тактическом отношении, предназначенная для дислокации формирований вооружённых сил какого-либо государства, на своей или оккупированной территории." ;
                   rdfs:label "Военный объект" .
 
 
@@ -2497,6 +2531,7 @@ cg:Monument rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Motorcycle
 cg:Motorcycle rdf:type owl:Class ;
               rdfs:subClassOf cg:MovableObject ;
+              rdfs:comment "Двухколёсное (либо трёхколёсное) транспортное средство с механическим двигателем (двигатель внутреннего сгорания, электрический, пневматический), главными отличительными чертами которого являются: вертикальная посадка водителя (мотоциклиста), наличие боковых ножных упоров (площадок, подножек), прямое (безредукторное) управление передним поворотным колесом." ;
               rdfs:label "Мотоцикл" .
 
 
@@ -2636,6 +2671,7 @@ cg:NonProfitFoundation rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#NonProfitOrganization
 cg:NonProfitOrganization rdf:type owl:Class ;
                          rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Organization> ;
+                         rdfs:comment "Организация, не имеющая в качестве основной цели своей деятельности извлечения прибыли. Некоммерческие организации могут создаваться для достижения социальных, благотворительных, культурных, образовательных, политических, научных и управленческих целей, в сферах охраны здоровья граждан, развития физической культуры и спорта, удовлетворения духовных и иных нематериальных потребностей граждан, защиты прав, законных интересов граждан и организаций, разрешения споров и конфликтов, оказания юридической помощи, а также в иных целях, направленных на достижение общественных благ. Некоммерческие организации вправе заниматься предпринимательской деятельностью, только если данная деятельность направлена на достижение целей организации." ;
                          rdfs:label "Некоммерческая организация" .
 
 
@@ -2709,6 +2745,7 @@ cg:OtherGroup rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#OtherPopulationGroups
 cg:OtherPopulationGroups rdf:type owl:Class ;
                          rdfs:subClassOf cg:OtherGroup ;
+                         rdfs:comment "Сюда входят группы сформированные по дополнительным признакам, такие как религия, отношение к сбору мусора, а также наличие животных, личного автомобиля и т.д." ;
                          rdfs:label "Спецаильная группа" .
 
 
@@ -2825,6 +2862,7 @@ cg:PlumbingStore rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#PointObject
 cg:PointObject rdf:type owl:Class ;
                rdfs:subClassOf cg:PhysicalObject ;
+               rdfs:comment "Объект, координаты которого мы можем описать в виде точки и принебречь его площадью." ;
                rdfs:label "Точечный объект" .
 
 
@@ -2855,12 +2893,14 @@ cg:Pond rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#PopulationWithChildren
 cg:PopulationWithChildren rdf:type owl:Class ;
                           rdfs:subClassOf cg:OtherGroup ;
+                          rdfs:comment "Группы горожан, воспитывающие детей (в том числе беременные женщины)." ;
                           rdfs:label "Горожане с детьми" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Position
 cg:Position rdf:type owl:Class ;
             rdfs:subClassOf cg:Reference ;
+            rdfs:comment "Первичная неделимая структурная единица в организации или вне её, замещаемая физическим лицом, отвечающим установленным квалификационным требованиям, несущим должностные обязанности и наделённым должностными полномочиями, в соответствии с руководящими документами в той или иной сфере деятельности." ;
             rdfs:label "Должность" .
 
 
@@ -2873,6 +2913,7 @@ cg:PostBox rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#PostMachine
 cg:PostMachine rdf:type owl:Class ;
                rdfs:subClassOf cg:AutomatedMachine ;
+               rdfs:comment "Станция приёма и выдачи малогабаритных отправлений." ;
                rdfs:label "Почтомат" .
 
 
@@ -2914,18 +2955,21 @@ cg:Prison rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Process
 cg:Process rdf:type owl:Class ;
+           rdfs:comment "Cовокупность действий, с конкретным началом и концом, целью которых является создание ценности для внешних и внутренних клиентов." ;
            rdfs:label "Процесс" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#ProsecutorOffice
 cg:ProsecutorOffice rdf:type owl:Class ;
                     rdfs:subClassOf cg:GovernmentAuthority ;
+                    rdfs:comment "Система органов, осуществляющих от имени государства высший надзор за соблюдением законодательства, прав, свобод человека и гражданина, а также выполнение иных функций, определённых национальным законодательством." ;
                     rdfs:label "Прокуратура" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#PublicHeatingSystemObject
 cg:PublicHeatingSystemObject rdf:type owl:Class ;
                              rdfs:subClassOf cg:PublicSystemObject ;
+                             rdfs:comment "Система обеспечивающая искусственный обогрев помещений с целью возмещения в них теплопотерь и поддержания на заданном уровне температуры, отвечающей условиям теплового комфорта и/или требованиям технологического процесса." ;
                              rdfs:label "Отопительная система" .
 
 
@@ -2944,6 +2988,7 @@ cg:PublicNotRegistered rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#PublicObject
 cg:PublicObject rdf:type owl:Class ;
                 rdfs:subClassOf cg:SocialObject ;
+                rdfs:comment "Класс представляет собой общественные объекты - элементы городского устройства, предназначенные для общественного использования." ;
                 rdfs:label "Общественный объект" .
 
 
@@ -2956,12 +3001,14 @@ cg:PublicOrganization rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#PublicPowerSystemObject
 cg:PublicPowerSystemObject rdf:type owl:Class ;
                            rdfs:subClassOf cg:PublicSystemObject ;
+                           rdfs:comment "Совокупность электроустановок, предназначенных для передачи и распределения электроэнергии от электростанции к потребителю." ;
                            rdfs:label "Электросетевая система" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#PublicSewerageSystemObject
 cg:PublicSewerageSystemObject rdf:type owl:Class ;
                               rdfs:subClassOf cg:PublicSystemObject ;
+                              rdfs:comment "Технические сооружения и сети трубопроводов, предназначенные для сбора и удаления твёрдых и жидких продуктов жизнедеятельности человека, хозяйственно-бытовых и дождевых сточных вод, образующихся на территории населённых пунктов с целью их очистки от загрязнений и дальнейшего использования или возвращения в водоём." ;
                               rdfs:label "Канализационная система" .
 
 
@@ -2986,6 +3033,7 @@ cg:PublicVehicle rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#PublicWaterSystemObject
 cg:PublicWaterSystemObject rdf:type owl:Class ;
                            rdfs:subClassOf cg:PublicSystemObject ;
+                           rdfs:comment "Системы предназначенные для подачи поверхностных или подземных вод потребителям в требуемом количестве и в соответствии с целевыми показателями качества воды в водных объектах." ;
                            rdfs:label "Система водоснабжения" .
 
 
@@ -2998,6 +3046,7 @@ cg:RailwayStation rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#RecommendationDoc
 cg:RecommendationDoc rdf:type owl:Class ;
                      rdfs:subClassOf cg:Document ;
+                     rdfs:comment "Разновидность учебно-методического издания, в котором отсутствует описательный материал, даются конкретные советы по организации учебно- воспитательного процесса учебного занятия, воспитательного мероприятия или к решению той или иной проблемы." ;
                      rdfs:label "Методические рекомендации" .
 
 
@@ -3009,6 +3058,7 @@ cg:RecreationZone rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Reference
 cg:Reference rdf:type owl:Class ;
+             rdfs:comment "Класс хранит коллекции значений, используемых в онтологии, различную информацию, которую мы можем использовать для характеризации городской среды." ;
              rdfs:label "Справочник" .
 
 
@@ -3046,6 +3096,7 @@ cg:RegionalParliament rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#ReligiousObject
 cg:ReligiousObject rdf:type owl:Class ;
                    rdfs:subClassOf cg:SocialObject ;
+                   rdfs:comment "Объекты созданные и предназначенные для осуществления религиозного культа и религиозных обрядов." ;
                    rdfs:label "Религиозный объект" .
 
 
@@ -3094,6 +3145,7 @@ cg:RiverStation rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#RoadNetworkObject
 cg:RoadNetworkObject rdf:type owl:Class ;
                      rdfs:subClassOf cg:NetObject ;
+                     rdfs:comment "Система предназначенная для обеспечения возможности перемещения по определённой местности с помощью средств передвижения." ;
                      rdfs:label "Дорожная сеть" .
 
 
@@ -3184,6 +3236,7 @@ cg:Skalodrom rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#SmallArchitecture
 cg:SmallArchitecture rdf:type owl:Class ;
                      rdfs:subClassOf cg:AchitectureElement ;
+                     rdfs:comment "Малые архитектурные формы - вспомогательные архитектурные сооружения, оборудование и художественно-декоративные элементы, обладающие собственными простыми функциями и дополняющие общую композицию архитектурного ансамбля застройки." ;
                      rdfs:label "МАФ" .
 
 
@@ -3266,6 +3319,7 @@ cg:SportsClass rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#SportsObject
 cg:SportsObject rdf:type owl:Class ;
                 rdfs:subClassOf cg:SocialObject ;
+                rdfs:comment "Индивиды этого класса предназначены для осуществления спортивной деятельности - тренировок, спортивных игр, соревнований, развлечения." ;
                 rdfs:label "Спортивный объект" .
 
 
@@ -3290,18 +3344,21 @@ cg:StateInspection rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#StateOrganization
 cg:StateOrganization rdf:type owl:Class ;
                      rdfs:subClassOf cg:GovernmentAuthority ;
+                     rdfs:comment "Некоммерческая организация, созданная Российской Федерацией, субъектом Российской Федерации или муниципальным образованием для выполнения работ, оказания услуг в целях обеспечения реализации предусмотренных законодательством Российской Федерации полномочий соответственно органов государственной власти (государственных органов) или органов местного самоуправления в сферах науки, образования, здравоохранения, культуры, социальной защиты, занятости населения, физической культуры и спорта, а также в иных сферах." ;
                      rdfs:label "Бюджетное учреждение" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#StatementDoc
 cg:StatementDoc rdf:type owl:Class ;
                 rdfs:subClassOf cg:Document ;
+                rdfs:comment "Один из видов подзаконных нормативно-правовых актов, принимаемых органом исполнительной власти." ;
                 rdfs:label "Постановление" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Street
 cg:Street rdf:type owl:Class ;
           rdfs:subClassOf cg:Address ;
+          rdfs:comment "Дорога внутри населённого пункта, вдоль которой размещаются и нумеруются здания. Как правило имеет индивидуальное название." ;
           rdfs:label "Улица" .
 
 
@@ -3338,6 +3395,7 @@ cg:Supermarket rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Surface
 cg:Surface rdf:type owl:Class ;
            rdfs:subClassOf cg:AreaObject ;
+           rdfs:comment "Некоторое покрытие определённой площади, имеющее определённые характеристики." ;
            rdfs:label "Поверхность" .
 
 
@@ -3398,6 +3456,7 @@ cg:Terminal rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Territory
 cg:Territory rdf:type owl:Class ;
              rdfs:subClassOf cg:Space ;
+             rdfs:comment "Земельное пространство, на которое распространяется юрисдикция государства или административной единицы (территориального образования) в его составе." ;
              rdfs:label "Территория" .
 
 
@@ -3410,12 +3469,14 @@ cg:Theatre rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Timetable
 cg:Timetable rdf:type owl:Class ;
              rdfs:subClassOf cg:Reference ;
+             rdfs:comment "Расписание, в соответствии с которым происходит какое либо действие или процесс." ;
              rdfs:label "Расписание" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#TouristPopulation
 cg:TouristPopulation rdf:type owl:Class ;
                      rdfs:subClassOf cg:OtherGroup ;
+                     rdfs:comment "Сюда входят все группы приезжих, вне зависимости от их организованности и причины приезда." ;
                      rdfs:label "Группа туристов" .
 
 
@@ -3428,6 +3489,7 @@ cg:Townhouse rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Tractor
 cg:Tractor rdf:type owl:Class ;
            rdfs:subClassOf cg:MovableObject ;
+           rdfs:comment "Самодвижущаяся (гусеничная или колёсная) машина, выполняющая сельскохозяйственные, дорожно-строительные, землеройные, транспортные и другие работы в агрегате с прицепными, навесными или стационарными машинами (орудиями)." ;
            rdfs:label "Трактор" .
 
 
@@ -3440,6 +3502,7 @@ cg:TrafficLight rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Tram
 cg:Tram rdf:type owl:Class ;
         rdfs:subClassOf cg:MovableObject ;
+        rdfs:comment "Наземная электрическая железная дорога, вид уличного и частично уличного общественного транспорта для перевозки пассажиров по заданным маршрутам, используемый преимущественно в городах." ;
         rdfs:label "Трамвай" .
 
 
@@ -3458,18 +3521,21 @@ cg:TraumaCenter rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#Tree
 cg:Tree rdf:type owl:Class ;
         rdfs:subClassOf cg:Green ;
+        rdfs:comment "Жизненная форма деревянистых растений с единственной, отчётливо выраженной, многолетней, в разной степени одревесневшей, сохраняющейся в течение всей жизни, разветвлённой (кроме пальм) главной осью — стволом." ;
         rdfs:label "Дерево" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#TrolleyBus
 cg:TrolleyBus rdf:type owl:Class ;
               rdfs:subClassOf cg:MovableObject ;
+              rdfs:comment "Безрельсовое механическое транспортное средство (преимущественно пассажирское, хотя встречаются троллейбусы грузовые и специального назначения) контактного типа с электрическим приводом, получающее электрический ток от внешнего источника питания (от центральных электрических станций) через двухпроводную контактную сеть с помощью штангового токоприёмника и сочетающее в себе преимущества трамвая и автобуса." ;
               rdfs:label "Троллейбус" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#TruckVehicle
 cg:TruckVehicle rdf:type owl:Class ;
                 rdfs:subClassOf cg:MovableObject ;
+                rdfs:comment "Автомобиль, предназначенный для перевозки грузов в кузове или на грузовой платформе. Для обобщённого обозначения машин, созданных на базе грузового автомобиля, используется термин грузовая техника." ;
                 rdfs:label "Грузовой автомобиль" .
 
 
@@ -3482,13 +3548,14 @@ cg:UK rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#UnauthorisedAction
 cg:UnauthorisedAction rdf:type owl:Class ;
                       rdfs:subClassOf cg:Action ;
-                      rdfs:comment "Например, самовольно построенное здание" ;
+                      rdfs:comment "Действие несогласованное с юридической точки зрения со всеми необходимыми инстанциями." ;
                       rdfs:label "Самовольное действие" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#UnderWorkingAgePopulation
 cg:UnderWorkingAgePopulation rdf:type owl:Class ;
                              rdfs:subClassOf cg:AgeGroup ;
+                             rdfs:comment "Сюда входят группы населения в возрасте от 0 до 18-ти лет." ;
                              rdfs:label "Несовершеннолетние" .
 
 
@@ -3507,12 +3574,14 @@ cg:University_Organization rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#UpwardWorkingAgePopulation
 cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
                               rdfs:subClassOf cg:AgeGroup ;
-                              rdfs:label "Население старше трудоспособного возраста" .
+                              rdfs:comment "Сюда входят группы населения достигшие пенсионного возраста (60+)." ;
+                              rdfs:label "Старше трудоспобоного возраста" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#VendingMachine
 cg:VendingMachine rdf:type owl:Class ;
                   rdfs:subClassOf cg:AutomatedMachine ;
+                  rdfs:comment "Автомат для осуществления розничной продаже каких-либо товаров." ;
                   rdfs:label "Торговый автомат" .
 
 
@@ -3568,7 +3637,8 @@ cg:WorkType rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/core#WorkingAgePopulation
 cg:WorkingAgePopulation rdf:type owl:Class ;
                         rdfs:subClassOf cg:AgeGroup ;
-                        rdfs:label "Население трудоспособного возраста" .
+                        rdfs:comment "Сюда входят группы населения, которые находятся в трудоспособном возрасте, либо продолжили работать после достижения пенсионного возраста." ;
+                        rdfs:label "Трудоспособные горожане" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#ZAGS
