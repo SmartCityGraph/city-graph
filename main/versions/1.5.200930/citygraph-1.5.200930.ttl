@@ -8,12 +8,12 @@
 @base <http://citygraph.onti.actcognitive.org/core> .
 
 <http://citygraph.onti.actcognitive.org/core> rdf:type owl:Ontology ;
+                                               <http://purl.org/dc/terms/contributor> "Максим Матюнькин"@ru ,
+                                                                                      "Наталья Чичкова"@ru ;
                                                <http://purl.org/dc/terms/created> "Декабрь 2020" ;
-                                               <http://purl.org/dc/terms/creator> "Алёна Беглер"@ru ;
-                                               <http://purl.org/dc/terms/contributor> "Наталья Чичкова"@ru ;
-                                               <http://purl.org/dc/terms/description> "Онтология городских сущностей"@ru ;
-                                               <http://purl.org/dc/terms/contributor> "Максим Матюнькин"@ru ;
-                                               <http://purl.org/dc/terms/creator> "Виталий Власов"@ru .
+                                               <http://purl.org/dc/terms/creator> "Алёна Беглер"@ru ,
+                                                                                  "Виталий Власов"@ru ;
+                                               <http://purl.org/dc/terms/description> "Онтология городских сущностей"@ru .
 
 #################################################################
 #    Annotation properties
@@ -1396,13 +1396,6 @@ cg:AeroStation rdf:type owl:Class ;
                rdfs:label "Аэровокзал" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#AgeGroup
-cg:AgeGroup rdf:type owl:Class ;
-            rdfs:subClassOf cg:SocialGroup ;
-            rdfs:comment "Группа населения относительно их возраста" ;
-            rdfs:label "Возрастная группа" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#AgreementDoc
 cg:AgreementDoc rdf:type owl:Class ;
                 rdfs:subClassOf cg:Document ;
@@ -1931,13 +1924,6 @@ cg:DeliveryService rdf:type owl:Class ;
 cg:Dentist rdf:type owl:Class ;
            rdfs:subClassOf cg:HelthFacility ;
            rdfs:label "Стоматология" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#DisabledPopulation
-cg:DisabledPopulation rdf:type owl:Class ;
-                      rdfs:subClassOf cg:OtherGroup ;
-                      rdfs:comment "Сюда входят группы людей с ограниченными возможностями, которым необходимы специальные городские условия для комфортной жизни." ;
-                      rdfs:label "Инвалиды" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Dispensary
@@ -2761,20 +2747,6 @@ cg:Orphanage rdf:type owl:Class ;
              rdfs:label "Детский дом" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#OtherGroup
-cg:OtherGroup rdf:type owl:Class ;
-              rdfs:subClassOf cg:SocialGroup ;
-              rdfs:comment "Дополнительная характеристика группы людей, которые не исключают друг друга" ;
-              rdfs:label "Дополнительная группа" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#OtherPopulationGroups
-cg:OtherPopulationGroups rdf:type owl:Class ;
-                         rdfs:subClassOf cg:OtherGroup ;
-                         rdfs:comment "Сюда входят группы сформированные по дополнительным признакам, такие как религия, отношение к сбору мусора, а также наличие животных, личного автомобиля и т.д." ;
-                         rdfs:label "Спецаильная группа" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#OutletCenter
 cg:OutletCenter rdf:type owl:Class ;
                 rdfs:subClassOf cg:RetailHub ;
@@ -2914,13 +2886,6 @@ cg:PoliceStation rdf:type owl:Class ;
 cg:Pond rdf:type owl:Class ;
         rdfs:subClassOf cg:WaterObject ;
         rdfs:label "Пруд" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#PopulationWithChildren
-cg:PopulationWithChildren rdf:type owl:Class ;
-                          rdfs:subClassOf cg:OtherGroup ;
-                          rdfs:comment "Группы горожан, воспитывающие детей (в том числе беременные женщины)." ;
-                          rdfs:label "Горожане с детьми" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Position
@@ -3499,13 +3464,6 @@ cg:Timetable rdf:type owl:Class ;
              rdfs:label "Расписание" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#TouristPopulation
-cg:TouristPopulation rdf:type owl:Class ;
-                     rdfs:subClassOf cg:OtherGroup ;
-                     rdfs:comment "Сюда входят все группы приезжих, вне зависимости от их организованности и причины приезда." ;
-                     rdfs:label "Группа туристов" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#Townhouse
 cg:Townhouse rdf:type owl:Class ;
              rdfs:subClassOf cg:LivingObject ;
@@ -3578,13 +3536,6 @@ cg:UnauthorisedAction rdf:type owl:Class ;
                       rdfs:label "Самовольное действие" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#UnderWorkingAgePopulation
-cg:UnderWorkingAgePopulation rdf:type owl:Class ;
-                             rdfs:subClassOf cg:AgeGroup ;
-                             rdfs:comment "Сюда входят группы населения в возрасте от 0 до 18-ти лет." ;
-                             rdfs:label "Несовершеннолетние" .
-
-
 ###  http://citygraph.onti.actcognitive.org/core#University
 cg:University rdf:type owl:Class ;
               rdfs:subClassOf cg:EducationalObject ;
@@ -3595,13 +3546,6 @@ cg:University rdf:type owl:Class ;
 cg:University_Organization rdf:type owl:Class ;
                            rdfs:subClassOf cg:StateOrganization ;
                            rdfs:label "Администрация Университета" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#UpwardWorkingAgePopulation
-cg:UpwardWorkingAgePopulation rdf:type owl:Class ;
-                              rdfs:subClassOf cg:AgeGroup ;
-                              rdfs:comment "Сюда входят группы населения достигшие пенсионного возраста (60+)." ;
-                              rdfs:label "Старше трудоспобоного возраста" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#VendingMachine
@@ -3658,13 +3602,6 @@ cg:WorkType rdf:type owl:Class ;
             rdfs:subClassOf cg:AuthorizedAction ;
             rdfs:comment "Список работ, проведённых при капитальном ремонте. Раньше назывался Вид работ" ;
             rdfs:label "Работы капитального ремонта" .
-
-
-###  http://citygraph.onti.actcognitive.org/core#WorkingAgePopulation
-cg:WorkingAgePopulation rdf:type owl:Class ;
-                        rdfs:subClassOf cg:AgeGroup ;
-                        rdfs:comment "Сюда входят группы населения, которые находятся в трудоспособном возрасте, либо продолжили работать после достижения пенсионного возраста." ;
-                        rdfs:label "Трудоспособные горожане" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#ZAGS
@@ -3830,4 +3767,4 @@ cg:StaticBench rdf:type owl:NamedIndividual ,
                rdfs:label "Стационарная скамья" .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
