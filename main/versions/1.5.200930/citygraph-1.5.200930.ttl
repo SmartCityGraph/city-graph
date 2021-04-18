@@ -1554,7 +1554,7 @@ cg:BikeRoad rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#BirthHospital
 cg:BirthHospital rdf:type owl:Class ;
-                 rdfs:subClassOf cg:HelthFacility ;
+                 rdfs:subClassOf cg:HealthFacility ;
                  rdfs:label "Роддом" .
 
 
@@ -1768,7 +1768,7 @@ cg:CityGarden rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Clinic
 cg:Clinic rdf:type owl:Class ;
-          rdfs:subClassOf cg:HelthFacility ;
+          rdfs:subClassOf cg:HealthFacility ;
           rdfs:label "Клиника" .
 
 
@@ -1922,13 +1922,13 @@ cg:DeliveryService rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Dentist
 cg:Dentist rdf:type owl:Class ;
-           rdfs:subClassOf cg:HelthFacility ;
+           rdfs:subClassOf cg:HealthFacility ;
            rdfs:label "Стоматология" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Dispensary
 cg:Dispensary rdf:type owl:Class ;
-              rdfs:subClassOf cg:HelthFacility ;
+              rdfs:subClassOf cg:HealthFacility ;
               rdfs:label "Диспансер" .
 
 
@@ -1990,7 +1990,7 @@ cg:Embassy rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Emergency
 cg:Emergency rdf:type owl:Class ;
-             rdfs:subClassOf cg:HelthFacility ;
+             rdfs:subClassOf cg:HealthFacility ;
              rdfs:label "Станция скорой помощи" .
 
 
@@ -2265,10 +2265,10 @@ cg:HardwareStore rdf:type owl:Class ;
                  rdfs:label "Строительный магазин" .
 
 
-###  http://citygraph.onti.actcognitive.org/core#HelthFacility
-cg:HelthFacility rdf:type owl:Class ;
-                 rdfs:subClassOf cg:MedicalObject ;
-                 rdfs:label "Медицинское учреждение" .
+###  http://citygraph.onti.actcognitive.org/core#HealthFacility
+cg:HealthFacility rdf:type owl:Class ;
+                  rdfs:subClassOf cg:MedicalObject ;
+                  rdfs:label "Медицинское учреждение" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#HomelessHome
@@ -2279,13 +2279,13 @@ cg:HomelessHome rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Hospis
 cg:Hospis rdf:type owl:Class ;
-          rdfs:subClassOf cg:HelthFacility ;
+          rdfs:subClassOf cg:HealthFacility ;
           rdfs:label "Хоспис" .
 
 
 ###  http://citygraph.onti.actcognitive.org/core#Hospital
 cg:Hospital rdf:type owl:Class ;
-            rdfs:subClassOf cg:HelthFacility ;
+            rdfs:subClassOf cg:HealthFacility ;
             rdfs:label "Больница" .
 
 
@@ -2713,7 +2713,7 @@ cg:OlympicReserveSportSchool rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#Optics
 cg:Optics rdf:type owl:Class ;
-          rdfs:subClassOf cg:HelthFacility ;
+          rdfs:subClassOf cg:HealthFacility ;
           rdfs:label "Оптика" .
 
 
@@ -2755,7 +2755,7 @@ cg:OutletCenter rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#OutpatientClinic
 cg:OutpatientClinic rdf:type owl:Class ;
-                    rdfs:subClassOf cg:HelthFacility ;
+                    rdfs:subClassOf cg:HealthFacility ;
                     rdfs:label "Поликлиника" .
 
 
@@ -3498,7 +3498,7 @@ cg:TrashBin rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#TraumaCenter
 cg:TraumaCenter rdf:type owl:Class ;
-                rdfs:subClassOf cg:HelthFacility ;
+                rdfs:subClassOf cg:HealthFacility ;
                 rdfs:label "Травмпункт" .
 
 
@@ -3593,7 +3593,7 @@ cg:WaterObject rdf:type owl:Class ;
 
 ###  http://citygraph.onti.actcognitive.org/core#WomanClinic
 cg:WomanClinic rdf:type owl:Class ;
-               rdfs:subClassOf cg:HelthFacility ;
+               rdfs:subClassOf cg:HealthFacility ;
                rdfs:label "Женская консультация" .
 
 
